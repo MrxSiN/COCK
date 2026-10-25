@@ -1,5 +1,7 @@
 # Engineering status
 
+Current Stage B state (2026-10-25): [all B01–B09 documentary drafts](stage-b-full-draft.md) are complete, including exact proposed BF/inert inventories, source maps/preflight, eight-command AOT lowering, native services, binary debug I/O, fuel/trace rules, independent acceptance and benchmark/rollback plans. Literal semantic expectations and inert policy are present. Executable draft: **INCOMPLETE**; IMPLEMENTED: **NO**; TESTED: **NOT RUN**; OPTIMIZED/INTEGRATED: **NO**. [Open Stage B issues](stage-b-issues.md) retain the Stage A real-compiler nesting, missing production source and Android target blockers. This design update runs no compiler/emulator/device tests. Later dated sections below contain the actual historical component evidence; the original table is historical.
+
 | Capability | Status | Reason |
 |---|---|---|
 | Part 0 feasibility decision | Partially documented | Android API and entry selected on paper; no emulator or SDK |

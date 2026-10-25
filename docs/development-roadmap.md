@@ -2,7 +2,7 @@
 
 The [full Stage A design package](stage-a-full-draft.md) now covers all A01–A14/A09a contracts, proposed metadata, test requirements and missing executable responsibilities. Its complete documentary coverage does not imply that the whole Stage A BF source draft exists.
 
-This is a dependency and acceptance draft grounded in the master prompt and current repository evidence. It is not a statement that the platform, Android app or later-stage source exists. The [bounded nested-input slice](next-stage-draft.md) has a complete executable draft and its subsequent tests are recorded in the [uploaded-component run](upload-executable-run-evidence.md). Stage B now has a [complete B01–B09 design package and exact proposed source/test inventory](stage-b-full-draft.md); its executable draft remains incomplete. Stages C–F remain roadmap-only and receive exact inventories at their own bounded boundaries; no empty modules are created now.
+This is a dependency and acceptance draft grounded in the master prompt and current repository evidence. It is not a statement that the platform, Android app or later-stage source exists. The [bounded nested-input slice](next-stage-draft.md) has a complete executable draft and its subsequent tests are recorded in the [uploaded-component run](upload-executable-run-evidence.md). Stages B–E have full documentary packages and exact proposed source/test inventories; their executable drafts remain incomplete. Stage F remains roadmap-only. No empty modules are created.
 
 ## Complete Stage A first
 
@@ -37,15 +37,21 @@ Prerequisite: keep a verified Stage A debug build usable. Implement bounded slic
 
 ## Stage C: interpreter coverage and maintainability
 
+Full design: [C01–C06 scope/inventory](stage-c-full-draft.md), [source/tape/fuel/nesting contract](stage-c-interpreter-draft.md), [independent acceptance/benchmarks](stage-c-test-draft.md), [inert policy](../config/stage-c/policy.json) and [literal expectations](../fixtures/stage_c_full/acceptance.json). Executable implementation and actual-source freeze remain incomplete.
+
 Preserve the accepted Stage A kernel rather than starting another broad VM. C01–C04 expand only missing decoder/tape separation, full profile semantics, original offsets and failure behavior with independently proved runtime results. C05 measures actual cost without changing the default build; C06 shares frontend/IR only when it simplifies responsibility or improves demonstrated cost. This stage improves an already self-hosted toolchain; it cannot postpone the still-mandatory Stage A nesting proof. Generic IR, caches and JITs are not prerequisites.
 
 ## Stage D: BF-native packaging and signing
+
+Full design: [D01–D08 scope/inventory](stage-d-full-draft.md), [binary resources/ZIP](stage-d-package-draft.md), [crypto/v2/key boundary](stage-d-crypto-draft.md), [independent acceptance](stage-d-test-draft.md), [inert policy](../config/stage-d/policy.json) and [public seed vectors/obligations](../fixtures/stage_d_full/acceptance.json). No cryptographic certification, key use or release publication is claimed.
 
 Use separate D01 complete draft inventories for D02 binary manifest/resources, D03 ZIP/CRC/layout/alignment and D04 cryptographic primitives/signature integration. Define exact canonical bytes, malformed-container negatives and independent known-answer vectors before implementation tests. D05 checks the chosen Android/API/page-size policy; D06 requires independent APK signature/tamper validation and device launch. D07 proves output ownership, retaining the labeled external debug fallback; D08 measures the working path before optimization.
 
 Real release keys require a separately satisfied custody/security contract, independent crypto evidence and explicit release instruction under Parts 11 and 19. The user's ordinary development/commit authorization does not authorize use of real release keys. No key material belongs in source, fixtures, logs or the cloud setup draft. No production APK or distribution promise is made by this roadmap.
 
 ## Stage E: one Android capability at a time
+
+Full design: [E01–E13 scope/inventory](stage-e-full-draft.md), [exact input/config/publication](stage-e-input-draft.md), [event/state/lifetime](stage-e-events-draft.md), [UI/two apps](stage-e-ui-draft.md), [platform/optional capabilities](stage-e-capabilities-draft.md), [independent acceptance](stage-e-test-draft.md), [design registry](../config/stage-e/capabilities.json) and [literal expectations](../fixtures/stage_e_full/acceptance.json). Illustrative manifests reference not-created BF sources/assets; no UI/device capability is accepted.
 
 E01 freezes each capability's complete bounded files before tests. E02–E04 add sealed multi-file input, canonical paths/configuration, frozen BFIO/BHIO session ownership and transactional artifact publication. E05 establishes native app event, lifetime, cancellation and state contracts. E06 proves actual visible text, touch/input, state commit, render acknowledgement and cleanup before any UI claim; E07 proves two different app structures. E08–E09 add modules/capability negotiation and explicit permission/API gateway behavior. E10 optional DEX and E11 storage/network/hardware each require BF-owned output and target evidence. E12 distribution formats and E13 additional ABI/API/device support are independent compatibility projects, not implied by one debug app.
 

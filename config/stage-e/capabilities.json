@@ -1,0 +1,15 @@
+{
+  "kind": "Inert Stage E design registry; not implemented COCK-BUILD-CONFIG parsing or supported capability advertisement",
+  "state": "DESIGN COMPLETE E01-E13; executable draft INCOMPLETE; tests NOT RUN; integration BLOCKED",
+  "contracts": ["COCK","COCK-FRAME-v1","COCK-BUILD-INPUT-v1","COCK-HOST-IO-v1","COCK-BUILD-CONFIG-v1","COCK-APP-ABI-v1","COCK-NATIVE-ENTRY-v1","COCK-UI-BASIC-v1"],
+  "initial_target": {"os":"Android","abi":"arm64-v8a","min_sdk":35,"target_sdk":35,"channel":"direct-install debug APK"},
+  "capability_designs": [
+    {"id":"ui.touch","status":"UNSUPPORTED until implemented and device-verified","event_types":[1],"input":"One primary ACTION_DOWN, finite in-window physical pixels, exact two u32 coordinates","dangerous_permissions":[]},
+    {"id":"ui.text","status":"UNSUPPORTED until implemented and device-verified","event_types":[2],"action_types":[1],"input":"Surface-ready empty data","output":"Version-1 single printable-ASCII text label and actual draw acknowledgement","dangerous_permissions":[]}
+  ],
+  "dispatch": {"in_flight_per_app":1,"queue_capacity":"Explicit nonzero per-app budget, no universal fixed queue size","backpressure":"Reject newest unadmitted event and record reason","state_commit":"Only after trusted guest return, valid action/status, live generation and local effect acknowledgement","restart":"Empty prior state absent independently verified persistence"},
+  "unsupported_initially": ["named direct module calls","arbitrary JNI/API operations","interactive text input","multitouch/gestures","rich UI/accessibility semantics","persistent state","network/hardware effects","DEX managed components","AAB/Play","other ABI/API rows"],
+  "production_mode": "BF generation/packaging/signing requires actual Stage D acceptance and separate release-key gates",
+  "external_debug_fallback": "Allowed only as disclosed development diagnostic; not Stage D production purity",
+  "tested_compatibility_rows": []
+}

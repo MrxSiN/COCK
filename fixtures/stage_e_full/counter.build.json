@@ -1,0 +1,13 @@
+{
+  "config_version": 1,
+  "application_id": "org.cock.counter",
+  "target_abi": "arm64-v8a",
+  "min_sdk": 35,
+  "target_sdk": 35,
+  "requested_capabilities": ["ui.touch", "ui.text"],
+  "modules": [
+    {"id":"counter","source":"examples/stage_e/counter.bf","_profile":"COCK","handler_id":1,"state_schema":1,"capabilities":["ui.touch","ui.text"]}
+  ],
+  "entrypoints": {"event_handler_id":1},
+  "assets": ["assets/stage_e/ascii8x8.bitmap"]
+}

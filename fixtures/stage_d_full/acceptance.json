@@ -1,0 +1,33 @@
+{
+  "kind": "Inert public primitive seed vectors and package/signature acceptance obligations",
+  "state": "NOT RUN; seed data is not a complete independent RSA/APK KAT corpus",
+  "primitive_vectors": [
+    {"id":"sha256_empty","algorithm":"SHA-256","input_hex":"","expected_hex":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"id":"sha256_abc","algorithm":"SHA-256","input_hex":"616263","expected_hex":"ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"},
+    {"id":"zip_crc_empty","algorithm":"CRC-32 ZIP","input_hex":"","expected_numeric_hex":"00000000"},
+    {"id":"zip_crc_digits","algorithm":"CRC-32 ZIP","input_hex":"313233343536373839","expected_numeric_hex":"cbf43926","expected_field_le_hex":"2639f4cb"},
+    {"id":"toy_modexp","algorithm":"public arithmetic example, NOT signature proof","base":4,"exponent":13,"modulus":497,"expected":445}
+  ],
+  "format_vectors": [
+    {"id":"empty_zip","input_hex":"504b0506000000000000000000000000000000000000","expected_zip_structure":"empty single-disk ZIP","expected_apk":"REJECT missing manifest/native/signature"},
+    {"id":"der_positive_128","integer":128,"expected_hex":"02020080"},
+    {"id":"der_nonminimal_integer","input_hex":"02020001","expected":"REJECT in strict DER"},
+    {"id":"der_indefinite_length","input_hex":"30800000","expected":"REJECT in DER"}
+  ],
+  "required_package_cases": [
+    "Input-driven binary manifest independently decoded against pinned attribute IDs",
+    "Changed app metadata/resources and actual dynamic entry inventory",
+    "Duplicate/traversal/alias/local-central path and CRC/size disagreement",
+    "Stored native data alignment independent from ELF LOAD alignment",
+    "32-bit ZIP and extra-length overflow, unsupported ZIP64/compression",
+    "Published complete RSA/DER/certificate/signature KATs before crypto implementation tests",
+    "Full independently signed exact APK reference and all v2 nested lengths/algorithms",
+    "1-MiB chunk boundaries and EOCD adjusted central-directory offset",
+    "Protected-region and signature/signed-data/certificate mutation rejection",
+    "Duplicate signing block/signer and truncated/trailing junk rejection",
+    "No external production packager/signature algorithm; explicit debug fallback",
+    "Failed producer/close/status/sign/publication keeps prior valid output",
+    "Actual install/launch on each claimed ABI/API/4-KiB or 16-KiB row",
+    "Disposable signing correctness separate from custody/release authorization"
+  ]
+}

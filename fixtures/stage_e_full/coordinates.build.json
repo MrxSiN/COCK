@@ -1,0 +1,15 @@
+{
+  "config_version": 1,
+  "application_id": "org.cock.coordinates",
+  "target_abi": "arm64-v8a",
+  "min_sdk": 35,
+  "target_sdk": 35,
+  "requested_capabilities": ["ui.text", "ui.touch"],
+  "modules": [
+    {"id":"label","source":"examples/stage_e/coordinates.bf","_profile":"COCK","handler_id":7,"state_schema":2,"dependencies":["convert"],"capabilities":["ui.text","ui.touch"]},
+    {"id":"convert","source":"examples/stage_e/convert.bf","_profile":"COCK"}
+  ],
+  "entrypoints": {"main_module_id":"convert","event_handler_id":7},
+  "assets": ["assets/stage_e/ascii8x8.bitmap","assets/stage_e/palette.bin"],
+  "optimization_policy": {"effort":"fast-dev","objective":"balanced"}
+}

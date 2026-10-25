@@ -1,0 +1,16 @@
+{
+  "reference_source": "src/bf_in_bf_reference.bf",
+  "license": "CC-BY-SA-4.0",
+  "guest_program_separator_hex": "21",
+  "planned_direct_compiler_examples": [
+    "tiny_app_a", "tiny_app_b", "held_out"
+  ],
+  "planned_nested_small_guests": [
+    {"program": "+++++.", "expected_stdout_hex": "05"},
+    {"program": "+++[>++<-]>.", "expected_stdout_hex": "06"},
+    {"program": ",.", "input_hex": "00", "expected_stdout_hex": "00"},
+    {"program": ",.", "input_hex": "ff", "expected_stdout_hex": "ff"}
+  ],
+  "attempt_full_nested_compiler": "Budget-limited exploratory diagnostic not mandatory successful proof",
+  "requirements_not_covered": ["complete_source_preflight", "exact_trusted_host_closure", "COCK_guest_fuel", "COCK_resource_budget_errors", "complete_nested_mini_compiler", "Android_device"]
+}

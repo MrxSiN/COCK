@@ -1,0 +1,269 @@
+{
+  "component": "bf_in_bf_pc_dynamic_prototype.bf",
+  "status": "LOCAL COMPONENT DIAGNOSTIC PASS / NOT STAGE A ACCEPTED",
+  "bounded_differential": {
+    "total": 1616,
+    "passed": 1616,
+    "seed": 20261025,
+    "limits": "one byte source length fuel and logical cell count",
+    "diagnostic_evaluator": "outside repository compiled C BF evaluator with grouped instruction operations",
+    "outer_evaluator_limit": 1200000000,
+    "notes": "The six maximum length stress cases initially exceeded the lower external diagnostic limit of 50 million grouped operations and subsequently completed with the higher external limit."
+  },
+  "fixtures": {
+    "passed": 22,
+    "total": 22,
+    "records": [
+      {
+        "id": "empty",
+        "input_bytes": 3,
+        "expected_bytes": 1,
+        "expected_hex": "00",
+        "input_sha256": "cf7605ed1bc735f6c825554154627467e1cac9df54cee8699218ed434603c568",
+        "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      {
+        "id": "one_byte",
+        "input_bytes": 5,
+        "expected_bytes": 2,
+        "expected_hex": "0100",
+        "input_sha256": "66df7f63c51f22c074e9497e001b6635f3a0541783d4a2beb27b4c369c87a9c6",
+        "expected_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254"
+      },
+      {
+        "id": "fuel_cutoff",
+        "input_bytes": 5,
+        "expected_bytes": 1,
+        "expected_hex": "06",
+        "input_sha256": "288c492cc83182c2cf574393b03586b9dd7b02c6fe54f505167b2fb9dfca91e0",
+        "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6"
+      },
+      {
+        "id": "zero_loop",
+        "input_bytes": 5,
+        "expected_bytes": 1,
+        "expected_hex": "00",
+        "input_sha256": "e88cf49fb16e95bd5c2328ed6f6dee6aa3810f3395109808b3a7e8f2ffa482f8",
+        "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      {
+        "id": "clear_loop",
+        "input_bytes": 9,
+        "expected_bytes": 2,
+        "expected_hex": "0000",
+        "input_sha256": "7004d517264736bc7d1fb60e6d0eda8862c1d71cf80f4d313203de91117bfd43",
+        "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      {
+        "id": "transfer_loop",
+        "input_bytes": 13,
+        "expected_bytes": 2,
+        "expected_hex": "0200",
+        "input_sha256": "89e6d2286ce06df960e771c801c73f8ef22faa158c5e101da96ce1c99aea8290",
+        "expected_sha256": "99be5efb88ca2013bd8e4eb035fd42d5245468fe9afa70d8ba9c1c419a48c4e8"
+      },
+      {
+        "id": "nested_loop",
+        "input_bytes": 23,
+        "expected_bytes": 2,
+        "expected_hex": "0800",
+        "input_sha256": "e6fd5bb7c0e0d760122d8c7e7e7cb371d7c3035a6b475747f7fdbebd9cea0b13",
+        "expected_sha256": "e545d395bb3fd971f91bf9a2b6722831df704efae6c1aa9da0989ed0970b77bb"
+      },
+      {
+        "id": "stdin_eof",
+        "input_bytes": 5,
+        "expected_bytes": 2,
+        "expected_hex": "0000",
+        "input_sha256": "39e786b5ccfc7d42a8ee07969c522ca412a23da23f0983e0be71d65b081d7239",
+        "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      {
+        "id": "stdin_ff",
+        "input_bytes": 6,
+        "expected_bytes": 2,
+        "expected_hex": "ff00",
+        "input_sha256": "488e7363eadd4ec00da1716a14ed94aa34be5fe3efd8b4538960efd0d1498347",
+        "expected_sha256": "ea5dbf9596d187e9500f23e9a680109475341cf4e81f7e043f7d97152c10772f"
+      },
+      {
+        "id": "stdin_zero",
+        "input_bytes": 6,
+        "expected_bytes": 2,
+        "expected_hex": "0000",
+        "input_sha256": "39bc0506284653fa15065edbe78bd9ab50fdef51952ddad112d7b2c7d3b5ed5b",
+        "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      {
+        "id": "invalid_suffix",
+        "input_bytes": 6,
+        "expected_bytes": 1,
+        "expected_hex": "01",
+        "input_sha256": "fbb7873285d0ba479824c0f4f8b18bb73c81b5386536272b163721ceb3ac2b2f",
+        "expected_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      {
+        "id": "invalid_source_nul",
+        "input_bytes": 6,
+        "expected_bytes": 1,
+        "expected_hex": "01",
+        "input_sha256": "104a246a819fc3ca0365b1d22a3d032313705cd32484ce2b50ed1f7a1e66d9fa",
+        "expected_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      {
+        "id": "unmatched_open",
+        "input_bytes": 5,
+        "expected_bytes": 1,
+        "expected_hex": "02",
+        "input_sha256": "fa28aaf82699a49c948d000c9f244bda1021ba9c63d487f830b115c4f86379ad",
+        "expected_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+      },
+      {
+        "id": "unmatched_close",
+        "input_bytes": 5,
+        "expected_bytes": 1,
+        "expected_hex": "03",
+        "input_sha256": "b8a16276332535d64b298e8261d14d8b8f4371aa32f97ec300284cac2ed68127",
+        "expected_sha256": "084fed08b978af4d7d196a7446a86b58009e636b611db16211b65a9aadff29c5"
+      },
+      {
+        "id": "left_trap",
+        "input_bytes": 4,
+        "expected_bytes": 1,
+        "expected_hex": "04",
+        "input_sha256": "03df6c85112519f21e116c91636b45a6a64d0e11f5d52a781b9fbdda206f85c4",
+        "expected_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+      },
+      {
+        "id": "right_trap",
+        "input_bytes": 5,
+        "expected_bytes": 1,
+        "expected_hex": "05",
+        "input_sha256": "200546cc775cbdb17c3ea47def63b2c01bda8c9e507feb973f82f2166942737b",
+        "expected_sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+      },
+      {
+        "id": "fuel_bracket_boundary",
+        "input_bytes": 7,
+        "expected_bytes": 1,
+        "expected_hex": "06",
+        "input_sha256": "6ec612cb370b817fd5c13e441be249057bb3aae9b65389afddab25ef74ff8a0e",
+        "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6"
+      },
+      {
+        "id": "max_linear_source",
+        "input_bytes": 258,
+        "expected_bytes": 2,
+        "expected_hex": "fe00",
+        "input_sha256": "ccc658f7b55d0c92904cfcd0cadfc308bb27025d27cfb7812d4cde7f15ca04b2",
+        "expected_sha256": "59316c1a765f0c95af8be7f3f75371aa38612e5ceffc4785ef22f5541635413a"
+      },
+      {
+        "id": "max_tape_highwater",
+        "input_bytes": 258,
+        "expected_bytes": 2,
+        "expected_hex": "0000",
+        "input_sha256": "5e85efcdc7baa3743a820908cc2841289ba15e30660908316ada09239d2eb7ed",
+        "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7"
+      },
+      {
+        "id": "max_tape_budget_trap",
+        "input_bytes": 258,
+        "expected_bytes": 1,
+        "expected_hex": "05",
+        "input_sha256": "c4f79c6f7cf57e75ab8479a917b7fff4fcced5f6b9405b9ceff3c2af84b9289b",
+        "expected_sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+      },
+      {
+        "id": "max_zero_skip",
+        "input_bytes": 257,
+        "expected_bytes": 1,
+        "expected_hex": "00",
+        "input_sha256": "e4ebe8daf0f287e2c3589fd0bf6dbf366b6d78605d80412ad75b20ea5814fa79",
+        "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+      },
+      {
+        "id": "empty_zero_budget",
+        "input_bytes": 3,
+        "expected_bytes": 1,
+        "expected_hex": "05",
+        "input_sha256": "709e80c88487a2411e1ee4dfb9f22a861492d20c4765150c0c794abd70f8147c",
+        "expected_sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db"
+      }
+    ]
+  },
+  "preserved_compiler_artifacts": [
+    {
+      "input": "original_tiny_app_a.input.bin",
+      "artifact": "tiny_app_a.aarch64.raw",
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "matched": true
+    },
+    {
+      "input": "original_tiny_app_b.input.bin",
+      "artifact": "tiny_app_b.aarch64.raw",
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "matched": true
+    },
+    {
+      "input": "original_held_out.input.bin",
+      "artifact": "held_out.aarch64.raw",
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "matched": true
+    },
+    {
+      "input": "compact_tiny_app_a.input.bin",
+      "artifact": "tiny_app_a.compact.aarch64.raw",
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "matched": true
+    },
+    {
+      "input": "compact_tiny_app_b.input.bin",
+      "artifact": "tiny_app_b.compact.aarch64.raw",
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "matched": true
+    },
+    {
+      "input": "compact_held_out.input.bin",
+      "artifact": "held_out.compact.aarch64.raw",
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "matched": true
+    }
+  ],
+  "source": {
+    "sha256": "ff218891b9edf8e1ac7f55c613a3d224e158456bfe15813898029737b947226d",
+    "bytes": 55491,
+    "bf_commands": 53823
+  },
+  "capabilities_tested": [
+    "Eight guest operations",
+    "nested backward loops",
+    "zero valued loop skipping",
+    "modular byte cells",
+    "binary input output",
+    "EOF as zero",
+    "source lexical and bracket preflight",
+    "guest fuel",
+    "left pointer trap",
+    "logical address budget trap",
+    "source length 255 and guest pointer 254"
+  ],
+  "remaining": [
+    "Source exceeds one byte length is unsupported",
+    "Fuel above 255 unsupported",
+    "Logical cell budget above 255 unsupported",
+    "No original source offset in diagnostic result",
+    "No independent physical host read count or stream closure",
+    "No BF authored production BFIO/BHIO integration",
+    "Does not execute the full 515 command mini compiler",
+    "Same interpreter nested selfhosting not verified",
+    "Android ELF APK and device verification deferred",
+    "External development drafting aid means process purity is not certified"
+  ]
+}

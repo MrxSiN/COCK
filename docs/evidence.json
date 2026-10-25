@@ -1,0 +1,67 @@
+{
+  "kind": "outside-repository custom evaluator diagnostics, not qualifying production self-hosting",
+  "reference_assembler_target": "aarch64-linux-android35",
+  "reference_assembler_hex": "000080520004001100040051001c0053c0035fd6",
+  "positive_candidates": [
+    {
+      "source": "examples/tiny_app_a.bf",
+      "source_raw_sha256": "3bea2e1b5e1a8c7e1430b1ad83f6a7b08dad1d14525ce6008618479310bbf651",
+      "source_command_sha256": "7d55aed571cbd57370d20eb0367a1c9e4439bbf0542b6c192f2cdd42daa4996a",
+      "emitted_file": "artifacts/tiny_app_a.aarch64.raw",
+      "emitted_byte_count": 264,
+      "emitted_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "outer_diagnostic_commands": 35752,
+      "production_root_executor_proven": false
+    },
+    {
+      "source": "examples/tiny_app_b.bf",
+      "source_raw_sha256": "49b0436e6ff4eb1b88dd8bd6f91abf9a5b79121a1dfcd65721bc123b0fb5d7df",
+      "source_command_sha256": "c9f28a75b2365685c5504fe98b6ece5a61baef6a25a6181eb769a98a4052a6e4",
+      "emitted_file": "artifacts/tiny_app_b.aarch64.raw",
+      "emitted_byte_count": 272,
+      "emitted_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "outer_diagnostic_commands": 36789,
+      "production_root_executor_proven": false
+    },
+    {
+      "source": "examples/held_out.bf",
+      "source_raw_sha256": "242d5375574e6b2c2890183fe66313e1d35eb4d46a147535a037d4a8048ad46e",
+      "source_command_sha256": "aa77a6c5555c13bb15d470c5daa53599c1f007aefb0067333c91bb719cbb6fcc",
+      "emitted_file": "artifacts/held_out.aarch64.raw",
+      "emitted_byte_count": 280,
+      "emitted_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "outer_diagnostic_commands": 37826,
+      "production_root_executor_proven": false
+    }
+  ],
+  "negative_gaps": [
+    {
+      "negative_case": "unrecognized_suffix",
+      "input_hex": "2b782e",
+      "raw_compiler_exited_without_source_error": true,
+      "produced_bytes": 16,
+      "expected_conforming_behavior": "reject before emitting bytes"
+    },
+    {
+      "negative_case": "embedded_nul",
+      "input_hex": "2b002d2e",
+      "raw_compiler_exited_without_source_error": true,
+      "produced_bytes": 16,
+      "expected_conforming_behavior": "reject before emitting bytes"
+    },
+    {
+      "negative_case": "unmatched_bracket",
+      "input_hex": "2b5b2e",
+      "raw_compiler_exited_without_source_error": true,
+      "produced_bytes": 16,
+      "expected_conforming_behavior": "reject before emitting bytes"
+    },
+    {
+      "negative_case": "no_terminal_output",
+      "input_hex": "2b2b2b",
+      "raw_compiler_exited_without_source_error": true,
+      "produced_bytes": 32,
+      "expected_conforming_behavior": "reject before emitting bytes"
+    }
+  ]
+}

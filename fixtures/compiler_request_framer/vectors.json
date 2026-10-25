@@ -1,0 +1,80 @@
+{
+  "original_tiny_app_a": {
+    "compiler_commands": 515,
+    "app_commands": 33,
+    "expected_bytes": 1064,
+    "expected_sha256": "68b7b2835e54f1d098d448be9e9cb1fa54e0ebcfac98fcef68395c4851fb495b"
+  },
+  "original_tiny_app_b": {
+    "compiler_commands": 515,
+    "app_commands": 34,
+    "expected_bytes": 1065,
+    "expected_sha256": "f8234d706d9dd26c4c74845c38218e0c33b68b9baaae87ef0c4dce11e95f9f2f"
+  },
+  "original_held_out": {
+    "compiler_commands": 515,
+    "app_commands": 35,
+    "expected_bytes": 1066,
+    "expected_sha256": "342f313484d0f2d23a44b5a628f4a65611478cb29f9103b9bccec8fa8d574e61"
+  },
+  "compact_tiny_app_a": {
+    "compiler_commands": 452,
+    "app_commands": 33,
+    "expected_bytes": 938,
+    "expected_sha256": "db9b62124bdda0e3a494607969f7fab55dcdc1d2a2afdbb91ffc6c9c253761a6"
+  },
+  "compact_tiny_app_b": {
+    "compiler_commands": 452,
+    "app_commands": 34,
+    "expected_bytes": 939,
+    "expected_sha256": "5ec7b63096f6f8837fecef88ee8ca6d15ebb757ed927755711b0561b266a0071"
+  },
+  "compact_held_out": {
+    "compiler_commands": 452,
+    "app_commands": 35,
+    "expected_bytes": 940,
+    "expected_sha256": "b05e074cebe44882f0775960fe75ebdda0bead36aad76ef4304316d6ea80aaf5"
+  },
+  "empty": {
+    "compiler_commands": 0,
+    "app_commands": 0,
+    "expected_bytes": 1,
+    "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+  },
+  "brackets": {
+    "compiler_commands": 10,
+    "app_commands": 2,
+    "expected_bytes": 23,
+    "expected_sha256": "f98498060bce687701fda49b4646f9a757dc347164a959889ad43347359ec6be"
+  },
+  "length_1": {
+    "compiler_commands": 1,
+    "app_commands": 1,
+    "expected_bytes": 4,
+    "expected_sha256": "857d21858ef7aee6cd2bf133126669ae21abb12c349c55321a5c1c14765f238c"
+  },
+  "length_255": {
+    "compiler_commands": 255,
+    "app_commands": 0,
+    "expected_bytes": 511,
+    "expected_sha256": "3243b4e3a55ba26328a9810db49dbbe087e21ee6607e206f8a7b233e50be0c22"
+  },
+  "length_256": {
+    "compiler_commands": 256,
+    "app_commands": 0,
+    "expected_bytes": 513,
+    "expected_sha256": "48bfba487688f1181c5a45b2b5a9459ee546c117b5788e96920b91c81d0d9ff3"
+  },
+  "length_515": {
+    "compiler_commands": 515,
+    "app_commands": 0,
+    "expected_bytes": 1031,
+    "expected_sha256": "0a7274a29b0ac32cb9c357973ffe83fec13b2410df540f70ef80f3779f848e91"
+  },
+  "length_1024": {
+    "compiler_commands": 1024,
+    "app_commands": 0,
+    "expected_bytes": 2049,
+    "expected_sha256": "088bcbd9904584bbeda6a829a7cf698f350fa8c8445a5f49962cd7733cc460c5"
+  }
+}

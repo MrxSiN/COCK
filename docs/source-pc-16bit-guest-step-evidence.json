@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-25",
+  "artifact": "src/source_pc_16bit_guest_step.bf",
+  "milestone": "local diagnostic execution step only",
+  "source_bytes": 35621,
+  "source_commands": 34246,
+  "source_sha256": "fa90883c9a9b7f4dce3d464783f006d08bc0f9d08b326c6ed454318c0c169be3",
+  "record_format": {
+    "request_bytes_per_step": 12,
+    "response_bytes_per_step": 9,
+    "request_count_width_bytes": 1,
+    "original_pc_width_bytes": 2,
+    "fuel_width_bytes": 2,
+    "logical_tape_budget_width_bytes": 1
+  },
+  "tests": {
+    "fixture_batches": 22,
+    "fixture_batches_passed": 22,
+    "individual_step_records": 1182,
+    "all_step_records_passed": true,
+    "legacy_aarch64_artifact_regressions": 6,
+    "legacy_aarch64_regressions_passed": 6,
+    "bf_sources_audited": 47,
+    "bf_source_audit_passed": 47
+  },
+  "fixture_results": [
+    {
+      "case": "fixed.input.bin",
+      "records": 35,
+      "passed": true,
+      "seconds": 0.00274,
+      "output_sha256": "73b782fc36a2b56dd7f76db5366f6a320b3ff84852bcd962a44ed32693f68df7",
+      "expected_sha256": "73b782fc36a2b56dd7f76db5366f6a320b3ff84852bcd962a44ed32693f68df7",
+      "diagnostic": "OK steps=722408 maxp=93 consumed=421"
+    },
+    {
+      "case": "mini_compiler_00.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00744,
+      "output_sha256": "9075f86cca32c68666d7ad945f6369b63ea0b3cc3f35892a5ea6737edff0966b",
+      "expected_sha256": "9075f86cca32c68666d7ad945f6369b63ea0b3cc3f35892a5ea6737edff0966b",
+      "diagnostic": "OK steps=3030494 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_01.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00645,
+      "output_sha256": "26025a90fa5c2a6a6a007a67274b66d0c5936f674000ba76485aa07b9ffe749f",
+      "expected_sha256": "26025a90fa5c2a6a6a007a67274b66d0c5936f674000ba76485aa07b9ffe749f",
+      "diagnostic": "OK steps=2893193 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_02.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00716,
+      "output_sha256": "3b67d7b4d65efa86f8ce4ae9586fb2673966cfec27d84e53ac68952b79b0c1bf",
+      "expected_sha256": "3b67d7b4d65efa86f8ce4ae9586fb2673966cfec27d84e53ac68952b79b0c1bf",
+      "diagnostic": "OK steps=2992695 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_03.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00678,
+      "output_sha256": "6e08e2cac85e623327b43112d1ac61fa6f942daf6b5ccdcba1901fded2ee9ae2",
+      "expected_sha256": "6e08e2cac85e623327b43112d1ac61fa6f942daf6b5ccdcba1901fded2ee9ae2",
+      "diagnostic": "OK steps=3012503 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_04.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.0069,
+      "output_sha256": "a3f55181c7079373542377d54c6e2c26590268151bcecc3fd30d5793992552e5",
+      "expected_sha256": "a3f55181c7079373542377d54c6e2c26590268151bcecc3fd30d5793992552e5",
+      "diagnostic": "OK steps=2882905 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_05.input.bin",
+      "records": 15,
+      "passed": true,
+      "seconds": 0.00178,
+      "output_sha256": "ab19226039fdee143bdc4097cb6734475c72f264a0ff03a92b7b72b34ad2a0c0",
+      "expected_sha256": "ab19226039fdee143bdc4097cb6734475c72f264a0ff03a92b7b72b34ad2a0c0",
+      "diagnostic": "OK steps=425609 maxp=90 consumed=181"
+    },
+    {
+      "case": "mini_compiler_compact_00.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00704,
+      "output_sha256": "4505130e35ab101559b5e1c314a613b1314c754e486b465eb19b9458aa8bbb91",
+      "expected_sha256": "4505130e35ab101559b5e1c314a613b1314c754e486b465eb19b9458aa8bbb91",
+      "diagnostic": "OK steps=3034036 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_compact_01.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00657,
+      "output_sha256": "88020e2dccbf78a827ff01602114c50e2c336b14e8242d5675f49f1bb4dfb24e",
+      "expected_sha256": "88020e2dccbf78a827ff01602114c50e2c336b14e8242d5675f49f1bb4dfb24e",
+      "diagnostic": "OK steps=2941364 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_compact_02.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00667,
+      "output_sha256": "dc237a8c3c3116a193a56d8dcd116069529ac4b31ff53f33524db4189c21e2f0",
+      "expected_sha256": "dc237a8c3c3116a193a56d8dcd116069529ac4b31ff53f33524db4189c21e2f0",
+      "diagnostic": "OK steps=2960187 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_compact_03.input.bin",
+      "records": 100,
+      "passed": true,
+      "seconds": 0.00686,
+      "output_sha256": "93760bd7d58558f1be721a37441548d7ee4654d57aebb66cda8a242d5454d0d2",
+      "expected_sha256": "93760bd7d58558f1be721a37441548d7ee4654d57aebb66cda8a242d5454d0d2",
+      "diagnostic": "OK steps=3019720 maxp=93 consumed=1201"
+    },
+    {
+      "case": "mini_compiler_compact_04.input.bin",
+      "records": 52,
+      "passed": true,
+      "seconds": 0.00383,
+      "output_sha256": "cd51d9d234923dbfe5018287793ad11e6ede8b262db0ed63443903aecb91b5f1",
+      "expected_sha256": "cd51d9d234923dbfe5018287793ad11e6ede8b262db0ed63443903aecb91b5f1",
+      "diagnostic": "OK steps=1506968 maxp=93 consumed=625"
+    },
+    {
+      "case": "random_00.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00186,
+      "output_sha256": "0113c0bcc508b205b46ee2d08d9e7f16bad37f17903c04ef5724f25b63ecdcb8",
+      "expected_sha256": "0113c0bcc508b205b46ee2d08d9e7f16bad37f17903c04ef5724f25b63ecdcb8",
+      "diagnostic": "OK steps=521934 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_01.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00239,
+      "output_sha256": "d3490d04bbfe7940d7e682cb53d5a1e830a81aafdfc6ca4cf10284a95f0ecb1d",
+      "expected_sha256": "d3490d04bbfe7940d7e682cb53d5a1e830a81aafdfc6ca4cf10284a95f0ecb1d",
+      "diagnostic": "OK steps=464967 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_02.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00204,
+      "output_sha256": "11ee544f38f53ad76fbecadadccc4cb0620322262870b0a60c3a0fdd01a05838",
+      "expected_sha256": "11ee544f38f53ad76fbecadadccc4cb0620322262870b0a60c3a0fdd01a05838",
+      "diagnostic": "OK steps=463834 maxp=90 consumed=217"
+    },
+    {
+      "case": "random_03.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00231,
+      "output_sha256": "276bd019cd778f0210995902ace562e63b1c474b4ad36d0c0c1a6f1bee97bca3",
+      "expected_sha256": "276bd019cd778f0210995902ace562e63b1c474b4ad36d0c0c1a6f1bee97bca3",
+      "diagnostic": "OK steps=437715 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_04.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00184,
+      "output_sha256": "4e724672789a294abfcea8978fb153543779b9363065c0e6640272cdd8be7521",
+      "expected_sha256": "4e724672789a294abfcea8978fb153543779b9363065c0e6640272cdd8be7521",
+      "diagnostic": "OK steps=442771 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_05.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00172,
+      "output_sha256": "adbabbd24da09eab2dfe835a1c07d795a3977082d410bd637a8fab0a0d381cff",
+      "expected_sha256": "adbabbd24da09eab2dfe835a1c07d795a3977082d410bd637a8fab0a0d381cff",
+      "diagnostic": "OK steps=405317 maxp=90 consumed=217"
+    },
+    {
+      "case": "random_06.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.0016,
+      "output_sha256": "5634ef067d56f65e65b2dc6d222ee908ff5cb4aef472b0b0061c5142b8be6d24",
+      "expected_sha256": "5634ef067d56f65e65b2dc6d222ee908ff5cb4aef472b0b0061c5142b8be6d24",
+      "diagnostic": "OK steps=398008 maxp=90 consumed=217"
+    },
+    {
+      "case": "random_07.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00225,
+      "output_sha256": "5a51b52508ffeaa245422a76709c31d017549715830e6d7c7b20a0d016dff2b8",
+      "expected_sha256": "5a51b52508ffeaa245422a76709c31d017549715830e6d7c7b20a0d016dff2b8",
+      "diagnostic": "OK steps=529196 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_08.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00174,
+      "output_sha256": "6c7e423d6efb39a1afe30c664cb18c07c3b7b10984ff904c6b4e897387d735e0",
+      "expected_sha256": "6c7e423d6efb39a1afe30c664cb18c07c3b7b10984ff904c6b4e897387d735e0",
+      "diagnostic": "OK steps=479643 maxp=93 consumed=217"
+    },
+    {
+      "case": "random_09.input.bin",
+      "records": 18,
+      "passed": true,
+      "seconds": 0.00182,
+      "output_sha256": "4c66da5154f5d0a4e2228befa6cdc4195813bd3147c660fd25c5635e03375c37",
+      "expected_sha256": "4c66da5154f5d0a4e2228befa6cdc4195813bd3147c660fd25c5635e03375c37",
+      "diagnostic": "OK steps=446248 maxp=90 consumed=217"
+    }
+  ],
+  "frozen_compiler_artifacts": [
+    {
+      "compiler": "mini_compiler",
+      "app": "tiny_app_a",
+      "passed": true,
+      "bytes": 264,
+      "target_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "output_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "outer_diagnostic": "OK steps=516861523 maxp=6191 consumed=552",
+      "seconds": 1.1341
+    },
+    {
+      "compiler": "mini_compiler",
+      "app": "tiny_app_b",
+      "passed": true,
+      "bytes": 272,
+      "target_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "output_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "outer_diagnostic": "OK steps=531893707 maxp=6191 consumed=553",
+      "seconds": 1.1217
+    },
+    {
+      "compiler": "mini_compiler",
+      "app": "held_out",
+      "passed": true,
+      "bytes": 280,
+      "target_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "output_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "outer_diagnostic": "OK steps=546925891 maxp=6191 consumed=554",
+      "seconds": 1.1797
+    },
+    {
+      "compiler": "mini_compiler_compact",
+      "app": "tiny_app_a",
+      "passed": true,
+      "bytes": 140,
+      "target_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "output_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "outer_diagnostic": "OK steps=368482452 maxp=5435 consumed=488",
+      "seconds": 0.8042
+    },
+    {
+      "compiler": "mini_compiler_compact",
+      "app": "tiny_app_b",
+      "passed": true,
+      "bytes": 144,
+      "target_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "output_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "outer_diagnostic": "OK steps=378768315 maxp=5435 consumed=489",
+      "seconds": 0.8128
+    },
+    {
+      "compiler": "mini_compiler_compact",
+      "app": "held_out",
+      "passed": true,
+      "bytes": 148,
+      "target_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "output_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "outer_diagnostic": "OK steps=389054178 maxp=5435 consumed=490",
+      "seconds": 0.824
+    }
+  ],
+  "negative_observations": {
+    "correct_partner": {
+      "input_hex": "015b1400640000010002060000",
+      "output_hex": "006500000000020000",
+      "exit_code": 0,
+      "process_result": "OK steps=24365 maxp=90 consumed=13"
+    },
+    "false_partner": {
+      "input_hex": "015b1400c80000010002060000",
+      "output_hex": "00c900000000020000",
+      "exit_code": 0,
+      "process_result": "OK steps=26965 maxp=90 consumed=13"
+    },
+    "full_arithmetic_record": {
+      "input_hex": "012b0100000005010000060063",
+      "output_hex": "000200000006000000",
+      "exit_code": 0,
+      "process_result": "OK steps=16724 maxp=90 consumed=13"
+    },
+    "truncated_arithmetic_record": {
+      "input_hex": "012b01000000050100000600",
+      "output_hex": "000200000006000000",
+      "exit_code": 0,
+      "process_result": "OK steps=16724 maxp=90 consumed=12"
+    },
+    "extra_trailing_data": {
+      "input_hex": "015b140064000001000206000058",
+      "output_hex": "006500000000020000",
+      "exit_code": 0,
+      "process_result": "OK steps=24365 maxp=90 consumed=13"
+    },
+    "invalid_input_presence": {
+      "input_hex": "012c010000000501000006ff0a",
+      "output_hex": "0d0100010005000000",
+      "exit_code": 0,
+      "process_result": "OK steps=15804 maxp=90 consumed=13"
+    },
+    "pointer_not_validated": {
+      "input_hex": "012b0100000005010009060000",
+      "output_hex": "000200000006090000",
+      "exit_code": 0,
+      "process_result": "OK steps=16832 maxp=90 consumed=13"
+    }
+  },
+  "known_blockers": [
+    "source fetch not integrated",
+    "guest tape not owned or persisted by this component",
+    "bracket partners and current guest cell supplied by caller",
+    "no authenticated byte count or host stream closure",
+    "not full annotated source preflight",
+    "six cell legacy compiler interpreter lacks guest fuel and scalable tape",
+    "same interpreter nested actual compiler NOT VERIFIED",
+    "production BF development process provenance NOT CERTIFIED",
+    "Android deferred"
+  ]
+}

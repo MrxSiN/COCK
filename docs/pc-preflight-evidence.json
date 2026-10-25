@@ -1,0 +1,73 @@
+{
+  "component": "src/bf_in_bf_pc_preflight.bf",
+  "classification": "integrated bounded local diagnostic; not Stage A acceptance",
+  "source_bytes": 546801,
+  "executable_bf_commands": 540532,
+  "sha256": "60099076a86e6a61eacd3de724e09e7a56ef3630e36b8386c4cf365cb722794d",
+  "preserved_reference_kernel_sha256": "a1f42a11055f2f12f19a9fe1cf75eac5bed6dd4b26306091e204ae0ee1d62cbc",
+  "guest_contract": {
+    "source_max_commands": 127,
+    "guest_tape_cells": 16,
+    "fuel_max": 255,
+    "input": "u8 source length followed by exactly that many raw normalized BF source bytes, u8 guest fuel, raw guest stdin",
+    "output": "guest bytes followed by one diagnostic status byte; source-preflight failure emits status only",
+    "status_codes": {
+      "invalid_source_byte": 1,
+      "unmatched_open": 2,
+      "unmatched_close": 3,
+      "left_boundary": 4,
+      "right_tape_budget": 5,
+      "fuel_exhaustion": 6,
+      "unsupported_capability": 13
+    }
+  },
+  "test_results": {
+    "seeded_differential": {
+      "passed": 431,
+      "total": 431,
+      "fixed": 21,
+      "randomized": 410,
+      "seed": 20261024,
+      "failures": 0
+    },
+    "binary_exhaustive": {
+      "passed": 256,
+      "total": 256
+    },
+    "new_exact_byte_fixtures": {
+      "passed": 19,
+      "total": 19
+    },
+    "legacy_pc_dispatch_fixtures": {
+      "passed": 20,
+      "total": 20
+    },
+    "unaltered_six_cell_compiler_outputs": {
+      "passed": 6,
+      "total": 6,
+      "exact_raw_sha256s": {
+        "held_out.aarch64.raw": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+        "held_out.compact.aarch64.raw": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+        "tiny_app_a.aarch64.raw": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+        "tiny_app_a.compact.aarch64.raw": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+        "tiny_app_b.aarch64.raw": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+        "tiny_app_b.compact.aarch64.raw": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+      }
+    },
+    "repository_bf_grammar_bracket_audit": {
+      "passed": 34,
+      "total": 34
+    }
+  },
+  "environment": "Outside-repository temporary C Brainfuck diagnostic evaluator built with Clang; a Python authoring and differential aid outside the repository. Not qualified as the independent Stage A bootstrap.",
+  "known_gaps": [
+    "trusted exact host transport closure and trailing byte detection not implemented",
+    "annotated original source preprocessing and original byte offset results not integrated",
+    "no source capacity beyond 127 guest commands",
+    "no dynamically right growing logical tape or more than sixteen cells",
+    "fuel representation 8 bit",
+    "same interpreter nested mini compiler chain not verified",
+    "Android ELF APK emulator and device acceptance deferred",
+    "strict Brainfuck-only development-process authorship not certified because of temporary foreign-language authoring aids"
+  ]
+}

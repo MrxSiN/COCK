@@ -1,0 +1,65 @@
+{
+  "status": "COMPONENT DIAGNOSTIC PASSED",
+  "source": "src/bf_in_bf_dynamic_zero_skip.bf",
+  "sha256": "31a137c2633670de305f366c2ab868c1519d43bf24b664fc96b8ecefa7c013d7",
+  "case_total": 533,
+  "passed": 533,
+  "failures": [],
+  "baseline_comparisons_passed": 90,
+  "baseline_failures": [],
+  "frozen_compiler_matches": 6,
+  "frozen_compiler_failures": [],
+  "bf_source_files_audited": 41,
+  "bf_source_failures": [],
+  "fixture_pairs": 32,
+  "limits": [
+    "zero-valued loops only support general bracket skipping",
+    "nonzero loops restricted to exact clearing patterns",
+    "8-bit nesting limit",
+    "no guest command fuel",
+    "not a complete source preflight",
+    "host closure not verified",
+    "no same-interpreter selfhosting",
+    "Android deferred"
+  ],
+  "consolidated_batch_defect_and_repair": [
+    {
+      "phase": "initial test batch",
+      "result": "318 of 533 cases matched; success on skipped loops incorrectly left unsupported opcode marker active"
+    },
+    {
+      "phase": "repaired full test rerun",
+      "result": "533 of 533 cases matched independently calculated expected bytes"
+    },
+    {
+      "phase": "baseline selection correction",
+      "result": "excluded new zero skip behavior absent from prior implementation; tested 90 genuinely shared inputs, all passed"
+    }
+  ],
+  "known_negative_probes": [
+    {
+      "case": "invalid source suffix after output",
+      "input_hex": "002b2e5800",
+      "observed_hex": "010d",
+      "reason": "full source preflight is not implemented; provisional guest output escapes"
+    },
+    {
+      "case": "extra bytes after source terminator",
+      "input_hex": "002b2e0067617262616765",
+      "observed_hex": "0100",
+      "reason": "no independently verified host stream closure"
+    },
+    {
+      "case": "unsupported raw guest comma",
+      "input_hex": "002c00",
+      "observed_hex": "0d",
+      "reason": "input guest operation is not implemented in this interpreter"
+    },
+    {
+      "case": "unmatched bracket after output",
+      "input_hex": "002e5b00",
+      "observed_hex": "000d",
+      "reason": "prefix output appears before loop rejection without full preflight"
+    }
+  ]
+}

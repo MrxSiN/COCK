@@ -1,0 +1,66 @@
+{
+  "source_contract": "admitted normalized arithmetic only with physical EOF following the final dot command",
+  "machine_words_le_hex": {
+    "init": "00008052",
+    "plus": "00040011",
+    "minus": "00040051",
+    "final_byte_mask": "001c0053",
+    "return": "c0035fd6"
+  },
+  "tests": [
+    {
+      "name": "tiny_app_a",
+      "source": "++++++++++++++++++++++++++++++++.",
+      "expected_native_bytes": 140,
+      "expected_guest_hex": "20"
+    },
+    {
+      "name": "tiny_app_b",
+      "source": "+++++++++++++++++++++++++++++++++.",
+      "expected_native_bytes": 144,
+      "expected_guest_hex": "21"
+    },
+    {
+      "name": "held_out",
+      "source": "++++++++++++++++++++++++++++++++++.",
+      "expected_native_bytes": 148,
+      "expected_guest_hex": "22"
+    },
+    {
+      "name": "mixed",
+      "source": "-+++++++++++++++++++++++++++++++++.",
+      "expected_native_bytes": 148,
+      "expected_guest_hex": "20"
+    },
+    {
+      "name": "wrap",
+      "source": "-.",
+      "expected_native_bytes": 16,
+      "expected_guest_hex": "ff",
+      "admitted_only_for_emitter_diagnostic": true
+    },
+    {
+      "name": "plus_only",
+      "source": "+.",
+      "expected_native_bytes": 16,
+      "expected_guest_hex": "01",
+      "admitted_only_for_emitter_diagnostic": true
+    },
+    {
+      "name": "zero",
+      "source": "+++---.",
+      "expected_native_bytes": 36,
+      "expected_guest_hex": "00",
+      "admitted_only_for_emitter_diagnostic": true
+    }
+  ],
+  "mandatory_upstream_rejection": [
+    "embedded_source_nul",
+    "unknown_char",
+    "missing_final_dot",
+    "duplicate_final_dot",
+    "nonprintable_guest_result",
+    "malformed_annotation",
+    "missing_transport_closure"
+  ]
+}

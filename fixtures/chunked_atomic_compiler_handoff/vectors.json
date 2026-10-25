@@ -1,0 +1,19 @@
+{
+  "status_at_inventory_freeze":"PLANNED_NOT_RUN",
+  "input_grammar":"(length:uint8_nonzero source:bytes[length])* zero_length:A5_guard",
+  "success_output":"01 + (01 source_byte)* + 00",
+  "failure_output":"00",
+  "positive_cases":[
+    "empty","one_plus","all_eight_glyphs_balanced","brackets_across_chunks",
+    "original_compiler_chunks_200","compact_compiler_chunks_200",
+    "original_compiler_chunks_1","compact_compiler_chunks_1",
+    "source_255","source_256","source_1024","source_255_one_chunk"
+  ],
+  "negative_cases":[
+    "invalid_ascii","embedded_nul","invalid_suffix","unmatched_open",
+    "unmatched_close","guard_changed","guard_missing","chunk_truncated"
+  ],
+  "host_only_rejection_cases":["trailing_byte_after_complete_record","producer_nonzero_exit"],
+  "regressions":["original_tiny_app_a","original_tiny_app_b","original_held_out","compact_tiny_app_a","compact_tiny_app_b","compact_held_out"],
+  "open_boundary":"guest bracket depth 256 and above must never be accepted by accidental wrapping"
+}

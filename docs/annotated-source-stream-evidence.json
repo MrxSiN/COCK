@@ -1,0 +1,6583 @@
+{
+  "date": "2026-10-24",
+  "validator": "annotated_source_stream_gate.bf",
+  "sha256": "dbb91920aab5a304e15efd22a194c495f1934cca85067c65a61188c7b896387a",
+  "batch_one": 589,
+  "batch_one_pass": 589,
+  "extended_total": 924,
+  "extended_pass": 924,
+  "extended_records": [
+    {
+      "id": "comment_byte_0",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_0",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_1",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_1",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_2",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_2",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_3",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_3",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_4",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_4",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_5",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_5",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_6",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_6",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_7",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_7",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_8",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_8",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_9",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_9",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_10",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_10",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_11",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_11",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_12",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_12",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_13",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_13",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_14",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_14",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_15",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_15",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_16",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_16",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_17",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_17",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_18",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_18",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_19",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_19",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_20",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_20",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_21",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_21",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_22",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_22",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_23",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_23",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_24",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_24",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_25",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_25",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_26",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_26",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_27",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_27",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_28",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_28",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_29",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_29",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_30",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_30",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_31",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_31",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_32",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_32",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_33",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_33",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_34",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_34",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_35",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_35",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_36",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_36",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_37",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_37",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_38",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_38",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_39",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_39",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_40",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_40",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_41",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_41",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_42",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_42",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_43",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_43",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_44",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_44",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_45",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_45",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_46",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_46",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_47",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_47",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_48",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_48",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_49",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_49",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_50",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_50",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_51",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_51",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_52",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_52",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_53",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_53",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_54",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_54",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_55",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_55",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_56",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_56",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_57",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_57",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_58",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_58",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_59",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_59",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_60",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_60",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_61",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_61",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_62",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_62",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_63",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_63",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_64",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_64",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_65",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_65",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_66",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_66",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_67",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_67",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_68",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_68",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_69",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_69",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_70",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_70",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_71",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_71",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_72",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_72",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_73",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_73",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_74",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_74",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_75",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_75",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_76",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_76",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_77",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_77",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_78",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_78",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_79",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_79",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_80",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_80",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_81",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_81",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_82",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_82",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_83",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_83",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_84",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_84",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_85",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_85",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_86",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_86",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_87",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_87",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_88",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_88",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_89",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_89",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_90",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_90",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_91",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_91",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_92",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_92",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_93",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_93",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_94",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_94",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_95",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_95",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_96",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_96",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_97",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_97",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_98",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_98",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_99",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_99",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_100",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_100",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_101",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_101",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_102",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_102",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_103",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_103",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_104",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_104",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_105",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_105",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_106",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_106",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_107",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_107",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_108",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_108",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_109",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_109",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_110",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_110",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_111",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_111",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_112",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_112",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_113",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_113",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_114",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_114",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_115",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_115",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_116",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_116",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_117",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_117",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_118",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_118",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_119",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_119",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_120",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_120",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_121",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_121",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_122",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_122",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_123",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_123",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_124",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_124",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_125",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_125",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_126",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_126",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_127",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_127",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_128",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_128",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_129",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_129",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_130",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_130",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_131",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_131",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_132",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_132",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_133",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_133",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_134",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_134",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_135",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_135",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_136",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_136",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_137",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_137",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_138",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_138",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_139",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_139",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_140",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_140",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_141",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_141",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_142",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_142",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_143",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_143",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_144",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_144",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_145",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_145",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_146",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_146",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_147",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_147",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_148",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_148",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_149",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_149",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_150",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_150",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_151",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_151",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_152",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_152",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_153",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_153",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_154",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_154",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_155",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_155",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_156",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_156",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_157",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_157",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_158",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_158",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_159",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_159",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_160",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_160",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_161",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_161",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_162",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_162",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_163",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_163",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_164",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_164",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_165",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_165",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_166",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_166",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_167",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_167",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_168",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_168",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_169",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_169",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_170",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_170",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_171",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_171",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_172",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_172",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_173",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_173",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_174",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_174",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_175",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_175",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_176",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_176",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_177",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_177",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_178",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_178",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_179",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_179",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_180",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_180",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_181",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_181",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_182",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_182",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_183",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_183",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_184",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_184",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_185",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_185",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_186",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_186",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_187",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_187",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_188",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_188",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_189",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_189",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_190",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_190",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_191",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_191",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_192",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_192",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_193",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_193",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_194",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_194",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_195",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_195",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_196",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_196",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_197",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_197",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_198",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_198",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_199",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_199",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_200",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_200",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_201",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_201",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_202",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_202",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_203",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_203",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_204",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_204",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_205",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_205",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_206",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_206",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_207",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_207",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_208",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_208",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_209",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_209",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_210",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_210",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_211",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_211",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_212",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_212",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_213",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_213",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_214",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_214",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_215",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_215",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_216",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_216",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_217",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_217",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_218",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_218",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_219",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_219",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_220",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_220",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_221",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_221",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_222",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_222",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_223",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_223",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_224",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_224",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_225",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_225",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_226",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_226",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_227",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_227",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_228",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_228",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_229",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_229",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_230",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_230",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_231",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_231",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_232",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_232",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_233",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_233",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_234",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_234",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_235",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_235",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_236",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_236",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_237",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_237",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_238",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_238",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_239",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_239",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_240",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_240",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_241",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_241",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_242",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_242",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_243",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_243",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_244",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_244",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_245",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_245",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_246",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_246",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_247",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_247",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_248",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_248",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_249",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_249",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_250",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_250",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_251",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_251",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_252",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_252",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_253",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_253",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_254",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_254",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "comment_byte_255",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "code_byte_255",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 3
+    },
+    {
+      "id": "mixed_0",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 11
+    },
+    {
+      "id": "mixed_1",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 86
+    },
+    {
+      "id": "mixed_2",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_3",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 79
+    },
+    {
+      "id": "mixed_4",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 104
+    },
+    {
+      "id": "mixed_5",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 89
+    },
+    {
+      "id": "mixed_6",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_7",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_8",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 80
+    },
+    {
+      "id": "mixed_9",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_10",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_11",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_12",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_13",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 59
+    },
+    {
+      "id": "mixed_14",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_15",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 81
+    },
+    {
+      "id": "mixed_16",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 26
+    },
+    {
+      "id": "mixed_17",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_18",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_19",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 17
+    },
+    {
+      "id": "mixed_20",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_21",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 15
+    },
+    {
+      "id": "mixed_22",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_23",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 79
+    },
+    {
+      "id": "mixed_24",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_25",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_26",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_27",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 49
+    },
+    {
+      "id": "mixed_28",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 12
+    },
+    {
+      "id": "mixed_29",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 65
+    },
+    {
+      "id": "mixed_30",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_31",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 46
+    },
+    {
+      "id": "mixed_32",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 99
+    },
+    {
+      "id": "mixed_33",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 63
+    },
+    {
+      "id": "mixed_34",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_35",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 27
+    },
+    {
+      "id": "mixed_36",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 94
+    },
+    {
+      "id": "mixed_37",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 23
+    },
+    {
+      "id": "mixed_38",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 81
+    },
+    {
+      "id": "mixed_39",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 29
+    },
+    {
+      "id": "mixed_40",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 63
+    },
+    {
+      "id": "mixed_41",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 35
+    },
+    {
+      "id": "mixed_42",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_43",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 30
+    },
+    {
+      "id": "mixed_44",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 72
+    },
+    {
+      "id": "mixed_45",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_46",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 113
+    },
+    {
+      "id": "mixed_47",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_48",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 94
+    },
+    {
+      "id": "mixed_49",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_50",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 89
+    },
+    {
+      "id": "mixed_51",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_52",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_53",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_54",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 74
+    },
+    {
+      "id": "mixed_55",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_56",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 26
+    },
+    {
+      "id": "mixed_57",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 36
+    },
+    {
+      "id": "mixed_58",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 77
+    },
+    {
+      "id": "mixed_59",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 27
+    },
+    {
+      "id": "mixed_60",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_61",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_62",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_63",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_64",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 57
+    },
+    {
+      "id": "mixed_65",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 83
+    },
+    {
+      "id": "mixed_66",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_67",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 73
+    },
+    {
+      "id": "mixed_68",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 68
+    },
+    {
+      "id": "mixed_69",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_70",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_71",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 21
+    },
+    {
+      "id": "mixed_72",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_73",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 27
+    },
+    {
+      "id": "mixed_74",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 35
+    },
+    {
+      "id": "mixed_75",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_76",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 92
+    },
+    {
+      "id": "mixed_77",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_78",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_79",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_80",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 119
+    },
+    {
+      "id": "mixed_81",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 59
+    },
+    {
+      "id": "mixed_82",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 56
+    },
+    {
+      "id": "mixed_83",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_84",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 18
+    },
+    {
+      "id": "mixed_85",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_86",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 12
+    },
+    {
+      "id": "mixed_87",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 76
+    },
+    {
+      "id": "mixed_88",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 18
+    },
+    {
+      "id": "mixed_89",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_90",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 28
+    },
+    {
+      "id": "mixed_91",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 33
+    },
+    {
+      "id": "mixed_92",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 91
+    },
+    {
+      "id": "mixed_93",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 49
+    },
+    {
+      "id": "mixed_94",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_95",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_96",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_97",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_98",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 99
+    },
+    {
+      "id": "mixed_99",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 36
+    },
+    {
+      "id": "mixed_100",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_101",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_102",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 35
+    },
+    {
+      "id": "mixed_103",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 13
+    },
+    {
+      "id": "mixed_104",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 99
+    },
+    {
+      "id": "mixed_105",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_106",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 106
+    },
+    {
+      "id": "mixed_107",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_108",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_109",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 97
+    },
+    {
+      "id": "mixed_110",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 69
+    },
+    {
+      "id": "mixed_111",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_112",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 86
+    },
+    {
+      "id": "mixed_113",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_114",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 56
+    },
+    {
+      "id": "mixed_115",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_116",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_117",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 82
+    },
+    {
+      "id": "mixed_118",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 8
+    },
+    {
+      "id": "mixed_119",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_120",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 76
+    },
+    {
+      "id": "mixed_121",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 57
+    },
+    {
+      "id": "mixed_122",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 114
+    },
+    {
+      "id": "mixed_123",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_124",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 86
+    },
+    {
+      "id": "mixed_125",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 120
+    },
+    {
+      "id": "mixed_126",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 89
+    },
+    {
+      "id": "mixed_127",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 85
+    },
+    {
+      "id": "mixed_128",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 111
+    },
+    {
+      "id": "mixed_129",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_130",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_131",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 57
+    },
+    {
+      "id": "mixed_132",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_133",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 63
+    },
+    {
+      "id": "mixed_134",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 118
+    },
+    {
+      "id": "mixed_135",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 73
+    },
+    {
+      "id": "mixed_136",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_137",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 11
+    },
+    {
+      "id": "mixed_138",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 59
+    },
+    {
+      "id": "mixed_139",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 21
+    },
+    {
+      "id": "mixed_140",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_141",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 71
+    },
+    {
+      "id": "mixed_142",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 32
+    },
+    {
+      "id": "mixed_143",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 34
+    },
+    {
+      "id": "mixed_144",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 107
+    },
+    {
+      "id": "mixed_145",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_146",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_147",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 75
+    },
+    {
+      "id": "mixed_148",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 54
+    },
+    {
+      "id": "mixed_149",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 59
+    },
+    {
+      "id": "mixed_150",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 85
+    },
+    {
+      "id": "mixed_151",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 58
+    },
+    {
+      "id": "mixed_152",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_153",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 18
+    },
+    {
+      "id": "mixed_154",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 12
+    },
+    {
+      "id": "mixed_155",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 75
+    },
+    {
+      "id": "mixed_156",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_157",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 32
+    },
+    {
+      "id": "mixed_158",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 28
+    },
+    {
+      "id": "mixed_159",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 52
+    },
+    {
+      "id": "mixed_160",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_161",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_162",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_163",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 65
+    },
+    {
+      "id": "mixed_164",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 50
+    },
+    {
+      "id": "mixed_165",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 88
+    },
+    {
+      "id": "mixed_166",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 60
+    },
+    {
+      "id": "mixed_167",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_168",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 55
+    },
+    {
+      "id": "mixed_169",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_170",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_171",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 13
+    },
+    {
+      "id": "mixed_172",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_173",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 101
+    },
+    {
+      "id": "mixed_174",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 36
+    },
+    {
+      "id": "mixed_175",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 70
+    },
+    {
+      "id": "mixed_176",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 6
+    },
+    {
+      "id": "mixed_177",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 35
+    },
+    {
+      "id": "mixed_178",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 40
+    },
+    {
+      "id": "mixed_179",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 45
+    },
+    {
+      "id": "mixed_180",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 9
+    },
+    {
+      "id": "mixed_181",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_182",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_183",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 93
+    },
+    {
+      "id": "mixed_184",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 102
+    },
+    {
+      "id": "mixed_185",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 6
+    },
+    {
+      "id": "mixed_186",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_187",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 88
+    },
+    {
+      "id": "mixed_188",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 26
+    },
+    {
+      "id": "mixed_189",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_190",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_191",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_192",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 56
+    },
+    {
+      "id": "mixed_193",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_194",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 56
+    },
+    {
+      "id": "mixed_195",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_196",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_197",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 10
+    },
+    {
+      "id": "mixed_198",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 91
+    },
+    {
+      "id": "mixed_199",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 57
+    },
+    {
+      "id": "mixed_200",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 58
+    },
+    {
+      "id": "mixed_201",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 102
+    },
+    {
+      "id": "mixed_202",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 68
+    },
+    {
+      "id": "mixed_203",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 60
+    },
+    {
+      "id": "mixed_204",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_205",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 82
+    },
+    {
+      "id": "mixed_206",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 104
+    },
+    {
+      "id": "mixed_207",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 50
+    },
+    {
+      "id": "mixed_208",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 82
+    },
+    {
+      "id": "mixed_209",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 23
+    },
+    {
+      "id": "mixed_210",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_211",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_212",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 14
+    },
+    {
+      "id": "mixed_213",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 51
+    },
+    {
+      "id": "mixed_214",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 26
+    },
+    {
+      "id": "mixed_215",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_216",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 52
+    },
+    {
+      "id": "mixed_217",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 28
+    },
+    {
+      "id": "mixed_218",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 50
+    },
+    {
+      "id": "mixed_219",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 63
+    },
+    {
+      "id": "mixed_220",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 121
+    },
+    {
+      "id": "mixed_221",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_222",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_223",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_224",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 29
+    },
+    {
+      "id": "mixed_225",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 33
+    },
+    {
+      "id": "mixed_226",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 80
+    },
+    {
+      "id": "mixed_227",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 24
+    },
+    {
+      "id": "mixed_228",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_229",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 55
+    },
+    {
+      "id": "mixed_230",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 39
+    },
+    {
+      "id": "mixed_231",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_232",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 108
+    },
+    {
+      "id": "mixed_233",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 55
+    },
+    {
+      "id": "mixed_234",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 60
+    },
+    {
+      "id": "mixed_235",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 65
+    },
+    {
+      "id": "mixed_236",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_237",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 7
+    },
+    {
+      "id": "mixed_238",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 79
+    },
+    {
+      "id": "mixed_239",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 12
+    },
+    {
+      "id": "mixed_240",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 14
+    },
+    {
+      "id": "mixed_241",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_242",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 100
+    },
+    {
+      "id": "mixed_243",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 20
+    },
+    {
+      "id": "mixed_244",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 76
+    },
+    {
+      "id": "mixed_245",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_246",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 88
+    },
+    {
+      "id": "mixed_247",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 15
+    },
+    {
+      "id": "mixed_248",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 40
+    },
+    {
+      "id": "mixed_249",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_250",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 64
+    },
+    {
+      "id": "mixed_251",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_252",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 77
+    },
+    {
+      "id": "mixed_253",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_254",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 72
+    },
+    {
+      "id": "mixed_255",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 9
+    },
+    {
+      "id": "mixed_256",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 10
+    },
+    {
+      "id": "mixed_257",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 80
+    },
+    {
+      "id": "mixed_258",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 79
+    },
+    {
+      "id": "mixed_259",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 25
+    },
+    {
+      "id": "mixed_260",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_261",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 29
+    },
+    {
+      "id": "mixed_262",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_263",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_264",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 88
+    },
+    {
+      "id": "mixed_265",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 41
+    },
+    {
+      "id": "mixed_266",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 52
+    },
+    {
+      "id": "mixed_267",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 57
+    },
+    {
+      "id": "mixed_268",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 58
+    },
+    {
+      "id": "mixed_269",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_270",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 68
+    },
+    {
+      "id": "mixed_271",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_272",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 13
+    },
+    {
+      "id": "mixed_273",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 11
+    },
+    {
+      "id": "mixed_274",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_275",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 32
+    },
+    {
+      "id": "mixed_276",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_277",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 71
+    },
+    {
+      "id": "mixed_278",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 6
+    },
+    {
+      "id": "mixed_279",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_280",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 85
+    },
+    {
+      "id": "mixed_281",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 55
+    },
+    {
+      "id": "mixed_282",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 49
+    },
+    {
+      "id": "mixed_283",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 104
+    },
+    {
+      "id": "mixed_284",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_285",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 94
+    },
+    {
+      "id": "mixed_286",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_287",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_288",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 70
+    },
+    {
+      "id": "mixed_289",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 34
+    },
+    {
+      "id": "mixed_290",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_291",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_292",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 38
+    },
+    {
+      "id": "mixed_293",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_294",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 28
+    },
+    {
+      "id": "mixed_295",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_296",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 49
+    },
+    {
+      "id": "mixed_297",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 50
+    },
+    {
+      "id": "mixed_298",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 80
+    },
+    {
+      "id": "mixed_299",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 96
+    },
+    {
+      "id": "mixed_300",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_301",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 55
+    },
+    {
+      "id": "mixed_302",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 65
+    },
+    {
+      "id": "mixed_303",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 104
+    },
+    {
+      "id": "mixed_304",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_305",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 49
+    },
+    {
+      "id": "mixed_306",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 8
+    },
+    {
+      "id": "mixed_307",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_308",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 14
+    },
+    {
+      "id": "mixed_309",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 14
+    },
+    {
+      "id": "mixed_310",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 24
+    },
+    {
+      "id": "mixed_311",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 21
+    },
+    {
+      "id": "mixed_312",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 30
+    },
+    {
+      "id": "mixed_313",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 94
+    },
+    {
+      "id": "mixed_314",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 37
+    },
+    {
+      "id": "mixed_315",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_316",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 46
+    },
+    {
+      "id": "mixed_317",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 74
+    },
+    {
+      "id": "mixed_318",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_319",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 61
+    },
+    {
+      "id": "mixed_320",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 89
+    },
+    {
+      "id": "mixed_321",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_322",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 93
+    },
+    {
+      "id": "mixed_323",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 85
+    },
+    {
+      "id": "mixed_324",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 81
+    },
+    {
+      "id": "mixed_325",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_326",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 76
+    },
+    {
+      "id": "mixed_327",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 25
+    },
+    {
+      "id": "mixed_328",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_329",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_330",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 107
+    },
+    {
+      "id": "mixed_331",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 95
+    },
+    {
+      "id": "mixed_332",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 42
+    },
+    {
+      "id": "mixed_333",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 18
+    },
+    {
+      "id": "mixed_334",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_335",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_336",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 54
+    },
+    {
+      "id": "mixed_337",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 63
+    },
+    {
+      "id": "mixed_338",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 9
+    },
+    {
+      "id": "mixed_339",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 73
+    },
+    {
+      "id": "mixed_340",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 24
+    },
+    {
+      "id": "mixed_341",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 11
+    },
+    {
+      "id": "mixed_342",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 16
+    },
+    {
+      "id": "mixed_343",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 75
+    },
+    {
+      "id": "mixed_344",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 72
+    },
+    {
+      "id": "mixed_345",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 8
+    },
+    {
+      "id": "mixed_346",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 69
+    },
+    {
+      "id": "mixed_347",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 27
+    },
+    {
+      "id": "mixed_348",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 21
+    },
+    {
+      "id": "mixed_349",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 43
+    },
+    {
+      "id": "mixed_350",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 65
+    },
+    {
+      "id": "mixed_351",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 36
+    },
+    {
+      "id": "mixed_352",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 6
+    },
+    {
+      "id": "mixed_353",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 52
+    },
+    {
+      "id": "mixed_354",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_355",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 66
+    },
+    {
+      "id": "mixed_356",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 70
+    },
+    {
+      "id": "mixed_357",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 77
+    },
+    {
+      "id": "mixed_358",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 40
+    },
+    {
+      "id": "mixed_359",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 17
+    },
+    {
+      "id": "mixed_360",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 100
+    },
+    {
+      "id": "mixed_361",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 93
+    },
+    {
+      "id": "mixed_362",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_363",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 33
+    },
+    {
+      "id": "mixed_364",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_365",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 74
+    },
+    {
+      "id": "mixed_366",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_367",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 17
+    },
+    {
+      "id": "mixed_368",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 46
+    },
+    {
+      "id": "mixed_369",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 67
+    },
+    {
+      "id": "mixed_370",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 48
+    },
+    {
+      "id": "mixed_371",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 44
+    },
+    {
+      "id": "mixed_372",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 8
+    },
+    {
+      "id": "mixed_373",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 78
+    },
+    {
+      "id": "mixed_374",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 45
+    },
+    {
+      "id": "mixed_375",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 13
+    },
+    {
+      "id": "mixed_376",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 27
+    },
+    {
+      "id": "mixed_377",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 47
+    },
+    {
+      "id": "mixed_378",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 24
+    },
+    {
+      "id": "mixed_379",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 31
+    },
+    {
+      "id": "mixed_380",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 30
+    },
+    {
+      "id": "mixed_381",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 35
+    },
+    {
+      "id": "mixed_382",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 46
+    },
+    {
+      "id": "mixed_383",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 88
+    },
+    {
+      "id": "mixed_384",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 47
+    },
+    {
+      "id": "mixed_385",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 53
+    },
+    {
+      "id": "mixed_386",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 54
+    },
+    {
+      "id": "mixed_387",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_388",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 54
+    },
+    {
+      "id": "mixed_389",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 22
+    },
+    {
+      "id": "mixed_390",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 104
+    },
+    {
+      "id": "mixed_391",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 9
+    },
+    {
+      "id": "mixed_392",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_393",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 19
+    },
+    {
+      "id": "mixed_394",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 71
+    },
+    {
+      "id": "mixed_395",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 9
+    },
+    {
+      "id": "mixed_396",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 13
+    },
+    {
+      "id": "mixed_397",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 62
+    },
+    {
+      "id": "mixed_398",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 126
+    },
+    {
+      "id": "mixed_399",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 41
+    },
+    {
+      "id": "exact255_comment",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 255
+    },
+    {
+      "id": "comment_consecutive_crlf",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 14
+    },
+    {
+      "id": "cmd_tab_spaces",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 10
+    },
+    {
+      "id": "invalid_bare_newline",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 9
+    },
+    {
+      "id": "nested_with_comment",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 19
+    },
+    {
+      "id": "inline_hash_after_code_line",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "input_bytes": 11
+    },
+    {
+      "id": "comment_later_line",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "input_bytes": 15
+    },
+    {
+      "id": "missing_terminal_guard",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "host_closure_untested": false
+    },
+    {
+      "id": "bad_terminal_guard",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "host_closure_untested": false
+    },
+    {
+      "id": "truncated_record",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "host_closure_untested": false
+    },
+    {
+      "id": "bad_data_guard",
+      "passed": true,
+      "result": "00",
+      "expected": 0,
+      "host_closure_untested": false
+    },
+    {
+      "id": "valid_with_extra_host_bytes",
+      "passed": true,
+      "result": "01",
+      "expected": 1,
+      "host_closure_untested": true
+    }
+  ],
+  "extended_failures": [],
+  "source_audits": [
+    {
+      "name": "annotated_source_stream_gate.bf",
+      "valid": true,
+      "command_count": 7278
+    },
+    {
+      "name": "bf_in_bf.bf",
+      "valid": true,
+      "command_count": 103
+    },
+    {
+      "name": "bf_in_bf_reference.bf",
+      "valid": true,
+      "command_count": 423
+    },
+    {
+      "name": "bracket_depth_gate.bf",
+      "valid": true,
+      "command_count": 342
+    },
+    {
+      "name": "bracket_stream_gate.bf",
+      "valid": true,
+      "command_count": 554
+    },
+    {
+      "name": "mini_compiler.bf",
+      "valid": true,
+      "command_count": 515
+    },
+    {
+      "name": "mini_compiler_compact.bf",
+      "valid": true,
+      "command_count": 452
+    },
+    {
+      "name": "normalized_source_stream_gate.bf",
+      "valid": true,
+      "command_count": 1609
+    },
+    {
+      "name": "printable_subset_gate.bf",
+      "valid": true,
+      "command_count": 831
+    },
+    {
+      "name": "raw_subset_gate.bf",
+      "valid": true,
+      "command_count": 606
+    },
+    {
+      "name": "oracle.bf",
+      "valid": true,
+      "command_count": 108
+    }
+  ],
+  "raw_compiler_regressions": [
+    {
+      "application": "tiny_app_a",
+      "compiler": "mini_compiler.bf",
+      "passed": true,
+      "bytes": 264
+    },
+    {
+      "application": "tiny_app_a",
+      "compiler": "mini_compiler_compact.bf",
+      "passed": true,
+      "bytes": 140
+    },
+    {
+      "application": "tiny_app_b",
+      "compiler": "mini_compiler.bf",
+      "passed": true,
+      "bytes": 272
+    },
+    {
+      "application": "tiny_app_b",
+      "compiler": "mini_compiler_compact.bf",
+      "passed": true,
+      "bytes": 144
+    },
+    {
+      "application": "held_out",
+      "compiler": "mini_compiler.bf",
+      "passed": true,
+      "bytes": 280
+    },
+    {
+      "application": "held_out",
+      "compiler": "mini_compiler_compact.bf",
+      "passed": true,
+      "bytes": 148
+    }
+  ],
+  "extended_seconds": 5.443,
+  "notes": [
+    "Tests used a locally built outside repository Brainfuck diagnostic evaluator not a certified bootstrap",
+    "The terminal guard rejects EOF-filled truncation but does not attest extra trailing bytes",
+    "Per-record 255 input count is not a universal source-length bound",
+    "Bracket depth currently bounded at 255",
+    "Original source offsets, normalized output and BF controlled downstream invocation are not implemented"
+  ]
+}

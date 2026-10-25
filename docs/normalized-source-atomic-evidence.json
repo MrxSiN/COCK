@@ -1,0 +1,118 @@
+{
+  "batch": "COCK normalized atomic gate diagnostic",
+  "date": "2026-10-24",
+  "test_count": 1135,
+  "passed": 1135,
+  "failed": 0,
+  "seed": 20261024,
+  "runtime_seconds": 20.048,
+  "validator_sha256": "6a21c3243c2f225d5c9ce7394a536b7211e785374caae625cf9c513e7e736c45",
+  "failures": [],
+  "scope": "bounded normalized source record only; locally installed external diagnostic BF evaluator; no transport closure",
+  "host_closure": "NOT TESTED",
+  "native_abi": "NOT TESTED",
+  "integrated_frozen_compiler_matches": [
+    {
+      "app": "tiny_app_a",
+      "compiler": "mini_compiler.bf",
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "passes": "01",
+      "time_seconds": 0.457,
+      "exact_frozen_match": true
+    },
+    {
+      "app": "tiny_app_a",
+      "compiler": "mini_compiler_compact.bf",
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "passes": "01",
+      "time_seconds": 0.262,
+      "exact_frozen_match": true
+    },
+    {
+      "app": "tiny_app_b",
+      "compiler": "mini_compiler.bf",
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "passes": "01",
+      "time_seconds": 0.453,
+      "exact_frozen_match": true
+    },
+    {
+      "app": "tiny_app_b",
+      "compiler": "mini_compiler_compact.bf",
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "passes": "01",
+      "time_seconds": 0.253,
+      "exact_frozen_match": true
+    },
+    {
+      "app": "held_out",
+      "compiler": "mini_compiler.bf",
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "passes": "01",
+      "time_seconds": 0.404,
+      "exact_frozen_match": true
+    },
+    {
+      "app": "held_out",
+      "compiler": "mini_compiler_compact.bf",
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "passes": "01",
+      "time_seconds": 0.267,
+      "exact_frozen_match": true
+    }
+  ],
+  "strict_annotated_negative_tests": [
+    {
+      "name": "invalid_comment",
+      "source_gate": "00",
+      "compiler_executed": false
+    },
+    {
+      "name": "inline_comment",
+      "source_gate": "00",
+      "compiler_executed": false
+    },
+    {
+      "name": "embedded_zero",
+      "source_gate": "00",
+      "compiler_executed": false
+    },
+    {
+      "name": "unmatched_open",
+      "source_gate": "00",
+      "compiler_executed": false
+    }
+  ],
+  "integrated_passed": 10,
+  "targeted_transport_diagnostics": {
+    "invalid_suffix_prevents_release": "00",
+    "truncated_declared_source": "00",
+    "missing_guard": "00",
+    "guard_corrupt": "00",
+    "trailing_unseen": "012b2e",
+    "clean_reference": "012b2e"
+  },
+  "known_negative_exposure": "After guard, additional bytes cannot be detected by a standalone BF guest. Independent host byte count and verified source/session closure remain mandatory.",
+  "local_evaluator_sha256": "062b8c3784983c353e8ab9c5f44adbd2fefd9c2e9401f69c5895f9555b5d3b78",
+  "source_audit": {
+    "total_bf_files": 16,
+    "format_and_brackets": "PASS",
+    "tool": "outside-repository static audit (diagnostic; not BF-native test driver)"
+  },
+  "bf_execution_contract": "Eight-command annotated Brainfuck; guest cells require unsigned eight-bit wrapping and EOF to zero",
+  "not_accepted": [
+    "external root evaluator independent qualification",
+    "full annotated source plus normalized output transactional coupling",
+    "trusted host exact byte counts and stream closure",
+    "original-byte offsets and preflight precedence",
+    "COCK-native interpreter compiling complete tool",
+    "bounded full nested interpreter compiler",
+    "Android ELF APK emulator and device verification"
+  ]
+}

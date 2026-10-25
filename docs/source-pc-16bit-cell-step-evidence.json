@@ -1,0 +1,110 @@
+{
+  "component": "source_pc_16bit_cell_step.bf",
+  "status": "LOCAL DIAGNOSTIC PASS; STAGE A NOT ACCEPTED",
+  "source_sha256": "bbaa4e2d353aaf11f532fc7571d1babd4b262b2080686cf2d369fa539bc505d3",
+  "executable_bf_commands": 5056,
+  "source_file_bytes": 5909,
+  "record_contract": {
+    "input": "u8 count then count records of opcode u16 PC u16 bracket partner u8 cell u16 fuel",
+    "output": "count records of u8 status u16 next PC u16 fuel remaining u8 new cell",
+    "endianness": "little"
+  },
+  "diagnostic": {
+    "batch_count": 51,
+    "record_cases": 7581,
+    "all_passed": true,
+    "groups": {
+      "legacy_branch_fixtures": {
+        "batches": 23,
+        "records": 2557
+      },
+      "wrap_edge_cases": {
+        "batches": 4,
+        "records": 512
+      },
+      "exhaustive_byte_values": {
+        "batches": 4,
+        "records": 512
+      },
+      "randomized_records": {
+        "batches": 20,
+        "records": 4000
+      }
+    },
+    "random_seed": 20261025,
+    "external_runner": "preinstalled temporary outside repository diagnostic BF evaluator"
+  },
+  "regression": {
+    "six_compiler_raw_candidates": [
+      {
+        "artifact": "tiny_app_a.aarch64.raw",
+        "size_bytes": 264,
+        "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+        "preserved_reexecution": "PASS"
+      },
+      {
+        "artifact": "tiny_app_b.aarch64.raw",
+        "size_bytes": 272,
+        "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+        "preserved_reexecution": "PASS"
+      },
+      {
+        "artifact": "held_out.aarch64.raw",
+        "size_bytes": 280,
+        "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+        "preserved_reexecution": "PASS"
+      },
+      {
+        "artifact": "tiny_app_a.compact.aarch64.raw",
+        "size_bytes": 140,
+        "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+        "preserved_reexecution": "PASS"
+      },
+      {
+        "artifact": "tiny_app_b.compact.aarch64.raw",
+        "size_bytes": 144,
+        "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+        "preserved_reexecution": "PASS"
+      },
+      {
+        "artifact": "held_out.compact.aarch64.raw",
+        "size_bytes": 148,
+        "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+        "preserved_reexecution": "PASS"
+      }
+    ],
+    "annotated_bf_file_audit": {
+      "total": 47,
+      "passed": 47
+    }
+  },
+  "observed_unresolved_negatives": [
+    {
+      "name": "short_physical_record",
+      "input_hex": "012b000000000701",
+      "observed_hex": "000100000008",
+      "limitation": "missing final record byte treated as guest EOF zero; no trusted byte count"
+    },
+    {
+      "name": "trailing_bytes",
+      "input_hex": "0001020304",
+      "observed_hex": "",
+      "limitation": "unconsumed trailing physical bytes not detected by component"
+    },
+    {
+      "name": "forged_bracket_partner",
+      "input_hex": "015b04006300000100",
+      "observed_hex": "006400000000",
+      "limitation": "caller-supplied partner must be independently authenticated against the exact BF source"
+    }
+  ],
+  "source_process_purity": "NOT CERTIFIED: a temporary outside-repository mechanical source layout aid and independent verification oracle were used",
+  "not_implemented": [
+    "source and bracket map authenticated fetch in the same execution authority",
+    "full guest tape state",
+    "guest input and output execution",
+    "trusted source and physical stream closure",
+    "same interpreter nested real compiler",
+    "Android APK and device execution"
+  ]
+}

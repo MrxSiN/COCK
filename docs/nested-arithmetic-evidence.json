@@ -1,0 +1,255 @@
+{
+  "executed_at_utc": "2026-10-24T05:54:13.254547+00:00",
+  "diagnostic_evaluator": "/tmp/cock_diag_root (outside repository C evaluator; not independent root bootstrap)",
+  "driver_bf_sha256": "3de60d12f1eef9af32a8452680b664cdc4fb1094df0ff09f8ef208c9a88f14a4",
+  "inner_bf_sha256": "6f04241ea4d0fd7b0d8217472b39a974c76e361c294cc2502070106663aba2af",
+  "outer_bf_sha256": "2208c0290f830f1af72f0798782dd416cfd22b4a85d7af680bb27c9944049bc2",
+  "nested_cases": [
+    {
+      "name": "empty",
+      "passed": true,
+      "expected": "00",
+      "actual": "00",
+      "request_bytes": 106,
+      "request_exact": true,
+      "driver_outer_steps": 1748,
+      "nested_outer_steps": 2197467,
+      "request_sha256": "ef44e19df8a97c871862a3e6ad3d1d2a597fd308063d843bcfc3ad53436cc4e2",
+      "nested_exit": 0
+    },
+    {
+      "name": "minus_one",
+      "passed": true,
+      "expected": "ff",
+      "actual": "ff",
+      "request_bytes": 107,
+      "request_exact": true,
+      "driver_outer_steps": 1751,
+      "nested_outer_steps": 6075300,
+      "request_sha256": "d49f18dda63f2fa00d78eb16e9d7b6284ae251aa4ae7ce265cf64136f2b0a0be",
+      "nested_exit": 0
+    },
+    {
+      "name": "one",
+      "passed": true,
+      "expected": "01",
+      "actual": "01",
+      "request_bytes": 107,
+      "request_exact": true,
+      "driver_outer_steps": 1751,
+      "nested_outer_steps": 23419918,
+      "request_sha256": "22cf63a4d52b2c3a9629d5fb480599765f3439273bfbf73d03f72a4ec56365f5",
+      "nested_exit": 0
+    },
+    {
+      "name": "two",
+      "passed": true,
+      "expected": "02",
+      "actual": "02",
+      "request_bytes": 108,
+      "request_exact": true,
+      "driver_outer_steps": 1754,
+      "nested_outer_steps": 44667002,
+      "request_sha256": "c0673646967caed1519e6a75db4a382bc273c895799c57f5ef47f300d74feaa4",
+      "nested_exit": 0
+    },
+    {
+      "name": "cancel_three",
+      "passed": true,
+      "expected": "00",
+      "actual": "00",
+      "request_bytes": 112,
+      "request_exact": true,
+      "driver_outer_steps": 1766,
+      "nested_outer_steps": 72505506,
+      "request_sha256": "94f2efede67b2561fffb895f71887fb814754a15d6dbe497dc6edf1178675baf",
+      "nested_exit": 0
+    },
+    {
+      "name": "cancel_two",
+      "passed": true,
+      "expected": "00",
+      "actual": "00",
+      "request_bytes": 110,
+      "request_exact": true,
+      "driver_outer_steps": 1760,
+      "nested_outer_steps": 59817404,
+      "request_sha256": "d9939bc8cfb1126166c23920ba96f1efbd414507b517fd220125b819c67d6cc5",
+      "nested_exit": 0
+    },
+    {
+      "name": "net_three",
+      "passed": true,
+      "expected": "03",
+      "actual": "03",
+      "request_bytes": 113,
+      "request_exact": true,
+      "driver_outer_steps": 1769,
+      "nested_outer_steps": 112775138,
+      "request_sha256": "38a6053a9047a232655dfdcd6b3cee5c655d8a69f9cc33f7ed28ce7dc8090ebd",
+      "nested_exit": 0
+    },
+    {
+      "name": "cancel_four",
+      "passed": true,
+      "expected": "00",
+      "actual": "00",
+      "request_bytes": 114,
+      "request_exact": true,
+      "driver_outer_steps": 1772,
+      "nested_outer_steps": 96015358,
+      "request_sha256": "00581a2dd85af93d118d8c44fbb35357d699ea238e61c0dc6aa80c5da0b70ee4",
+      "nested_exit": 0
+    },
+    {
+      "name": "minus_five",
+      "passed": true,
+      "expected": "fb",
+      "actual": "fb",
+      "request_bytes": 111,
+      "request_exact": true,
+      "driver_outer_steps": 1763,
+      "nested_outer_steps": 20578860,
+      "request_sha256": "040670fc61b8849baa594b628db36f8da96b6db8dfa0be23e2347506851d26ea",
+      "nested_exit": 0
+    },
+    {
+      "name": "ten",
+      "passed": true,
+      "expected": "0a",
+      "actual": "0a",
+      "request_bytes": 116,
+      "request_exact": true,
+      "driver_outer_steps": 1778,
+      "nested_outer_steps": 215813962,
+      "request_sha256": "801b62bcaf66f969e445370de483ce548bd2fa8dda4b21899a2701bf4b1d40f0",
+      "nested_exit": 0
+    },
+    {
+      "name": "mixed_one",
+      "passed": true,
+      "expected": "01",
+      "actual": "01",
+      "request_bytes": 115,
+      "request_exact": true,
+      "driver_outer_steps": 1775,
+      "nested_outer_steps": 147129452,
+      "request_sha256": "b60e4ddd1b7823fb6250d51714f8293fd0d3efb2f6f1b91369570f0aaa5fc2d8",
+      "nested_exit": 0
+    },
+    {
+      "name": "space",
+      "passed": true,
+      "expected": "20",
+      "actual": "20",
+      "request_bytes": 138,
+      "request_exact": true,
+      "driver_outer_steps": 1844,
+      "nested_outer_steps": 697195742,
+      "request_sha256": "d0c20954a466771f3aaeb38401ba672894801ba2a2339d71371e6ada502bbca5",
+      "nested_exit": 0
+    },
+    {
+      "name": "letter_a",
+      "passed": true,
+      "expected": "41",
+      "actual": "41",
+      "request_bytes": 171,
+      "request_exact": true,
+      "driver_outer_steps": 1943,
+      "nested_outer_steps": 1448769422,
+      "request_sha256": "10696e0b50391f77aec4cdc7c30da954fc4e75fdc2469ebdf1ca7d9c788f8f95",
+      "nested_exit": 0
+    }
+  ],
+  "compiler_regressions": [
+    {
+      "variant": "original",
+      "app": "tiny_app_a",
+      "passed": true,
+      "bytes": 264,
+      "raw_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "outer_steps": 1155947805
+    },
+    {
+      "variant": "original",
+      "app": "tiny_app_b",
+      "passed": true,
+      "bytes": 272,
+      "raw_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "outer_steps": 1189711137
+    },
+    {
+      "variant": "original",
+      "app": "held_out",
+      "passed": true,
+      "bytes": 280,
+      "raw_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "outer_steps": 1223474469
+    },
+    {
+      "variant": "compact",
+      "app": "tiny_app_a",
+      "passed": true,
+      "bytes": 140,
+      "raw_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "outer_steps": 827959701
+    },
+    {
+      "variant": "compact",
+      "app": "tiny_app_b",
+      "passed": true,
+      "bytes": 144,
+      "raw_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "outer_steps": 851194323
+    },
+    {
+      "variant": "compact",
+      "app": "held_out",
+      "passed": true,
+      "bytes": 148,
+      "raw_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "outer_steps": 874428945
+    }
+  ],
+  "source_audit": {
+    "files": 23,
+    "passed": true,
+    "issues": []
+  },
+  "limits": {
+    "outer_step_cap_each": 2100000000,
+    "source_relay_does_not_validate": true,
+    "whole_compiler_nested_self_interpretation": false,
+    "Android": "DEFERRED"
+  },
+  "elapsed_seconds": 13.186,
+  "summary": {
+    "nested_passed": 13,
+    "nested_total": 13,
+    "compiler_passed": 6,
+    "compiler_total": 6,
+    "bf_source_audit_passed": true,
+    "bf_sources": 23
+  },
+  "known_negative_counterexamples": [
+    {
+      "name": "embedded_nul_and_suffix",
+      "input_hex": "2b2e002d",
+      "driver_request_byte_count": 107,
+      "nested_exit": 0,
+      "nested_stdout_hex": "01",
+      "diagnostic": "not rejected by current raw driver or interpreted nested path",
+      "expected_safe_behavior": "reject before guest execution and output"
+    },
+    {
+      "name": "invalid_unmatched_open_suffix",
+      "input_hex": "2b2e5b",
+      "driver_request_byte_count": 108,
+      "nested_exit": 0,
+      "nested_stdout_hex": "01",
+      "diagnostic": "not rejected by current raw driver or interpreted nested path",
+      "expected_safe_behavior": "reject before guest execution and output"
+    }
+  ]
+}

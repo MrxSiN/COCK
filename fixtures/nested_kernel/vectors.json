@@ -1,0 +1,66 @@
+{
+  "source_contract": "diagnostic chunked source then diagnostic chunked binary data",
+  "vectors": [
+    {
+      "name": "plus_one",
+      "transport_input": "plus_one.input.bin",
+      "transport_expected": "plus_one.transport.expected.bin",
+      "result_expected": "plus_one.result.expected.bin",
+      "nested_run": true
+    },
+    {
+      "name": "clear",
+      "transport_input": "clear.input.bin",
+      "transport_expected": "clear.transport.expected.bin",
+      "result_expected": "clear.result.expected.bin",
+      "nested_run": true
+    },
+    {
+      "name": "binary_ff",
+      "transport_input": "binary_ff.input.bin",
+      "transport_expected": "binary_ff.transport.expected.bin",
+      "result_expected": "binary_ff.result.expected.bin",
+      "nested_run": true
+    },
+    {
+      "name": "binary_zero",
+      "transport_input": "binary_zero.input.bin",
+      "transport_expected": "binary_zero.transport.expected.bin",
+      "result_expected": "binary_zero.result.expected.bin",
+      "nested_run": true
+    },
+    {
+      "name": "pointer_transfer",
+      "transport_input": "pointer_transfer.input.bin",
+      "transport_expected": "pointer_transfer.transport.expected.bin",
+      "result_expected": "pointer_transfer.result.expected.bin",
+      "nested_run": true
+    },
+    {
+      "name": "raw_binary_relay",
+      "transport_input": "raw_binary_relay.input.bin",
+      "transport_expected": "raw_binary_relay.transport.expected.bin",
+      "nested_run": false
+    },
+    {
+      "name": "long_source_relay",
+      "transport_input": "long_source_relay.input.bin",
+      "transport_expected": "long_source_relay.transport.expected.bin",
+      "nested_run": false
+    },
+    {
+      "name": "compact_compiler_request",
+      "transport_input": "compact_compiler_request.input.bin",
+      "transport_expected": "compact_compiler_request.transport.expected.bin",
+      "nested_run": false,
+      "full_nested_compiler_unverified": true
+    },
+    {
+      "name": "original_compiler_request",
+      "transport_input": "original_compiler_request.input.bin",
+      "transport_expected": "original_compiler_request.transport.expected.bin",
+      "nested_run": false,
+      "full_nested_compiler_unverified": true
+    }
+  ]
+}

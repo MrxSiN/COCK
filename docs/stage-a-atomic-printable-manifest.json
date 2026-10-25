@@ -1,0 +1,15 @@
+{
+  "generated_on": "2026-10-24",
+  "new_bf_source_hashes": {
+    "src/stage_a_atomic_subset_gate.bf": "53ef432d57c2d8bef00651d1123d8f083ae80778f612869261c4bb8c9b3cda2b",
+    "src/stage_a_atomic_printable_gate.bf": "2c4b1e909e4182fc481ec83fdd58cfb7cf33b9e2e9a5793f6f46b09ffdfaf128",
+    "src/mini_compiler.bf": "3edbaa35c420eb14ba2421e74520362ac03894ec118c5fe9d616f08809d5efe7",
+    "src/mini_compiler_compact.bf": "738857d78bc0839cb84ff0d4d5033c983b649368ecf1ca93b3bc04b3ab724afd"
+  },
+  "unverified_requirements": [
+    "trusted physical stream closure",
+    "integrated BF authored annotated input handoff",
+    "self nested real compiler",
+    "Android ELF APK device"
+  ]
+}

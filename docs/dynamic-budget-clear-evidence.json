@@ -1,0 +1,182 @@
+{
+  "status": "DIAGNOSTIC PASSED",
+  "source_file": "src/bf_in_bf_dynamic_budget_clear.bf",
+  "source_sha256": "f6b5b1ae9cfc947a0b2dc405d0a15ccaec847e46ea7723d3d9efe9a5f3b751fb",
+  "cases": 630,
+  "linear_regressions": 80,
+  "failures": [],
+  "exit_status_distribution": {
+    "0": 263,
+    "5": 44,
+    "4": 317,
+    "13": 6
+  },
+  "fixture_count": 18,
+  "examples": [
+    {
+      "case": "fixed_00",
+      "budget": 1,
+      "source_hex": "",
+      "expected_hex": "00",
+      "observed_hex": "00"
+    },
+    {
+      "case": "fixed_01",
+      "budget": 1,
+      "source_hex": "2b2e",
+      "expected_hex": "0100",
+      "observed_hex": "0100"
+    },
+    {
+      "case": "fixed_02",
+      "budget": 1,
+      "source_hex": "2d2e",
+      "expected_hex": "ff00",
+      "observed_hex": "ff00"
+    },
+    {
+      "case": "fixed_03",
+      "budget": 1,
+      "source_hex": "2b5b2d5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_04",
+      "budget": 1,
+      "source_hex": "2b5b2b5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_05",
+      "budget": 1,
+      "source_hex": "2d5b2b5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_06",
+      "budget": 1,
+      "source_hex": "2d5b2d5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_07",
+      "budget": 1,
+      "source_hex": "5b2b5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_08",
+      "budget": 1,
+      "source_hex": "5b2d5d2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_09",
+      "budget": 2,
+      "source_hex": "3e2b5b2d5d3c2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_10",
+      "budget": 2,
+      "source_hex": "3e2b5b2b5d3c2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_11",
+      "budget": 4,
+      "source_hex": "3e3e3e5b2d5d3c3c3c2e",
+      "expected_hex": "0000",
+      "observed_hex": "0000"
+    },
+    {
+      "case": "fixed_12",
+      "budget": 1,
+      "source_hex": "3e",
+      "expected_hex": "05",
+      "observed_hex": "05"
+    },
+    {
+      "case": "fixed_13",
+      "budget": 1,
+      "source_hex": "3c",
+      "expected_hex": "04",
+      "observed_hex": "04"
+    },
+    {
+      "case": "fixed_14",
+      "budget": 1,
+      "source_hex": "3e3e2e",
+      "expected_hex": "05",
+      "observed_hex": "05"
+    }
+  ],
+  "test_environment": "outside-repository C BF evaluator, no Android",
+  "limits": [
+    "exact clear loops only",
+    "per-invocation logical budget 1..256",
+    "not full preflight",
+    "host closure external",
+    "not guest-fuel aware",
+    "not compiler-capable"
+  ],
+  "boundary_regressions": 7,
+  "source_audit": {
+    "bf_files": 40,
+    "invalid_files": 0
+  },
+  "frozen_compiler_regressions": 6,
+  "frozen_compiler_results": [
+    {
+      "compiler": "original",
+      "app": "tiny_app_a",
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "compiler": "original",
+      "app": "tiny_app_b",
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "compiler": "original",
+      "app": "held_out",
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_a",
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_b",
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "compiler": "compact",
+      "app": "held_out",
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    }
+  ],
+  "unaccepted_negatives": {
+    "trailing_after_zero": "BF program does not detect bytes after zero terminator; independent host closure required",
+    "invalid_suffix_after_output": "emits partial stdout before unsupported status; no complete-source preflight",
+    "missing_close_after_output": "emits partial stdout before unsupported status; no bracket preflight"
+  },
+  "evaluator": "externally compiled local BF evaluator, not independently qualified Stage A bootstrap",
+  "source_command_count": 1410
+}

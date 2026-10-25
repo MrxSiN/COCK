@@ -1,0 +1,171 @@
+{
+  "date_utc": "2026-10-24T06:38:26.248168+00:00",
+  "diagnostic_only": true,
+  "cases": [
+    {
+      "name": "plus_one",
+      "transport_pass": true,
+      "transport_actual_bytes": 8912,
+      "transport_sha256": "56a31c88d4c1ed0527f0974095112ea3cb91c2e57cd27455f69465260bbfd038",
+      "nested_pass": true,
+      "nested_output_hex": "01",
+      "nested_expected_hex": "01",
+      "nested_steps": 3887442225,
+      "nested_exit": 0
+    },
+    {
+      "name": "clear",
+      "transport_pass": true,
+      "transport_actual_bytes": 8915,
+      "transport_sha256": "a005c55d086223f2936392ca255beb0bcc54197c21a37a7ab560a7f79f6dbf98",
+      "nested_pass": true,
+      "nested_output_hex": "00",
+      "nested_expected_hex": "00",
+      "nested_steps": 11299482319,
+      "nested_exit": 0
+    },
+    {
+      "name": "binary_ff",
+      "transport_pass": true,
+      "transport_actual_bytes": 8913,
+      "transport_sha256": "d0c1096f6c1b485ee581b261513d8d043e919c324856408489b3367c52c9bdf3",
+      "nested_pass": true,
+      "nested_output_hex": "ff",
+      "nested_expected_hex": "ff",
+      "nested_steps": 3770808042,
+      "nested_exit": 0
+    },
+    {
+      "name": "binary_zero",
+      "transport_pass": true,
+      "transport_actual_bytes": 8916,
+      "transport_sha256": "5b90877e26f9fd6b751a738a6aac48eedac110f4693c797ba197783d9a83dc37",
+      "nested_pass": true,
+      "nested_output_hex": "00",
+      "nested_expected_hex": "00",
+      "nested_steps": 6532634845,
+      "nested_exit": 0
+    },
+    {
+      "name": "pointer_transfer",
+      "transport_pass": true,
+      "transport_actual_bytes": 8917,
+      "transport_sha256": "3d074d56605f9ce8ca557aa49b520a89147d0161583d127f43e9025fbf8b081a",
+      "nested_pass": true,
+      "nested_output_hex": "02",
+      "nested_expected_hex": "02",
+      "nested_steps": 13396734166,
+      "nested_exit": 0
+    },
+    {
+      "name": "raw_binary_relay",
+      "transport_pass": true,
+      "transport_actual_bytes": 8,
+      "transport_sha256": "6886e0d1db209e6d7b61bbbb3385a28ad01bd57d92e2aa1785c23bd338f75292"
+    },
+    {
+      "name": "long_source_relay",
+      "transport_pass": true,
+      "transport_actual_bytes": 602,
+      "transport_sha256": "f9d20fe689235cd561b6ea509d233f4c6e72772e6cd00ecf6e168dce19c8f3db"
+    },
+    {
+      "name": "compact_compiler_request",
+      "transport_pass": true,
+      "transport_actual_bytes": 9397,
+      "transport_sha256": "3779b4a8a20dcb52a80b982cec3ceaa3e7936fb4f649289a2b1d10a6c86d32e8"
+    },
+    {
+      "name": "original_compiler_request",
+      "transport_pass": true,
+      "transport_actual_bytes": 9460,
+      "transport_sha256": "cbbc05b5ee49cba1799b8b836f63f4c260891a6339552e5200c7283b349b5b7c"
+    }
+  ],
+  "full_nested_compact_compiler": {
+    "exit": 124,
+    "output_bytes": 0,
+    "target_bytes": 140,
+    "passed": false,
+    "timeout_seconds": 12
+  },
+  "compiler_regressions": [
+    {
+      "variant": "original",
+      "app": "tiny_app_a",
+      "pass": true,
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "variant": "original",
+      "app": "tiny_app_b",
+      "pass": true,
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "variant": "original",
+      "app": "held_out",
+      "pass": true,
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "variant": "compact",
+      "app": "tiny_app_a",
+      "pass": true,
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "variant": "compact",
+      "app": "tiny_app_b",
+      "pass": true,
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "variant": "compact",
+      "app": "held_out",
+      "pass": true,
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    }
+  ],
+  "source_audit": {
+    "count": 26,
+    "passed": true,
+    "issues": []
+  },
+  "elapsed_seconds": 77.917,
+  "summary": {
+    "transport_passed": 9,
+    "transport_total": 9,
+    "nested_passed": 5,
+    "nested_total": 5,
+    "compiler_regression_passed": 6,
+    "source_audit_passed": true,
+    "transport_negative_closure_blockers": 2
+  },
+  "negative_transport_cases": [
+    {
+      "name": "valid_record_extra_bytes",
+      "observed_same_success_output": true,
+      "must_reject_under_trusted_closure": true
+    },
+    {
+      "name": "truncated_second_count",
+      "observed_same_success_output": true,
+      "must_reject_under_trusted_closure": true
+    }
+  ],
+  "contract_limitations": {
+    "outer_reference_is_third_party": true,
+    "same_interpreter_nested_compiler_passed": false,
+    "independently_qualified_bootstrap": false,
+    "Android_device_test": "DEFERRED",
+    "trusted_host_closure": false,
+    "full_nested_compiler_timed_out": true
+  }
+}

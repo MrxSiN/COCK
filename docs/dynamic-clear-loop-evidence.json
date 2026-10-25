@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-24",
+  "status": "diagnostic component pass; Stage A NOT ACCEPTED",
+  "target_source": "src/bf_in_bf_dynamic_clear_loop.bf",
+  "sha256": "f769ba84aebef0014c3550cf74130f2cbda0d7145d1d6d4b37d029167d0a53fc",
+  "source_bytes": 3961,
+  "bf_instruction_count": 1155,
+  "supported_guest_source": "trusted BF source using + - < > . and exact adjacent [-] only; binary NUL terminator; no guest comma input",
+  "fixed_cases": {
+    "passed": 14,
+    "total": 14,
+    "fixture_path": "fixtures/dynamic_clear_loop/vectors.json"
+  },
+  "random_and_boundary": {
+    "seed": 20261024,
+    "randomized_passed": 500,
+    "growth_and_boundary_passed": 5,
+    "negative_passed": 5,
+    "total_passed": 510,
+    "outer_steps_total": 212353499,
+    "max_guest_address": 7200
+  },
+  "compiler_regressions": [
+    {
+      "artifact": "artifacts/tiny_app_a.aarch64.raw",
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "matched_on_current_turn": true
+    },
+    {
+      "artifact": "artifacts/tiny_app_a.compact.aarch64.raw",
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "matched_on_current_turn": true
+    },
+    {
+      "artifact": "artifacts/tiny_app_b.aarch64.raw",
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "matched_on_current_turn": true
+    },
+    {
+      "artifact": "artifacts/tiny_app_b.compact.aarch64.raw",
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "matched_on_current_turn": true
+    },
+    {
+      "artifact": "artifacts/held_out.aarch64.raw",
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "matched_on_current_turn": true
+    },
+    {
+      "artifact": "artifacts/held_out.compact.aarch64.raw",
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "matched_on_current_turn": true
+    }
+  ],
+  "bf_source_audit": {
+    "passed": 28,
+    "total": 28
+  },
+  "root_executor": "/tmp/cock_diag_new diagnostic C evaluator; OUTSIDE repository; NOT independently certified",
+  "failures_or_unmet_requirements": [
+    "embedded original guest source NUL is indistinguishable from stream terminator without trusted source length",
+    "invalid suffix may emit partial guest output before error",
+    "trailing stream bytes after zero delimiter not detected",
+    "general loops, guest comma, full annotated preflight, logical guest budgets and command fuel missing",
+    "full same-interpreter nested actual mini compiler proof not run",
+    "Android ELF APK signing/device checks deferred"
+  ],
+  "external_development_tools": "Separate outside-repository Python verification coordinator and reference model; strict pure BF development-process provenance NOT certified"
+}

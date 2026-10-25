@@ -1,0 +1,122 @@
+[
+  {
+    "case": "empty_one_cell",
+    "max_cells": 1,
+    "guest_source_bytes": 0,
+    "actual_output_hex": "00",
+    "expected_output_hex": "00",
+    "pass": true
+  },
+  {
+    "case": "zero_data",
+    "max_cells": 1,
+    "guest_source_bytes": 1,
+    "actual_output_hex": "0000",
+    "expected_output_hex": "0000",
+    "pass": true
+  },
+  {
+    "case": "left_at_origin",
+    "max_cells": 1,
+    "guest_source_bytes": 1,
+    "actual_output_hex": "04",
+    "expected_output_hex": "04",
+    "pass": true
+  },
+  {
+    "case": "right_at_budget_one",
+    "max_cells": 1,
+    "guest_source_bytes": 1,
+    "actual_output_hex": "05",
+    "expected_output_hex": "05",
+    "pass": true
+  },
+  {
+    "case": "right_at_budget_two",
+    "max_cells": 2,
+    "guest_source_bytes": 2,
+    "actual_output_hex": "05",
+    "expected_output_hex": "05",
+    "pass": true
+  },
+  {
+    "case": "right_valid_two",
+    "max_cells": 2,
+    "guest_source_bytes": 5,
+    "actual_output_hex": "010000",
+    "expected_output_hex": "010000",
+    "pass": true
+  },
+  {
+    "case": "right_too_far_after_output",
+    "max_cells": 2,
+    "guest_source_bytes": 4,
+    "actual_output_hex": "0105",
+    "expected_output_hex": "0105",
+    "pass": true
+  },
+  {
+    "case": "right_at_budget_256",
+    "max_cells": 256,
+    "guest_source_bytes": 257,
+    "actual_output_hex": "0100",
+    "expected_output_hex": "0100",
+    "pass": true
+  },
+  {
+    "case": "right_beyond_budget_256",
+    "max_cells": 256,
+    "guest_source_bytes": 257,
+    "actual_output_hex": "05",
+    "expected_output_hex": "05",
+    "pass": true
+  },
+  {
+    "case": "right_back_left_zero",
+    "max_cells": 3,
+    "guest_source_bytes": 9,
+    "actual_output_hex": "0100",
+    "expected_output_hex": "0100",
+    "pass": true
+  },
+  {
+    "case": "roundtrip",
+    "max_cells": 4,
+    "guest_source_bytes": 14,
+    "actual_output_hex": "00010000",
+    "expected_output_hex": "00010000",
+    "pass": true
+  },
+  {
+    "case": "byte_wrap",
+    "max_cells": 1,
+    "guest_source_bytes": 2,
+    "actual_output_hex": "ff00",
+    "expected_output_hex": "ff00",
+    "pass": true
+  },
+  {
+    "case": "invalid_opcode",
+    "max_cells": 2,
+    "guest_source_bytes": 2,
+    "actual_output_hex": "0d",
+    "expected_output_hex": "0d",
+    "pass": true
+  },
+  {
+    "case": "partial_output_invalid_suffix",
+    "max_cells": 1,
+    "guest_source_bytes": 3,
+    "actual_output_hex": "010d",
+    "expected_output_hex": "010d",
+    "pass": true
+  },
+  {
+    "case": "partial_output_right_trap",
+    "max_cells": 1,
+    "guest_source_bytes": 3,
+    "actual_output_hex": "0105",
+    "expected_output_hex": "0105",
+    "pass": true
+  }
+]

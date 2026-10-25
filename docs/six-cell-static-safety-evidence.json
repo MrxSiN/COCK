@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-10-24",
+  "scope": "six-cell guest static pointer and loop admission diagnostic; not full interpreter correctness",
+  "source_file": "src/six_cell_static_safety_gate.bf",
+  "source_sha256": "875f804dd01ce47343f25844e0268d3526e5dd6a1474a0a34b6b4849f4353b83",
+  "source_executable_command_count": 6352,
+  "external_evaluator": "/tmp/cock_bf_diag",
+  "fixture_seed": 20261024,
+  "tests_passed": {
+    "fixed": 20,
+    "exhaustive_one_byte": 255,
+    "randomized": 700,
+    "guard_and_truncation": 160,
+    "compiler_admission": 2,
+    "compiled_artifact_regression": 6,
+    "source_audit": 20
+  },
+  "total_passed": 1163,
+  "failures": [],
+  "notes": [
+    {
+      "source": "mini_compiler",
+      "source_commands": 515,
+      "reference_static_admission": 1
+    },
+    {
+      "source": "mini_compiler_compact",
+      "source_commands": 452,
+      "reference_static_admission": 1
+    },
+    {
+      "source_byte_zero": "not representable as source command in this diagnostic protocol because zero denotes end of program; earlier annotated source preflight must reject NUL"
+    },
+    {
+      "unverified_host_closure": "appended trailing junk after completed source record",
+      "observed_component_output_hex": "01",
+      "interpretation": "OUTSIDE CURRENT GATE no successful sealed input or closure claim"
+    }
+  ],
+  "known_gaps": [
+    "host read-count and stream closure not checked by this gate",
+    "static lexical pointer balance conservatively rejects some semantically safe guest programs",
+    "guest instruction fuel and runtime trap status remain unimplemented",
+    "caller must normalize and validate annotated source prior to passing command stream",
+    "not a full COCK guest preflight or stage A proof",
+    "outside-repository Python drafting and diagnostic oracles cannot certify strict BF-only development process"
+  ],
+  "fixture_binary_files": 22,
+  "input_grammar": "(u8 command, u8 guard A5) repeated; zero command and A5 guard terminator; trusted external exact stream closure required",
+  "output_grammar": "one diagnostic byte: 01 static safe; 00 reject. Never guest stdout.",
+  "static_pointer_proof": "One pass over every command checks pointer positions in 0..5; a loop frame saves its entry pointer, and each matching close requires identical exit pointer. By induction every admitted loop iteration leaves the pointer unchanged, and all textual movements are within the six-cell range.",
+  "reproduction": "Run an externally installed binary-safe BF evaluator on src/six_cell_static_safety_gate.bf with input from fixtures/six_cell_safety/*.input.bin; compare exact one-byte outputs. Example invocation documented in the accompanying evidence report.",
+  "negative_preflight_requirement": "Because zero is a control marker in this diagnostic input grammar, it is not a representable source command; exact annotated-source preflight must independently reject a real source NUL and any trailing bytes."
+}

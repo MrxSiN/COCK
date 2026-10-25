@@ -1,0 +1,66 @@
+[
+  {
+    "name": "wrap",
+    "returncode": 0,
+    "stdout_hex": "ff00",
+    "stderr": "",
+    "expected_hex": "ff00",
+    "passed": true
+  },
+  {
+    "name": "binary-eof",
+    "returncode": 0,
+    "stdout_hex": "00ff00",
+    "stderr": "",
+    "expected_hex": "00ff00",
+    "passed": true
+  },
+  {
+    "name": "new-tape",
+    "returncode": 0,
+    "stdout_hex": "00",
+    "stderr": "",
+    "expected_hex": "00",
+    "passed": true
+  },
+  {
+    "name": "nested",
+    "returncode": 0,
+    "stdout_hex": "04",
+    "stderr": "",
+    "expected_hex": "04",
+    "passed": true
+  },
+  {
+    "name": "unmatched-open",
+    "returncode": 0,
+    "stdout_hex": "00",
+    "stderr": "Warning: Unterminated loop at end of file.\n",
+    "expected_hex": null,
+    "passed": null
+  },
+  {
+    "name": "unmatched-close",
+    "returncode": 0,
+    "stdout_hex": "00",
+    "stderr": "Warning: unbalanced bracket at Line 1, Col 2\n",
+    "expected_hex": null,
+    "passed": null
+  },
+  {
+    "name": "left-boundary",
+    "returncode": 0,
+    "stdout_hex": "00",
+    "stderr": "",
+    "expected_hex": null,
+    "passed": null
+  },
+  {
+    "name": "right-growth",
+    "returncode": 0,
+    "stdout_hex": "00",
+    "stderr": "",
+    "expected_hex": "00",
+    "passed": true
+  }
+]

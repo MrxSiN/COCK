@@ -1,0 +1,75 @@
+{
+  "component": "src/bf_in_bf_dynamic_budget.bf",
+  "status": "diagnostic only",
+  "max_guest_cells": 256,
+  "min_guest_cells": 1,
+  "input_contract": "u8 max_additional_cells followed by admitted raw guest commands terminated by 00",
+  "output_contract": "raw guest output followed by one development status byte",
+  "source_sha256": "41a971997e787383b7eeac3300ea3e0522611ac4fe2fa6cd63eeaa05b5700db8",
+  "source_bytes": 3509,
+  "executable_commands": 946,
+  "fixed_and_random_cases": 548,
+  "extended_cases": 1468,
+  "new_total": 2016,
+  "new_failures": 0,
+  "saved_fixtures": 15,
+  "saved_fixture_failures": 0,
+  "preserved_full_compiler_outputs": [
+    {
+      "compiler": "original",
+      "app": "tiny_app_a",
+      "bytes": 264,
+      "matched": true,
+      "hash": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "compiler": "original",
+      "app": "tiny_app_b",
+      "bytes": 272,
+      "matched": true,
+      "hash": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "compiler": "original",
+      "app": "held_out",
+      "bytes": 280,
+      "matched": true,
+      "hash": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_a",
+      "bytes": 140,
+      "matched": true,
+      "hash": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_b",
+      "bytes": 144,
+      "matched": true,
+      "hash": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "compiler": "compact",
+      "app": "held_out",
+      "bytes": 148,
+      "matched": true,
+      "hash": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    }
+  ],
+  "repository_bf_files_audited": 39,
+  "repository_audit_failures": [],
+  "environment": "local outside-repository C diagnostic Brainfuck evaluator, no qualified bootstrap, Android deferred",
+  "limitations": [
+    "linear subset only",
+    "guest comma and arbitrary loops unsupported",
+    "per-invocation one-byte logical cell budget max 256",
+    "no integrated complete-source preflight or trusted external input closure",
+    "no guest instruction fuel",
+    "partial output before unsupported source or runtime trap can occur",
+    "development status byte is not authoritative BFIO result",
+    "cannot run either full mini compiler or nested self-hosting proof",
+    "foreign-language outside-repository diagnostic and layout editing aid used; strict BF-only development-process provenance not certified"
+  ]
+}

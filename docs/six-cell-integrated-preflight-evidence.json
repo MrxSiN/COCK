@@ -1,0 +1,3139 @@
+{
+  "date": "2026-10-24",
+  "component": "src/bf_in_bf_six_cell_preflight.bf",
+  "status": "diagnostic",
+  "cases_passed": 446,
+  "failures": [],
+  "fixed_cases": 25,
+  "random_seed": 20261024,
+  "compiler_output_cases": 6,
+  "bf_sources_audited": 30,
+  "source_audit_failures": [],
+  "source_sha256": "ac2aa9be04c051fe84d4e3a66170cb36a15efae86330046d8d79ae44f6fd0913",
+  "source_commands": 10635,
+  "seconds_total": 21.009,
+  "records": [
+    {
+      "name": "empty",
+      "input_bytes": 1,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "single_plus",
+      "input_bytes": 4,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "two_plus",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "02",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "malformed_suffix",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "invalid_first",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "nul_after_output",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "nul_start",
+      "input_bytes": 4,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "invalid_over_brackets",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "unmatched_open_after_output",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "02",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "unmatched_close_after_output",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "03",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "brackets_empty",
+      "input_bytes": 4,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "nested_skip",
+      "input_bytes": 7,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "clear_decrement",
+      "input_bytes": 10,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.003
+    },
+    {
+      "name": "clear_increment",
+      "input_bytes": 9,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0582
+    },
+    {
+      "name": "transfer",
+      "input_bytes": 12,
+      "output_bytes": 1,
+      "output_hex": "02",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "binary_zero",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "binary_ff",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "binary_eof",
+      "input_bytes": 4,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "binary_wrap",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "right_two",
+      "input_bytes": 14,
+      "output_bytes": 1,
+      "output_hex": "04",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "high_wrapping",
+      "input_bytes": 203,
+      "output_bytes": 1,
+      "output_hex": "c8",
+      "outer_wall_seconds": 0.0203
+    },
+    {
+      "name": "chunk_cross_loop",
+      "input_bytes": 264,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0735
+    },
+    {
+      "name": "deep_255",
+      "input_bytes": 513,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0549
+    },
+    {
+      "name": "deep_256",
+      "input_bytes": 516,
+      "output_bytes": 1,
+      "output_hex": "0a",
+      "outer_wall_seconds": 0.038
+    },
+    {
+      "name": "byte_fence",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 78,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 4,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 82,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0057
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0007
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 68,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0042
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 44,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 42,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0031
+    },
+    {
+      "name": "random",
+      "input_bytes": 46,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0037
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.003
+    },
+    {
+      "name": "random",
+      "input_bytes": 29,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 36,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 45,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.003
+    },
+    {
+      "name": "random",
+      "input_bytes": 75,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 49,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 87,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0058
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0033
+    },
+    {
+      "name": "random",
+      "input_bytes": 47,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 32,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 79,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0049
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 37,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 40,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 58,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0047
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0037
+    },
+    {
+      "name": "random",
+      "input_bytes": 56,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 65,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 41,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0029
+    },
+    {
+      "name": "random",
+      "input_bytes": 49,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 77,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 74,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.011
+    },
+    {
+      "name": "random",
+      "input_bytes": 15,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 69,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 54,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 86,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0053
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0031
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 64,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 52,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 72,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 54,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 81,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 76,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 65,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0047
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 53,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 81,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0053
+    },
+    {
+      "name": "random",
+      "input_bytes": 76,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 64,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0042
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 61,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 15,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 66,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 52,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 37,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 29,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 24,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 82,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0049
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 36,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0029
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 37,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 82,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0056
+    },
+    {
+      "name": "random",
+      "input_bytes": 57,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 31,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 72,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 75,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 85,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 31,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 46,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0035
+    },
+    {
+      "name": "random",
+      "input_bytes": 86,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0061
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 60,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 61,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0055
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 72,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0047
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 39,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0037
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 62,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 69,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0058
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0029
+    },
+    {
+      "name": "random",
+      "input_bytes": 56,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0042
+    },
+    {
+      "name": "random",
+      "input_bytes": 62,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 77,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0051
+    },
+    {
+      "name": "random",
+      "input_bytes": 30,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 70,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0057
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0033
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 82,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 73,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0053
+    },
+    {
+      "name": "random",
+      "input_bytes": 69,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 55,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0054
+    },
+    {
+      "name": "random",
+      "input_bytes": 37,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 46,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0031
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 15,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 47,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0029
+    },
+    {
+      "name": "random",
+      "input_bytes": 55,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 85,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0054
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 62,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 74,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 63,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0053
+    },
+    {
+      "name": "random",
+      "input_bytes": 49,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 66,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 86,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0064
+    },
+    {
+      "name": "random",
+      "input_bytes": 60,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 42,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 64,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0056
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0008
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 52,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 46,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 39,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 73,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 69,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 63,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0044
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0049
+    },
+    {
+      "name": "random",
+      "input_bytes": 59,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0036
+    },
+    {
+      "name": "random",
+      "input_bytes": 70,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 74,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 64,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0047
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0043
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 79,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0054
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0033
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0042
+    },
+    {
+      "name": "random",
+      "input_bytes": 72,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 70,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 36,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 70,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0043
+    },
+    {
+      "name": "random",
+      "input_bytes": 52,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0037
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 30,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 30,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 42,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0031
+    },
+    {
+      "name": "random",
+      "input_bytes": 57,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 42,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0031
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 77,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0054
+    },
+    {
+      "name": "random",
+      "input_bytes": 32,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0068
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 48,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0043
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 51,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0056
+    },
+    {
+      "name": "random",
+      "input_bytes": 29,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0076
+    },
+    {
+      "name": "random",
+      "input_bytes": 73,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0063
+    },
+    {
+      "name": "random",
+      "input_bytes": 71,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 59,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0067
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "02",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 80,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 61,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0042
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 56,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 15,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 76,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 57,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.004
+    },
+    {
+      "name": "random",
+      "input_bytes": 7,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 66,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0043
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 73,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 87,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0058
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 72,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.007
+    },
+    {
+      "name": "random",
+      "input_bytes": 67,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 53,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 58,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 57,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 60,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0039
+    },
+    {
+      "name": "random",
+      "input_bytes": 75,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 24,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 7,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 76,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0059
+    },
+    {
+      "name": "random",
+      "input_bytes": 77,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0048
+    },
+    {
+      "name": "random",
+      "input_bytes": 37,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0026
+    },
+    {
+      "name": "random",
+      "input_bytes": 83,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0049
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 66,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0045
+    },
+    {
+      "name": "random",
+      "input_bytes": 68,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0047
+    },
+    {
+      "name": "random",
+      "input_bytes": 75,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.005
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 80,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0052
+    },
+    {
+      "name": "random",
+      "input_bytes": 50,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 43,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 49,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0035
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0753
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0553
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 3,
+      "output_hex": "010000",
+      "outer_wall_seconds": 0.0516
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 2,
+      "output_hex": "0001",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 7,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.0012
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 4,
+      "output_hex": "00ffff02",
+      "outer_wall_seconds": 0.0533
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 6,
+      "output_hex": "000000000000",
+      "outer_wall_seconds": 0.0517
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0029
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 2,
+      "output_hex": "0002",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 2,
+      "output_hex": "00fe",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 27,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.1009
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "02",
+      "outer_wall_seconds": 0.1042
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0497
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 2,
+      "output_hex": "ff00",
+      "outer_wall_seconds": 0.0529
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 2,
+      "output_hex": "00ff",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0008
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 7,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 34,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.054
+    },
+    {
+      "name": "random",
+      "input_bytes": 35,
+      "output_bytes": 2,
+      "output_hex": "00fe",
+      "outer_wall_seconds": 0.0046
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0008
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0518
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 4,
+      "output_hex": "ffff0100",
+      "outer_wall_seconds": 0.0716
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 3,
+      "output_hex": "010100",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 38,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.2015
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 3,
+      "output_hex": "000000",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0025
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 4,
+      "output_hex": "00010200",
+      "outer_wall_seconds": 0.0544
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0018
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 3,
+      "output_hex": "000001",
+      "outer_wall_seconds": 0.0034
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 2,
+      "output_hex": "0200",
+      "outer_wall_seconds": 0.0522
+    },
+    {
+      "name": "random",
+      "input_bytes": 4,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 32,
+      "output_bytes": 3,
+      "output_hex": "ffff00",
+      "outer_wall_seconds": 0.0707
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.002
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 31,
+      "output_bytes": 5,
+      "output_hex": "00ff000000",
+      "outer_wall_seconds": 0.0706
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.0504
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 2,
+      "output_hex": "0101",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 2,
+      "output_hex": "ff00",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 24,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0691
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 2,
+      "output_hex": "ff00",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0515
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0527
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.053
+    },
+    {
+      "name": "random",
+      "input_bytes": 15,
+      "output_bytes": 2,
+      "output_hex": "0100",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 2,
+      "output_hex": "0200",
+      "outer_wall_seconds": 0.0514
+    },
+    {
+      "name": "random",
+      "input_bytes": 28,
+      "output_bytes": 1,
+      "output_hex": "fe",
+      "outer_wall_seconds": 0.0038
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0527
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.1672
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.1026
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 2,
+      "output_hex": "0001",
+      "outer_wall_seconds": 0.0505
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 3,
+      "output_hex": "fffffe",
+      "outer_wall_seconds": 0.0515
+    },
+    {
+      "name": "random",
+      "input_bytes": 44,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.053
+    },
+    {
+      "name": "random",
+      "input_bytes": 12,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 5,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 5,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 14,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.1009
+    },
+    {
+      "name": "random",
+      "input_bytes": 39,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0041
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 3,
+      "output_hex": "000000",
+      "outer_wall_seconds": 0.0519
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 16,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.1012
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0017
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 5,
+      "output_hex": "0000000100",
+      "outer_wall_seconds": 0.1024
+    },
+    {
+      "name": "random",
+      "input_bytes": 22,
+      "output_bytes": 3,
+      "output_hex": "000001",
+      "outer_wall_seconds": 0.0741
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 33,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0033
+    },
+    {
+      "name": "random",
+      "input_bytes": 25,
+      "output_bytes": 3,
+      "output_hex": "000100",
+      "outer_wall_seconds": 0.0027
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 11,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0015
+    },
+    {
+      "name": "random",
+      "input_bytes": 19,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 31,
+      "output_bytes": 2,
+      "output_hex": "ff00",
+      "outer_wall_seconds": 0.0035
+    },
+    {
+      "name": "random",
+      "input_bytes": 18,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0023
+    },
+    {
+      "name": "random",
+      "input_bytes": 32,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0564
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0021
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0009
+    },
+    {
+      "name": "random",
+      "input_bytes": 8,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0522
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 1,
+      "output_hex": "01",
+      "outer_wall_seconds": 0.0024
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0019
+    },
+    {
+      "name": "random",
+      "input_bytes": 10,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 21,
+      "output_bytes": 3,
+      "output_hex": "0000ff",
+      "outer_wall_seconds": 0.0028
+    },
+    {
+      "name": "random",
+      "input_bytes": 6,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 13,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0016
+    },
+    {
+      "name": "random",
+      "input_bytes": 4,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 1,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.001
+    },
+    {
+      "name": "random",
+      "input_bytes": 29,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0032
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.1021
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.0548
+    },
+    {
+      "name": "random",
+      "input_bytes": 17,
+      "output_bytes": 2,
+      "output_hex": "0000",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 26,
+      "output_bytes": 3,
+      "output_hex": "000300",
+      "outer_wall_seconds": 0.0733
+    },
+    {
+      "name": "random",
+      "input_bytes": 7,
+      "output_bytes": 1,
+      "output_hex": "ff",
+      "outer_wall_seconds": 0.0013
+    },
+    {
+      "name": "random",
+      "input_bytes": 20,
+      "output_bytes": 6,
+      "output_hex": "010100000001",
+      "outer_wall_seconds": 0.0022
+    },
+    {
+      "name": "random",
+      "input_bytes": 9,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0014
+    },
+    {
+      "name": "random",
+      "input_bytes": 23,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.1177
+    },
+    {
+      "name": "random",
+      "input_bytes": 3,
+      "output_bytes": 0,
+      "output_hex": "",
+      "outer_wall_seconds": 0.0011
+    },
+    {
+      "name": "random",
+      "input_bytes": 24,
+      "output_bytes": 1,
+      "output_hex": "00",
+      "outer_wall_seconds": 0.1067
+    },
+    {
+      "name": "original_tiny_app_a",
+      "input_bytes": 552,
+      "output_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "outer_wall_seconds": 3.1519
+    },
+    {
+      "name": "original_tiny_app_b",
+      "input_bytes": 553,
+      "output_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "outer_wall_seconds": 3.1243
+    },
+    {
+      "name": "original_held_out",
+      "input_bytes": 554,
+      "output_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "outer_wall_seconds": 3.2074
+    },
+    {
+      "name": "compact_tiny_app_a",
+      "input_bytes": 489,
+      "output_bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "outer_wall_seconds": 2.1896
+    },
+    {
+      "name": "compact_tiny_app_b",
+      "input_bytes": 490,
+      "output_bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "outer_wall_seconds": 2.2825
+    },
+    {
+      "name": "compact_held_out",
+      "input_bytes": 491,
+      "output_bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "outer_wall_seconds": 2.2145
+    }
+  ]
+}

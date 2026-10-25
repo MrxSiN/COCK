@@ -1,0 +1,17 @@
+{
+  "note": "Inert acceptance inventory frozen before consolidated implementation tests",
+  "input": "Raw prevalidated linear guest code bytes followed by binary zero terminator; a trusted host separately supplies actual byte length and closure",
+  "output": "Guest output bytes followed by one terminal status byte",
+  "vectors": [
+    {"id": "empty", "source": "", "expected_hex": "00"},
+    {"id": "one", "source": "+.", "expected_hex": "0100"},
+    {"id": "wrap", "source": "-.", "expected_hex": "ff00"},
+    {"id": "move-right", "source": ">+.<.", "expected_hex": "010000"},
+    {"id": "return-old", "source": "+>>+<<.", "expected_hex": "0100"},
+    {"id": "left-trap", "source": "<", "expected_hex": "04"},
+    {"id": "late-left-trap", "source": "><<", "expected_hex": "04"},
+    {"id": "unsupported-loop", "source": "[", "expected_hex": "0d"},
+    {"id": "unsupported-input", "source": ",", "expected_hex": "0d"},
+    {"id": "partial-output", "source": "+.[", "expected_hex": "010d"}
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "profile": "COCK arithmetic diagnostic subset",
+  "description": "Positive nested execution vectors only, without source preflight or host closure claims",
+  "vectors": [
+    {
+      "name": "empty",
+      "input": "fixtures/nested_arithmetic/empty.input.bin",
+      "expected": "fixtures/nested_arithmetic/empty.expected.bin",
+      "input_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "expected_hex": "00"
+    },
+    {
+      "name": "minus_one",
+      "input": "fixtures/nested_arithmetic/minus_one.input.bin",
+      "expected": "fixtures/nested_arithmetic/minus_one.expected.bin",
+      "input_sha256": "be7f48c8ae1c3860960a350e02184be8722dfbed6bf8e9e5e6c4053f4451a09f",
+      "expected_hex": "ff"
+    },
+    {
+      "name": "one",
+      "input": "fixtures/nested_arithmetic/one.input.bin",
+      "expected": "fixtures/nested_arithmetic/one.expected.bin",
+      "input_sha256": "5fa6534d1d4dd879ff7924a8e0030e4814cddfa5466e58601573651afd366239",
+      "expected_hex": "01"
+    },
+    {
+      "name": "two",
+      "input": "fixtures/nested_arithmetic/two.input.bin",
+      "expected": "fixtures/nested_arithmetic/two.expected.bin",
+      "input_sha256": "963cf87ddd41be481dacec23bcb26b756803b5b57915c43f3da040f7cd9e3ef6",
+      "expected_hex": "02"
+    },
+    {
+      "name": "cancel_three",
+      "input": "fixtures/nested_arithmetic/cancel_three.input.bin",
+      "expected": "fixtures/nested_arithmetic/cancel_three.expected.bin",
+      "input_sha256": "26a588397c0bb61a4fac535c8dc423c47f23857aa4eab46b1aaed6f3b599b349",
+      "expected_hex": "00"
+    },
+    {
+      "name": "cancel_two",
+      "input": "fixtures/nested_arithmetic/cancel_two.input.bin",
+      "expected": "fixtures/nested_arithmetic/cancel_two.expected.bin",
+      "input_sha256": "4f9744f4a3944c6fbf6072a00a2b272f5186894217ff9fff86697f4299b27d7c",
+      "expected_hex": "00"
+    },
+    {
+      "name": "net_three",
+      "input": "fixtures/nested_arithmetic/net_three.input.bin",
+      "expected": "fixtures/nested_arithmetic/net_three.expected.bin",
+      "input_sha256": "54b411baca37be9c9b2c0238ca01a1508137d2de48fa766d897da86ff4eebb89",
+      "expected_hex": "03"
+    },
+    {
+      "name": "cancel_four",
+      "input": "fixtures/nested_arithmetic/cancel_four.input.bin",
+      "expected": "fixtures/nested_arithmetic/cancel_four.expected.bin",
+      "input_sha256": "141790f37266bff21eeaf1b2261a72eadcfe0726552eb37f14876f4a5208191b",
+      "expected_hex": "00"
+    },
+    {
+      "name": "minus_five",
+      "input": "fixtures/nested_arithmetic/minus_five.input.bin",
+      "expected": "fixtures/nested_arithmetic/minus_five.expected.bin",
+      "input_sha256": "ad3570c1870662b1b1e399a7adf618e3a790b77a6e919d3b43bcc015e7c4f4d1",
+      "expected_hex": "fb"
+    },
+    {
+      "name": "ten",
+      "input": "fixtures/nested_arithmetic/ten.input.bin",
+      "expected": "fixtures/nested_arithmetic/ten.expected.bin",
+      "input_sha256": "da79e90bb95852d01e283aef08a47891f6db29202b4df5dc1af8bb60682fc28f",
+      "expected_hex": "0a"
+    },
+    {
+      "name": "mixed_one",
+      "input": "fixtures/nested_arithmetic/mixed_one.input.bin",
+      "expected": "fixtures/nested_arithmetic/mixed_one.expected.bin",
+      "input_sha256": "7975dd3d938f2d7cb5a176200b82338811cc11242d5272c562c46a63b5a62ed2",
+      "expected_hex": "01"
+    },
+    {
+      "name": "space",
+      "input": "fixtures/nested_arithmetic/space.input.bin",
+      "expected": "fixtures/nested_arithmetic/space.expected.bin",
+      "input_sha256": "7d55aed571cbd57370d20eb0367a1c9e4439bbf0542b6c192f2cdd42daa4996a",
+      "expected_hex": "20"
+    },
+    {
+      "name": "letter_a",
+      "input": "fixtures/nested_arithmetic/letter_a.input.bin",
+      "expected": "fixtures/nested_arithmetic/letter_a.expected.bin",
+      "input_sha256": "e6f76c61eb56d27ecc56a282389cf56916d88b5462c8f6ea632e6862f6b437c8",
+      "expected_hex": "41"
+    }
+  ]
+}

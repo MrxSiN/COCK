@@ -1,0 +1,15 @@
+{
+  "phase": "planned first pass diagnostic vectors",
+  "input_mode": "raw complete previously validated annotated source bytes",
+  "result_mode": "raw Brainfuck eight command byte subsequence",
+  "vectors": [
+    {"name":"empty", "source_hex":"", "normalized_hex":"", "admissible":true},
+    {"name":"all eight", "source_hex":"2b2d3c3e5b5d2e2c", "normalized_hex":"2b2d3c3e5b5d2e2c", "admissible":true},
+    {"name":"safe annotations", "source_hex":"2320736166650a2b202e0a", "normalized_hex":"2b2e", "admissible":true},
+    {"name":"crlf", "source_hex":"2b0d0a2309736166650d0a2e", "normalized_hex":"2b2e", "admissible":true},
+    {"name":"spaces tabs", "source_hex":"202b0920202d200a2e", "normalized_hex":"2b2d2e", "admissible":true},
+    {"name":"invalid forbidden comment", "source_hex":"23202b0a2e", "normalized_hex":"2b2e", "admissible":false},
+    {"name":"invalid nul", "source_hex":"2b002e", "normalized_hex":"2b", "admissible":false},
+    {"name":"invalid inline comment", "source_hex":"2b232e", "normalized_hex":"2b2e", "admissible":false}
+  ]
+}

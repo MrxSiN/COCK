@@ -1,0 +1,24 @@
+{
+  "format": "development-only u8 count and bytes and A5 trailer records with zero-count A5 terminator",
+  "expected_result_bytes": {"accept": "01", "reject": "00"},
+  "tests": [
+    {"name":"empty","source_hex":"","accept":true},
+    {"name":"plus output","source_hex":"2b2e","accept":true},
+    {"name":"valid safe annotation","source_hex":"232068656c6c6f0a2b2e0a","accept":true},
+    {"name":"indented safe annotation","source_hex":"20092320736166650a2b2e","accept":true},
+    {"name":"newline between code and comment","source_hex":"2b0a2320736166650a2e","accept":true},
+    {"name":"comment may contain hash","source_hex":"2320232068656c6c6f","accept":true},
+    {"name":"invalid inline annotation","source_hex":"2b20236869","accept":false},
+    {"name":"invalid command in comment","source_hex":"2320612b62","accept":false},
+    {"name":"invalid embedded nul","source_hex":"2b002e","accept":false},
+    {"name":"valid crlf","source_hex":"2b0d0a2e","accept":true},
+    {"name":"invalid bare cr","source_hex":"2b0d2e","accept":false},
+    {"name":"invalid terminal cr","source_hex":"2b0d","accept":false},
+    {"name":"unmatched closing","source_hex":"5d","accept":false},
+    {"name":"unmatched opening","source_hex":"5b","accept":false},
+    {"name":"nested legal","source_hex":"5b5b5d5d","accept":true},
+    {"name":"illegal utf8","source_hex":"c3a9","accept":false},
+    {"name":"illegal bom","source_hex":"efbbbf","accept":false},
+    {"name":"invalid content on code line","source_hex":"616263","accept":false}
+  ]
+}

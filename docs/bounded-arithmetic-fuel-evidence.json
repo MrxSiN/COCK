@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-24",
+  "component": "bounded_arithmetic_fuel_executor.bf",
+  "source_sha256": "4ecf8c43b1f83d6ae34f0450c41592e1ee228350ccfa7ec997f273956fe68b40",
+  "input_grammar": "u8 fuel then repeated command and A5 records then 00 A5 terminal",
+  "output_grammar": "diagnostic status byte 0 then guest output byte on success; 6 no fuel; 11 bad guard; 13 unsupported",
+  "count": {
+    "passed": 1279,
+    "total": 1279
+  },
+  "first_failures": [],
+  "negative_host_closure": {
+    "input_hex": "022ba52ea500a5ff",
+    "returned_hex": "0001",
+    "expected_to_be_unverifiable": true,
+    "accepted": true
+  },
+  "scope": "single cell plus and minus with one final dot; not general COCK guest or BFIO",
+  "status": "DIAGNOSTIC COMPONENT; NOT STAGE A ACCEPTANCE",
+  "source_executable_commands": 6356,
+  "source_module_bytes": 7444,
+  "repository_source_audit": {
+    "passed": 21,
+    "total": 21,
+    "note": "comment and bracket syntax audit only"
+  },
+  "frozen_native_artifact_regression": {
+    "passed": 6,
+    "total": 6,
+    "description": "existing six cell interpreter, unchanged original and compact compilers, three application programs each; exact raw byte files"
+  },
+  "known_preflight_precedence_failure": {
+    "input_hex": "002ba558a52ea500a5",
+    "observed_hex": "06",
+    "expected_coCK_semantics": "Reject invalid full source before fuel; current diagnostic runs without full source preflight",
+    "result": "NOT CONFORMANT on untrusted guest source"
+  },
+  "external_drafting_aid": "Temporary Python helper outside repository generated repetitive BF layout; BF-only repository content but strict pure-BF production authorship is not certified",
+  "sdk_emulator_android": "Deferred at user request, no device test",
+  "test_authority": "Locally available nonqualifying C diagnostic evaluator outside repository; not an independently qualified bootstrap",
+  "fixture_pairs_saved": 23
+}

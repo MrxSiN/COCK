@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-24",
+  "scope": "local outside repository diagnostic evaluator no trusted host closure",
+  "planned": 1620,
+  "executed": 1620,
+  "passed": 1620,
+  "by_category": {
+    "exhaustive_result": 256,
+    "single_byte": 256,
+    "random_bytes": 750,
+    "random_arithmetic": 320,
+    "fixed": 14,
+    "guard_failure": 12,
+    "length_mismatch": 9,
+    "host_closure_gap": 3
+  },
+  "duration_seconds": 10.279,
+  "failures": [],
+  "host_closure_caveat": "trailing bytes not visible to this BF program; checks pass only for BF observed bytes"
+}

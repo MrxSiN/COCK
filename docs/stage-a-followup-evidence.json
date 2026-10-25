@@ -1,0 +1,51 @@
+{
+  "recorded_date": "2026-10-24",
+  "classification": "development diagnostics only; not Stage A acceptance",
+  "host": {
+    "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "kvm_present": false,
+    "android_sdk_installed": false,
+    "adb_installed": false
+  },
+  "diagnostic_evaluator": {
+    "binary": "/usr/local/bin/cock-bf-diagnostic",
+    "origin": "compiled from a local temporary C diagnostic implementation outside repository, not independent supplied evaluator",
+    "sha256": "062b8c3784983c353e8ab9c5f44adbd2fefd9c2e9401f69c5895f9555b5d3b78"
+  },
+  "new_bf_component": {
+    "file": "src/raw_subset_gate.bf",
+    "sha256": "f80e2be6458473a7064148651a14d50dd94b3644185c89ae0a9dc5fe8f1d83cd",
+    "bytes": 2497,
+    "executable_commands": 606,
+    "status": "implemented diagnostics only; limited raw-source input",
+    "fixed_vectors_passed": 13,
+    "fixed_vectors_total": 13,
+    "randomized_differential_passed": 400,
+    "randomized_differential_total": 400,
+    "random_seed": "0xC0CC",
+    "status_byte": "01 admitted; 00 rejected; provisional only"
+  },
+  "pure_bf_source_grammar": {
+    "files_scanned": 7,
+    "passed": 7
+  },
+  "remaining_required": {
+    "annotated_source_preflight": "NOT IMPLEMENTED",
+    "generic_unbounded_framed_source_input": "NOT IMPLEMENTED",
+    "printable_ascii_output_admission": "NOT IMPLEMENTED",
+    "bf_in_bf_executes_real_mini_compiler": "NOT IMPLEMENTED",
+    "nested_self_interpretation": "NOT RUN",
+    "android_elf_and_native_entry": "NOT IMPLEMENTED",
+    "sdk_emulator_install": "BLOCKED network and platform",
+    "android_device": "NOT AVAILABLE",
+    "signed_debug_apk": "NOT IMPLEMENTED"
+  },
+  "limitations": [
+    "per invocation one-byte source-length budget is not a global size cap",
+    "trusted host must independently attest actual byte counts and process/pipe closure",
+    "one-byte output is not a COCK-FRAME-v1 terminal status",
+    "physical I/O is not authenticated by the A5 terminal byte",
+    "this gate is not an annotated source parser"
+  ]
+}

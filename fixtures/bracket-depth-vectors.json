@@ -1,0 +1,19 @@
+{
+  "format": "u8 source count, raw command bytes, one A5 guard",
+  "output": "one byte hex 01 for balanced, 00 for invalid",
+  "requires_lexically_admitted_source": true,
+  "cases": [
+    {"name":"empty", "source":"", "guard_hex":"a5", "expected_hex":"01"},
+    {"name":"plain", "source":"++--.>", "guard_hex":"a5", "expected_hex":"01"},
+    {"name":"empty_loop", "source":"[]", "guard_hex":"a5", "expected_hex":"01"},
+    {"name":"nested", "source":"[[]]", "guard_hex":"a5", "expected_hex":"01"},
+    {"name":"real_nested_loop", "source":"++[->+<[->+<]]", "guard_hex":"a5", "expected_hex":"01"},
+    {"name":"early_close", "source":"]", "guard_hex":"a5", "expected_hex":"00"},
+    {"name":"unclosed_open", "source":"[", "guard_hex":"a5", "expected_hex":"00"},
+    {"name":"close_before_open", "source":"][", "guard_hex":"a5", "expected_hex":"00"},
+    {"name":"extra_close", "source":"[]]", "guard_hex":"a5", "expected_hex":"00"},
+    {"name":"two_unclosed", "source":"[[", "guard_hex":"a5", "expected_hex":"00"},
+    {"name":"bad_trailer", "source":"[]", "guard_hex":"00", "expected_hex":"00"},
+    {"name":"trailer_absent", "source":"[]", "guard_hex":null, "expected_hex":"00"}
+  ]
+}

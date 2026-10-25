@@ -1,0 +1,18 @@
+{
+  "format": "development only one unsigned byte count followed by exact bytes and an A5 guard",
+  "accepted_prefix_hex": "01",
+  "rejected_result_hex": "00",
+  "cases": [
+    {"name": "empty", "source_hex": "", "valid": true},
+    {"name": "plus", "source_hex": "2b", "valid": true},
+    {"name": "all_commands", "source_hex": "2b2d3c3e5b5d2e2c", "valid": true},
+    {"name": "nested", "source_hex": "2b5b2d5b2b5d5d2e", "valid": true},
+    {"name": "unexpected_close", "source_hex": "5d5b", "valid": false},
+    {"name": "unfinished_open", "source_hex": "5b2b", "valid": false},
+    {"name": "invalid_suffix", "source_hex": "2b2e78", "valid": false},
+    {"name": "embedded_nul", "source_hex": "2b002e", "valid": false},
+    {"name": "non_ascii", "source_hex": "c3a9", "valid": false},
+    {"name": "unbalanced_early", "source_hex": "5d5b5d", "valid": false},
+    {"name": "valid_255", "source_hex": null, "recipe": "255 plus bytes", "valid": true}
+  ]
+}

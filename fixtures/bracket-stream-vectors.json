@@ -1,0 +1,14 @@
+{
+ "format":"repeat [nonzero u8 count, BF bytes, A5] then terminate [00,A5]",
+ "requires_lexically_admitted_source":true,
+ "cases":[
+  {"name":"empty","source":"","chunk_sizes":[],"expected_hex":"01"},
+  {"name":"empty_loop","source":"[]","chunk_sizes":[2],"expected_hex":"01"},
+  {"name":"open_split_close","source":"[[]]","chunk_sizes":[1,1,1,1],"expected_hex":"01"},
+  {"name":"no_bracket","source":"+++---.,<>","chunk_sizes":[4,6],"expected_hex":"01"},
+  {"name":"single_close","source":"]","chunk_sizes":[1],"expected_hex":"00"},
+  {"name":"single_open","source":"[","chunk_sizes":[1],"expected_hex":"00"},
+  {"name":"out_of_order","source":"][","chunk_sizes":[1,1],"expected_hex":"00"},
+  {"name":"extra_close","source":"[]]","chunk_sizes":[2,1],"expected_hex":"00"}
+ ]
+}

@@ -1,0 +1,4733 @@
+{
+  "date": "2026-10-24",
+  "component": "src/whole_source_bracket_pairs.bf",
+  "status": "LOCAL_DIAGNOSTIC_PASS_NOT_STAGE_A_ACCEPTANCE",
+  "source_sha256": "78ff66378c8d66f7da4d12763bc44f833cf0942beed7a0f56b884b5304677736",
+  "authored_command_count": 1995,
+  "test_summary": {
+    "bracket_cases_passed": 506,
+    "bracket_cases_total": 506,
+    "compiler_artifact_regressions_passed": 6,
+    "source_grammar_audits_passed": 33,
+    "intentional_negative_failures": 2
+  },
+  "test_class_counts": {
+    "fixed": 9,
+    "real_sources": 5,
+    "seeded_valid": 400,
+    "seeded_unrestricted": 80,
+    "length_boundaries": 8,
+    "distant_pairs": 4
+  },
+  "random_seed": "0xC0C",
+  "fixture_meta": {
+    "empty": {
+      "command_bytes": 0,
+      "expected_bytes": 1,
+      "input_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "result_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "status": 0
+    },
+    "nested": {
+      "command_bytes": 5,
+      "expected_bytes": 9,
+      "input_sha256": "dcebcbc95c617fe0189d902af02eb0a02088c7b41e611015c3f001665bde684b",
+      "result_sha256": "48928802eceb9a47beb21026b1a6ae3fe297d581c3ba2fc710b28111cbe2252f",
+      "status": 0
+    },
+    "disjoint": {
+      "command_bytes": 4,
+      "expected_bytes": 9,
+      "input_sha256": "1aa93f52bf978503525c176b463aa0767160ba3fd5e72a809c15ccafe8559fc1",
+      "result_sha256": "325b2b1796edf5feeefffdf6dfd6e0ce77660be571f4728587fee0f794a4db10",
+      "status": 0
+    },
+    "mixed": {
+      "command_bytes": 12,
+      "expected_bytes": 17,
+      "input_sha256": "4734db0c1a8f47801591078b2dadabe0097511a5a4eb3fb00447643c70fb9292",
+      "result_sha256": "1ff7d303570aebc228d82f665f5f09323a4e0f57f5ebd7def3b168371229e2b8",
+      "status": 0
+    },
+    "missing_close": {
+      "command_bytes": 2,
+      "expected_bytes": 1,
+      "input_sha256": "189764fbbcfbd925f42aaf8dd40334136e71f6b921989375f913d418b2e16946",
+      "result_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+      "status": 2
+    },
+    "extra_close": {
+      "command_bytes": 3,
+      "expected_bytes": 5,
+      "input_sha256": "1373ca861c6f2b288da2c4a9a65c9fe49707c9e24424d43b54375d6e6fc78aa4",
+      "result_sha256": "7cf603ce287d4ca36b27c47eb97d485b07328e51e9fd3d79a5f79562ebb5d470",
+      "status": 3
+    },
+    "original_compiler": {
+      "command_bytes": 515,
+      "expected_bytes": 121,
+      "input_sha256": "34d9b41856d12a8af062290c6caccacb7459104032c8af7914e67ba6dff94056",
+      "result_sha256": "0b08fd3876e1bd7120836bb53dd0d45efec566e4d8dbe54ca981f2588da9a539",
+      "status": 0
+    },
+    "compact_compiler": {
+      "command_bytes": 452,
+      "expected_bytes": 109,
+      "input_sha256": "5d549016a3453650ba43473ab30b4a3cf244f3a61fe2af34980d2cca7d176581",
+      "result_sha256": "6aa3e192ea40ba4bdaedeaba1ddf2aaa656758f437546d2e3174f1cfa42bf212",
+      "status": 0
+    },
+    "offset_512": {
+      "command_bytes": 512,
+      "expected_bytes": 5,
+      "input_sha256": "627dabbd3f59bcf3c60a329a01341b2f728597061817f54e7bc0ff56a65f325c",
+      "result_sha256": "d26940bea608d3e010409e4ccba99a0af42325edc64d5f624e039f337fad4fe0",
+      "status": 0
+    }
+  },
+  "compiler_regressions": {
+    "original_tiny_app_a": {
+      "pass": true,
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    "original_tiny_app_b": {
+      "pass": true,
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    "original_held_out": {
+      "pass": true,
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    "compact_tiny_app_a": {
+      "pass": true,
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    "compact_tiny_app_b": {
+      "pass": true,
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    "compact_held_out": {
+      "pass": true,
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    }
+  },
+  "negative_observations": {
+    "trailing_after_zero": {
+      "input_hex": "5b5d002b",
+      "observed_hex": "0000010000",
+      "diagnostic_exit": 0,
+      "accepted_unsafely": true
+    },
+    "invalid_letter": {
+      "input_hex": "5800",
+      "observed_hex": "00",
+      "diagnostic_exit": 0,
+      "accepted_unsafely": true
+    }
+  },
+  "full_diagnostic_cases": [
+    {
+      "name": "empty",
+      "pass": true,
+      "source_length": 0,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "linear",
+      "pass": true,
+      "source_length": 5,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "simple",
+      "pass": true,
+      "source_length": 2,
+      "actual_hex": "0000010000",
+      "expected_hex": "0000010000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "nested",
+      "pass": true,
+      "source_length": 6,
+      "actual_hex": "02000300010004000000050000",
+      "expected_hex": "02000300010004000000050000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "interleaved",
+      "pass": true,
+      "source_length": 12,
+      "actual_hex": "00000100040006000300070008000a0000",
+      "expected_hex": "00000100040006000300070008000a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "underflow",
+      "pass": true,
+      "source_length": 1,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "unclosed",
+      "pass": true,
+      "source_length": 2,
+      "actual_hex": "02",
+      "expected_hex": "02",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "completed_then_unclosed",
+      "pass": true,
+      "source_length": 3,
+      "actual_hex": "0000010002",
+      "expected_hex": "0000010002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "completed_then_underflow",
+      "pass": true,
+      "source_length": 3,
+      "actual_hex": "0000010003",
+      "expected_hex": "0000010003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "real_mini_compiler.bf",
+      "pass": true,
+      "source_length": 515,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "real_mini_compiler_compact.bf",
+      "pass": true,
+      "source_length": 452,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "real_bf_in_bf_reference.bf",
+      "pass": true,
+      "source_length": 423,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "real_bf_in_bf_six_cell.bf",
+      "pass": true,
+      "source_length": 8907,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "real_whole_source_bracket_pairs.bf",
+      "pass": true,
+      "source_length": 1995,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_0",
+      "pass": true,
+      "source_length": 142,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_1",
+      "pass": true,
+      "source_length": 200,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_2",
+      "pass": true,
+      "source_length": 121,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_3",
+      "pass": true,
+      "source_length": 204,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_4",
+      "pass": true,
+      "source_length": 25,
+      "actual_hex": "07000b0002000d001300180000",
+      "expected_hex": "07000b0002000d001300180000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_5",
+      "pass": true,
+      "source_length": 146,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_6",
+      "pass": true,
+      "source_length": 169,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_7",
+      "pass": true,
+      "source_length": 154,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_8",
+      "pass": true,
+      "source_length": 162,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_9",
+      "pass": true,
+      "source_length": 158,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_10",
+      "pass": true,
+      "source_length": 45,
+      "actual_hex": "080009000f00210000",
+      "expected_hex": "080009000f00210000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_11",
+      "pass": true,
+      "source_length": 212,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_12",
+      "pass": true,
+      "source_length": 154,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_13",
+      "pass": true,
+      "source_length": 157,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_14",
+      "pass": true,
+      "source_length": 165,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_15",
+      "pass": true,
+      "source_length": 60,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_16",
+      "pass": true,
+      "source_length": 55,
+      "actual_hex": "14001500110018001b001d003400360000",
+      "expected_hex": "14001500110018001b001d003400360000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_17",
+      "pass": true,
+      "source_length": 122,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_18",
+      "pass": true,
+      "source_length": 178,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_19",
+      "pass": true,
+      "source_length": 183,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_20",
+      "pass": true,
+      "source_length": 151,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_21",
+      "pass": true,
+      "source_length": 106,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_22",
+      "pass": true,
+      "source_length": 55,
+      "actual_hex": "08000a0017001e0026002d002100300031003300120034000e0035000c00360000",
+      "expected_hex": "08000a0017001e0026002d002100300031003300120034000e0035000c00360000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_23",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_24",
+      "pass": true,
+      "source_length": 14,
+      "actual_hex": "0500090002000c0000000d0000",
+      "expected_hex": "0500090002000c0000000d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_25",
+      "pass": true,
+      "source_length": 44,
+      "actual_hex": "09000a0002000c0001000d000f00100000001e0025002a0020002b0000",
+      "expected_hex": "09000a0002000c0001000d000f00100000001e0025002a0020002b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_26",
+      "pass": true,
+      "source_length": 131,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_27",
+      "pass": true,
+      "source_length": 215,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_28",
+      "pass": true,
+      "source_length": 214,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_29",
+      "pass": true,
+      "source_length": 211,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_30",
+      "pass": true,
+      "source_length": 226,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_31",
+      "pass": true,
+      "source_length": 102,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_32",
+      "pass": true,
+      "source_length": 112,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_33",
+      "pass": true,
+      "source_length": 83,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_34",
+      "pass": true,
+      "source_length": 65,
+      "actual_hex": "2100250029002b002c002e002f00330000",
+      "expected_hex": "2100250029002b002c002e002f00330000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_35",
+      "pass": true,
+      "source_length": 184,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_36",
+      "pass": true,
+      "source_length": 35,
+      "actual_hex": "1d002000100021000800220000",
+      "expected_hex": "1d002000100021000800220000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_37",
+      "pass": true,
+      "source_length": 214,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_38",
+      "pass": true,
+      "source_length": 32,
+      "actual_hex": "16001b0015001c0014001d0010001e0006001f0000",
+      "expected_hex": "16001b0015001c0014001d0010001e0006001f0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_39",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_40",
+      "pass": true,
+      "source_length": 230,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_41",
+      "pass": true,
+      "source_length": 13,
+      "actual_hex": "09000b0001000c0000",
+      "expected_hex": "09000b0001000c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_42",
+      "pass": true,
+      "source_length": 219,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_43",
+      "pass": true,
+      "source_length": 196,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_44",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_45",
+      "pass": true,
+      "source_length": 30,
+      "actual_hex": "030008001a001c0015001d0000",
+      "expected_hex": "030008001a001c0015001d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_46",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": "08001000130019001a002400120026003e0042003b004700360048003400490011004a0000",
+      "expected_hex": "08001000130019001a002400120026003e0042003b004700360048003400490011004a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_47",
+      "pass": true,
+      "source_length": 155,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_48",
+      "pass": true,
+      "source_length": 152,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_49",
+      "pass": true,
+      "source_length": 84,
+      "actual_hex": "010006000e0011000d001900260028001b002e000b00330037003a004500470000",
+      "expected_hex": "010006000e0011000d001900260028001b002e000b00330037003a004500470000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_50",
+      "pass": true,
+      "source_length": 190,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_51",
+      "pass": true,
+      "source_length": 195,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_52",
+      "pass": true,
+      "source_length": 95,
+      "actual_hex": "1e0024002f003100380039003b0043004d004e0057005b0056005d004f005e0000",
+      "expected_hex": "1e0024002f003100380039003b0043004d004e0057005b0056005d004f005e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_53",
+      "pass": true,
+      "source_length": 154,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_54",
+      "pass": true,
+      "source_length": 21,
+      "actual_hex": "02000400110013000d00140000",
+      "expected_hex": "02000400110013000d00140000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_55",
+      "pass": true,
+      "source_length": 6,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_56",
+      "pass": true,
+      "source_length": 164,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_57",
+      "pass": true,
+      "source_length": 191,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_58",
+      "pass": true,
+      "source_length": 52,
+      "actual_hex": "0a000b0002001100190024002e002f002d00300025003100140032001300330000",
+      "expected_hex": "0a000b0002001100190024002e002f002d00300025003100140032001300330000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_59",
+      "pass": true,
+      "source_length": 165,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_60",
+      "pass": true,
+      "source_length": 164,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_61",
+      "pass": true,
+      "source_length": 34,
+      "actual_hex": "09000a000e0011001d001f001200210000",
+      "expected_hex": "09000a000e0011001d001f001200210000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_62",
+      "pass": true,
+      "source_length": 230,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_63",
+      "pass": true,
+      "source_length": 137,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_64",
+      "pass": true,
+      "source_length": 62,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_65",
+      "pass": true,
+      "source_length": 164,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_66",
+      "pass": true,
+      "source_length": 158,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_67",
+      "pass": true,
+      "source_length": 77,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_68",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_69",
+      "pass": true,
+      "source_length": 213,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_70",
+      "pass": true,
+      "source_length": 89,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_71",
+      "pass": true,
+      "source_length": 228,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_72",
+      "pass": true,
+      "source_length": 214,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_73",
+      "pass": true,
+      "source_length": 190,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_74",
+      "pass": true,
+      "source_length": 235,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_75",
+      "pass": true,
+      "source_length": 213,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_76",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_77",
+      "pass": true,
+      "source_length": 120,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_78",
+      "pass": true,
+      "source_length": 229,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_79",
+      "pass": true,
+      "source_length": 94,
+      "actual_hex": "110022002a002e002f0030003100320043004e0052005300540055003c00570038005d0000",
+      "expected_hex": "110022002a002e002f0030003100320043004e0052005300540055003c00570038005d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_80",
+      "pass": true,
+      "source_length": 53,
+      "actual_hex": "160019001a001e0029002a0028003200200033001300340000",
+      "expected_hex": "160019001a001e0029002a0028003200200033001300340000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_81",
+      "pass": true,
+      "source_length": 231,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_82",
+      "pass": true,
+      "source_length": 31,
+      "actual_hex": "0100070016001a0012001b000c001c000b001d0008001e0000",
+      "expected_hex": "0100070016001a0012001b000c001c000b001d0008001e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_83",
+      "pass": true,
+      "source_length": 158,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_84",
+      "pass": true,
+      "source_length": 200,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_85",
+      "pass": true,
+      "source_length": 100,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_86",
+      "pass": true,
+      "source_length": 67,
+      "actual_hex": "0700080005000d00110014003200350039003e0037003f0031004000250041002200420000",
+      "expected_hex": "0700080005000d00110014003200350039003e0037003f0031004000250041002200420000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_87",
+      "pass": true,
+      "source_length": 226,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_88",
+      "pass": true,
+      "source_length": 112,
+      "actual_hex": "0d000e0016001d0024003500410043006300680061006a004a006b006e006f0000",
+      "expected_hex": "0d000e0016001d0024003500410043006300680061006a004a006b006e006f0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_89",
+      "pass": true,
+      "source_length": 173,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_90",
+      "pass": true,
+      "source_length": 183,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_91",
+      "pass": true,
+      "source_length": 125,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_92",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_93",
+      "pass": true,
+      "source_length": 47,
+      "actual_hex": "11001b000d001d0021002b001f002c001e002d000a002e0000",
+      "expected_hex": "11001b000d001d0021002b001f002c001e002d000a002e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_94",
+      "pass": true,
+      "source_length": 221,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_95",
+      "pass": true,
+      "source_length": 79,
+      "actual_hex": "1f0020001800230037004100320042002f00440046004b002e004c002b004d0029004e0000",
+      "expected_hex": "1f0020001800230037004100320042002f00440046004b002e004c002b004d0029004e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_96",
+      "pass": true,
+      "source_length": 79,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_97",
+      "pass": true,
+      "source_length": 32,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_98",
+      "pass": true,
+      "source_length": 128,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_99",
+      "pass": true,
+      "source_length": 120,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_100",
+      "pass": true,
+      "source_length": 83,
+      "actual_hex": "030004001d0020002d003800390042004f0051004e00520000",
+      "expected_hex": "030004001d0020002d003800390042004f0051004e00520000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_101",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_102",
+      "pass": true,
+      "source_length": 16,
+      "actual_hex": "000003000a000e0004000f0000",
+      "expected_hex": "000003000a000e0004000f0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_103",
+      "pass": true,
+      "source_length": 124,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_104",
+      "pass": true,
+      "source_length": 95,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_105",
+      "pass": true,
+      "source_length": 174,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_106",
+      "pass": true,
+      "source_length": 222,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_107",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_108",
+      "pass": true,
+      "source_length": 175,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_109",
+      "pass": true,
+      "source_length": 178,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_110",
+      "pass": true,
+      "source_length": 30,
+      "actual_hex": "020004000a000b000c0013001b001c0000",
+      "expected_hex": "020004000a000b000c0013001b001c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_111",
+      "pass": true,
+      "source_length": 151,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_112",
+      "pass": true,
+      "source_length": 41,
+      "actual_hex": "0e0010000b00150018001d00230027002100280000",
+      "expected_hex": "0e0010000b00150018001d00230027002100280000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_113",
+      "pass": true,
+      "source_length": 137,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_114",
+      "pass": true,
+      "source_length": 92,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_115",
+      "pass": true,
+      "source_length": 60,
+      "actual_hex": "09000b001e00210026002b00350036001c0038001b00390010003a000d003b0000",
+      "expected_hex": "09000b001e00210026002b00350036001c0038001b00390010003a000d003b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_116",
+      "pass": true,
+      "source_length": 189,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_117",
+      "pass": true,
+      "source_length": 178,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_118",
+      "pass": true,
+      "source_length": 58,
+      "actual_hex": "06000d00100013000f0014002200230000",
+      "expected_hex": "06000d00100013000f0014002200230000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_119",
+      "pass": true,
+      "source_length": 54,
+      "actual_hex": "0b000c001200140015001a0008001e0006002000000021003400350000",
+      "expected_hex": "0b000c001200140015001a0008001e0006002000000021003400350000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_120",
+      "pass": true,
+      "source_length": 133,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_121",
+      "pass": true,
+      "source_length": 173,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_122",
+      "pass": true,
+      "source_length": 33,
+      "actual_hex": "020010001b001d0017001e0016001f001300200000",
+      "expected_hex": "020010001b001d0017001e0016001f001300200000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_123",
+      "pass": true,
+      "source_length": 76,
+      "actual_hex": "0f0010000c00130016001f00210022000a00260001003600000037003d003f0047004b0000",
+      "expected_hex": "0f0010000c00130016001f00210022000a00260001003600000037003d003f0047004b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_124",
+      "pass": true,
+      "source_length": 4,
+      "actual_hex": "0100030000",
+      "expected_hex": "0100030000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_125",
+      "pass": true,
+      "source_length": 186,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_126",
+      "pass": true,
+      "source_length": 101,
+      "actual_hex": "1400170019001a001d001e001c00210029002d0039003c0037004700520053005f00620000",
+      "expected_hex": "1400170019001a001d001e001c00210029002d0039003c0037004700520053005f00620000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_127",
+      "pass": true,
+      "source_length": 71,
+      "actual_hex": "0b000f001000110027002a0022002d003e0045003a00460000",
+      "expected_hex": "0b000f001000110027002a0022002d003e0045003a00460000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_128",
+      "pass": true,
+      "source_length": 61,
+      "actual_hex": "000006000a00120000",
+      "expected_hex": "000006000a00120000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_129",
+      "pass": true,
+      "source_length": 94,
+      "actual_hex": "0200100001001a0026002c0023002e001f0032003b004200500056004f005d0000",
+      "expected_hex": "0200100001001a0026002c0023002e001f0032003b004200500056004f005d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_130",
+      "pass": true,
+      "source_length": 60,
+      "actual_hex": "0d000f000c0018001b001e002e0036002c003700280038002500390020003a001a003b0000",
+      "expected_hex": "0d000f000c0018001b001e002e0036002c003700280038002500390020003a001a003b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_131",
+      "pass": true,
+      "source_length": 79,
+      "actual_hex": "2e003100290032002100370040004a001d004b0019004c0018004d0005004e0000",
+      "expected_hex": "2e003100290032002100370040004a001d004b0019004c0018004d0005004e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_132",
+      "pass": true,
+      "source_length": 81,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_133",
+      "pass": true,
+      "source_length": 106,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_134",
+      "pass": true,
+      "source_length": 202,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_135",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_136",
+      "pass": true,
+      "source_length": 5,
+      "actual_hex": "0300040000",
+      "expected_hex": "0300040000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_137",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "17002200150023001100270009002a0033003b0041004300450046004d0050004700510000",
+      "expected_hex": "17002200150023001100270009002a0033003b0041004300450046004d0050004700510000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_138",
+      "pass": true,
+      "source_length": 221,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_139",
+      "pass": true,
+      "source_length": 58,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_140",
+      "pass": true,
+      "source_length": 159,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_141",
+      "pass": true,
+      "source_length": 111,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_142",
+      "pass": true,
+      "source_length": 81,
+      "actual_hex": "0700090015001b003f0040004100450032004d002a004e0023004f002000500000",
+      "expected_hex": "0700090015001b003f0040004100450032004d002a004e0023004f002000500000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_143",
+      "pass": true,
+      "source_length": 132,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_144",
+      "pass": true,
+      "source_length": 226,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_145",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_146",
+      "pass": true,
+      "source_length": 136,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_147",
+      "pass": true,
+      "source_length": 161,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_148",
+      "pass": true,
+      "source_length": 142,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_149",
+      "pass": true,
+      "source_length": 131,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_150",
+      "pass": true,
+      "source_length": 9,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_151",
+      "pass": true,
+      "source_length": 95,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_152",
+      "pass": true,
+      "source_length": 203,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_153",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_154",
+      "pass": true,
+      "source_length": 44,
+      "actual_hex": "0d001c00270029001d002a000c002b0000",
+      "expected_hex": "0d001c00270029001d002a000c002b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_155",
+      "pass": true,
+      "source_length": 150,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_156",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_157",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_158",
+      "pass": true,
+      "source_length": 101,
+      "actual_hex": "02000a001000120025002a002d0032003b003c004200470053005e006200640000",
+      "expected_hex": "02000a001000120025002a002d0032003b003c004200470053005e006200640000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_159",
+      "pass": true,
+      "source_length": 138,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_160",
+      "pass": true,
+      "source_length": 185,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_161",
+      "pass": true,
+      "source_length": 26,
+      "actual_hex": "13001500090016000500180000",
+      "expected_hex": "13001500090016000500180000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_162",
+      "pass": true,
+      "source_length": 8,
+      "actual_hex": "0600070000",
+      "expected_hex": "0600070000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_163",
+      "pass": true,
+      "source_length": 178,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_164",
+      "pass": true,
+      "source_length": 5,
+      "actual_hex": "0200040000",
+      "expected_hex": "0200040000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_165",
+      "pass": true,
+      "source_length": 29,
+      "actual_hex": "12001b000c001c0000",
+      "expected_hex": "12001b000c001c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_166",
+      "pass": true,
+      "source_length": 154,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_167",
+      "pass": true,
+      "source_length": 229,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_168",
+      "pass": true,
+      "source_length": 152,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_169",
+      "pass": true,
+      "source_length": 216,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_170",
+      "pass": true,
+      "source_length": 22,
+      "actual_hex": "1300150000",
+      "expected_hex": "1300150000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_171",
+      "pass": true,
+      "source_length": 143,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_172",
+      "pass": true,
+      "source_length": 3,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_173",
+      "pass": true,
+      "source_length": 26,
+      "actual_hex": "05000800030009000d00120016001700130018000a00190000",
+      "expected_hex": "05000800030009000d00120016001700130018000a00190000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_174",
+      "pass": true,
+      "source_length": 11,
+      "actual_hex": "05000a0000",
+      "expected_hex": "05000a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_175",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_176",
+      "pass": true,
+      "source_length": 62,
+      "actual_hex": "09000f00080013002b002c003200350000",
+      "expected_hex": "09000f00080013002b002c003200350000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_177",
+      "pass": true,
+      "source_length": 120,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_178",
+      "pass": true,
+      "source_length": 163,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_179",
+      "pass": true,
+      "source_length": 153,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_180",
+      "pass": true,
+      "source_length": 140,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_181",
+      "pass": true,
+      "source_length": 174,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_182",
+      "pass": true,
+      "source_length": 209,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_183",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_184",
+      "pass": true,
+      "source_length": 105,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_185",
+      "pass": true,
+      "source_length": 102,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_186",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": "09001400010015003000350037003b00510060004f006400710078006f00790000",
+      "expected_hex": "09001400010015003000350037003b00510060004f006400710078006f00790000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_187",
+      "pass": true,
+      "source_length": 188,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_188",
+      "pass": true,
+      "source_length": 131,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_189",
+      "pass": true,
+      "source_length": 100,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_190",
+      "pass": true,
+      "source_length": 225,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_191",
+      "pass": true,
+      "source_length": 173,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_192",
+      "pass": true,
+      "source_length": 65,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_193",
+      "pass": true,
+      "source_length": 199,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_194",
+      "pass": true,
+      "source_length": 166,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_195",
+      "pass": true,
+      "source_length": 93,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_196",
+      "pass": true,
+      "source_length": 221,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_197",
+      "pass": true,
+      "source_length": 52,
+      "actual_hex": "1400150026002e0020002f001f0030001e003100100032000400330000",
+      "expected_hex": "1400150026002e0020002f001f0030001e003100100032000400330000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_198",
+      "pass": true,
+      "source_length": 222,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_199",
+      "pass": true,
+      "source_length": 21,
+      "actual_hex": "0c00120000",
+      "expected_hex": "0c00120000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_200",
+      "pass": true,
+      "source_length": 43,
+      "actual_hex": "07000e0003000f000100130000001d0000",
+      "expected_hex": "07000e0003000f000100130000001d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_201",
+      "pass": true,
+      "source_length": 236,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_202",
+      "pass": true,
+      "source_length": 14,
+      "actual_hex": "0b000d0000",
+      "expected_hex": "0b000d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_203",
+      "pass": true,
+      "source_length": 2,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_204",
+      "pass": true,
+      "source_length": 67,
+      "actual_hex": "0d00120033003e0027003f00230040001e0041000400420000",
+      "expected_hex": "0d00120033003e0027003f00230040001e0041000400420000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_205",
+      "pass": true,
+      "source_length": 9,
+      "actual_hex": "0400080000",
+      "expected_hex": "0400080000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_206",
+      "pass": true,
+      "source_length": 187,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_207",
+      "pass": true,
+      "source_length": 150,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_208",
+      "pass": true,
+      "source_length": 18,
+      "actual_hex": "0a000f000000110000",
+      "expected_hex": "0a000f000000110000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_209",
+      "pass": true,
+      "source_length": 139,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_210",
+      "pass": true,
+      "source_length": 206,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_211",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_212",
+      "pass": true,
+      "source_length": 119,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_213",
+      "pass": true,
+      "source_length": 162,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_214",
+      "pass": true,
+      "source_length": 189,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_215",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_216",
+      "pass": true,
+      "source_length": 192,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_217",
+      "pass": true,
+      "source_length": 147,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_218",
+      "pass": true,
+      "source_length": 120,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_219",
+      "pass": true,
+      "source_length": 90,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_220",
+      "pass": true,
+      "source_length": 189,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_221",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_222",
+      "pass": true,
+      "source_length": 97,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_223",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_224",
+      "pass": true,
+      "source_length": 14,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_225",
+      "pass": true,
+      "source_length": 183,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_226",
+      "pass": true,
+      "source_length": 65,
+      "actual_hex": "0b000d000f0018000e002000070024000600250026002800300031002c003c003e00400000",
+      "expected_hex": "0b000d000f0018000e002000070024000600250026002800300031002c003c003e00400000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_227",
+      "pass": true,
+      "source_length": 11,
+      "actual_hex": "0700090005000a0000",
+      "expected_hex": "0700090005000a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_228",
+      "pass": true,
+      "source_length": 48,
+      "actual_hex": "0600080000000e001a001b0019001c0000",
+      "expected_hex": "0600080000000e001a001b0019001c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_229",
+      "pass": true,
+      "source_length": 140,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_230",
+      "pass": true,
+      "source_length": 166,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_231",
+      "pass": true,
+      "source_length": 72,
+      "actual_hex": "0d000e001100120016001b002a002f0035003a003c004400230045001c0046001400470000",
+      "expected_hex": "0d000e001100120016001b002a002f0035003a003c004400230045001c0046001400470000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_232",
+      "pass": true,
+      "source_length": 53,
+      "actual_hex": "0f0010001d0020001200210024002d0000",
+      "expected_hex": "0f0010001d0020001200210024002d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_233",
+      "pass": true,
+      "source_length": 186,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_234",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_235",
+      "pass": true,
+      "source_length": 157,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_236",
+      "pass": true,
+      "source_length": 192,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_237",
+      "pass": true,
+      "source_length": 100,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_238",
+      "pass": true,
+      "source_length": 52,
+      "actual_hex": "0400050002000600130017000d001a000b001b00230027001d0029003100330000",
+      "expected_hex": "0400050002000600130017000d001a000b001b00230027001d0029003100330000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_239",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_240",
+      "pass": true,
+      "source_length": 176,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_241",
+      "pass": true,
+      "source_length": 42,
+      "actual_hex": "0300050000000600110013002700290000",
+      "expected_hex": "0300050000000600110013002700290000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_242",
+      "pass": true,
+      "source_length": 163,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_243",
+      "pass": true,
+      "source_length": 19,
+      "actual_hex": "0800100000",
+      "expected_hex": "0800100000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_244",
+      "pass": true,
+      "source_length": 159,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_245",
+      "pass": true,
+      "source_length": 12,
+      "actual_hex": "07000b0000",
+      "expected_hex": "07000b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_246",
+      "pass": true,
+      "source_length": 206,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_247",
+      "pass": true,
+      "source_length": 28,
+      "actual_hex": "0500090003000d0019001a0017001b0000",
+      "expected_hex": "0500090003000d0019001a0017001b0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_248",
+      "pass": true,
+      "source_length": 234,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_249",
+      "pass": true,
+      "source_length": 206,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_250",
+      "pass": true,
+      "source_length": 224,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_251",
+      "pass": true,
+      "source_length": 204,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_252",
+      "pass": true,
+      "source_length": 30,
+      "actual_hex": "0500060008000b0014001a0010001b000f001c0000001d0000",
+      "expected_hex": "0500060008000b0014001a0010001b000f001c0000001d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_253",
+      "pass": true,
+      "source_length": 53,
+      "actual_hex": "00000200060007000d0010001f00250018002a002b002e00320033001700340000",
+      "expected_hex": "00000200060007000d0010001f00250018002a002b002e00320033001700340000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_254",
+      "pass": true,
+      "source_length": 231,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_255",
+      "pass": true,
+      "source_length": 102,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_256",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": "070014002600300039004400370049001e004a0000",
+      "expected_hex": "070014002600300039004400370049001e004a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_257",
+      "pass": true,
+      "source_length": 187,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_258",
+      "pass": true,
+      "source_length": 115,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_259",
+      "pass": true,
+      "source_length": 96,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_260",
+      "pass": true,
+      "source_length": 217,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_261",
+      "pass": true,
+      "source_length": 6,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_262",
+      "pass": true,
+      "source_length": 18,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_263",
+      "pass": true,
+      "source_length": 219,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_264",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_265",
+      "pass": true,
+      "source_length": 1,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_266",
+      "pass": true,
+      "source_length": 95,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_267",
+      "pass": true,
+      "source_length": 141,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_268",
+      "pass": true,
+      "source_length": 50,
+      "actual_hex": "100011000e0016001f0021002c00310000",
+      "expected_hex": "100011000e0016001f0021002c00310000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_269",
+      "pass": true,
+      "source_length": 215,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_270",
+      "pass": true,
+      "source_length": 209,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_271",
+      "pass": true,
+      "source_length": 133,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_272",
+      "pass": true,
+      "source_length": 169,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_273",
+      "pass": true,
+      "source_length": 25,
+      "actual_hex": "0c000e00130016000700170000",
+      "expected_hex": "0c000e00130016000700170000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_274",
+      "pass": true,
+      "source_length": 112,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_275",
+      "pass": true,
+      "source_length": 177,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_276",
+      "pass": true,
+      "source_length": 231,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_277",
+      "pass": true,
+      "source_length": 186,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_278",
+      "pass": true,
+      "source_length": 206,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_279",
+      "pass": true,
+      "source_length": 49,
+      "actual_hex": "030004000c0012001400260000",
+      "expected_hex": "030004000c0012001400260000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_280",
+      "pass": true,
+      "source_length": 100,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_281",
+      "pass": true,
+      "source_length": 104,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_282",
+      "pass": true,
+      "source_length": 182,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_283",
+      "pass": true,
+      "source_length": 140,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_284",
+      "pass": true,
+      "source_length": 191,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_285",
+      "pass": true,
+      "source_length": 134,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_286",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_287",
+      "pass": true,
+      "source_length": 96,
+      "actual_hex": "13001c0022002e003c004200300048004e0054004b005c005e005f0000",
+      "expected_hex": "13001c0022002e003c004200300048004e0054004b005c005e005f0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_288",
+      "pass": true,
+      "source_length": 79,
+      "actual_hex": "090011000600120016002200130028002d002e00010030004600490043004d003f004e0000",
+      "expected_hex": "090011000600120016002200130028002d002e00010030004600490043004d003f004e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_289",
+      "pass": true,
+      "source_length": 182,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_290",
+      "pass": true,
+      "source_length": 56,
+      "actual_hex": "0300090002000a000b001e000100200029002c003300340025003500210036000000370000",
+      "expected_hex": "0300090002000a000b001e000100200029002c003300340025003500210036000000370000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_291",
+      "pass": true,
+      "source_length": 95,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_292",
+      "pass": true,
+      "source_length": 155,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_293",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "200022002500270034003c003e00420046004e0044004f002d0050002c00510000",
+      "expected_hex": "200022002500270034003c003e00420046004e0044004f002d0050002c00510000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_294",
+      "pass": true,
+      "source_length": 65,
+      "actual_hex": "12001400220023002b002f0039003f003500400000",
+      "expected_hex": "12001400220023002b002f0039003f003500400000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_295",
+      "pass": true,
+      "source_length": 178,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_296",
+      "pass": true,
+      "source_length": 214,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_297",
+      "pass": true,
+      "source_length": 204,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_298",
+      "pass": true,
+      "source_length": 9,
+      "actual_hex": "040007000300080000",
+      "expected_hex": "040007000300080000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_299",
+      "pass": true,
+      "source_length": 4,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_300",
+      "pass": true,
+      "source_length": 142,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_301",
+      "pass": true,
+      "source_length": 53,
+      "actual_hex": "200024002d002e0026003200180033001700340000",
+      "expected_hex": "200024002d002e0026003200180033001700340000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_302",
+      "pass": true,
+      "source_length": 63,
+      "actual_hex": "06000c0005000d00130014002a002c0038003c0000",
+      "expected_hex": "06000c0005000d00130014002a002c0038003c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_303",
+      "pass": true,
+      "source_length": 222,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_304",
+      "pass": true,
+      "source_length": 108,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_305",
+      "pass": true,
+      "source_length": 70,
+      "actual_hex": "0600070005000c000e00100017001a00300038003d003e003a0041002700450000",
+      "expected_hex": "0600070005000c000e00100017001a00300038003d003e003a0041002700450000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_306",
+      "pass": true,
+      "source_length": 199,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_307",
+      "pass": true,
+      "source_length": 231,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_308",
+      "pass": true,
+      "source_length": 29,
+      "actual_hex": "030004000c000f001800190017001a0015001b0006001c0000",
+      "expected_hex": "030004000c000f001800190017001a0015001b0006001c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_309",
+      "pass": true,
+      "source_length": 203,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_310",
+      "pass": true,
+      "source_length": 236,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_311",
+      "pass": true,
+      "source_length": 35,
+      "actual_hex": "080009000b0017001900210000",
+      "expected_hex": "080009000b0017001900210000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_312",
+      "pass": true,
+      "source_length": 17,
+      "actual_hex": "0500080000",
+      "expected_hex": "0500080000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_313",
+      "pass": true,
+      "source_length": 164,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_314",
+      "pass": true,
+      "source_length": 93,
+      "actual_hex": "37003a004c0051003d00530057005a0054005c0000",
+      "expected_hex": "37003a004c0051003d00530057005a0054005c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_315",
+      "pass": true,
+      "source_length": 170,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_316",
+      "pass": true,
+      "source_length": 112,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_317",
+      "pass": true,
+      "source_length": 47,
+      "actual_hex": "08000b001400150004001600000019001a001c001f00200027002c0000",
+      "expected_hex": "08000b001400150004001600000019001a001c001f00200027002c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_318",
+      "pass": true,
+      "source_length": 139,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_319",
+      "pass": true,
+      "source_length": 116,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_320",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_321",
+      "pass": true,
+      "source_length": 20,
+      "actual_hex": "09000c00100012000f00130000",
+      "expected_hex": "09000c00100012000f00130000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_322",
+      "pass": true,
+      "source_length": 109,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_323",
+      "pass": true,
+      "source_length": 29,
+      "actual_hex": "150019000f001a000e001b000b001c0000",
+      "expected_hex": "150019000f001a000e001b000b001c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_324",
+      "pass": true,
+      "source_length": 151,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_325",
+      "pass": true,
+      "source_length": 23,
+      "actual_hex": "110012000e0013000c0014000b0015000600160000",
+      "expected_hex": "110012000e0013000c0014000b0015000600160000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_326",
+      "pass": true,
+      "source_length": 172,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_327",
+      "pass": true,
+      "source_length": 92,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_328",
+      "pass": true,
+      "source_length": 194,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_329",
+      "pass": true,
+      "source_length": 90,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_330",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_331",
+      "pass": true,
+      "source_length": 148,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_332",
+      "pass": true,
+      "source_length": 187,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_333",
+      "pass": true,
+      "source_length": 27,
+      "actual_hex": "020006000e0011000c0019000b001a0000",
+      "expected_hex": "020006000e0011000c0019000b001a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_334",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_335",
+      "pass": true,
+      "source_length": 139,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_336",
+      "pass": true,
+      "source_length": 180,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_337",
+      "pass": true,
+      "source_length": 190,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_338",
+      "pass": true,
+      "source_length": 27,
+      "actual_hex": "03000600140019000b001a0000",
+      "expected_hex": "03000600140019000b001a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_339",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "1e002b001c003900460047004d0050001a00510000",
+      "expected_hex": "1e002b001c003900460047004d0050001a00510000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_340",
+      "pass": true,
+      "source_length": 131,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_341",
+      "pass": true,
+      "source_length": 147,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_342",
+      "pass": true,
+      "source_length": 19,
+      "actual_hex": "04000c0000",
+      "expected_hex": "04000c0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_343",
+      "pass": true,
+      "source_length": 216,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_344",
+      "pass": true,
+      "source_length": 125,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_345",
+      "pass": true,
+      "source_length": 77,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_346",
+      "pass": true,
+      "source_length": 165,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_347",
+      "pass": true,
+      "source_length": 97,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_348",
+      "pass": true,
+      "source_length": 122,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_349",
+      "pass": true,
+      "source_length": 175,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_350",
+      "pass": true,
+      "source_length": 173,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_351",
+      "pass": true,
+      "source_length": 205,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_352",
+      "pass": true,
+      "source_length": 79,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_353",
+      "pass": true,
+      "source_length": 31,
+      "actual_hex": "0200080017001a0015001c0009001d0001001e0000",
+      "expected_hex": "0200080017001a0015001c0009001d0001001e0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_354",
+      "pass": true,
+      "source_length": 185,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_355",
+      "pass": true,
+      "source_length": 224,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_356",
+      "pass": true,
+      "source_length": 168,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_357",
+      "pass": true,
+      "source_length": 218,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_358",
+      "pass": true,
+      "source_length": 22,
+      "actual_hex": "0400070003000a000200130000",
+      "expected_hex": "0400070003000a000200130000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_359",
+      "pass": true,
+      "source_length": 151,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_360",
+      "pass": true,
+      "source_length": 135,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_361",
+      "pass": true,
+      "source_length": 159,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_362",
+      "pass": true,
+      "source_length": 24,
+      "actual_hex": "0300080000",
+      "expected_hex": "0300080000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_363",
+      "pass": true,
+      "source_length": 5,
+      "actual_hex": "0100040000",
+      "expected_hex": "0100040000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_364",
+      "pass": true,
+      "source_length": 223,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_365",
+      "pass": true,
+      "source_length": 180,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_366",
+      "pass": true,
+      "source_length": 185,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_367",
+      "pass": true,
+      "source_length": 174,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_368",
+      "pass": true,
+      "source_length": 203,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_369",
+      "pass": true,
+      "source_length": 198,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_370",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": "100012001b002000240033002200350005003c003f0041003d0042004800590046005a0000",
+      "expected_hex": "100012001b002000240033002200350005003c003f0041003d0042004800590046005a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_371",
+      "pass": true,
+      "source_length": 80,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_372",
+      "pass": true,
+      "source_length": 183,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_373",
+      "pass": true,
+      "source_length": 7,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_374",
+      "pass": true,
+      "source_length": 14,
+      "actual_hex": "0200050000",
+      "expected_hex": "0200050000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_375",
+      "pass": true,
+      "source_length": 187,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_376",
+      "pass": true,
+      "source_length": 220,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_377",
+      "pass": true,
+      "source_length": 157,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_378",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_379",
+      "pass": true,
+      "source_length": 153,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_380",
+      "pass": true,
+      "source_length": 67,
+      "actual_hex": "0a000b001300140023002a0022002b001d002d001800420000",
+      "expected_hex": "0a000b001300140023002a0022002b001d002d001800420000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_381",
+      "pass": true,
+      "source_length": 169,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_382",
+      "pass": true,
+      "source_length": 73,
+      "actual_hex": "160018001f00290039003b00360043002b0044001b004500100046000b0047000400480000",
+      "expected_hex": "160018001f00290039003b00360043002b0044001b004500100046000b0047000400480000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_383",
+      "pass": true,
+      "source_length": 88,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_384",
+      "pass": true,
+      "source_length": 72,
+      "actual_hex": "1000110024002600340037003e0041003a0043001e0044001a004500150046001200470000",
+      "expected_hex": "1000110024002600340037003e0041003a0043001e0044001a004500150046001200470000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_385",
+      "pass": true,
+      "source_length": 51,
+      "actual_hex": "030004000d000e0016001800150019001c0029001a002f000a003000060031000500320000",
+      "expected_hex": "030004000d000e0016001800150019001c0029001a002f000a003000060031000500320000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_386",
+      "pass": true,
+      "source_length": 30,
+      "actual_hex": "09000b0008000c0010001200130014000300160000",
+      "expected_hex": "09000b0008000c0010001200130014000300160000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_387",
+      "pass": true,
+      "source_length": 1,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_388",
+      "pass": true,
+      "source_length": 154,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_389",
+      "pass": true,
+      "source_length": 33,
+      "actual_hex": "160017000a001d000200200000",
+      "expected_hex": "160017000a001d000200200000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_390",
+      "pass": true,
+      "source_length": 146,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_391",
+      "pass": true,
+      "source_length": 113,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_392",
+      "pass": true,
+      "source_length": 16,
+      "actual_hex": "060009000d000e000a000f0000",
+      "expected_hex": "060009000d000e000a000f0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_393",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": "08000d0005000f001e001f00330034003b00460030004700290048002500490010004a0000",
+      "expected_hex": "08000d0005000f001e001f00330034003b00460030004700290048002500490010004a0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_394",
+      "pass": true,
+      "source_length": 75,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_395",
+      "pass": true,
+      "source_length": 189,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_396",
+      "pass": true,
+      "source_length": 209,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_397",
+      "pass": true,
+      "source_length": 158,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_398",
+      "pass": true,
+      "source_length": 129,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_valid_399",
+      "pass": true,
+      "source_length": 161,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_0",
+      "pass": true,
+      "source_length": 171,
+      "actual_hex": "0000050003",
+      "expected_hex": "0000050003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_1",
+      "pass": true,
+      "source_length": 118,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_2",
+      "pass": true,
+      "source_length": 126,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_3",
+      "pass": true,
+      "source_length": 132,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_4",
+      "pass": true,
+      "source_length": 22,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_5",
+      "pass": true,
+      "source_length": 110,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_6",
+      "pass": true,
+      "source_length": 122,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_7",
+      "pass": true,
+      "source_length": 28,
+      "actual_hex": "02000e0002",
+      "expected_hex": "02000e0002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_8",
+      "pass": true,
+      "source_length": 34,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_9",
+      "pass": true,
+      "source_length": 3,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_10",
+      "pass": true,
+      "source_length": 40,
+      "actual_hex": "02",
+      "expected_hex": "02",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_11",
+      "pass": true,
+      "source_length": 63,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_12",
+      "pass": true,
+      "source_length": 61,
+      "actual_hex": "0200050007000a0019001d00180029002d00340002",
+      "expected_hex": "0200050007000a0019001d00180029002d00340002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_13",
+      "pass": true,
+      "source_length": 80,
+      "actual_hex": "000003000500070003",
+      "expected_hex": "000003000500070003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_14",
+      "pass": true,
+      "source_length": 112,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_15",
+      "pass": true,
+      "source_length": 48,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_16",
+      "pass": true,
+      "source_length": 114,
+      "actual_hex": "0600090002000c0003",
+      "expected_hex": "0600090002000c0003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_17",
+      "pass": true,
+      "source_length": 168,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_18",
+      "pass": true,
+      "source_length": 87,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_19",
+      "pass": true,
+      "source_length": 20,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_20",
+      "pass": true,
+      "source_length": 131,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_21",
+      "pass": true,
+      "source_length": 173,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_22",
+      "pass": true,
+      "source_length": 132,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_23",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_24",
+      "pass": true,
+      "source_length": 37,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_25",
+      "pass": true,
+      "source_length": 91,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_26",
+      "pass": true,
+      "source_length": 124,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_27",
+      "pass": true,
+      "source_length": 134,
+      "actual_hex": "0000020003",
+      "expected_hex": "0000020003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_28",
+      "pass": true,
+      "source_length": 93,
+      "actual_hex": "01000300040005000a000d00080011001e0021001b00250015002f0003",
+      "expected_hex": "01000300040005000a000d00080011001e0021001b00250015002f0003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_29",
+      "pass": true,
+      "source_length": 44,
+      "actual_hex": "0000010003",
+      "expected_hex": "0000010003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_30",
+      "pass": true,
+      "source_length": 44,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_31",
+      "pass": true,
+      "source_length": 19,
+      "actual_hex": "0300040000000c0003",
+      "expected_hex": "0300040000000c0003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_32",
+      "pass": true,
+      "source_length": 21,
+      "actual_hex": "0b000d000a000e0002",
+      "expected_hex": "0b000d000a000e0002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_33",
+      "pass": true,
+      "source_length": 58,
+      "actual_hex": "040011001200140023002600150027002d00300002",
+      "expected_hex": "040011001200140023002600150027002d00300002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_34",
+      "pass": true,
+      "source_length": 61,
+      "actual_hex": "09000a001d0028003200330002",
+      "expected_hex": "09000a001d0028003200330002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_35",
+      "pass": true,
+      "source_length": 115,
+      "actual_hex": "0200030003",
+      "expected_hex": "0200030003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_36",
+      "pass": true,
+      "source_length": 108,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_37",
+      "pass": true,
+      "source_length": 76,
+      "actual_hex": "0500060003",
+      "expected_hex": "0500060003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_38",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "0100040003",
+      "expected_hex": "0100040003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_39",
+      "pass": true,
+      "source_length": 33,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_40",
+      "pass": true,
+      "source_length": 89,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_41",
+      "pass": true,
+      "source_length": 67,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_42",
+      "pass": true,
+      "source_length": 39,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_43",
+      "pass": true,
+      "source_length": 152,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_44",
+      "pass": true,
+      "source_length": 109,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_45",
+      "pass": true,
+      "source_length": 30,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_46",
+      "pass": true,
+      "source_length": 57,
+      "actual_hex": "03000c000d000f0019001d0018001f003100320002",
+      "expected_hex": "03000c000d000f0019001d0018001f003100320002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_47",
+      "pass": true,
+      "source_length": 108,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_48",
+      "pass": true,
+      "source_length": 81,
+      "actual_hex": "1b00220026002900140031003e0041003b00460049004a0002",
+      "expected_hex": "1b00220026002900140031003e0041003b00460049004a0002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_49",
+      "pass": true,
+      "source_length": 157,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_50",
+      "pass": true,
+      "source_length": 78,
+      "actual_hex": "000002000700090012002a0036003b003e0040000a0042004400480004004a0003004d0000",
+      "expected_hex": "000002000700090012002a0036003b003e0040000a0042004400480004004a0003004d0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_51",
+      "pass": true,
+      "source_length": 85,
+      "actual_hex": "0100030003",
+      "expected_hex": "0100030003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_52",
+      "pass": true,
+      "source_length": 94,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_53",
+      "pass": true,
+      "source_length": 111,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_54",
+      "pass": true,
+      "source_length": 74,
+      "actual_hex": "09000b00040016001e002000250026001c002d003d003f003c0042003900430002",
+      "expected_hex": "09000b00040016001e002000250026001c002d003d003f003c0042003900430002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_55",
+      "pass": true,
+      "source_length": 58,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_56",
+      "pass": true,
+      "source_length": 149,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_57",
+      "pass": true,
+      "source_length": 177,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_58",
+      "pass": true,
+      "source_length": 5,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_59",
+      "pass": true,
+      "source_length": 39,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_60",
+      "pass": true,
+      "source_length": 24,
+      "actual_hex": "0600090003",
+      "expected_hex": "0600090003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_61",
+      "pass": true,
+      "source_length": 58,
+      "actual_hex": "07000800050011000300120019002300260027002c00360002",
+      "expected_hex": "07000800050011000300120019002300260027002c00360002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_62",
+      "pass": true,
+      "source_length": 124,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_63",
+      "pass": true,
+      "source_length": 82,
+      "actual_hex": "0a000f000100100003",
+      "expected_hex": "0a000f000100100003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_64",
+      "pass": true,
+      "source_length": 68,
+      "actual_hex": "18001b00160022002c002e0038003e003400400002",
+      "expected_hex": "18001b00160022002c002e0038003e003400400002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_65",
+      "pass": true,
+      "source_length": 142,
+      "actual_hex": "110014000b00170003",
+      "expected_hex": "110014000b00170003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_66",
+      "pass": true,
+      "source_length": 25,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_67",
+      "pass": true,
+      "source_length": 48,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_68",
+      "pass": true,
+      "source_length": 96,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_69",
+      "pass": true,
+      "source_length": 36,
+      "actual_hex": "130014001d001e0002",
+      "expected_hex": "130014001d001e0002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_70",
+      "pass": true,
+      "source_length": 13,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_71",
+      "pass": true,
+      "source_length": 88,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_72",
+      "pass": true,
+      "source_length": 77,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_73",
+      "pass": true,
+      "source_length": 60,
+      "actual_hex": "1100170003002100020025002c002f002b00370000",
+      "expected_hex": "1100170003002100020025002c002f002b00370000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_74",
+      "pass": true,
+      "source_length": 160,
+      "actual_hex": "2300240014002500260028002a002b000900330003",
+      "expected_hex": "2300240014002500260028002a002b000900330003",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_75",
+      "pass": true,
+      "source_length": 148,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_76",
+      "pass": true,
+      "source_length": 27,
+      "actual_hex": "040006000a00130002",
+      "expected_hex": "040006000a00130002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_77",
+      "pass": true,
+      "source_length": 6,
+      "actual_hex": "03",
+      "expected_hex": "03",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_78",
+      "pass": true,
+      "source_length": 163,
+      "actual_hex": null,
+      "expected_hex": null,
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "random_malformed_79",
+      "pass": true,
+      "source_length": 19,
+      "actual_hex": "0a000c0002",
+      "expected_hex": "0a000c0002",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_255",
+      "pass": true,
+      "source_length": 255,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_256",
+      "pass": true,
+      "source_length": 256,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_511",
+      "pass": true,
+      "source_length": 511,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_512",
+      "pass": true,
+      "source_length": 512,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_1024",
+      "pass": true,
+      "source_length": 1024,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_4096",
+      "pass": true,
+      "source_length": 4096,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_65535",
+      "pass": true,
+      "source_length": 65535,
+      "actual_hex": "00",
+      "expected_hex": "00",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "length_65536",
+      "pass": true,
+      "source_length": 65536,
+      "actual_hex": "0a",
+      "expected_hex": "0a",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "distant_pair_256",
+      "pass": true,
+      "source_length": 256,
+      "actual_hex": "0000ff0000",
+      "expected_hex": "0000ff0000",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "distant_pair_515",
+      "pass": true,
+      "source_length": 515,
+      "actual_hex": "0000020200",
+      "expected_hex": "0000020200",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "distant_pair_1001",
+      "pass": true,
+      "source_length": 1001,
+      "actual_hex": "0000e80300",
+      "expected_hex": "0000e80300",
+      "exit": 0,
+      "host_error": ""
+    },
+    {
+      "name": "distant_pair_4096",
+      "pass": true,
+      "source_length": 4096,
+      "actual_hex": "0000ff0f00",
+      "expected_hex": "0000ff0f00",
+      "exit": 0,
+      "host_error": ""
+    }
+  ],
+  "source_audit_paths": [
+    "examples/held_out.bf",
+    "examples/tiny_app_a.bf",
+    "examples/tiny_app_b.bf",
+    "src/annotated_source_normalizer.bf",
+    "src/annotated_source_stream_gate.bf",
+    "src/bf_in_bf.bf",
+    "src/bf_in_bf_dynamic_bidirectional_clear.bf",
+    "src/bf_in_bf_dynamic_clear_loop.bf",
+    "src/bf_in_bf_dynamic_linear.bf",
+    "src/bf_in_bf_reference.bf",
+    "src/bf_in_bf_six_cell.bf",
+    "src/bf_in_bf_six_cell_fuel.bf",
+    "src/bounded_arithmetic_fuel_executor.bf",
+    "src/bracket_depth_gate.bf",
+    "src/bracket_stream_gate.bf",
+    "src/chunked_atomic_compiler_handoff.bf",
+    "src/general_backward_bracket_probe.bf",
+    "src/general_forward_bracket_probe.bf",
+    "src/mini_compiler.bf",
+    "src/mini_compiler_compact.bf",
+    "src/normalized_source_atomic_gate.bf",
+    "src/normalized_source_stream_gate.bf",
+    "src/printable_subset_gate.bf",
+    "src/raw_subset_gate.bf",
+    "src/reverse_normalized_source.bf",
+    "src/six_cell_static_safety_gate.bf",
+    "src/stage_a_atomic_printable_gate.bf",
+    "src/stage_a_atomic_subset_gate.bf",
+    "src/whole_source_bracket_pairs.bf",
+    "tests/compiler_request_framer.bf",
+    "tests/nested_arithmetic_driver.bf",
+    "tests/nested_reference_transport.bf",
+    "tests/oracle.bf"
+  ],
+  "scope_notes": [
+    "Input is previously admitted normalized command stream terminated by one zero byte",
+    "Untrusted zero marker cannot prove closure and embedded source NUL is not detectable",
+    "Pairs emitted on invalid source are provisional and must not be committed",
+    "Sixteen bit command indices fail on 65536th executed original source position",
+    "No guest execution or original annotated source byte offsets",
+    "Outside repository drafting aid and C test evaluator mean BF only development process provenance is not certified"
+  ]
+}

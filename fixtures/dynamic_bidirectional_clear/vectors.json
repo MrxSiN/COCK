@@ -1,0 +1,21 @@
+{
+  "status": "planned before implementation tests",
+  "interface": "trusted raw guest commands followed by one zero terminator; guest output plus terminal diagnostic status",
+  "vectors": [
+    {"id":"empty", "source":"", "expected_hex":"00"},
+    {"id":"plus_zero", "source":"[+].", "expected_hex":"0000"},
+    {"id":"minus_zero", "source":"[-].", "expected_hex":"0000"},
+    {"id":"plus_one", "source":"+[+].", "expected_hex":"0000"},
+    {"id":"minus_one", "source":"+[-].", "expected_hex":"0000"},
+    {"id":"plus_negative", "source":"-[+].", "expected_hex":"0000"},
+    {"id":"minus_negative", "source":"-[-].", "expected_hex":"0000"},
+    {"id":"both_in_series", "source":"++++[+]++[-].", "expected_hex":"0000"},
+    {"id":"neighbor_preserved", "source":"+>++++[+]<.>.", "expected_hex":"010000"},
+    {"id":"binary_ff", "source":"-.+[-].", "expected_hex":"ff0000"},
+    {"id":"unsupported_plus_repeat", "source":"[++].", "expected_hex":"0d"},
+    {"id":"unsupported_nest", "source":"[[+]].", "expected_hex":"0d"},
+    {"id":"unsupported_stray_close", "source":"]", "expected_hex":"0d"},
+    {"id":"truncated", "source":"[+", "expected_hex":"0d"},
+    {"id":"origin_left", "source":"<", "expected_hex":"04"}
+  ]
+}

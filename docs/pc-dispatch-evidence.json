@@ -1,0 +1,265 @@
+{
+  "component": "bf_in_bf_pc_dispatch.bf",
+  "classification": "bounded diagnostic, not Stage A accepted",
+  "source_bytes": 508212,
+  "executable_bf_commands": 501519,
+  "sha256": "a1f42a11055f2f12f19a9fe1cf75eac5bed6dd4b26306091e204ae0ee1d62cbc",
+  "constraints": {
+    "source_max_commands": 127,
+    "guest_tape_max_cells": 16,
+    "fuel_max": 255,
+    "transport": "development only u8 source length, raw source, u8 fuel, raw guest stdin",
+    "terminal_status_last_byte": true
+  },
+  "results": {
+    "reference_differential": {
+      "passed": 583,
+      "by_type": {
+        "fixed": 175,
+        "seeded": 360,
+        "nested": 48
+      },
+      "failures": [],
+      "seed": 20261024,
+      "elapsed_s": 22.678
+    },
+    "binary_exhaustive_passed": 256,
+    "fixed_binary_fixture_passed": 20,
+    "preserved_aarch64_artifacts": [
+      {
+        "program": "original_tiny_app_a",
+        "ok": true,
+        "bytes": 264,
+        "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "program": "original_tiny_app_b",
+        "ok": true,
+        "bytes": 272,
+        "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "program": "original_held_out",
+        "ok": true,
+        "bytes": 280,
+        "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "program": "compact_tiny_app_a",
+        "ok": true,
+        "bytes": 140,
+        "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "program": "compact_tiny_app_b",
+        "ok": true,
+        "bytes": 144,
+        "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "program": "compact_held_out",
+        "ok": true,
+        "bytes": 148,
+        "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+        "exit": 0,
+        "stderr": ""
+      }
+    ],
+    "source_audit_count": 34
+  },
+  "fixed_vectors": [
+    {
+      "name": "empty",
+      "guest_source_ascii": "",
+      "fuel": 0,
+      "input_hex": "",
+      "observed_hex": "00",
+      "passed": true
+    },
+    {
+      "name": "zero_loop",
+      "guest_source_ascii": "[]",
+      "fuel": 1,
+      "input_hex": "",
+      "observed_hex": "00",
+      "passed": true
+    },
+    {
+      "name": "nested_zero_skip",
+      "guest_source_ascii": "[[-]]+.",
+      "fuel": 3,
+      "input_hex": "",
+      "observed_hex": "0100",
+      "passed": true
+    },
+    {
+      "name": "transfer_loop",
+      "guest_source_ascii": "++[->+<]>.",
+      "fuel": 100,
+      "input_hex": "",
+      "observed_hex": "0200",
+      "passed": true
+    },
+    {
+      "name": "nested_transfer",
+      "guest_source_ascii": "+++[>++[>+<-]<-]>>.",
+      "fuel": 255,
+      "input_hex": "",
+      "observed_hex": "0600",
+      "passed": true
+    },
+    {
+      "name": "binary_ff",
+      "guest_source_ascii": ",.",
+      "fuel": 2,
+      "input_hex": "ff",
+      "observed_hex": "ff00",
+      "passed": true
+    },
+    {
+      "name": "binary_nul",
+      "guest_source_ascii": ",.",
+      "fuel": 2,
+      "input_hex": "00",
+      "observed_hex": "0000",
+      "passed": true
+    },
+    {
+      "name": "eof_zero",
+      "guest_source_ascii": ",.",
+      "fuel": 2,
+      "input_hex": "",
+      "observed_hex": "0000",
+      "passed": true
+    },
+    {
+      "name": "left_trap",
+      "guest_source_ascii": "<",
+      "fuel": 1,
+      "input_hex": "",
+      "observed_hex": "04",
+      "passed": true
+    },
+    {
+      "name": "right_budget",
+      "guest_source_ascii": ">>>>>>>>>>>>>>>>",
+      "fuel": 16,
+      "input_hex": "",
+      "observed_hex": "05",
+      "passed": true
+    },
+    {
+      "name": "fuel_before_output",
+      "guest_source_ascii": "+.",
+      "fuel": 1,
+      "input_hex": "",
+      "observed_hex": "06",
+      "passed": true
+    },
+    {
+      "name": "fuel_before_bracket",
+      "guest_source_ascii": "[]",
+      "fuel": 0,
+      "input_hex": "",
+      "observed_hex": "06",
+      "passed": true
+    },
+    {
+      "name": "fuel_before_close",
+      "guest_source_ascii": "+[-]",
+      "fuel": 3,
+      "input_hex": "",
+      "observed_hex": "06",
+      "passed": true
+    },
+    {
+      "name": "fuel_before_left_trap",
+      "guest_source_ascii": "<",
+      "fuel": 0,
+      "input_hex": "",
+      "observed_hex": "06",
+      "passed": true
+    },
+    {
+      "name": "source_127",
+      "guest_source_ascii": "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++",
+      "fuel": 127,
+      "input_hex": "",
+      "observed_hex": "00",
+      "passed": true
+    },
+    {
+      "name": "loop_zero_plus",
+      "guest_source_ascii": "[+]",
+      "fuel": 1,
+      "input_hex": "",
+      "observed_hex": "00",
+      "passed": true
+    },
+    {
+      "name": "negative_wrap",
+      "guest_source_ascii": "-.",
+      "fuel": 2,
+      "input_hex": "",
+      "observed_hex": "ff00",
+      "passed": true
+    },
+    {
+      "name": "rightmost_cell",
+      "guest_source_ascii": ">>>>>>>>>>>>>>>+.",
+      "fuel": 40,
+      "input_hex": "",
+      "observed_hex": "0100",
+      "passed": true
+    },
+    {
+      "name": "partial_output_fuel",
+      "guest_source_ascii": ".+.",
+      "fuel": 2,
+      "input_hex": "",
+      "observed_hex": "0006",
+      "passed": true
+    },
+    {
+      "name": "zero_bracket_empty_source",
+      "guest_source_ascii": "",
+      "fuel": 255,
+      "input_hex": "",
+      "observed_hex": "00",
+      "passed": true
+    }
+  ],
+  "negative_observations": {
+    "malformed_invalid_suffix": {
+      "exit": 0,
+      "observed_hex": "010d",
+      "stderr": ""
+    },
+    "unsupported_length_128": {
+      "exit": 0,
+      "observed_hex": "0d",
+      "stderr": ""
+    }
+  },
+  "root_bf_executor": "unqualified pre-existing outside repository C diagnostic evaluator /tmp/cock_diag_bf",
+  "provenance": "Python authoring generator outside repository; strict BF-only development process not certified",
+  "android": "deferred and not run",
+  "unverified": [
+    "trusted host stream closure",
+    "original source byte-offset errors",
+    "annotated source preflight integrated",
+    "full COCK logical tape behavior",
+    "same-interpreter nested mini compiler",
+    "Android native output"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "classification": "designed before consolidated diagnostic batch",
+  "input_contract": "one byte source length then exact raw source bytes then A5 trailer, independent host closure required",
+  "output_contract": "01 provisional admission, 00 rejection; never complete authenticated build acceptance",
+  "cases": [
+    {"label":"small_valid", "input_hex":"022b2ea5", "expected_hex":"01"},
+    {"label":"empty_arithmetic_valid", "input_hex":"012ea5", "expected_hex":"01"},
+    {"label":"missing_dot", "input_hex":"012ba5", "expected_hex":"00"},
+    {"label":"malformed_suffix", "input_hex":"032b2e78a5", "expected_hex":"00"},
+    {"label":"embedded_nul", "input_hex":"032b002ea5", "expected_hex":"00"},
+    {"label":"double_dot", "input_hex":"022e2ea5", "expected_hex":"00"},
+    {"label":"unsupported_comma", "input_hex":"022c2ea5", "expected_hex":"00"},
+    {"label":"unsupported_bracket", "input_hex":"032b5b2ea5", "expected_hex":"00"},
+    {"label":"empty_source", "input_hex":"00a5", "expected_hex":"00"},
+    {"label":"missing_guard_at_eof", "input_hex":"022b2e", "expected_hex":"00"},
+    {"label":"bad_guard", "input_hex":"022b2e00", "expected_hex":"00"},
+    {"label":"one_arithmetic_after_dot", "input_hex":"032b2e2da5", "expected_hex":"00"},
+    {"label":"valid_with_minus", "input_hex":"032b2d2ea5", "expected_hex":"01"}
+  ]
+}

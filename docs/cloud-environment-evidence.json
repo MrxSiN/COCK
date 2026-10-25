@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-25",
+  "workspace_archive_sha256": "c7dc1ca225eb70dfe6bd2b92d080b7b25b6c07d48e014083c88d0c00f44d180b",
+  "evaluator_repository": "https://github.com/rdebath/Brainfuck",
+  "evaluator_commit": "525d346c006ea30dfc847ae3b32ed44d44fa9925",
+  "evaluator_binary_sha256": "0ac670ed3128db52bfa73347d6f81eccd864ebd91f8a7d450d8efb2278178a5b",
+  "sdk_cli_version": "19.0",
+  "sdk_archive_sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
+  "sdk_archive_sha1_from_google_repository_xml": "5fdcc763663eefb86a5b8879697aa6088b041e70",
+  "kvm_available": false,
+  "sdk_package_license_accepted": false,
+  "emulator_installed": false,
+  "android_device_tests": "NOT RUN"
+}

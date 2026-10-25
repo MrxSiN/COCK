@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-24",
+  "environment": {
+    "executor": "/tmp/cock_diag_root locally built out of repository",
+    "qualification": "diagnostic-only, not independently installed bootstrap",
+    "android": "deferred"
+  },
+  "framer_source_sha256": "a27efcef41dfe722b617caff25e490fdf9d2bd857b99cf4382f2314f36bd8a71",
+  "framer_commands": 99,
+  "frozen_frame_vectors": [
+    {
+      "case": "original_tiny_app_a",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 515,
+      "output_bytes": 1064,
+      "output_sha256": "68b7b2835e54f1d098d448be9e9cb1fa54e0ebcfac98fcef68395c4851fb495b",
+      "outer_steps": 557983
+    },
+    {
+      "case": "original_tiny_app_b",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 515,
+      "output_bytes": 1065,
+      "output_sha256": "f8234d706d9dd26c4c74845c38218e0c33b68b9baaae87ef0c4dce11e95f9f2f",
+      "outer_steps": 557986
+    },
+    {
+      "case": "original_held_out",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 515,
+      "output_bytes": 1066,
+      "output_sha256": "342f313484d0f2d23a44b5a628f4a65611478cb29f9103b9bccec8fa8d574e61",
+      "outer_steps": 557989
+    },
+    {
+      "case": "compact_tiny_app_a",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 452,
+      "output_bytes": 938,
+      "output_sha256": "db9b62124bdda0e3a494607969f7fab55dcdc1d2a2afdbb91ffc6c9c253761a6",
+      "outer_steps": 493030
+    },
+    {
+      "case": "compact_tiny_app_b",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 452,
+      "output_bytes": 939,
+      "output_sha256": "5ec7b63096f6f8837fecef88ee8ca6d15ebb757ed927755711b0561b266a0071",
+      "outer_steps": 493033
+    },
+    {
+      "case": "compact_held_out",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 452,
+      "output_bytes": 940,
+      "output_sha256": "b05e074cebe44882f0775960fe75ebdda0bead36aad76ef4304316d6ea80aaf5",
+      "outer_steps": 493036
+    },
+    {
+      "case": "empty",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 0,
+      "output_bytes": 1,
+      "output_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "outer_steps": 691
+    },
+    {
+      "case": "brackets",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 10,
+      "output_bytes": 23,
+      "output_sha256": "f98498060bce687701fda49b4646f9a757dc347164a959889ad43347359ec6be",
+      "outer_steps": 12667
+    },
+    {
+      "case": "length_1",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 1,
+      "output_bytes": 4,
+      "output_sha256": "857d21858ef7aee6cd2bf133126669ae21abb12c349c55321a5c1c14765f238c",
+      "outer_steps": 1597
+    },
+    {
+      "case": "length_255",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 255,
+      "output_bytes": 511,
+      "output_sha256": "3243b4e3a55ba26328a9810db49dbbe087e21ee6607e206f8a7b233e50be0c22",
+      "outer_steps": 230956
+    },
+    {
+      "case": "length_256",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 256,
+      "output_bytes": 513,
+      "output_sha256": "48bfba487688f1181c5a45b2b5a9459ee546c117b5788e96920b91c81d0d9ff3",
+      "outer_steps": 231859
+    },
+    {
+      "case": "length_515",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 515,
+      "output_bytes": 1031,
+      "output_sha256": "0a7274a29b0ac32cb9c357973ffe83fec13b2410df540f70ef80f3779f848e91",
+      "outer_steps": 465736
+    },
+    {
+      "case": "length_1024",
+      "passed": true,
+      "exit_code": 0,
+      "source_commands": 1024,
+      "output_bytes": 2049,
+      "output_sha256": "088bcbd9904584bbeda6a829a7cf698f350fa8c8445a5f49962cd7733cc460c5",
+      "outer_steps": 925363
+    }
+  ],
+  "six_cell_real_compiler_regressions": {
+    "original_tiny_app_a": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 264,
+      "expected_bytes": 264,
+      "actual_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "elapsed_seconds": 1.626,
+      "report": "outer_steps=1154697756 host_tape_cells=65536"
+    },
+    "original_tiny_app_b": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 272,
+      "expected_bytes": 272,
+      "actual_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "elapsed_seconds": 1.708,
+      "report": "outer_steps=1188461088 host_tape_cells=65536"
+    },
+    "original_held_out": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 280,
+      "expected_bytes": 280,
+      "actual_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "elapsed_seconds": 1.659,
+      "report": "outer_steps=1222224420 host_tape_cells=65536"
+    },
+    "compact_tiny_app_a": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 140,
+      "expected_bytes": 140,
+      "actual_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "elapsed_seconds": 1.217,
+      "report": "outer_steps=826850646 host_tape_cells=65536"
+    },
+    "compact_tiny_app_b": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 144,
+      "expected_bytes": 144,
+      "actual_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "elapsed_seconds": 1.183,
+      "report": "outer_steps=850085268 host_tape_cells=65536"
+    },
+    "compact_held_out": {
+      "passed": true,
+      "exit": 0,
+      "actual_bytes": 148,
+      "expected_bytes": 148,
+      "actual_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "elapsed_seconds": 1.254,
+      "report": "outer_steps=873319890 host_tape_cells=65536"
+    }
+  },
+  "independent_reference_self_interpretation_smoke": [
+    {
+      "guest": "+.",
+      "passed": true,
+      "actual_hex": "01",
+      "expected_hex": "01",
+      "exit": 0,
+      "outer_steps": 27746063
+    },
+    {
+      "guest": "-.",
+      "passed": true,
+      "actual_hex": "ff",
+      "expected_hex": "ff",
+      "exit": 0,
+      "outer_steps": 27982449
+    },
+    {
+      "guest": "[]",
+      "passed": true,
+      "actual_hex": "",
+      "expected_hex": "",
+      "exit": 0,
+      "outer_steps": 56667627
+    },
+    {
+      "guest": "++[>++<-]>.",
+      "passed": true,
+      "actual_hex": "04",
+      "expected_hex": "04",
+      "exit": 0,
+      "outer_steps": 187668212
+    }
+  ],
+  "bf_grammar_audit": {
+    "count": 24,
+    "passed": true,
+    "source_hashes": {
+      "examples/held_out.bf": {
+        "commands": 35,
+        "sha256": "242d5375574e6b2c2890183fe66313e1d35eb4d46a147535a037d4a8048ad46e"
+      },
+      "examples/tiny_app_a.bf": {
+        "commands": 33,
+        "sha256": "3bea2e1b5e1a8c7e1430b1ad83f6a7b08dad1d14525ce6008618479310bbf651"
+      },
+      "examples/tiny_app_b.bf": {
+        "commands": 34,
+        "sha256": "49b0436e6ff4eb1b88dd8bd6f91abf9a5b79121a1dfcd65721bc123b0fb5d7df"
+      },
+      "src/annotated_source_normalizer.bf": {
+        "commands": 872,
+        "sha256": "0246930a44280f9fde0fe91100a17dd8eefcffe333cd6b6a82e7d933c4eeaec1"
+      },
+      "src/annotated_source_stream_gate.bf": {
+        "commands": 7278,
+        "sha256": "dbb91920aab5a304e15efd22a194c495f1934cca85067c65a61188c7b896387a"
+      },
+      "src/bf_in_bf.bf": {
+        "commands": 103,
+        "sha256": "6f04241ea4d0fd7b0d8217472b39a974c76e361c294cc2502070106663aba2af"
+      },
+      "src/bf_in_bf_reference.bf": {
+        "commands": 423,
+        "sha256": "7d7ab6e6b67c60a1d0176c33536e19eb3f3bd892c711733991dc1c6283bdb2f4"
+      },
+      "src/bf_in_bf_six_cell.bf": {
+        "commands": 8907,
+        "sha256": "2208c0290f830f1af72f0798782dd416cfd22b4a85d7af680bb27c9944049bc2"
+      },
+      "src/bf_in_bf_six_cell_fuel.bf": {
+        "commands": 3839140,
+        "sha256": "f73f4dbfe78cd93c34cf0a8a36726f4102945ece358707a378c625964afacf66"
+      },
+      "src/bounded_arithmetic_fuel_executor.bf": {
+        "commands": 6356,
+        "sha256": "4ecf8c43b1f83d6ae34f0450c41592e1ee228350ccfa7ec997f273956fe68b40"
+      },
+      "src/bracket_depth_gate.bf": {
+        "commands": 342,
+        "sha256": "8b57f6ae831185b41f5e2705a2e8396071b37a77a7f5a698d4873ad5151a9456"
+      },
+      "src/bracket_stream_gate.bf": {
+        "commands": 554,
+        "sha256": "d0bd637880b616311be5e9760376a9403aa9f74626ce63fcf7210ff53cc80d9e"
+      },
+      "src/mini_compiler.bf": {
+        "commands": 515,
+        "sha256": "3edbaa35c420eb14ba2421e74520362ac03894ec118c5fe9d616f08809d5efe7"
+      },
+      "src/mini_compiler_compact.bf": {
+        "commands": 452,
+        "sha256": "738857d78bc0839cb84ff0d4d5033c983b649368ecf1ca93b3bc04b3ab724afd"
+      },
+      "src/normalized_source_atomic_gate.bf": {
+        "commands": 1524,
+        "sha256": "6a21c3243c2f225d5c9ce7394a536b7211e785374caae625cf9c513e7e736c45"
+      },
+      "src/normalized_source_stream_gate.bf": {
+        "commands": 1609,
+        "sha256": "5284b9f1aa1f3a004d41ff257361dd7c260e7fb0d05e6909351328f89e398504"
+      },
+      "src/printable_subset_gate.bf": {
+        "commands": 831,
+        "sha256": "63fe76d9c0eba41bb3d5c5079c356018a78ace552315edb7fc0d7ab15f013e5b"
+      },
+      "src/raw_subset_gate.bf": {
+        "commands": 606,
+        "sha256": "f80e2be6458473a7064148651a14d50dd94b3644185c89ae0a9dc5fe8f1d83cd"
+      },
+      "src/six_cell_static_safety_gate.bf": {
+        "commands": 6352,
+        "sha256": "875f804dd01ce47343f25844e0268d3526e5dd6a1474a0a34b6b4849f4353b83"
+      },
+      "src/stage_a_atomic_printable_gate.bf": {
+        "commands": 1441,
+        "sha256": "2c4b1e909e4182fc481ec83fdd58cfb7cf33b9e2e9a5793f6f46b09ffdfaf128"
+      },
+      "src/stage_a_atomic_subset_gate.bf": {
+        "commands": 1033,
+        "sha256": "53ef432d57c2d8bef00651d1123d8f083ae80778f612869261c4bb8c9b3cda2b"
+      },
+      "tests/compiler_request_framer.bf": {
+        "commands": 99,
+        "sha256": "a27efcef41dfe722b617caff25e490fdf9d2bd857b99cf4382f2314f36bd8a71"
+      },
+      "tests/nested_arithmetic_driver.bf": {
+        "commands": 1748,
+        "sha256": "3de60d12f1eef9af32a8452680b664cdc4fb1094df0ff09f8ef208c9a88f14a4"
+      },
+      "tests/oracle.bf": {
+        "commands": 108,
+        "sha256": "4a0f58cf2d6ea4fdf19ef47e313b24c477cc44abff3795e05559012db0b6cb6b"
+      }
+    }
+  },
+  "known_unresolved_negative_cases": [
+    {
+      "name": "missing_separator",
+      "diagnostic_exit": 68,
+      "observation": "outer evaluator fuel exhausted after provisional chunks including zero byte; no trusted rejection implemented",
+      "is_acceptance_pass": false
+    },
+    {
+      "name": "embedded_application_nul",
+      "diagnostic_exit": 0,
+      "observed_hex": "012b00",
+      "observation": "silently ignores application data after NUL",
+      "is_acceptance_pass": false
+    },
+    {
+      "name": "invalid_compiler_byte",
+      "diagnostic_exit": 0,
+      "observed_hex": "012b0178002e",
+      "observation": "unadmitted compiler byte x is emitted without lexical rejection",
+      "is_acceptance_pass": false
+    }
+  ]
+}

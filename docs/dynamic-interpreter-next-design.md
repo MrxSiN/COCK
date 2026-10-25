@@ -1,0 +1,11 @@
+# Dynamic guest tape requirement for the next Stage A interpreter slice
+
+Status: DESIGN ONLY. Neither a new ABI nor an implemented runtime.
+
+The new nested execution diagnostic proves the existing COCK six-cell interpreter can itself be executed as Brainfuck guest source by a dynamically addressable external BF-in-BF reference. It does not prove the existing six-cell interpreter can execute itself. The latter source uses host memory addresses beyond the six guest cells that its own BF-in-BF kernel can represent. Increasing its outer host command budget does not fix the addressability mismatch.
+
+The next implementation must remove guest-cell-index assumptions from `bf_in_bf_six_cell.bf` before claiming nested self-hosting. Plan an independently checked, right-growing logical guest tape with zero initialization, explicit logical cell budget errors on the actual `>` command, left-of-zero traps, and checked address arithmetic. Select a backing layout only after declaring memory and runtime costs; do not set a permanent six-cell or fixed project-wide cap. Preserve the old six-cell kernel and the six frozen raw compiler binaries for differential regression.
+
+The bounded next feature slice should inventory: (1) BF-authored dynamic tape growth and read/write primitives, (2) interpreter guest-program storage and instruction dispatch, (3) a BF-authored complete-source validator with exact offsets, (4) guest fuel and error/status handling consistent with the COCK guest profile, (5) declared host closure and input transport, and (6) independent fixtures for pointer left trap, right growth, loop pointer travel, binary input, EOF, 515/452-command real mini compilers, and a second copy of the new interpreter. First complete the inventory and all file drafts, then open a consolidated batch. Test the original and compact compilers as immediate regressions. Do not mark source-byte errors, truncation, physical OOM, guest fuel, or nested self-interpretation as passing without actual evidence.
+
+A different but still BF-authored interpreter can be used as an external developmental oracle, not as proof of same-implementation self-hosting. The existing third-party reference is separately licensed and not the production COCK-conformant kernel.

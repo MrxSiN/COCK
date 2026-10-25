@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-24",
+  "component": "src/normalized_source_offset_gate.bf",
+  "sha256": "500ef891d6d3f7a5ff2cfc4fe64aa850a75a65a6c676a88c85d931239a77c6d6",
+  "source_bytes": 3241,
+  "executable_commands": 1252,
+  "diagnostic_case_count": 1175,
+  "random_test_seed": 20261024,
+  "fixed_fixture_count": 11,
+  "fixed_fixtures": [
+    {
+      "name": "empty",
+      "input_size": 2,
+      "expected_hex": "00ff",
+      "pass": true
+    },
+    {
+      "name": "all_eight",
+      "input_size": 10,
+      "expected_hex": "00ff",
+      "pass": true
+    },
+    {
+      "name": "bad_first",
+      "input_size": 5,
+      "expected_hex": "0100",
+      "pass": true
+    },
+    {
+      "name": "bad_after_output",
+      "input_size": 5,
+      "expected_hex": "0102",
+      "pass": true
+    },
+    {
+      "name": "first_of_two_errors",
+      "input_size": 8,
+      "expected_hex": "0101",
+      "pass": true
+    },
+    {
+      "name": "embedded_nul",
+      "input_size": 5,
+      "expected_hex": "0101",
+      "pass": true
+    },
+    {
+      "name": "invalid_at_254",
+      "input_size": 257,
+      "expected_hex": "01fe",
+      "pass": true
+    },
+    {
+      "name": "wrong_guard",
+      "input_size": 5,
+      "expected_hex": "0bff",
+      "pass": true
+    },
+    {
+      "name": "missing_guard",
+      "input_size": 4,
+      "expected_hex": "0bff",
+      "pass": true
+    },
+    {
+      "name": "truncated_source",
+      "input_size": 3,
+      "expected_hex": "0bff",
+      "pass": true
+    },
+    {
+      "name": "unmatched_bracket_is_lexically_legal",
+      "input_size": 5,
+      "expected_hex": "00ff",
+      "pass": true
+    }
+  ],
+  "repo_bf_sources_audited": 35,
+  "audit_passed": true,
+  "additional_regression_original_compact_raw_outputs": 6,
+  "test_host": "local outside repository diagnostic BF evaluator; not independently qualified",
+  "acceptance": "component diagnostic only; not Stage A acceptance",
+  "limitations": [
+    "only normalized eight command source and lexical byte validation",
+    "bracket pairing and annotated source grammar excluded",
+    "no complete source pass through to downstream interpreter",
+    "no trustworthy host closure or trailing-byte detection",
+    "one byte count supports 0 to 255 bytes only",
+    "source input read at host EOF is not independently authenticated"
+  ],
+  "negative_nonacceptance_probes": [
+    {
+      "case": "valid record with a trailing invalid byte",
+      "observed_hex": "00ff",
+      "expected_production_decision": "REJECT AFTER TRUSTED HOST CLOSURE",
+      "component_result_is_insufficient": true
+    },
+    {
+      "case": "unmatched opening bracket after output capable prefix",
+      "observed_hex": "00ff",
+      "expected_production_decision": "REJECT IN BRACKET PREFLIGHT",
+      "component_result_is_insufficient": true
+    }
+  ]
+}

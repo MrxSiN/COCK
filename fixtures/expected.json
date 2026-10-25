@@ -1,0 +1,17 @@
+{
+  "profile": "development-only-normalized-single-cell",
+  "instruction_hex": {
+    "init": "00008052",
+    "plus": "00040011",
+    "minus": "00040051",
+    "mask": "001c0053",
+    "return": "c0035fd6"
+  },
+  "vectors": [
+    {"source": "examples/tiny_app_a.bf", "arithmetic_commands": 32, "guest_output_hex": "20", "raw_aarch64_bytes": 264},
+    {"source": "examples/tiny_app_b.bf", "arithmetic_commands": 33, "guest_output_hex": "21", "raw_aarch64_bytes": 272},
+    {"source": "examples/held_out.bf", "arithmetic_commands": 34, "guest_output_hex": "22", "raw_aarch64_bytes": 280},
+    {"source_literal": "+.", "guest_output_hex": "01", "raw_aarch64_bytes": 16},
+    {"source_literal": "-.", "guest_output_hex": "ff", "raw_aarch64_bytes": 16}
+  ]
+}

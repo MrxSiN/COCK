@@ -1,0 +1,351 @@
+{
+  "date": "2026-10-24",
+  "scope": "local diagnostic compact raw AArch64 compiler",
+  "status": "COMPONENT DIAGNOSTIC PASSED",
+  "environment": {
+    "root_evaluator": "/usr/local/bin/cock-bf-diagnostic",
+    "bootstrap_independent": false,
+    "target": "AArch64 raw words, not ELF/Android",
+    "android_deferred": true
+  },
+  "source": "src/mini_compiler_compact.bf",
+  "bf_commands": 452,
+  "sha256": "738857d78bc0839cb84ff0d4d5033c983b649368ecf1ca93b3bc04b3ab724afd",
+  "duration_s": 1.992,
+  "tests": [
+    {
+      "case": "tiny_app_a",
+      "result": "PASS",
+      "source_commands": 33,
+      "native_bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "case": "tiny_app_b",
+      "result": "PASS",
+      "source_commands": 34,
+      "native_bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "case": "held_out",
+      "result": "PASS",
+      "source_commands": 35,
+      "native_bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    },
+    {
+      "case": "mixed",
+      "result": "PASS",
+      "source_commands": 35,
+      "native_bytes": 148,
+      "sha256": "1dc60c77a9aa4396fd7607ce5ce7742b22ae62d9e07e9a685cdf7a78e26a8038"
+    },
+    {
+      "case": "wrap",
+      "result": "PASS",
+      "source_commands": 2,
+      "native_bytes": 16,
+      "sha256": "610d15749fa7271defa651f2d8e1f38f94b5424a79d3f1c25f3ee27f8e1cd429"
+    },
+    {
+      "case": "plus_only",
+      "result": "PASS",
+      "source_commands": 2,
+      "native_bytes": 16,
+      "sha256": "98e78c6f62205a0420cd4c6abaf87c8684b2c6ae186aaaa8e50b39a42f368d50"
+    },
+    {
+      "case": "zero",
+      "result": "PASS",
+      "source_commands": 7,
+      "native_bytes": 36,
+      "sha256": "a8d22c2427aebae045f921b2e73fc0f15ce6a6e93ad7436f98bdbe2c90d59726"
+    },
+    {
+      "case": "seeded_random_arithmetic",
+      "result": "PASS",
+      "count": 1200,
+      "max_arithmetic_commands": 191,
+      "seed": 20261024
+    },
+    {
+      "case": "compiler_via_reference_tiny_app_a",
+      "result": "PASS",
+      "native_bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "case": "compiler_via_reference_tiny_app_b",
+      "result": "PASS",
+      "native_bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "case": "compiler_via_reference_held_out",
+      "result": "PASS",
+      "native_bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    },
+    {
+      "case": "independent_AArch64_clang_assembler",
+      "result": "PASS",
+      "word_bytes": "000080520004001100040051001c0053c0035fd6"
+    },
+    {
+      "case": "legacy_compiler_frozen_tiny_app_a",
+      "result": "PASS",
+      "native_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "case": "legacy_compiler_frozen_tiny_app_b",
+      "result": "PASS",
+      "native_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "case": "legacy_compiler_frozen_held_out",
+      "result": "PASS",
+      "native_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "case": "repository_bf_purity_audit",
+      "result": "PASS",
+      "file_count": 12
+    }
+  ],
+  "random_count": 1200,
+  "limitations": [
+    "no complete annotated-source preflight",
+    "no trusted exact host stream-closure authority",
+    "not COCK guest-fuel preserving",
+    "full nested interpreter executing mini compiler not demonstrated",
+    "Android SDK emulator ELF APK and device deferred"
+  ],
+  "benchmarks": [
+    {
+      "program": "tiny_app_a",
+      "generator": "original",
+      "BF_compiler_command_count": 515,
+      "artifact_bytes": 264,
+      "process_invocation_seconds": [
+        0.426328,
+        0.400833,
+        0.421412,
+        0.463207,
+        0.430721,
+        0.417105,
+        0.460803,
+        0.431405,
+        0.390395,
+        0.416323,
+        0.436026,
+        0.437405,
+        0.428384
+      ],
+      "first_three_median_s": 0.421412,
+      "remaining_ten_median_s": 0.431063,
+      "all_samples_min_s": 0.390395,
+      "all_samples_max_s": 0.463207,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    },
+    {
+      "program": "tiny_app_a",
+      "generator": "compact",
+      "BF_compiler_command_count": 452,
+      "artifact_bytes": 140,
+      "process_invocation_seconds": [
+        0.258052,
+        0.246932,
+        0.222426,
+        0.23978,
+        0.240985,
+        0.228426,
+        0.268027,
+        0.223488,
+        0.23466,
+        0.244995,
+        0.238967,
+        0.248062,
+        0.278043
+      ],
+      "first_three_median_s": 0.246932,
+      "remaining_ten_median_s": 0.240382,
+      "all_samples_min_s": 0.222426,
+      "all_samples_max_s": 0.278043,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    },
+    {
+      "program": "tiny_app_b",
+      "generator": "original",
+      "BF_compiler_command_count": 515,
+      "artifact_bytes": 272,
+      "process_invocation_seconds": [
+        0.454629,
+        0.438417,
+        0.46186,
+        0.425962,
+        0.411365,
+        0.439372,
+        0.408574,
+        0.424083,
+        0.408813,
+        0.431293,
+        0.463065,
+        0.401581,
+        0.454159
+      ],
+      "first_three_median_s": 0.454629,
+      "remaining_ten_median_s": 0.425022,
+      "all_samples_min_s": 0.401581,
+      "all_samples_max_s": 0.463065,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    },
+    {
+      "program": "tiny_app_b",
+      "generator": "compact",
+      "BF_compiler_command_count": 452,
+      "artifact_bytes": 144,
+      "process_invocation_seconds": [
+        0.247018,
+        0.260341,
+        0.265067,
+        0.293365,
+        0.260833,
+        0.269967,
+        0.268321,
+        0.319353,
+        0.271279,
+        0.260284,
+        0.27366,
+        0.276586,
+        0.26096
+      ],
+      "first_three_median_s": 0.260341,
+      "remaining_ten_median_s": 0.270623,
+      "all_samples_min_s": 0.247018,
+      "all_samples_max_s": 0.319353,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    },
+    {
+      "program": "held_out",
+      "generator": "original",
+      "BF_compiler_command_count": 515,
+      "artifact_bytes": 280,
+      "process_invocation_seconds": [
+        0.452453,
+        0.480137,
+        0.431175,
+        0.421399,
+        0.423979,
+        0.431086,
+        0.481564,
+        0.448523,
+        0.477565,
+        0.411945,
+        0.422903,
+        0.410231,
+        0.467071
+      ],
+      "first_three_median_s": 0.452453,
+      "remaining_ten_median_s": 0.427532,
+      "all_samples_min_s": 0.410231,
+      "all_samples_max_s": 0.481564,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    },
+    {
+      "program": "held_out",
+      "generator": "compact",
+      "BF_compiler_command_count": 452,
+      "artifact_bytes": 148,
+      "process_invocation_seconds": [
+        0.268304,
+        0.286956,
+        0.275391,
+        0.281665,
+        0.242455,
+        0.271253,
+        0.256367,
+        0.266344,
+        0.264349,
+        0.270708,
+        0.230591,
+        0.269867,
+        0.250562
+      ],
+      "first_three_median_s": 0.275391,
+      "remaining_ten_median_s": 0.265347,
+      "all_samples_min_s": 0.230591,
+      "all_samples_max_s": 0.286956,
+      "cache_enabled": false,
+      "executable": "src/bf_in_bf_reference.bf",
+      "execution_path": "external diagnostic engine executes BF reference interpreter executes BF compiler"
+    }
+  ],
+  "note": "Samples are standalone process invocations, not an incremental or cached build; runtime includes root diagnostic startup, BF-in-BF interpretation, guest compiler execution and cleanup. The tests do not execute native target AArch64 machine code.",
+  "upstream_printable_gate_diagnostic": [
+    {
+      "name": "tiny_app_a",
+      "result": "PASS",
+      "admission": "01"
+    },
+    {
+      "name": "tiny_app_b",
+      "result": "PASS",
+      "admission": "01"
+    },
+    {
+      "name": "held_out",
+      "result": "PASS",
+      "admission": "01"
+    },
+    {
+      "name": "unknown_source_byte",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "embedded_NUL",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "unsupported_pointer",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "unsupported_loop",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "no_final_output",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "duplicate_dot",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    },
+    {
+      "name": "guest_nonprintable",
+      "result": "PASS_GATE_REJECTED",
+      "admission": "00"
+    }
+  ],
+  "upstream_gate_limitation": "Diagnostic-only two-component invocation; host did not implement BF-authored production chaining or trustworthy read/close/length confirmation. This BF gate only supports raw inputs of at most 255 bytes per record, not full annotated-source validation."
+}

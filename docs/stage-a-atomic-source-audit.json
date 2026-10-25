@@ -1,0 +1,25 @@
+{
+  "audited_bf_files": 18,
+  "files": [
+    "examples/held_out.bf",
+    "examples/tiny_app_a.bf",
+    "examples/tiny_app_b.bf",
+    "src/annotated_source_normalizer.bf",
+    "src/annotated_source_stream_gate.bf",
+    "src/bf_in_bf.bf",
+    "src/bf_in_bf_reference.bf",
+    "src/bracket_depth_gate.bf",
+    "src/bracket_stream_gate.bf",
+    "src/mini_compiler.bf",
+    "src/mini_compiler_compact.bf",
+    "src/normalized_source_atomic_gate.bf",
+    "src/normalized_source_stream_gate.bf",
+    "src/printable_subset_gate.bf",
+    "src/raw_subset_gate.bf",
+    "src/stage_a_atomic_printable_gate.bf",
+    "src/stage_a_atomic_subset_gate.bf",
+    "tests/oracle.bf"
+  ],
+  "errors": [],
+  "checks": "raw legal annotations code alphabet and paired brackets"
+}

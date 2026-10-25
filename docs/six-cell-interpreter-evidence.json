@@ -1,0 +1,1264 @@
+{
+  "date": "2026-10-24",
+  "profile": "diagnostic bounded 6 cell guest interpreter; not full COCK profile",
+  "tool": "externally compiled local C BF evaluator in /tmp, not qualified independent bootstrap",
+  "random_seed": 20261024,
+  "source_file": "src/bf_in_bf_six_cell.bf",
+  "source_sha256": "2208c0290f830f1af72f0798782dd416cfd22b4a85d7af680bb27c9944049bc2",
+  "source_commands": 8907,
+  "repro_input": "repeating count octet and exact command bytes; zero length count; guest stdin",
+  "no_test_script_in_repository": true,
+  "compiler_cases": [
+    {
+      "compiler": "mini_compiler.bf",
+      "app": "tiny_app_a",
+      "source_bytes": 515,
+      "output_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "expected_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "pass": true,
+      "status": 0,
+      "time_sec": 2.25561,
+      "error": ""
+    },
+    {
+      "compiler": "mini_compiler.bf",
+      "app": "tiny_app_b",
+      "source_bytes": 515,
+      "output_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "expected_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "pass": true,
+      "status": 0,
+      "time_sec": 2.07997,
+      "error": ""
+    },
+    {
+      "compiler": "mini_compiler.bf",
+      "app": "held_out",
+      "source_bytes": 515,
+      "output_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "expected_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "pass": true,
+      "status": 0,
+      "time_sec": 2.34877,
+      "error": ""
+    },
+    {
+      "compiler": "mini_compiler_compact.bf",
+      "app": "tiny_app_a",
+      "source_bytes": 452,
+      "output_bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "expected_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "pass": true,
+      "status": 0,
+      "time_sec": 1.61628,
+      "error": ""
+    },
+    {
+      "compiler": "mini_compiler_compact.bf",
+      "app": "tiny_app_b",
+      "source_bytes": 452,
+      "output_bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "expected_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "pass": true,
+      "status": 0,
+      "time_sec": 1.60742,
+      "error": ""
+    },
+    {
+      "compiler": "mini_compiler_compact.bf",
+      "app": "held_out",
+      "source_bytes": 452,
+      "output_bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "expected_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "pass": true,
+      "status": 0,
+      "time_sec": 1.66172,
+      "error": ""
+    }
+  ],
+  "semantic_cases": [
+    {
+      "label": "empty",
+      "len": 0,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "arithmetic",
+      "len": 7,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0301",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "modular_plus",
+      "len": 257,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "modular_minus",
+      "len": 2,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "ff",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "eof_zero",
+      "len": 2,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "input_zero",
+      "len": 2,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "input_ff",
+      "len": 2,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "ff",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "multi_byte",
+      "len": 6,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00ff1f",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "nested_loop",
+      "len": 20,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0c",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "transfer",
+      "len": 16,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "06",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "restore_pointer",
+      "len": 18,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "04",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "skip_initial_zero",
+      "len": 11,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "02",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "long_source_chunking",
+      "len": 513,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "fc",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "more_than_six_output",
+      "len": 16,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0102030405060708",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "blank_output",
+      "len": 4,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "zero_loop",
+      "len": 2,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "input_override",
+      "len": 8,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "01",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "loop_at_fifth_cell",
+      "len": 11,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_000",
+      "len": 35,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_001",
+      "len": 106,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_002",
+      "len": 13,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_003",
+      "len": 27,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_004",
+      "len": 30,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_005",
+      "len": 91,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_006",
+      "len": 71,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_007",
+      "len": 6,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_008",
+      "len": 23,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_009",
+      "len": 48,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0000",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_010",
+      "len": 59,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_011",
+      "len": 56,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_012",
+      "len": 7,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_013",
+      "len": 31,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_014",
+      "len": 60,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_015",
+      "len": 39,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_016",
+      "len": 61,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_017",
+      "len": 51,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_018",
+      "len": 69,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_019",
+      "len": 46,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00fe",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_020",
+      "len": 11,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_021",
+      "len": 17,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_022",
+      "len": 32,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_023",
+      "len": 71,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_024",
+      "len": 43,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_025",
+      "len": 15,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_026",
+      "len": 19,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_027",
+      "len": 30,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_028",
+      "len": 70,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_029",
+      "len": 65,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_030",
+      "len": 55,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "fe",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_031",
+      "len": 52,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_032",
+      "len": 46,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_033",
+      "len": 43,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "ff00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_034",
+      "len": 54,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_035",
+      "len": 65,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_036",
+      "len": 49,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_037",
+      "len": 79,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_038",
+      "len": 37,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_039",
+      "len": 46,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_040",
+      "len": 37,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_041",
+      "len": 57,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_042",
+      "len": 51,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_043",
+      "len": 82,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_044",
+      "len": 92,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_045",
+      "len": 65,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0000",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_046",
+      "len": 31,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_047",
+      "len": 43,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "fe04",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_048",
+      "len": 56,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_049",
+      "len": 24,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_050",
+      "len": 37,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_051",
+      "len": 26,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_052",
+      "len": 58,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "ff",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_053",
+      "len": 29,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_054",
+      "len": 28,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_055",
+      "len": 67,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_056",
+      "len": 49,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_057",
+      "len": 12,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_058",
+      "len": 19,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_059",
+      "len": 93,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_060",
+      "len": 92,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_061",
+      "len": 16,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_062",
+      "len": 30,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "fe",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_063",
+      "len": 67,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_064",
+      "len": 42,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "fefe00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_065",
+      "len": 87,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_066",
+      "len": 27,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0000ff",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_067",
+      "len": 79,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0000",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_068",
+      "len": 40,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_069",
+      "len": 13,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "0002",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_070",
+      "len": 9,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_071",
+      "len": 22,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_072",
+      "len": 36,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_073",
+      "len": 10,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    },
+    {
+      "label": "seed_074",
+      "len": 49,
+      "status": 0,
+      "reference_status": 0,
+      "output_hex": "00",
+      "pass": true,
+      "diagnostic": ""
+    }
+  ],
+  "source_audit": [
+    {
+      "file": "src/annotated_source_normalizer.bf",
+      "pass": true,
+      "commands": 872,
+      "errors": []
+    },
+    {
+      "file": "src/annotated_source_stream_gate.bf",
+      "pass": true,
+      "commands": 7278,
+      "errors": []
+    },
+    {
+      "file": "src/bf_in_bf.bf",
+      "pass": true,
+      "commands": 103,
+      "errors": []
+    },
+    {
+      "file": "src/bf_in_bf_reference.bf",
+      "pass": true,
+      "commands": 423,
+      "errors": []
+    },
+    {
+      "file": "src/bf_in_bf_six_cell.bf",
+      "pass": true,
+      "commands": 8907,
+      "errors": []
+    },
+    {
+      "file": "src/bracket_depth_gate.bf",
+      "pass": true,
+      "commands": 342,
+      "errors": []
+    },
+    {
+      "file": "src/bracket_stream_gate.bf",
+      "pass": true,
+      "commands": 554,
+      "errors": []
+    },
+    {
+      "file": "src/mini_compiler.bf",
+      "pass": true,
+      "commands": 515,
+      "errors": []
+    },
+    {
+      "file": "src/mini_compiler_compact.bf",
+      "pass": true,
+      "commands": 452,
+      "errors": []
+    },
+    {
+      "file": "src/normalized_source_atomic_gate.bf",
+      "pass": true,
+      "commands": 1524,
+      "errors": []
+    },
+    {
+      "file": "src/normalized_source_stream_gate.bf",
+      "pass": true,
+      "commands": 1609,
+      "errors": []
+    },
+    {
+      "file": "src/printable_subset_gate.bf",
+      "pass": true,
+      "commands": 831,
+      "errors": []
+    },
+    {
+      "file": "src/raw_subset_gate.bf",
+      "pass": true,
+      "commands": 606,
+      "errors": []
+    },
+    {
+      "file": "src/stage_a_atomic_printable_gate.bf",
+      "pass": true,
+      "commands": 1441,
+      "errors": []
+    },
+    {
+      "file": "src/stage_a_atomic_subset_gate.bf",
+      "pass": true,
+      "commands": 1033,
+      "errors": []
+    },
+    {
+      "file": "tests/oracle.bf",
+      "pass": true,
+      "commands": 108,
+      "errors": []
+    }
+  ],
+  "totals": {
+    "compiler_pass": 6,
+    "compiler_total": 6,
+    "semantic_pass": 93,
+    "semantic_total": 93,
+    "audit_pass": 16,
+    "audit_total": 16,
+    "all_bf_audit_pass": 19,
+    "all_bf_audit_total": 19
+  },
+  "limitations": [
+    "fixed six cell guest tape; no guest boundary traps",
+    "no original instruction fuel or deterministic guest trace",
+    "no trusted source closure; raw diagnostics use outside coordinator",
+    "not COCK complete profile or nested full self interpretation",
+    "unqualified local evaluator",
+    "no Android artifacts"
+  ],
+  "all_bf_source_audit": [
+    {
+      "path": "examples/held_out.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "examples/tiny_app_a.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "examples/tiny_app_b.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/annotated_source_normalizer.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/annotated_source_stream_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/bf_in_bf.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/bf_in_bf_reference.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/bf_in_bf_six_cell.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/bracket_depth_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/bracket_stream_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/mini_compiler.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/mini_compiler_compact.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/normalized_source_atomic_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/normalized_source_stream_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/printable_subset_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/raw_subset_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/stage_a_atomic_printable_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "src/stage_a_atomic_subset_gate.bf",
+      "pass": true,
+      "errors": []
+    },
+    {
+      "path": "tests/oracle.bf",
+      "pass": true,
+      "errors": []
+    }
+  ],
+  "fixed_binary_sessions": [
+    {
+      "case": "original_tiny_app_a",
+      "input": "fixtures/six_cell/original_tiny_app_a.input.bin",
+      "input_len": 552,
+      "input_sha256": "29b282573062f0026c13eff5c2ed9e2a1d417850e4875e309ab9016f4627f3ef",
+      "expected_output": "artifacts/tiny_app_a.aarch64.raw",
+      "expected_bytes": 264,
+      "expected_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "case": "original_tiny_app_b",
+      "input": "fixtures/six_cell/original_tiny_app_b.input.bin",
+      "input_len": 553,
+      "input_sha256": "b1b5005e43e202c811598be34c92cacf96a70c969c6caebbe653b5a73e2c8a8a",
+      "expected_output": "artifacts/tiny_app_b.aarch64.raw",
+      "expected_bytes": 272,
+      "expected_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "case": "original_held_out",
+      "input": "fixtures/six_cell/original_held_out.input.bin",
+      "input_len": 554,
+      "input_sha256": "7957bee0dae0c4e75d1e29ff94658959f3b8f4275abc549785aa3f88ce3c540a",
+      "expected_output": "artifacts/held_out.aarch64.raw",
+      "expected_bytes": 280,
+      "expected_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "case": "compact_tiny_app_a",
+      "input": "fixtures/six_cell/compact_tiny_app_a.input.bin",
+      "input_len": 489,
+      "input_sha256": "fb5234c0d8f576e349985a31b22f669e072bdbbf75800c6bae0ab2b0be94294a",
+      "expected_output": "artifacts/tiny_app_a.compact.aarch64.raw",
+      "expected_bytes": 140,
+      "expected_sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "case": "compact_tiny_app_b",
+      "input": "fixtures/six_cell/compact_tiny_app_b.input.bin",
+      "input_len": 490,
+      "input_sha256": "f477067b31873a8fa70d5113fac8cd92703e5981046587da1e9108471f347b3d",
+      "expected_output": "artifacts/tiny_app_b.compact.aarch64.raw",
+      "expected_bytes": 144,
+      "expected_sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "case": "compact_held_out",
+      "input": "fixtures/six_cell/compact_held_out.input.bin",
+      "input_len": 491,
+      "input_sha256": "cc03788b15bc1fc2a697165fdc499c6839edc18b11ff106c5ac776503b5aaf31",
+      "expected_output": "artifacts/held_out.compact.aarch64.raw",
+      "expected_bytes": 148,
+      "expected_sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    },
+    {
+      "case": "nested",
+      "input": "fixtures/six_cell/nested.input.bin",
+      "input_len": 22,
+      "input_sha256": "445c881d4db76d939e204964467e289f8a504b064c44d884176ff4b7d0d1c297",
+      "expected_output": "fixtures/six_cell/nested.expected.bin",
+      "expected_bytes": 1,
+      "expected_sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977"
+    },
+    {
+      "case": "binary_ff",
+      "input": "fixtures/six_cell/binary_ff.input.bin",
+      "input_len": 5,
+      "input_sha256": "4bddc5f5788001f209a50a431d5e30f956ecb0028e04ffba08c55e504f6736d0",
+      "expected_output": "fixtures/six_cell/binary_ff.expected.bin",
+      "expected_bytes": 1,
+      "expected_sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+    },
+    {
+      "case": "binary_zero",
+      "input": "fixtures/six_cell/binary_zero.input.bin",
+      "input_len": 5,
+      "input_sha256": "8ca004d99ed22c9641ff078ca01dc8e9422b3d73ab099ded639e6847c0566adc",
+      "expected_output": "fixtures/six_cell/binary_zero.expected.bin",
+      "expected_bytes": 1,
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "case": "eof_zero",
+      "input": "fixtures/six_cell/eof_zero.input.bin",
+      "input_len": 4,
+      "input_sha256": "55b1917df6d8c841cc6cca02e195e9fdc4fdb2978da2defb56b4674db06f76be",
+      "expected_output": "fixtures/six_cell/eof_zero.expected.bin",
+      "expected_bytes": 1,
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    },
+    {
+      "case": "long_source",
+      "input": "fixtures/six_cell/long_source.input.bin",
+      "input_len": 521,
+      "input_sha256": "744035836f398011fa5fb661cb1653b5376924448a2ea65d5de088e8145ba76c",
+      "expected_output": "fixtures/six_cell/long_source.expected.bin",
+      "expected_bytes": 1,
+      "expected_sha256": "98722e2ebed8ed3d3652e11e4181f0dccc1ce7d192d8f1db370af8ec4a4e174a"
+    }
+  ],
+  "known_negative_gate_demonstrations": [
+    {
+      "guest_source": ">>>>>>+.",
+      "condition": "guest tape address beyond the six supported cells",
+      "observed_status": 0,
+      "observed_stdout_hex": "",
+      "required_future_behavior": "GUEST_LOGICAL_BUDGET at the offending movement under a configured six-cell cap",
+      "conformance_pass": false
+    },
+    {
+      "guest_source": "<+.",
+      "condition": "leftward movement from guest address zero",
+      "observed_status": 0,
+      "observed_stdout_hex": "",
+      "required_future_behavior": "LEFT_BOUNDARY before pointer change",
+      "conformance_pass": false
+    },
+    {
+      "guest_source": "+.[",
+      "condition": "unmatched opening bracket after output",
+      "observed_status": 0,
+      "observed_stdout_hex": "01",
+      "required_future_behavior": "preflight reject with no guest output",
+      "conformance_pass": false
+    }
+  ]
+}

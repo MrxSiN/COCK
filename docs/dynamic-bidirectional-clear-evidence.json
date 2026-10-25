@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-24",
+  "source": "src/bf_in_bf_dynamic_bidirectional_clear.bf",
+  "source_sha256": "0ac99e93314376c42e44f39c5929d6025699cf423752b9e0f66b9fd9ab82adec",
+  "type": "local diagnostic only; Stage A not accepted",
+  "source_commands": 1265,
+  "counts": {
+    "passed": 835,
+    "total": 835,
+    "fixed": 15,
+    "randomized": 600,
+    "growth": 60,
+    "prior_subset_comparisons": 160
+  },
+  "results_by_class": {
+    "fixed": 15,
+    "randomized": 600,
+    "growth": 60,
+    "prior_subset": 160
+  },
+  "legacy_compilers": [
+    {
+      "id": "original_tiny_app_a",
+      "passed": true,
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    {
+      "id": "original_tiny_app_b",
+      "passed": true,
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    {
+      "id": "original_held_out",
+      "passed": true,
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    },
+    {
+      "id": "compact_tiny_app_a",
+      "passed": true,
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+    },
+    {
+      "id": "compact_tiny_app_b",
+      "passed": true,
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+    },
+    {
+      "id": "compact_held_out",
+      "passed": true,
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+    }
+  ],
+  "bf_source_audit": {
+    "passed": 29,
+    "total": 29
+  },
+  "failures": [],
+  "external_evaluator": "/tmp/cock_diag_new, development diagnostic, C implementation outside repository, not independently qualified bootstrap",
+  "negative_boundaries": [
+    "raw input embedded NUL can masquerade as end of source",
+    "invalid trailing suffix can produce earlier guest output",
+    "data after first zero source terminator requires host closure",
+    "no original guest fuel; accelerated loops change original command counts",
+    "unrestricted loop bodies and guest comma unavailable"
+  ],
+  "negative_observations": [
+    {
+      "id": "bad_suffix",
+      "input_hex": "2b2e5b2b2b5d00",
+      "actual_hex": "010d",
+      "exit": 0,
+      "meaning": "negative evidence; source safety requirement not met"
+    },
+    {
+      "id": "illegal_embedded_zero",
+      "input_hex": "2b002e00",
+      "actual_hex": "00",
+      "exit": 0,
+      "meaning": "negative evidence; source safety requirement not met"
+    },
+    {
+      "id": "trailing_after_zero",
+      "input_hex": "2b2e005a",
+      "actual_hex": "0100",
+      "exit": 0,
+      "meaning": "negative evidence; source safety requirement not met"
+    }
+  ]
+}

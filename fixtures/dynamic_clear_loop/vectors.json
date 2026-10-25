@@ -1,0 +1,19 @@
+{
+  "description": "Exact diagnostic output includes final status 00 or 0D and is not a BFIO frame",
+  "cases": [
+    {"name": "empty", "source": "", "expected_hex": "00"},
+    {"name": "zero_loop", "source": "[-].", "expected_hex": "0000"},
+    {"name": "positive_clear", "source": "++++[-].", "expected_hex": "0000"},
+    {"name": "negative_clear", "source": "-----[-].", "expected_hex": "0000"},
+    {"name": "clear_then_increment", "source": "+++[-]++.", "expected_hex": "0200"},
+    {"name": "clear_second_cell", "source": "++>+++[-]<.", "expected_hex": "0200"},
+    {"name": "repeat_clear", "source": "++[-]++[-].", "expected_hex": "0000"},
+    {"name": "unsupported_plus_loop", "source": "[+]", "expected_hex": "0d"},
+    {"name": "unsupported_empty_loop", "source": "[]", "expected_hex": "0d"},
+    {"name": "truncated_open", "source": "[", "expected_hex": "0d"},
+    {"name": "truncated_close", "source": "[-", "expected_hex": "0d"},
+    {"name": "wrong_close", "source": "[-+", "expected_hex": "0d"},
+    {"name": "origin_trap", "source": "<", "expected_hex": "04"},
+    {"name": "unsupported_input", "source": ",", "expected_hex": "0d"}
+  ]
+}

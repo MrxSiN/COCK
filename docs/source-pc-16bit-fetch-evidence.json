@@ -1,0 +1,270 @@
+{
+  "component": "source_pc_16bit_fetch_many.bf",
+  "source_sha256": "e1f8fb3a3ee300ec4c69de2faec6b4703af10c9e5e0af8317d698eabff0a4cc9",
+  "tests": {
+    "frozen_literal_fixtures": {
+      "passed": 6,
+      "total": 6
+    },
+    "complete_compiler_indexing": {
+      "passed": 2,
+      "total": 2,
+      "lengths": [
+        515,
+        452
+      ]
+    },
+    "seeded_random_program_queries": {
+      "passed": 320,
+      "total": 320,
+      "seed": 20261025
+    },
+    "large_index_stress": {
+      "passed": 3,
+      "total": 3
+    },
+    "repository_annotated_bf_source_audit": {
+      "passed": 44,
+      "total": 44,
+      "issues": []
+    },
+    "max_per_invocation_query_count": {
+      "passed": 1,
+      "total": 1,
+      "queries": 255
+    }
+  },
+  "failures": [],
+  "sample": [
+    {
+      "label": "fixture_cross_256.input",
+      "source_length": 516,
+      "query_count": 9,
+      "pass": true,
+      "time_ms": 22.444,
+      "input_sha256": "faabbe5894085c3bad8afd7c7612c118fccc2af8afbfe73ba1261d6c2afafb86",
+      "output_sha256": "502dcd7175682b243e05615217bc8e189469328e7da03936817101c127a06d2d"
+    },
+    {
+      "label": "fixture_eight_commands.input",
+      "source_length": 8,
+      "query_count": 10,
+      "pass": true,
+      "time_ms": 3.361,
+      "input_sha256": "0cb2faf47ab4a2b58e69c82dea45495116b69782f6eed7b2ccd03299577b0065",
+      "output_sha256": "d9754f02e3e1119c4d4fcf4e8dae58716a9e745f91fa61406f13efeb005c76ac"
+    },
+    {
+      "label": "fixture_empty.input",
+      "source_length": 0,
+      "query_count": 3,
+      "pass": true,
+      "time_ms": 3.172,
+      "input_sha256": "f576d722db350aee2d9135ebedf6fe0553a09a69745012a8160cd3da40010eca",
+      "output_sha256": "6ec82672ee922adf749e9aae9eb902af14e54bd13fdede7610202012ec54504c"
+    },
+    {
+      "label": "fixture_maximum_pos.input",
+      "source_length": 65535,
+      "query_count": 4,
+      "pass": true,
+      "time_ms": 2334.606,
+      "input_sha256": "802f3c4529f099478daa0bbe9c3c858816f8e73df915dd3d19bdfad9a42468f9",
+      "output_sha256": "034d3eeb6019dcdcc564f1a74dc242b1f36cad5c8189faeb4e789f8e5bcdde74"
+    },
+    {
+      "label": "fixture_reverse_loop.input",
+      "source_length": 10,
+      "query_count": 9,
+      "pass": true,
+      "time_ms": 8.977,
+      "input_sha256": "cbbee080be7176c534c659d8e63f89a4aa95ed95c63f7a62ff6a3e067c6ab27c",
+      "output_sha256": "6572a513c8f305f3e7a5f28e71750f64d79dd2db925725a2cab0d5b8b51b9a8e"
+    },
+    {
+      "label": "fixture_zero_queries.input",
+      "source_length": 4,
+      "query_count": 0,
+      "pass": true,
+      "time_ms": 0.814,
+      "input_sha256": "98c4620555632a0369c6c236e1240066bdcae858f8430784e5ee9a17efa244e7",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "compiler_mini_compiler",
+      "source_length": 515,
+      "query_count": 20,
+      "pass": true,
+      "time_ms": 45.071,
+      "input_sha256": "c13dce6a628f56db2038336e310f0aaddc3b1c24c366ebe3097a6e3cb700f330",
+      "output_sha256": "819e04d090a456493eb60a7ce942b46f0384a06f7003f6dcad59e2209d5d92af"
+    },
+    {
+      "label": "compiler_mini_compiler_compact",
+      "source_length": 452,
+      "query_count": 20,
+      "pass": true,
+      "time_ms": 32.523,
+      "input_sha256": "a8a7ebf59ad516af5914195ee6076b0b78af365216ad33d58ca31794ebaa7ed2",
+      "output_sha256": "ad2bc4998aaee55cb1127b12bbd329410123c23ec438915e4b806212ca61f3ef"
+    },
+    {
+      "label": "stress_4096",
+      "source_length": 4096,
+      "query_count": 8,
+      "pass": true,
+      "time_ms": 115.363,
+      "input_sha256": "dd0aad8f1d5a3282223ecfd969a7a4b43a179b7a3fa2374bd69ed991695a04f3",
+      "output_sha256": "3eb431594b2db21606e849a0740b8caf96fabc77f471dbf7aedc32e881cdf48b"
+    },
+    {
+      "label": "stress_65535",
+      "source_length": 65535,
+      "query_count": 6,
+      "pass": true,
+      "time_ms": 1597.429,
+      "input_sha256": "ffeef60d41019c0cc20a7a2e1c5bf8a5b248658abc48178eec293999a0e7bb00",
+      "output_sha256": "ea17b75b49d49e9794c346e6028ba34be36e2f4b671bb770de8798f3fcd0ba68"
+    },
+    {
+      "label": "stress_65536",
+      "source_length": 65536,
+      "query_count": 4,
+      "pass": true,
+      "time_ms": 1117.562,
+      "input_sha256": "53c428f8ee436b22ec1dd0dbb1fc225f0396d8951e689ac2dd82061f22034375",
+      "output_sha256": "5fef584c2fff156244527ea2d0062c6ec071a0715f6fbba0fe87b17856f7e7d2"
+    }
+  ],
+  "stress": [
+    {
+      "label": "stress_4096",
+      "source_length": 4096,
+      "query_count": 8,
+      "pass": true,
+      "time_ms": 115.363,
+      "input_sha256": "dd0aad8f1d5a3282223ecfd969a7a4b43a179b7a3fa2374bd69ed991695a04f3",
+      "output_sha256": "3eb431594b2db21606e849a0740b8caf96fabc77f471dbf7aedc32e881cdf48b"
+    },
+    {
+      "label": "stress_65535",
+      "source_length": 65535,
+      "query_count": 6,
+      "pass": true,
+      "time_ms": 1597.429,
+      "input_sha256": "ffeef60d41019c0cc20a7a2e1c5bf8a5b248658abc48178eec293999a0e7bb00",
+      "output_sha256": "ea17b75b49d49e9794c346e6028ba34be36e2f4b671bb770de8798f3fcd0ba68"
+    },
+    {
+      "label": "stress_65536",
+      "source_length": 65536,
+      "query_count": 4,
+      "pass": true,
+      "time_ms": 1117.562,
+      "input_sha256": "53c428f8ee436b22ec1dd0dbb1fc225f0396d8951e689ac2dd82061f22034375",
+      "output_sha256": "5fef584c2fff156244527ea2d0062c6ec071a0715f6fbba0fe87b17856f7e7d2"
+    }
+  ],
+  "source_bytes": 1565,
+  "baseline_artifact_hashes": {
+    "held_out.aarch64.raw": {
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "bytes": 280
+    },
+    "held_out.compact.aarch64.raw": {
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "bytes": 148
+    },
+    "tiny_app_a.aarch64.raw": {
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "bytes": 264
+    },
+    "tiny_app_a.compact.aarch64.raw": {
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "bytes": 140
+    },
+    "tiny_app_b.aarch64.raw": {
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "bytes": 272
+    },
+    "tiny_app_b.compact.aarch64.raw": {
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "bytes": 144
+    }
+  },
+  "execution_seconds": 9.529,
+  "all_positive_passed": true,
+  "negative_probes": [
+    {
+      "input": "valid request followed by EXTRA",
+      "observation": "accepts request and ignores suffix; external closure required",
+      "classification": "known limitation"
+    },
+    {
+      "input": "noncommand X as source opcode",
+      "observation": "returns X and success; complete source preflight required",
+      "classification": "known limitation"
+    },
+    {
+      "input": "missing source NUL terminator",
+      "observation": "outer EOF zero can end loader; host length and closure required",
+      "classification": "known limitation"
+    }
+  ],
+  "baseline_regressions": [
+    {
+      "input": "compact_tiny_app_a.input.bin",
+      "artifact": "tiny_app_a.compact.aarch64.raw",
+      "pass_": true,
+      "seconds": 0.78,
+      "size": 140,
+      "exit": 0,
+      "stderr": "OK steps=368429630 maxp=5435 consumed=489\n"
+    },
+    {
+      "input": "compact_tiny_app_b.input.bin",
+      "artifact": "tiny_app_b.compact.aarch64.raw",
+      "pass_": true,
+      "seconds": 0.82,
+      "size": 144,
+      "exit": 0,
+      "stderr": "OK steps=378715493 maxp=5435 consumed=490\n"
+    },
+    {
+      "input": "original_tiny_app_a.input.bin",
+      "artifact": "tiny_app_a.aarch64.raw",
+      "pass_": true,
+      "seconds": 1.08,
+      "size": 264,
+      "exit": 0,
+      "stderr": "OK steps=516769398 maxp=6191 consumed=552\n"
+    },
+    {
+      "input": "original_tiny_app_b.input.bin",
+      "artifact": "tiny_app_b.aarch64.raw",
+      "pass_": true,
+      "seconds": 1.19,
+      "size": 272,
+      "exit": 0,
+      "stderr": "OK steps=531801582 maxp=6191 consumed=553\n"
+    },
+    {
+      "input": "compact_held_out.input.bin",
+      "artifact": "held_out.compact.aarch64.raw",
+      "pass_": true,
+      "seconds": 0.84,
+      "size": 148,
+      "exit": 0,
+      "stderr": "OK steps=389001356 maxp=5435 consumed=491\n"
+    },
+    {
+      "input": "original_held_out.input.bin",
+      "artifact": "held_out.aarch64.raw",
+      "pass_": true,
+      "seconds": 1.21,
+      "size": 280,
+      "exit": 0,
+      "stderr": "OK steps=546833766 maxp=6191 consumed=554\n"
+    }
+  ]
+}

@@ -1,0 +1,6296 @@
+{
+  "date": "2026-10-24",
+  "status": "DIAGNOSTIC ONLY",
+  "seed": 20261024,
+  "root_evaluator": "/usr/local/bin/cock-bf-diagnostic",
+  "root_is_independently_qualified": false,
+  "component": "src/normalized_source_stream_gate.bf",
+  "source_sha256": "5284b9f1aa1f3a004d41ff257361dd7c260e7fb0d05e6909351328f89e398504",
+  "BF_command_count": 1609,
+  "totals": {
+    "passed": 690,
+    "total": 690,
+    "failed": 0
+  },
+  "source_audit_count": 10,
+  "source_audit_files": [
+    "src/bf_in_bf.bf",
+    "src/bf_in_bf_reference.bf",
+    "src/bracket_depth_gate.bf",
+    "src/bracket_stream_gate.bf",
+    "src/mini_compiler.bf",
+    "src/mini_compiler_compact.bf",
+    "src/normalized_source_stream_gate.bf",
+    "src/printable_subset_gate.bf",
+    "src/raw_subset_gate.bf",
+    "tests/oracle.bf"
+  ],
+  "host_suffix_not_checked_by_BF": true,
+  "cases": [
+    {
+      "case": "fixed_valid_0",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.15,
+      "error": ""
+    },
+    {
+      "case": "fixed_valid_1",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.11,
+      "error": ""
+    },
+    {
+      "case": "fixed_valid_2",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.82,
+      "error": ""
+    },
+    {
+      "case": "fixed_valid_3",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.87,
+      "error": ""
+    },
+    {
+      "case": "fixed_valid_4",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.3,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_0",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_1",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_2",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_3",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_4",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.08,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_5",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_6",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_7",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_8",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "fixed_invalid_9",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_0",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_1",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_2",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_3",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_4",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_5",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_6",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_7",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_8",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_9",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_10",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_11",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_12",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_13",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.79,
+      "error": ""
+    },
+    {
+      "case": "one_byte_14",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_15",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_16",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_17",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_18",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_19",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_20",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_21",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_22",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_23",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_24",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_25",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_26",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.81,
+      "error": ""
+    },
+    {
+      "case": "one_byte_27",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_28",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.85,
+      "error": ""
+    },
+    {
+      "case": "one_byte_29",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_30",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_31",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "one_byte_32",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_33",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_34",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_35",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_36",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_37",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_38",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_39",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_40",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.87,
+      "error": ""
+    },
+    {
+      "case": "one_byte_41",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_42",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_43",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_44",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "one_byte_45",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_46",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_47",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_48",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_49",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_50",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_51",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_52",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_53",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_54",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_55",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_56",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.6,
+      "error": ""
+    },
+    {
+      "case": "one_byte_57",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_58",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.97,
+      "error": ""
+    },
+    {
+      "case": "one_byte_59",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_60",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_61",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_62",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_63",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_64",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_65",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_66",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_67",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_68",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_69",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_70",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_71",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_72",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_73",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "one_byte_74",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_75",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "one_byte_76",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_77",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_78",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.6,
+      "error": ""
+    },
+    {
+      "case": "one_byte_79",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.6,
+      "error": ""
+    },
+    {
+      "case": "one_byte_80",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_81",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_82",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "one_byte_83",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_84",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_85",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_86",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.79,
+      "error": ""
+    },
+    {
+      "case": "one_byte_87",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_88",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_89",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_90",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_91",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_92",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.87,
+      "error": ""
+    },
+    {
+      "case": "one_byte_93",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_94",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_95",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_96",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.81,
+      "error": ""
+    },
+    {
+      "case": "one_byte_97",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_98",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_99",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_100",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_101",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_102",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.98,
+      "error": ""
+    },
+    {
+      "case": "one_byte_103",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_104",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_105",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_106",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_107",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_108",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_109",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_110",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.88,
+      "error": ""
+    },
+    {
+      "case": "one_byte_111",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_112",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_113",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.59,
+      "error": ""
+    },
+    {
+      "case": "one_byte_114",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_115",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.9,
+      "error": ""
+    },
+    {
+      "case": "one_byte_116",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_117",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_118",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_119",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_120",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_121",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.81,
+      "error": ""
+    },
+    {
+      "case": "one_byte_122",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_123",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_124",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.13,
+      "error": ""
+    },
+    {
+      "case": "one_byte_125",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_126",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.94,
+      "error": ""
+    },
+    {
+      "case": "one_byte_127",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_128",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.84,
+      "error": ""
+    },
+    {
+      "case": "one_byte_129",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_130",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_131",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_132",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "one_byte_133",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_134",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_135",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "one_byte_136",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_137",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_138",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_139",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.93,
+      "error": ""
+    },
+    {
+      "case": "one_byte_140",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_141",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_142",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_143",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_144",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.81,
+      "error": ""
+    },
+    {
+      "case": "one_byte_145",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_146",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_147",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_148",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_149",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.34,
+      "error": ""
+    },
+    {
+      "case": "one_byte_150",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.01,
+      "error": ""
+    },
+    {
+      "case": "one_byte_151",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_152",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_153",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_154",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_155",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_156",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_157",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_158",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_159",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "one_byte_160",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_161",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_162",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.96,
+      "error": ""
+    },
+    {
+      "case": "one_byte_163",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_164",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_165",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_166",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_167",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_168",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_169",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_170",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.61,
+      "error": ""
+    },
+    {
+      "case": "one_byte_171",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_172",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_173",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_174",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_175",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.99,
+      "error": ""
+    },
+    {
+      "case": "one_byte_176",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.79,
+      "error": ""
+    },
+    {
+      "case": "one_byte_177",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_178",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_179",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_180",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_181",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_182",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_183",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_184",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_185",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_186",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_187",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_188",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_189",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_190",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_191",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "one_byte_192",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_193",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_194",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_195",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_196",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_197",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_198",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_199",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_200",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_201",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.96,
+      "error": ""
+    },
+    {
+      "case": "one_byte_202",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_203",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_204",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_205",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_206",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "one_byte_207",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_208",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.63,
+      "error": ""
+    },
+    {
+      "case": "one_byte_209",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_210",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    },
+    {
+      "case": "one_byte_211",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.64,
+      "error": ""
+    },
+    {
+      "case": "one_byte_212",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_213",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "one_byte_214",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_215",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_216",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_217",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.03,
+      "error": ""
+    },
+    {
+      "case": "one_byte_218",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.05,
+      "error": ""
+    },
+    {
+      "case": "one_byte_219",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.68,
+      "error": ""
+    },
+    {
+      "case": "one_byte_220",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "one_byte_221",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_222",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.92,
+      "error": ""
+    },
+    {
+      "case": "one_byte_223",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "one_byte_224",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_225",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_226",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_227",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_228",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.16,
+      "error": ""
+    },
+    {
+      "case": "one_byte_229",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "one_byte_230",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "one_byte_231",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.88,
+      "error": ""
+    },
+    {
+      "case": "one_byte_232",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "one_byte_233",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_234",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_235",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_236",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "one_byte_237",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "one_byte_238",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.7,
+      "error": ""
+    },
+    {
+      "case": "one_byte_239",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.87,
+      "error": ""
+    },
+    {
+      "case": "one_byte_240",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_241",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.85,
+      "error": ""
+    },
+    {
+      "case": "one_byte_242",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.02,
+      "error": ""
+    },
+    {
+      "case": "one_byte_243",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "one_byte_244",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "one_byte_245",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "one_byte_246",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.82,
+      "error": ""
+    },
+    {
+      "case": "one_byte_247",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.91,
+      "error": ""
+    },
+    {
+      "case": "one_byte_248",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_249",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "one_byte_250",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.15,
+      "error": ""
+    },
+    {
+      "case": "one_byte_251",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.97,
+      "error": ""
+    },
+    {
+      "case": "one_byte_252",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_253",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "one_byte_254",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "one_byte_255",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "random_0",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.77,
+      "error": ""
+    },
+    {
+      "case": "random_1",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.7,
+      "error": ""
+    },
+    {
+      "case": "random_2",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.81,
+      "error": ""
+    },
+    {
+      "case": "random_3",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.22,
+      "error": ""
+    },
+    {
+      "case": "random_4",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.19,
+      "error": ""
+    },
+    {
+      "case": "random_5",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.03,
+      "error": ""
+    },
+    {
+      "case": "random_6",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.12,
+      "error": ""
+    },
+    {
+      "case": "random_7",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.69,
+      "error": ""
+    },
+    {
+      "case": "random_8",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.41,
+      "error": ""
+    },
+    {
+      "case": "random_9",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "random_10",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.24,
+      "error": ""
+    },
+    {
+      "case": "random_11",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.26,
+      "error": ""
+    },
+    {
+      "case": "random_12",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.96,
+      "error": ""
+    },
+    {
+      "case": "random_13",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.39,
+      "error": ""
+    },
+    {
+      "case": "random_14",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.29,
+      "error": ""
+    },
+    {
+      "case": "random_15",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.37,
+      "error": ""
+    },
+    {
+      "case": "random_16",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.65,
+      "error": ""
+    },
+    {
+      "case": "random_17",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.08,
+      "error": ""
+    },
+    {
+      "case": "random_18",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.35,
+      "error": ""
+    },
+    {
+      "case": "random_19",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.1,
+      "error": ""
+    },
+    {
+      "case": "random_20",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.59,
+      "error": ""
+    },
+    {
+      "case": "random_21",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "random_22",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.4,
+      "error": ""
+    },
+    {
+      "case": "random_23",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.78,
+      "error": ""
+    },
+    {
+      "case": "random_24",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.42,
+      "error": ""
+    },
+    {
+      "case": "random_25",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.82,
+      "error": ""
+    },
+    {
+      "case": "random_26",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.99,
+      "error": ""
+    },
+    {
+      "case": "random_27",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.33,
+      "error": ""
+    },
+    {
+      "case": "random_28",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.73,
+      "error": ""
+    },
+    {
+      "case": "random_29",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.69,
+      "error": ""
+    },
+    {
+      "case": "random_30",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.66,
+      "error": ""
+    },
+    {
+      "case": "random_31",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.02,
+      "error": ""
+    },
+    {
+      "case": "random_32",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.2,
+      "error": ""
+    },
+    {
+      "case": "random_33",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.32,
+      "error": ""
+    },
+    {
+      "case": "random_34",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 6.24,
+      "error": ""
+    },
+    {
+      "case": "random_35",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.87,
+      "error": ""
+    },
+    {
+      "case": "random_36",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.1,
+      "error": ""
+    },
+    {
+      "case": "random_37",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.76,
+      "error": ""
+    },
+    {
+      "case": "random_38",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.5,
+      "error": ""
+    },
+    {
+      "case": "random_39",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.47,
+      "error": ""
+    },
+    {
+      "case": "random_40",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.51,
+      "error": ""
+    },
+    {
+      "case": "random_41",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.02,
+      "error": ""
+    },
+    {
+      "case": "random_42",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.59,
+      "error": ""
+    },
+    {
+      "case": "random_43",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.88,
+      "error": ""
+    },
+    {
+      "case": "random_44",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.28,
+      "error": ""
+    },
+    {
+      "case": "random_45",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.16,
+      "error": ""
+    },
+    {
+      "case": "random_46",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.37,
+      "error": ""
+    },
+    {
+      "case": "random_47",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.85,
+      "error": ""
+    },
+    {
+      "case": "random_48",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.71,
+      "error": ""
+    },
+    {
+      "case": "random_49",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.83,
+      "error": ""
+    },
+    {
+      "case": "random_50",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.22,
+      "error": ""
+    },
+    {
+      "case": "random_51",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.51,
+      "error": ""
+    },
+    {
+      "case": "random_52",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "random_53",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.84,
+      "error": ""
+    },
+    {
+      "case": "random_54",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.66,
+      "error": ""
+    },
+    {
+      "case": "random_55",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.54,
+      "error": ""
+    },
+    {
+      "case": "random_56",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.19,
+      "error": ""
+    },
+    {
+      "case": "random_57",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.48,
+      "error": ""
+    },
+    {
+      "case": "random_58",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.31,
+      "error": ""
+    },
+    {
+      "case": "random_59",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.33,
+      "error": ""
+    },
+    {
+      "case": "random_60",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.3,
+      "error": ""
+    },
+    {
+      "case": "random_61",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.33,
+      "error": ""
+    },
+    {
+      "case": "random_62",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.79,
+      "error": ""
+    },
+    {
+      "case": "random_63",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.53,
+      "error": ""
+    },
+    {
+      "case": "random_64",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.89,
+      "error": ""
+    },
+    {
+      "case": "random_65",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.25,
+      "error": ""
+    },
+    {
+      "case": "random_66",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.67,
+      "error": ""
+    },
+    {
+      "case": "random_67",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.08,
+      "error": ""
+    },
+    {
+      "case": "random_68",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.73,
+      "error": ""
+    },
+    {
+      "case": "random_69",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.6,
+      "error": ""
+    },
+    {
+      "case": "random_70",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.29,
+      "error": ""
+    },
+    {
+      "case": "random_71",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.44,
+      "error": ""
+    },
+    {
+      "case": "random_72",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.41,
+      "error": ""
+    },
+    {
+      "case": "random_73",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.95,
+      "error": ""
+    },
+    {
+      "case": "random_74",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.35,
+      "error": ""
+    },
+    {
+      "case": "random_75",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.11,
+      "error": ""
+    },
+    {
+      "case": "random_76",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.36,
+      "error": ""
+    },
+    {
+      "case": "random_77",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.38,
+      "error": ""
+    },
+    {
+      "case": "random_78",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.83,
+      "error": ""
+    },
+    {
+      "case": "random_79",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.35,
+      "error": ""
+    },
+    {
+      "case": "random_80",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.44,
+      "error": ""
+    },
+    {
+      "case": "random_81",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.78,
+      "error": ""
+    },
+    {
+      "case": "random_82",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.35,
+      "error": ""
+    },
+    {
+      "case": "random_83",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.11,
+      "error": ""
+    },
+    {
+      "case": "random_84",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.55,
+      "error": ""
+    },
+    {
+      "case": "random_85",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.47,
+      "error": ""
+    },
+    {
+      "case": "random_86",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.44,
+      "error": ""
+    },
+    {
+      "case": "random_87",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.35,
+      "error": ""
+    },
+    {
+      "case": "random_88",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.11,
+      "error": ""
+    },
+    {
+      "case": "random_89",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.86,
+      "error": ""
+    },
+    {
+      "case": "random_90",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.93,
+      "error": ""
+    },
+    {
+      "case": "random_91",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.71,
+      "error": ""
+    },
+    {
+      "case": "random_92",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.61,
+      "error": ""
+    },
+    {
+      "case": "random_93",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "random_94",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.66,
+      "error": ""
+    },
+    {
+      "case": "random_95",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.26,
+      "error": ""
+    },
+    {
+      "case": "random_96",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.85,
+      "error": ""
+    },
+    {
+      "case": "random_97",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.89,
+      "error": ""
+    },
+    {
+      "case": "random_98",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.8,
+      "error": ""
+    },
+    {
+      "case": "random_99",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.96,
+      "error": ""
+    },
+    {
+      "case": "random_100",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.5,
+      "error": ""
+    },
+    {
+      "case": "random_101",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.27,
+      "error": ""
+    },
+    {
+      "case": "random_102",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.17,
+      "error": ""
+    },
+    {
+      "case": "random_103",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.77,
+      "error": ""
+    },
+    {
+      "case": "random_104",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.76,
+      "error": ""
+    },
+    {
+      "case": "random_105",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.4,
+      "error": ""
+    },
+    {
+      "case": "random_106",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.59,
+      "error": ""
+    },
+    {
+      "case": "random_107",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.21,
+      "error": ""
+    },
+    {
+      "case": "random_108",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.22,
+      "error": ""
+    },
+    {
+      "case": "random_109",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.44,
+      "error": ""
+    },
+    {
+      "case": "random_110",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.04,
+      "error": ""
+    },
+    {
+      "case": "random_111",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.73,
+      "error": ""
+    },
+    {
+      "case": "random_112",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.05,
+      "error": ""
+    },
+    {
+      "case": "random_113",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.37,
+      "error": ""
+    },
+    {
+      "case": "random_114",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.25,
+      "error": ""
+    },
+    {
+      "case": "random_115",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.24,
+      "error": ""
+    },
+    {
+      "case": "random_116",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.03,
+      "error": ""
+    },
+    {
+      "case": "random_117",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.11,
+      "error": ""
+    },
+    {
+      "case": "random_118",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.86,
+      "error": ""
+    },
+    {
+      "case": "random_119",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.71,
+      "error": ""
+    },
+    {
+      "case": "random_120",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.02,
+      "error": ""
+    },
+    {
+      "case": "random_121",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.64,
+      "error": ""
+    },
+    {
+      "case": "random_122",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.91,
+      "error": ""
+    },
+    {
+      "case": "random_123",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.71,
+      "error": ""
+    },
+    {
+      "case": "random_124",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.04,
+      "error": ""
+    },
+    {
+      "case": "random_125",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.96,
+      "error": ""
+    },
+    {
+      "case": "random_126",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.81,
+      "error": ""
+    },
+    {
+      "case": "random_127",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.15,
+      "error": ""
+    },
+    {
+      "case": "random_128",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.32,
+      "error": ""
+    },
+    {
+      "case": "random_129",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.82,
+      "error": ""
+    },
+    {
+      "case": "random_130",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.76,
+      "error": ""
+    },
+    {
+      "case": "random_131",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.74,
+      "error": ""
+    },
+    {
+      "case": "random_132",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.19,
+      "error": ""
+    },
+    {
+      "case": "random_133",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.24,
+      "error": ""
+    },
+    {
+      "case": "random_134",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.45,
+      "error": ""
+    },
+    {
+      "case": "random_135",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.73,
+      "error": ""
+    },
+    {
+      "case": "random_136",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.87,
+      "error": ""
+    },
+    {
+      "case": "random_137",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.01,
+      "error": ""
+    },
+    {
+      "case": "random_138",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.32,
+      "error": ""
+    },
+    {
+      "case": "random_139",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.43,
+      "error": ""
+    },
+    {
+      "case": "random_140",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.96,
+      "error": ""
+    },
+    {
+      "case": "random_141",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.16,
+      "error": ""
+    },
+    {
+      "case": "random_142",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.8,
+      "error": ""
+    },
+    {
+      "case": "random_143",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.13,
+      "error": ""
+    },
+    {
+      "case": "random_144",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.33,
+      "error": ""
+    },
+    {
+      "case": "random_145",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.05,
+      "error": ""
+    },
+    {
+      "case": "random_146",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.43,
+      "error": ""
+    },
+    {
+      "case": "random_147",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.15,
+      "error": ""
+    },
+    {
+      "case": "random_148",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.68,
+      "error": ""
+    },
+    {
+      "case": "random_149",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.02,
+      "error": ""
+    },
+    {
+      "case": "random_150",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.19,
+      "error": ""
+    },
+    {
+      "case": "random_151",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.58,
+      "error": ""
+    },
+    {
+      "case": "random_152",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.21,
+      "error": ""
+    },
+    {
+      "case": "random_153",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.84,
+      "error": ""
+    },
+    {
+      "case": "random_154",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.57,
+      "error": ""
+    },
+    {
+      "case": "random_155",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.7,
+      "error": ""
+    },
+    {
+      "case": "random_156",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.12,
+      "error": ""
+    },
+    {
+      "case": "random_157",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.26,
+      "error": ""
+    },
+    {
+      "case": "random_158",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.22,
+      "error": ""
+    },
+    {
+      "case": "random_159",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 7.26,
+      "error": ""
+    },
+    {
+      "case": "random_160",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.09,
+      "error": ""
+    },
+    {
+      "case": "random_161",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.23,
+      "error": ""
+    },
+    {
+      "case": "random_162",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.72,
+      "error": ""
+    },
+    {
+      "case": "random_163",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.47,
+      "error": ""
+    },
+    {
+      "case": "random_164",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.61,
+      "error": ""
+    },
+    {
+      "case": "random_165",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.16,
+      "error": ""
+    },
+    {
+      "case": "random_166",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.16,
+      "error": ""
+    },
+    {
+      "case": "random_167",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.16,
+      "error": ""
+    },
+    {
+      "case": "random_168",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.01,
+      "error": ""
+    },
+    {
+      "case": "random_169",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.65,
+      "error": ""
+    },
+    {
+      "case": "random_170",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.34,
+      "error": ""
+    },
+    {
+      "case": "random_171",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.96,
+      "error": ""
+    },
+    {
+      "case": "random_172",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.91,
+      "error": ""
+    },
+    {
+      "case": "random_173",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.45,
+      "error": ""
+    },
+    {
+      "case": "random_174",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.62,
+      "error": ""
+    },
+    {
+      "case": "random_175",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.77,
+      "error": ""
+    },
+    {
+      "case": "random_176",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.68,
+      "error": ""
+    },
+    {
+      "case": "random_177",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.25,
+      "error": ""
+    },
+    {
+      "case": "random_178",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.9,
+      "error": ""
+    },
+    {
+      "case": "random_179",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.8,
+      "error": ""
+    },
+    {
+      "case": "random_180",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.29,
+      "error": ""
+    },
+    {
+      "case": "random_181",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.81,
+      "error": ""
+    },
+    {
+      "case": "random_182",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.73,
+      "error": ""
+    },
+    {
+      "case": "random_183",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.35,
+      "error": ""
+    },
+    {
+      "case": "random_184",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.11,
+      "error": ""
+    },
+    {
+      "case": "random_185",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.87,
+      "error": ""
+    },
+    {
+      "case": "random_186",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.36,
+      "error": ""
+    },
+    {
+      "case": "random_187",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.51,
+      "error": ""
+    },
+    {
+      "case": "random_188",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.31,
+      "error": ""
+    },
+    {
+      "case": "random_189",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.42,
+      "error": ""
+    },
+    {
+      "case": "random_190",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.03,
+      "error": ""
+    },
+    {
+      "case": "random_191",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.52,
+      "error": ""
+    },
+    {
+      "case": "random_192",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.68,
+      "error": ""
+    },
+    {
+      "case": "random_193",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.64,
+      "error": ""
+    },
+    {
+      "case": "random_194",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.11,
+      "error": ""
+    },
+    {
+      "case": "random_195",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.96,
+      "error": ""
+    },
+    {
+      "case": "random_196",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.75,
+      "error": ""
+    },
+    {
+      "case": "random_197",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.82,
+      "error": ""
+    },
+    {
+      "case": "random_198",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.06,
+      "error": ""
+    },
+    {
+      "case": "random_199",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "random_200",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.09,
+      "error": ""
+    },
+    {
+      "case": "random_201",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.81,
+      "error": ""
+    },
+    {
+      "case": "random_202",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.17,
+      "error": ""
+    },
+    {
+      "case": "random_203",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.99,
+      "error": ""
+    },
+    {
+      "case": "random_204",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.12,
+      "error": ""
+    },
+    {
+      "case": "random_205",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.34,
+      "error": ""
+    },
+    {
+      "case": "random_206",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.17,
+      "error": ""
+    },
+    {
+      "case": "random_207",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.89,
+      "error": ""
+    },
+    {
+      "case": "random_208",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 7.12,
+      "error": ""
+    },
+    {
+      "case": "random_209",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.53,
+      "error": ""
+    },
+    {
+      "case": "random_210",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.24,
+      "error": ""
+    },
+    {
+      "case": "random_211",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.08,
+      "error": ""
+    },
+    {
+      "case": "random_212",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.88,
+      "error": ""
+    },
+    {
+      "case": "random_213",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.52,
+      "error": ""
+    },
+    {
+      "case": "random_214",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.21,
+      "error": ""
+    },
+    {
+      "case": "random_215",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.25,
+      "error": ""
+    },
+    {
+      "case": "random_216",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.52,
+      "error": ""
+    },
+    {
+      "case": "random_217",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.66,
+      "error": ""
+    },
+    {
+      "case": "random_218",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.34,
+      "error": ""
+    },
+    {
+      "case": "random_219",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.91,
+      "error": ""
+    },
+    {
+      "case": "random_220",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.9,
+      "error": ""
+    },
+    {
+      "case": "random_221",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "random_222",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.15,
+      "error": ""
+    },
+    {
+      "case": "random_223",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.75,
+      "error": ""
+    },
+    {
+      "case": "random_224",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.04,
+      "error": ""
+    },
+    {
+      "case": "random_225",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.25,
+      "error": ""
+    },
+    {
+      "case": "random_226",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "random_227",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.29,
+      "error": ""
+    },
+    {
+      "case": "random_228",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.6,
+      "error": ""
+    },
+    {
+      "case": "random_229",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.69,
+      "error": ""
+    },
+    {
+      "case": "random_230",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.08,
+      "error": ""
+    },
+    {
+      "case": "random_231",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.27,
+      "error": ""
+    },
+    {
+      "case": "random_232",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.32,
+      "error": ""
+    },
+    {
+      "case": "random_233",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.01,
+      "error": ""
+    },
+    {
+      "case": "random_234",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.12,
+      "error": ""
+    },
+    {
+      "case": "random_235",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.09,
+      "error": ""
+    },
+    {
+      "case": "random_236",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.21,
+      "error": ""
+    },
+    {
+      "case": "random_237",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.46,
+      "error": ""
+    },
+    {
+      "case": "random_238",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "random_239",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.69,
+      "error": ""
+    },
+    {
+      "case": "random_240",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.49,
+      "error": ""
+    },
+    {
+      "case": "random_241",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.32,
+      "error": ""
+    },
+    {
+      "case": "random_242",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.57,
+      "error": ""
+    },
+    {
+      "case": "random_243",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.89,
+      "error": ""
+    },
+    {
+      "case": "random_244",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.77,
+      "error": ""
+    },
+    {
+      "case": "random_245",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.41,
+      "error": ""
+    },
+    {
+      "case": "random_246",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.98,
+      "error": ""
+    },
+    {
+      "case": "random_247",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.16,
+      "error": ""
+    },
+    {
+      "case": "random_248",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.18,
+      "error": ""
+    },
+    {
+      "case": "random_249",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.3,
+      "error": ""
+    },
+    {
+      "case": "random_250",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.83,
+      "error": ""
+    },
+    {
+      "case": "random_251",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.04,
+      "error": ""
+    },
+    {
+      "case": "random_252",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.74,
+      "error": ""
+    },
+    {
+      "case": "random_253",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.84,
+      "error": ""
+    },
+    {
+      "case": "random_254",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.85,
+      "error": ""
+    },
+    {
+      "case": "random_255",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.98,
+      "error": ""
+    },
+    {
+      "case": "random_256",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.74,
+      "error": ""
+    },
+    {
+      "case": "random_257",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.75,
+      "error": ""
+    },
+    {
+      "case": "random_258",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.05,
+      "error": ""
+    },
+    {
+      "case": "random_259",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.6,
+      "error": ""
+    },
+    {
+      "case": "random_260",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.14,
+      "error": ""
+    },
+    {
+      "case": "random_261",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.38,
+      "error": ""
+    },
+    {
+      "case": "random_262",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.13,
+      "error": ""
+    },
+    {
+      "case": "random_263",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.87,
+      "error": ""
+    },
+    {
+      "case": "random_264",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.62,
+      "error": ""
+    },
+    {
+      "case": "random_265",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.67,
+      "error": ""
+    },
+    {
+      "case": "random_266",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.84,
+      "error": ""
+    },
+    {
+      "case": "random_267",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.2,
+      "error": ""
+    },
+    {
+      "case": "random_268",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.94,
+      "error": ""
+    },
+    {
+      "case": "random_269",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.16,
+      "error": ""
+    },
+    {
+      "case": "random_270",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.06,
+      "error": ""
+    },
+    {
+      "case": "random_271",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.68,
+      "error": ""
+    },
+    {
+      "case": "random_272",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 6.71,
+      "error": ""
+    },
+    {
+      "case": "random_273",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.04,
+      "error": ""
+    },
+    {
+      "case": "random_274",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.16,
+      "error": ""
+    },
+    {
+      "case": "random_275",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.73,
+      "error": ""
+    },
+    {
+      "case": "random_276",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.93,
+      "error": ""
+    },
+    {
+      "case": "random_277",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.21,
+      "error": ""
+    },
+    {
+      "case": "random_278",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.47,
+      "error": ""
+    },
+    {
+      "case": "random_279",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.11,
+      "error": ""
+    },
+    {
+      "case": "random_280",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.15,
+      "error": ""
+    },
+    {
+      "case": "random_281",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.48,
+      "error": ""
+    },
+    {
+      "case": "random_282",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.26,
+      "error": ""
+    },
+    {
+      "case": "random_283",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.07,
+      "error": ""
+    },
+    {
+      "case": "random_284",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.15,
+      "error": ""
+    },
+    {
+      "case": "random_285",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.11,
+      "error": ""
+    },
+    {
+      "case": "random_286",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.34,
+      "error": ""
+    },
+    {
+      "case": "random_287",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.07,
+      "error": ""
+    },
+    {
+      "case": "random_288",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.47,
+      "error": ""
+    },
+    {
+      "case": "random_289",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.75,
+      "error": ""
+    },
+    {
+      "case": "random_290",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.17,
+      "error": ""
+    },
+    {
+      "case": "random_291",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.76,
+      "error": ""
+    },
+    {
+      "case": "random_292",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.68,
+      "error": ""
+    },
+    {
+      "case": "random_293",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.54,
+      "error": ""
+    },
+    {
+      "case": "random_294",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.98,
+      "error": ""
+    },
+    {
+      "case": "random_295",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.0,
+      "error": ""
+    },
+    {
+      "case": "random_296",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.47,
+      "error": ""
+    },
+    {
+      "case": "random_297",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.98,
+      "error": ""
+    },
+    {
+      "case": "random_298",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.27,
+      "error": ""
+    },
+    {
+      "case": "random_299",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.6,
+      "error": ""
+    },
+    {
+      "case": "random_300",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.22,
+      "error": ""
+    },
+    {
+      "case": "random_301",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.5,
+      "error": ""
+    },
+    {
+      "case": "random_302",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.45,
+      "error": ""
+    },
+    {
+      "case": "random_303",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.51,
+      "error": ""
+    },
+    {
+      "case": "random_304",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.96,
+      "error": ""
+    },
+    {
+      "case": "random_305",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.98,
+      "error": ""
+    },
+    {
+      "case": "random_306",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.59,
+      "error": ""
+    },
+    {
+      "case": "random_307",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.93,
+      "error": ""
+    },
+    {
+      "case": "random_308",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.26,
+      "error": ""
+    },
+    {
+      "case": "random_309",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.15,
+      "error": ""
+    },
+    {
+      "case": "random_310",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 6.67,
+      "error": ""
+    },
+    {
+      "case": "random_311",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.55,
+      "error": ""
+    },
+    {
+      "case": "random_312",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.43,
+      "error": ""
+    },
+    {
+      "case": "random_313",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.5,
+      "error": ""
+    },
+    {
+      "case": "random_314",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.8,
+      "error": ""
+    },
+    {
+      "case": "random_315",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.62,
+      "error": ""
+    },
+    {
+      "case": "random_316",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.96,
+      "error": ""
+    },
+    {
+      "case": "random_317",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.26,
+      "error": ""
+    },
+    {
+      "case": "random_318",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.85,
+      "error": ""
+    },
+    {
+      "case": "random_319",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.82,
+      "error": ""
+    },
+    {
+      "case": "random_320",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.32,
+      "error": ""
+    },
+    {
+      "case": "random_321",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.58,
+      "error": ""
+    },
+    {
+      "case": "random_322",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.71,
+      "error": ""
+    },
+    {
+      "case": "random_323",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "random_324",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.37,
+      "error": ""
+    },
+    {
+      "case": "random_325",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.23,
+      "error": ""
+    },
+    {
+      "case": "random_326",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 4.24,
+      "error": ""
+    },
+    {
+      "case": "random_327",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.98,
+      "error": ""
+    },
+    {
+      "case": "random_328",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.59,
+      "error": ""
+    },
+    {
+      "case": "random_329",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.43,
+      "error": ""
+    },
+    {
+      "case": "random_330",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.88,
+      "error": ""
+    },
+    {
+      "case": "random_331",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.22,
+      "error": ""
+    },
+    {
+      "case": "random_332",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.54,
+      "error": ""
+    },
+    {
+      "case": "random_333",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.1,
+      "error": ""
+    },
+    {
+      "case": "random_334",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.61,
+      "error": ""
+    },
+    {
+      "case": "random_335",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.69,
+      "error": ""
+    },
+    {
+      "case": "random_336",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.76,
+      "error": ""
+    },
+    {
+      "case": "random_337",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.96,
+      "error": ""
+    },
+    {
+      "case": "random_338",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.12,
+      "error": ""
+    },
+    {
+      "case": "random_339",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.7,
+      "error": ""
+    },
+    {
+      "case": "random_340",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.23,
+      "error": ""
+    },
+    {
+      "case": "random_341",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.89,
+      "error": ""
+    },
+    {
+      "case": "random_342",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.13,
+      "error": ""
+    },
+    {
+      "case": "random_343",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.28,
+      "error": ""
+    },
+    {
+      "case": "random_344",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.09,
+      "error": ""
+    },
+    {
+      "case": "random_345",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.01,
+      "error": ""
+    },
+    {
+      "case": "random_346",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.44,
+      "error": ""
+    },
+    {
+      "case": "random_347",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.81,
+      "error": ""
+    },
+    {
+      "case": "random_348",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.75,
+      "error": ""
+    },
+    {
+      "case": "random_349",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.24,
+      "error": ""
+    },
+    {
+      "case": "random_350",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.62,
+      "error": ""
+    },
+    {
+      "case": "random_351",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.05,
+      "error": ""
+    },
+    {
+      "case": "random_352",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.23,
+      "error": ""
+    },
+    {
+      "case": "random_353",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 4.04,
+      "error": ""
+    },
+    {
+      "case": "random_354",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.57,
+      "error": ""
+    },
+    {
+      "case": "random_355",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.86,
+      "error": ""
+    },
+    {
+      "case": "random_356",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.0,
+      "error": ""
+    },
+    {
+      "case": "random_357",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.12,
+      "error": ""
+    },
+    {
+      "case": "random_358",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.28,
+      "error": ""
+    },
+    {
+      "case": "random_359",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.58,
+      "error": ""
+    },
+    {
+      "case": "random_360",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 8.25,
+      "error": ""
+    },
+    {
+      "case": "random_361",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 5.2,
+      "error": ""
+    },
+    {
+      "case": "random_362",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.7,
+      "error": ""
+    },
+    {
+      "case": "random_363",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.78,
+      "error": ""
+    },
+    {
+      "case": "random_364",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.34,
+      "error": ""
+    },
+    {
+      "case": "random_365",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.68,
+      "error": ""
+    },
+    {
+      "case": "random_366",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.87,
+      "error": ""
+    },
+    {
+      "case": "random_367",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.38,
+      "error": ""
+    },
+    {
+      "case": "random_368",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 2.97,
+      "error": ""
+    },
+    {
+      "case": "random_369",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.11,
+      "error": ""
+    },
+    {
+      "case": "random_370",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.53,
+      "error": ""
+    },
+    {
+      "case": "random_371",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 5.53,
+      "error": ""
+    },
+    {
+      "case": "random_372",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.34,
+      "error": ""
+    },
+    {
+      "case": "random_373",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.63,
+      "error": ""
+    },
+    {
+      "case": "random_374",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.15,
+      "error": ""
+    },
+    {
+      "case": "random_375",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.01,
+      "error": ""
+    },
+    {
+      "case": "random_376",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.71,
+      "error": ""
+    },
+    {
+      "case": "random_377",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.44,
+      "error": ""
+    },
+    {
+      "case": "random_378",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.05,
+      "error": ""
+    },
+    {
+      "case": "random_379",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.58,
+      "error": ""
+    },
+    {
+      "case": "random_380",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.02,
+      "error": ""
+    },
+    {
+      "case": "random_381",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.16,
+      "error": ""
+    },
+    {
+      "case": "random_382",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.45,
+      "error": ""
+    },
+    {
+      "case": "random_383",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.68,
+      "error": ""
+    },
+    {
+      "case": "random_384",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.17,
+      "error": ""
+    },
+    {
+      "case": "random_385",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.88,
+      "error": ""
+    },
+    {
+      "case": "random_386",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 3.62,
+      "error": ""
+    },
+    {
+      "case": "random_387",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.66,
+      "error": ""
+    },
+    {
+      "case": "random_388",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.75,
+      "error": ""
+    },
+    {
+      "case": "random_389",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.58,
+      "error": ""
+    },
+    {
+      "case": "random_390",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 3.46,
+      "error": ""
+    },
+    {
+      "case": "random_391",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.63,
+      "error": ""
+    },
+    {
+      "case": "random_392",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.38,
+      "error": ""
+    },
+    {
+      "case": "random_393",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 1.31,
+      "error": ""
+    },
+    {
+      "case": "random_394",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 4.7,
+      "error": ""
+    },
+    {
+      "case": "random_395",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.93,
+      "error": ""
+    },
+    {
+      "case": "random_396",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.54,
+      "error": ""
+    },
+    {
+      "case": "random_397",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.58,
+      "error": ""
+    },
+    {
+      "case": "random_398",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 6.7,
+      "error": ""
+    },
+    {
+      "case": "random_399",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 2.86,
+      "error": ""
+    },
+    {
+      "case": "real_source_mini_compiler.bf",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 18.88,
+      "error": ""
+    },
+    {
+      "case": "real_source_mini_compiler_compact.bf",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 15.56,
+      "error": ""
+    },
+    {
+      "case": "real_source_bf_in_bf_reference.bf",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 14.73,
+      "error": ""
+    },
+    {
+      "case": "depth_255",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 19.81,
+      "error": ""
+    },
+    {
+      "case": "depth_256",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 18.9,
+      "error": ""
+    },
+    {
+      "case": "long_source_1500",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 55.68,
+      "error": ""
+    },
+    {
+      "case": "exact_guard_and_end",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 1.23,
+      "error": ""
+    },
+    {
+      "case": "mutated_guard",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.89,
+      "error": ""
+    },
+    {
+      "case": "missing_guard_at_eof",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.77,
+      "error": ""
+    },
+    {
+      "case": "truncated_payload_at_eof",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.83,
+      "error": ""
+    },
+    {
+      "case": "bad_terminal_guard",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.84,
+      "error": ""
+    },
+    {
+      "case": "missing_terminal_guard",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.73,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_0",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.72,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_1",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.69,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_2",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.71,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_3",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.66,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_4",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.65,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_5",
+      "pass": true,
+      "result": "01",
+      "expected": "01",
+      "exit": 0,
+      "elapsed_ms": 0.67,
+      "error": ""
+    },
+    {
+      "case": "old_gate_regression_6",
+      "pass": true,
+      "result": "00",
+      "expected": "00",
+      "exit": 0,
+      "elapsed_ms": 0.62,
+      "error": ""
+    }
+  ],
+  "integration_diagnostics": {
+    "passed": 6,
+    "total": 6,
+    "description": "Outside-repository host supplied normalized exact byte fixture to BF admission then BF-in-BF compiler; host orchestrated a diagnostic only",
+    "cases": [
+      {
+        "app": "tiny_app_a",
+        "compiler": "mini_compiler.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 264,
+        "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+      },
+      {
+        "app": "tiny_app_a",
+        "compiler": "mini_compiler_compact.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 140,
+        "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f"
+      },
+      {
+        "app": "tiny_app_b",
+        "compiler": "mini_compiler.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 272,
+        "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+      },
+      {
+        "app": "tiny_app_b",
+        "compiler": "mini_compiler_compact.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 144,
+        "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6"
+      },
+      {
+        "app": "held_out",
+        "compiler": "mini_compiler.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 280,
+        "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+      },
+      {
+        "app": "held_out",
+        "compiler": "mini_compiler_compact.bf",
+        "preflight": "01",
+        "matched_frozen": true,
+        "output_bytes": 148,
+        "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a"
+      }
+    ]
+  }
+}

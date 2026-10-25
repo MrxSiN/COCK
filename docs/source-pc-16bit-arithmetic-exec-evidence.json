@@ -1,0 +1,364 @@
+{
+  "source": "src/source_pc_16bit_arithmetic_exec.bf",
+  "source_sha256": "9090d6aaab85bcc04043bf994b844107d1fef762ef156f127da87ff67e6b9fc5",
+  "cases_planned": 964,
+  "cases_passed": 964,
+  "cases_failed": 0,
+  "failures": [],
+  "saved_fixture_pairs": 38,
+  "saved": [
+    {
+      "name": "empty_zero_fuel",
+      "input_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "output_bytes": 1
+    },
+    {
+      "name": "one_output",
+      "input_sha256": "af905e4023889e134c756fc85550cbd054cbdd7bce7719361af69c7b6a810a29",
+      "expected_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+      "output_bytes": 2
+    },
+    {
+      "name": "one_output_underfuel",
+      "input_sha256": "db3900cec51e8d5625476372ce1ad2d890b6b75cbba9efa27395220b75e1fb13",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "output_bytes": 1
+    },
+    {
+      "name": "one_output_zero_fuel",
+      "input_sha256": "10d35a3b6c14bce18fa78fa04e7030bc7586c0159c6d4c2da03731703518a446",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "output_bytes": 1
+    },
+    {
+      "name": "two_output",
+      "input_sha256": "9713adf807f92d8951181c328c6b8cd0642b0e88696a67674f318c7b45995d83",
+      "expected_sha256": "fb50dc0717ff266cf9baf82b1ce7a1c2ef6d9247859680b11a19fb7077f5f222",
+      "output_bytes": 3
+    },
+    {
+      "name": "two_output_partial",
+      "input_sha256": "884aa15789482b8c65149ab2ef5021c98b692491737eaf3f3d88339dac23f0c5",
+      "expected_sha256": "44602a999abbebedf7de0ae1318e4f57e3cb1d67e482a65f9657f7541f3fe4bb",
+      "output_bytes": 2
+    },
+    {
+      "name": "illegal_suffix",
+      "input_sha256": "7e10869f90e72fbd18fd7c9f26858f8f138b2fd9de61ca581d2868fdffc0363a",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "illegal_nul",
+      "input_sha256": "64ed92b4dd00b5dac9b651b72bf9ab5ea72f7df85ac47f406c330f8f641e4703",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "bracket_unsupported",
+      "input_sha256": "6d04cd8442f8e9b3b8819355f2119c2f713def1a1da1b638909643ef170790dd",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "input_unsupported",
+      "input_sha256": "85a223df4a7cc0733298b8c3cf1ee03f57850231e5930961dd546522049470bb",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "left_unsupported",
+      "input_sha256": "29a8100ea1b809cbf1314b273666af9f594ea463fccd4d7a451ca6713a5c5007",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "right_unsupported",
+      "input_sha256": "3c5075b665ce53b6a9443497e7adf8ceee26aa29ee0e7025eccbfb22051f456e",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "wrap_minus",
+      "input_sha256": "a988efa978fdd7abe661db1cf2194bd6f93b3e6abdb540b10092e4b661469928",
+      "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "output_bytes": 2
+    },
+    {
+      "name": "source_255",
+      "input_sha256": "2955c1feae9cbb9ccc161e0e649b7687e6edbe78e859a8e10d34bf53760637e9",
+      "expected_sha256": "59316c1a765f0c95af8be7f3f75371aa38612e5ceffc4785ef22f5541635413a",
+      "output_bytes": 2
+    },
+    {
+      "name": "source_256",
+      "input_sha256": "62e6a936ffee468bf907f82af4831b5a0966298bed4e96dd8562e3db69b031d9",
+      "expected_sha256": "ea5dbf9596d187e9500f23e9a680109475341cf4e81f7e043f7d97152c10772f",
+      "output_bytes": 2
+    },
+    {
+      "name": "source_515",
+      "input_sha256": "0b8372dffa1fb3a859cc7c28065e78455fb6c5661374c7a2a669d5a6f32b6f91",
+      "expected_sha256": "99be5efb88ca2013bd8e4eb035fd42d5245468fe9afa70d8ba9c1c419a48c4e8",
+      "output_bytes": 2
+    },
+    {
+      "name": "source_1024",
+      "input_sha256": "d1db6338e19ca38cc3fc8b485e677163499c467d6c3c3babf6d2d0a6ac23d391",
+      "expected_sha256": "ea5dbf9596d187e9500f23e9a680109475341cf4e81f7e043f7d97152c10772f",
+      "output_bytes": 2
+    },
+    {
+      "name": "source_2049",
+      "input_sha256": "da1ccbf5e92a5139a0e881ff6176759ec87741cad87025081d39c57fceb8c4fd",
+      "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "output_bytes": 2
+    },
+    {
+      "name": "fuel_256",
+      "input_sha256": "29d438e8928116debb4b2b1d811cbf60a6ef434bc0cf1835fe31e9362d56ee62",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "output_bytes": 1
+    },
+    {
+      "name": "fuel_257",
+      "input_sha256": "bc48712a2b1c579b939eea4af649e0ed6082777ddbd3320e25bc85326c70dd52",
+      "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "output_bytes": 2
+    },
+    {
+      "name": "fuel_65535",
+      "input_sha256": "c1f376825ba0d6f02371ef943157c460f473d4fa7683db97c4e0cd7d6f51b367",
+      "expected_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+      "output_bytes": 2
+    },
+    {
+      "name": "output_nul",
+      "input_sha256": "b6ca58c7d969d5aacada3856b102429a457d0ac3c26b694d9214d489cf238e67",
+      "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "output_bytes": 2
+    },
+    {
+      "name": "output_ff",
+      "input_sha256": "3c38ff163d45e08866491b397e75a578cf531a9ed40e7cdacb5a0f9fa2e4764c",
+      "expected_sha256": "ea5dbf9596d187e9500f23e9a680109475341cf4e81f7e043f7d97152c10772f",
+      "output_bytes": 2
+    },
+    {
+      "name": "alphabet_00",
+      "input_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "alphabet_2b",
+      "input_sha256": "4562e315f487bd877136fa02569278b5f3f6f73c05b86a5158ab6d9b03901e5d",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "output_bytes": 1
+    },
+    {
+      "name": "alphabet_2d",
+      "input_sha256": "9040e371438b4ce2770d19b727a3ceaadf4d297a1324ddb47205ac44ec55280a",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "output_bytes": 1
+    },
+    {
+      "name": "alphabet_2e",
+      "input_sha256": "b6ca58c7d969d5aacada3856b102429a457d0ac3c26b694d9214d489cf238e67",
+      "expected_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "output_bytes": 2
+    },
+    {
+      "name": "alphabet_5b",
+      "input_sha256": "8254cbc82be901943aa82e7a8142367809b42e8095ce888ef7e786eca20753a6",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "alphabet_5d",
+      "input_sha256": "0c81f52f276a9da4fc25234671f943a0c2e83911485993b97584449e53c7471e",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "alphabet_ff",
+      "input_sha256": "ce5819444857af74519740e3421e5603a1f8e3b95eb747d6836271cefae77722",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_valid_000",
+      "input_sha256": "f0c1e9dee651e6f6815f1a5077e880e152d9cd7621b519c0e8040bce13859f0a",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_valid_001",
+      "input_sha256": "6b1e73a0094b7b812d3b9e22cffb4f8239319847522c4fa103753b6950020f93",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_valid_002",
+      "input_sha256": "01e60bb026587bae610ec82fab691980a8b449736ad8a186013da67d3dbe42a7",
+      "expected_sha256": "75cac7422ab60ef769f88a25e238091979fbc72e154a167736086c9c870beef4",
+      "output_bytes": 42
+    },
+    {
+      "name": "random_arbitrary_000",
+      "input_sha256": "39f7bc7701dca9a3f6c96b55fdfd9438f416f98bd5a7457c2dc808f20b7817ae",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_arbitrary_001",
+      "input_sha256": "edc25750315c6c75039c28bda5d5512a3618bc5cabe9e57dce56df5a7d8e71a2",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_arbitrary_002",
+      "input_sha256": "db36ceb2f2d51ada9cb84af1041c432e8dfdc11f8c0c506f720c82e9f948b307",
+      "expected_sha256": "9d1e0e2d9459d06523ad13e28a4093c2316baafe7aec5b25f30eba2e113599c4",
+      "output_bytes": 1
+    },
+    {
+      "name": "random_wide_000",
+      "input_sha256": "e7be89232019e8a38281e9057e0c8938b82fc99b030f94e756daae3dfd8148b2",
+      "expected_sha256": "5b0912306aae22845170a4e7c29d4e3bcd09c76fa8d4ec248f682edace970f0f",
+      "output_bytes": 156
+    },
+    {
+      "name": "random_wide_001",
+      "input_sha256": "7c04db7c783672fd4c653a993f3f761fb7428d2d4036a01396e9d198911ff584",
+      "expected_sha256": "7d1629c61e54e308d0d4801dc5528ffcc786d7172e98cb6221361e6a85712004",
+      "output_bytes": 92
+    }
+  ],
+  "elapsed_seconds": 2.33,
+  "diagnostic_root": "outside repository locally compiled BF evaluator",
+  "test_seed": 20261025,
+  "source_executable_bf_commands": 2019,
+  "fixed_and_random_tests": 964,
+  "additional_long_source_tests": [
+    {
+      "source_commands": 32768,
+      "guest_fuel": 32768,
+      "input_sha256": "8608302142b190000e6085091023bc9cef2069b64a69a42dd9f194f79b4dea7c",
+      "expected_output_hex": "ff00",
+      "matched": true,
+      "root_evaluator": "outside repository BF evaluator with 400K physical cells",
+      "full_stream_consumed": true
+    },
+    {
+      "source_commands": 65535,
+      "guest_fuel": 65535,
+      "input_sha256": "779bd367b6282b3a44af2ddd09365d97a2f32a1b30fe5cf37c86e8c089fb0399",
+      "expected_output_hex": "fe00",
+      "matched": true,
+      "root_evaluator": "outside repository BF evaluator with 2M physical cells",
+      "full_stream_consumed": true
+    }
+  ],
+  "total_positive_diagnostic_cases": 966,
+  "saved_exact_byte_fixture_pairs": 40,
+  "saved_fixture_reruns_passed": 40,
+  "compiler_regression_results": [
+    {
+      "compiler": "original",
+      "app": "tiny_app_a",
+      "status": "PASS",
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "elapsed_seconds": 1.17,
+      "root_diagnostic": "OK steps=516827398 maxp=6191 consumed=552\n"
+    },
+    {
+      "compiler": "original",
+      "app": "tiny_app_b",
+      "status": "PASS",
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "elapsed_seconds": 1.15,
+      "root_diagnostic": "OK steps=531859582 maxp=6191 consumed=553\n"
+    },
+    {
+      "compiler": "original",
+      "app": "held_out",
+      "status": "PASS",
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "elapsed_seconds": 1.24,
+      "root_diagnostic": "OK steps=546891766 maxp=6191 consumed=554\n"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_a",
+      "status": "PASS",
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "elapsed_seconds": 0.84,
+      "root_diagnostic": "OK steps=368479227 maxp=5435 consumed=488\n"
+    },
+    {
+      "compiler": "compact",
+      "app": "tiny_app_b",
+      "status": "PASS",
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "elapsed_seconds": 0.9,
+      "root_diagnostic": "OK steps=378765090 maxp=5435 consumed=489\n"
+    },
+    {
+      "compiler": "compact",
+      "app": "held_out",
+      "status": "PASS",
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "elapsed_seconds": 0.88,
+      "root_diagnostic": "OK steps=389050953 maxp=5435 consumed=490\n"
+    }
+  ],
+  "compiler_regressions_passed": 6,
+  "bf_audit_files_passed": 48,
+  "trusted_host_closure": "NOT IMPLEMENTED",
+  "full_guest_language": "UNSUPPORTED",
+  "same_interpreter_nested_compiler": "NOT VERIFIED",
+  "android_target": "DEFERRED",
+  "development_process_purity": "NOT CERTIFIED",
+  "negative_transport_probes": [
+    {
+      "name": "trailing_extra_byte",
+      "input_hex": "020002002b2e58",
+      "observed_output_hex": "0100",
+      "observed_consumed_bytes": 6,
+      "actual_bytes": 7,
+      "finding": "Extra byte after declared source is unread; separate trusted host completion needed"
+    },
+    {
+      "name": "declared_length_zero_with_unread_payload",
+      "input_hex": "000000002b2e",
+      "observed_output_hex": "00",
+      "observed_consumed_bytes": 4,
+      "actual_bytes": 6,
+      "finding": "Unexpected trailing payload is invisible"
+    },
+    {
+      "name": "missing_source_byte",
+      "input_hex": "020002002b",
+      "observed_output_hex": "0d",
+      "observed_consumed_bytes": 5,
+      "actual_bytes": 5,
+      "finding": "Physical truncated source manifests as invalid byte by EOF zero; not an authoritative transport error"
+    },
+    {
+      "name": "truncated_fuel_header",
+      "input_hex": "020002",
+      "observed_output_hex": "0d",
+      "observed_consumed_bytes": 3,
+      "actual_bytes": 3,
+      "finding": "Missing header bytes cannot be diagnosed separately from EOF zero without host authority"
+    }
+  ]
+}

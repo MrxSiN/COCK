@@ -1,0 +1,9 @@
+{
+  "schema": "normalized_source_stream_gate_development_vectors",
+  "transport": "zero or more nonzero u8 length, raw source bytes, A5; terminated by 00 A5",
+  "success": ["", "+-<>[].,", "[]", "+[-]", "++[>++[<+>-]<-]."],
+  "failure": ["]", "[", "abc", "A+", "# comment", "\n", "\u0000", "\u00ff", "[[]", "[]]"],
+  "limits": {"max_record_bytes": 255, "max_depth": 255},
+  "status_bytes": {"admitted": "01", "rejected": "00"},
+  "closure": "host must independently verify exact count and stream end after terminal record"
+}

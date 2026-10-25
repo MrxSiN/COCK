@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-24",
+  "status": "diagnostic-only; NOT COCK conformance",
+  "target_source": "src/bf_in_bf_dynamic_linear.bf",
+  "target_source_sha256": "c2648b8b33648696dbd222a5bfa2605f72acd87767faa8344df8203c1edb0c55",
+  "bf_commands": 801,
+  "outer_executor": "/tmp/cock_diag_new; compiled C root outside repository; NOT independent qualified bootstrap",
+  "test_oracle": "independent diagnostic Python model outside repository",
+  "input_authority": "prevalidated source bytes supplied with known fixture length; true interactive/pipe closure NOT proven",
+  "tests": {
+    "fixed_and_boundary": 20,
+    "randomized": 500,
+    "passed": 520,
+    "total": 520,
+    "max_guest_address": 7200,
+    "total_outer_steps": 159450947
+  },
+  "legacy_compiler_regressions": [
+    {
+      "case": "legacy_original_tiny_app_a",
+      "passed": true,
+      "output_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "exit_code": 0
+    },
+    {
+      "case": "legacy_original_tiny_app_b",
+      "passed": true,
+      "output_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "exit_code": 0
+    },
+    {
+      "case": "legacy_original_held_out",
+      "passed": true,
+      "output_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "exit_code": 0
+    },
+    {
+      "case": "legacy_compact_tiny_app_a",
+      "passed": true,
+      "output_bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "exit_code": 0
+    },
+    {
+      "case": "legacy_compact_tiny_app_b",
+      "passed": true,
+      "output_bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "exit_code": 0
+    },
+    {
+      "case": "legacy_compact_held_out",
+      "passed": true,
+      "output_bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "exit_code": 0
+    }
+  ],
+  "bf_source_audits": {
+    "passed": 21,
+    "total": 21
+  },
+  "failures": [],
+  "samples": {
+    "fixed_left-trap": {
+      "case": "fixed_left-trap",
+      "passed": true,
+      "source_bytes": 1,
+      "expected_hex": "04",
+      "actual_hex": "04",
+      "source_sha256": "dabd3aff769f07eb2965401eb029974ebba3407afd02b26ddb564ea5f8efae72",
+      "output_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+      "outer_steps": 5749,
+      "wall_sec": 0.001321,
+      "exit_code": 0,
+      "high_guest_address": 0
+    },
+    "boundary_over_255": {
+      "case": "boundary_over_255",
+      "passed": true,
+      "source_bytes": 262,
+      "expected_hex": "0100",
+      "actual_hex": "0100",
+      "source_sha256": "8afe2cba2193f52372f5a1f175570c251051a3a8012779b630fa8014f32612fe",
+      "output_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+      "outer_steps": 1401755,
+      "wall_sec": 0.005071,
+      "exit_code": 0,
+      "high_guest_address": 260
+    },
+    "boundary_return_origin": {
+      "case": "boundary_return_origin",
+      "passed": true,
+      "source_bytes": 643,
+      "expected_hex": "000100",
+      "actual_hex": "000100",
+      "source_sha256": "07bcb5ef09a92b682022ff991aeba0f2eeadc7912573b67e197676bbe7a770af",
+      "output_sha256": "faee935763044f124d7526755a5058a33f9402a595994d59eddd4be8546ff201",
+      "outer_steps": 3554599,
+      "wall_sec": 0.008203,
+      "exit_code": 0,
+      "high_guest_address": 320
+    },
+    "boundary_zero_after_growth": {
+      "case": "boundary_zero_after_growth",
+      "passed": true,
+      "source_bytes": 1041,
+      "expected_hex": "0000",
+      "actual_hex": "0000",
+      "source_sha256": "eef6dff567f303e886b45664ed929c4221090671ed446017618bf73aa78fdbe4",
+      "output_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+      "outer_steps": 5569028,
+      "wall_sec": 0.01248,
+      "exit_code": 0,
+      "high_guest_address": 1040
+    },
+    "boundary_trap_after_long": {
+      "case": "boundary_trap_after_long",
+      "passed": true,
+      "source_bytes": 541,
+      "expected_hex": "04",
+      "actual_hex": "04",
+      "source_sha256": "0d9cbde22539906cf659b596d1f738e229b3f17ed8b9b1c1450429ac2a0fd7dd",
+      "output_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71",
+      "outer_steps": 2991679,
+      "wall_sec": 0.007699,
+      "exit_code": 0,
+      "high_guest_address": 270
+    },
+    "boundary_beyond_host_initial_allocation": {
+      "case": "boundary_beyond_host_initial_allocation",
+      "passed": true,
+      "source_bytes": 7202,
+      "expected_hex": "0100",
+      "actual_hex": "0100",
+      "source_sha256": "731d79c76254a3adeb9f1b013f53f8786b611aa8868c8b3f738f0d61eebe1b5a",
+      "output_sha256": "47dc540c94ceb704a23875c11273e16bb0b8a87aed84de911f2133568115f254",
+      "outer_steps": 38530755,
+      "wall_sec": 0.087624,
+      "exit_code": 0,
+      "high_guest_address": 7200
+    }
+  },
+  "limitations": [
+    "not a loop capable interpreter",
+    "guest input command not supported",
+    "no source preflight before first guest effect",
+    "partial output before invalid suffix is possible",
+    "missing trusted source and EOF closure",
+    "no original-source offset or fuel",
+    "no configured logical cell budget; physical host OOM timing differs",
+    "not the required full nested self-hosting",
+    "not Android verified",
+    "development process authorship purity uncertified"
+  ]
+}

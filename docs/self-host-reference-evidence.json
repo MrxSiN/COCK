@@ -1,0 +1,255 @@
+{
+  "root_evaluator": "/usr/local/bin/cock-bf-diagnostic",
+  "reference_source": "src/bf_in_bf_reference.bf",
+  "reference_command_count": 423,
+  "compiler_command_count": 515,
+  "tests": [
+    {
+      "test": "compiler_tiny_app_a",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.443,
+      "actual_bytes": 264,
+      "expected_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "expected_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "stderr": ""
+    },
+    {
+      "test": "compiler_tiny_app_b",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.429,
+      "actual_bytes": 272,
+      "expected_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "expected_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "stderr": ""
+    },
+    {
+      "test": "compiler_held_out",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.469,
+      "actual_bytes": 280,
+      "expected_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "expected_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "stderr": ""
+    },
+    {
+      "test": "direct_plus5",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.001,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db",
+      "expected_sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db",
+      "stderr": ""
+    },
+    {
+      "test": "nested_plus5",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.114,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db",
+      "expected_sha256": "e77b9a9ae9e30b0dbdb6f510a264ef9de781501d7b6b92ae89eb059c5ab743db",
+      "stderr": ""
+    },
+    {
+      "test": "direct_loop6",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.001,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "stderr": ""
+    },
+    {
+      "test": "nested_loop6",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.364,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "expected_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6",
+      "stderr": ""
+    },
+    {
+      "test": "direct_binary_zero",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.002,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "stderr": ""
+    },
+    {
+      "test": "nested_binary_zero",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.058,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "expected_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "stderr": ""
+    },
+    {
+      "test": "direct_binary_ff",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.001,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "expected_sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "stderr": ""
+    },
+    {
+      "test": "nested_binary_ff",
+      "result": "PASS",
+      "returncode": 0,
+      "elapsed_s": 0.049,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "expected_sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "stderr": ""
+    },
+    {
+      "test": "invalid_suffix_not_rejected",
+      "result": "EXPECTED_PREFLIGHT_GAP",
+      "returncode": 0,
+      "elapsed_s": 0.001,
+      "actual_bytes": 1,
+      "expected_bytes": 1,
+      "sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "expected_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a",
+      "stderr": ""
+    }
+  ],
+  "evaluated_at_date": "2026-10-24",
+  "root_evaluator_class": "locally compiled outside-repository diagnostic; NOT standards-only independently certified",
+  "reference_source_sha256": "7d7ab6e6b67c60a1d0176c33536e19eb3f3bd892c711733991dc1c6283bdb2f4",
+  "compiler_source_sha256": "3edbaa35c420eb14ba2421e74520362ac03894ec118c5fe9d616f08809d5efe7",
+  "full_nested_compiler_attempts": [
+    {
+      "executor": "local diagnostic BF evaluator",
+      "max_root_guest_commands": 15000000000,
+      "observed_stdout_bytes": 2,
+      "result": "BUDGET_EXCEEDED; NOT VERIFIED",
+      "is_success": false
+    },
+    {
+      "executor": "external temporary generated optimized native diagnostic evaluator",
+      "wall_timeout_seconds": 25,
+      "observed_stdout_bytes": 0,
+      "result": "TIMEOUT; NOT VERIFIED",
+      "is_success": false
+    }
+  ],
+  "notes": [
+    "Nested small-guest test is not the required actual mini compiler nested test.",
+    "Raw normalized BF command streams supplied using an external test-only lexical extractor; not a COCK production source-loading path.",
+    "All validated native byte outputs are raw instruction sequences and not ELF or Android installable packages."
+  ],
+  "source_audit": [
+    {
+      "path": "examples/held_out.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 205,
+      "commands": 35,
+      "sha256": "242d5375574e6b2c2890183fe66313e1d35eb4d46a147535a037d4a8048ad46e"
+    },
+    {
+      "path": "examples/tiny_app_a.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 187,
+      "commands": 33,
+      "sha256": "3bea2e1b5e1a8c7e1430b1ad83f6a7b08dad1d14525ce6008618479310bbf651"
+    },
+    {
+      "path": "examples/tiny_app_b.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 194,
+      "commands": 34,
+      "sha256": "49b0436e6ff4eb1b88dd8bd6f91abf9a5b79121a1dfcd65721bc123b0fb5d7df"
+    },
+    {
+      "path": "src/bf_in_bf.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 1031,
+      "commands": 103,
+      "sha256": "6f04241ea4d0fd7b0d8217472b39a974c76e361c294cc2502070106663aba2af"
+    },
+    {
+      "path": "src/bf_in_bf_reference.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 1137,
+      "commands": 423,
+      "sha256": "7d7ab6e6b67c60a1d0176c33536e19eb3f3bd892c711733991dc1c6283bdb2f4"
+    },
+    {
+      "path": "src/bracket_depth_gate.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 2076,
+      "commands": 342,
+      "sha256": "8b57f6ae831185b41f5e2705a2e8396071b37a77a7f5a698d4873ad5151a9456"
+    },
+    {
+      "path": "src/bracket_stream_gate.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 2539,
+      "commands": 554,
+      "sha256": "d0bd637880b616311be5e9760376a9403aa9f74626ce63fcf7210ff53cc80d9e"
+    },
+    {
+      "path": "src/mini_compiler.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 1845,
+      "commands": 515,
+      "sha256": "3edbaa35c420eb14ba2421e74520362ac03894ec118c5fe9d616f08809d5efe7"
+    },
+    {
+      "path": "src/printable_subset_gate.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 3391,
+      "commands": 831,
+      "sha256": "63fe76d9c0eba41bb3d5c5079c356018a78ace552315edb7fc0d7ab15f013e5b"
+    },
+    {
+      "path": "src/raw_subset_gate.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 2497,
+      "commands": 606,
+      "sha256": "f80e2be6458473a7064148651a14d50dd94b3644185c89ae0a9dc5fe8f1d83cd"
+    },
+    {
+      "path": "tests/oracle.bf",
+      "pass": true,
+      "issue": null,
+      "bytes": 995,
+      "commands": 108,
+      "sha256": "4a0f58cf2d6ea4fdf19ef47e313b24c477cc44abff3795e05559012db0b6cb6b"
+    }
+  ]
+}

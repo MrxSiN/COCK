@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-24",
+  "classification": "local diagnostic only; no qualifying production bootstrap, Android device, or full Stage A acceptance",
+  "new_source": "src/printable_subset_gate.bf",
+  "source_sha256": "63fe76d9c0eba41bb3d5c5079c356018a78ace552315edb7fc0d7ab15f013e5b",
+  "source_bytes": 3391,
+  "source_executable_bf_commands": 831,
+  "test_environment": "Linux x86-64 container; existing local out-of-repository diagnostic BF evaluator",
+  "evaluator_path": "/usr/local/bin/cock-bf-diagnostic",
+  "evaluator_sha256": "062b8c3784983c353e8ab9c5f44adbd2fefd9c2e9401f69c5895f9555b5d3b78",
+  "fixed_fixtures": {
+    "total_declared": 21,
+    "actual_gate_evaluator_cases": 18,
+    "passed": 18,
+    "failed": 0,
+    "host_contract_only_cases_not_run": 3
+  },
+  "exhaustive_output_byte_cases": {
+    "count": 256,
+    "passed": 256,
+    "failed": 0,
+    "bf_arithmetic_oracle_compared": 256
+  },
+  "randomized_cases": {
+    "seed": 20261024,
+    "count": 700,
+    "passed": 700,
+    "failed": 0
+  },
+  "annotation_bracket_audit": {
+    "bf_files": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "existing_native_candidates": {
+    "tiny_app_a": {
+      "gate_admitted": true,
+      "compiler_matches_previously_saved_raw_artifact": true,
+      "raw_aarch64_bytes": 264,
+      "raw_aarch64_sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    "tiny_app_b": {
+      "gate_admitted": true,
+      "compiler_matches_previously_saved_raw_artifact": true,
+      "raw_aarch64_bytes": 272,
+      "raw_aarch64_sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    "held_out": {
+      "gate_admitted": true,
+      "compiler_matches_previously_saved_raw_artifact": true,
+      "raw_aarch64_bytes": 280,
+      "raw_aarch64_sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    }
+  },
+  "not_done": [
+    "annotated source grammar and offsets",
+    "trusted physical closure/manifest/host routing",
+    "BF-in-BF executing compiler",
+    "nested BF-in-BF and compiler equivalence",
+    "Android ELF bridge/ABI",
+    "signed debug APK/device run"
+  ]
+}

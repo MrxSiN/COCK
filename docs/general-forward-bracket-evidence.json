@@ -1,0 +1,5312 @@
+{
+  "date": "2026-10-24",
+  "scope": "forward bracket target lookup diagnostic, no guest execution or authority of host closure",
+  "source_file": "src/general_forward_bracket_probe.bf",
+  "source_sha256": "0562931cc5e0a815d51125f2c0f7e0a26ad63fa70a554a5748ef76cbafb48508",
+  "source_commands": 863,
+  "cases_total": 572,
+  "cases_passed": 572,
+  "bracket_queries_total": 57,
+  "bracket_queries_passed": 57,
+  "preserved_compiler_artifacts_passed": 6,
+  "preserved_compiler_artifacts_total": 6,
+  "repository_bf_audit_passed": 30,
+  "repository_bf_audit_total": 30,
+  "duration_s": 16.363,
+  "cases": [
+    {
+      "id": "fixed_empty",
+      "passed": true,
+      "input_bytes": 0,
+      "actual_hex": "00000d",
+      "expected_hex": "00000d",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "fixed_bad_initial",
+      "passed": true,
+      "input_bytes": 1,
+      "actual_hex": "00000d",
+      "expected_hex": "00000d",
+      "elapsed_s": 0.00132
+    },
+    {
+      "id": "fixed_empty_loop",
+      "passed": true,
+      "input_bytes": 2,
+      "actual_hex": "010000",
+      "expected_hex": "010000",
+      "elapsed_s": 0.00137
+    },
+    {
+      "id": "fixed_arithmetic_body",
+      "passed": true,
+      "input_bytes": 6,
+      "actual_hex": "050000",
+      "expected_hex": "050000",
+      "elapsed_s": 0.00144
+    },
+    {
+      "id": "fixed_nested",
+      "passed": true,
+      "input_bytes": 12,
+      "actual_hex": "0b0000",
+      "expected_hex": "0b0000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "fixed_missing_close",
+      "passed": true,
+      "input_bytes": 1,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00151
+    },
+    {
+      "id": "fixed_truncated_nested",
+      "passed": true,
+      "input_bytes": 5,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00123
+    },
+    {
+      "id": "fixed_ignore_suffix",
+      "passed": true,
+      "input_bytes": 7,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00129
+    },
+    {
+      "id": "fixed_cross_255",
+      "passed": true,
+      "input_bytes": 256,
+      "actual_hex": "ff0000",
+      "expected_hex": "ff0000",
+      "elapsed_s": 0.00435
+    },
+    {
+      "id": "fixed_cross_256",
+      "passed": true,
+      "input_bytes": 257,
+      "actual_hex": "000100",
+      "expected_hex": "000100",
+      "elapsed_s": 0.0051
+    },
+    {
+      "id": "fixed_long_1024",
+      "passed": true,
+      "input_bytes": 1026,
+      "actual_hex": "010400",
+      "expected_hex": "010400",
+      "elapsed_s": 0.01509
+    },
+    {
+      "id": "fixed_depth_255",
+      "passed": true,
+      "input_bytes": 510,
+      "actual_hex": "fd0100",
+      "expected_hex": "fd0100",
+      "elapsed_s": 0.01098
+    },
+    {
+      "id": "fixed_depth_256_error",
+      "passed": true,
+      "input_bytes": 512,
+      "actual_hex": "00000a",
+      "expected_hex": "00000a",
+      "elapsed_s": 0.00637
+    },
+    {
+      "id": "fixed_max_u16",
+      "passed": true,
+      "input_bytes": 65536,
+      "actual_hex": "ffff00",
+      "expected_hex": "ffff00",
+      "elapsed_s": 0.76483
+    },
+    {
+      "id": "fixed_overflow_u16",
+      "passed": true,
+      "input_bytes": 65537,
+      "actual_hex": "00000a",
+      "expected_hex": "00000a",
+      "elapsed_s": 0.7826
+    },
+    {
+      "id": "mini_compiler_open_14",
+      "passed": true,
+      "input_bytes": 501,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00253
+    },
+    {
+      "id": "mini_compiler_open_37",
+      "passed": true,
+      "input_bytes": 478,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00153
+    },
+    {
+      "id": "mini_compiler_open_49",
+      "passed": true,
+      "input_bytes": 466,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "mini_compiler_open_68",
+      "passed": true,
+      "input_bytes": 447,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00131
+    },
+    {
+      "id": "mini_compiler_open_130",
+      "passed": true,
+      "input_bytes": 385,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00125
+    },
+    {
+      "id": "mini_compiler_open_124",
+      "passed": true,
+      "input_bytes": 391,
+      "actual_hex": "0a0000",
+      "expected_hex": "0a0000",
+      "elapsed_s": 0.00129
+    },
+    {
+      "id": "mini_compiler_open_146",
+      "passed": true,
+      "input_bytes": 369,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00123
+    },
+    {
+      "id": "mini_compiler_open_168",
+      "passed": true,
+      "input_bytes": 347,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00132
+    },
+    {
+      "id": "mini_compiler_open_201",
+      "passed": true,
+      "input_bytes": 314,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "mini_compiler_open_213",
+      "passed": true,
+      "input_bytes": 302,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00138
+    },
+    {
+      "id": "mini_compiler_open_233",
+      "passed": true,
+      "input_bytes": 282,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00135
+    },
+    {
+      "id": "mini_compiler_open_136",
+      "passed": true,
+      "input_bytes": 379,
+      "actual_hex": "690000",
+      "expected_hex": "690000",
+      "elapsed_s": 0.0026
+    },
+    {
+      "id": "mini_compiler_open_249",
+      "passed": true,
+      "input_bytes": 266,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.0017
+    },
+    {
+      "id": "mini_compiler_open_253",
+      "passed": true,
+      "input_bytes": 262,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "mini_compiler_open_248",
+      "passed": true,
+      "input_bytes": 267,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00172
+    },
+    {
+      "id": "mini_compiler_open_267",
+      "passed": true,
+      "input_bytes": 248,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00186
+    },
+    {
+      "id": "mini_compiler_open_279",
+      "passed": true,
+      "input_bytes": 236,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.0014
+    },
+    {
+      "id": "mini_compiler_open_297",
+      "passed": true,
+      "input_bytes": 218,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00162
+    },
+    {
+      "id": "mini_compiler_open_331",
+      "passed": true,
+      "input_bytes": 184,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00142
+    },
+    {
+      "id": "mini_compiler_open_343",
+      "passed": true,
+      "input_bytes": 172,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00157
+    },
+    {
+      "id": "mini_compiler_open_363",
+      "passed": true,
+      "input_bytes": 152,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00155
+    },
+    {
+      "id": "mini_compiler_open_259",
+      "passed": true,
+      "input_bytes": 256,
+      "actual_hex": "6e0000",
+      "expected_hex": "6e0000",
+      "elapsed_s": 0.00245
+    },
+    {
+      "id": "mini_compiler_open_77",
+      "passed": true,
+      "input_bytes": 438,
+      "actual_hex": "290100",
+      "expected_hex": "290100",
+      "elapsed_s": 0.00478
+    },
+    {
+      "id": "mini_compiler_open_391",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00171
+    },
+    {
+      "id": "mini_compiler_open_414",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00117
+    },
+    {
+      "id": "mini_compiler_open_422",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00141
+    },
+    {
+      "id": "mini_compiler_open_434",
+      "passed": true,
+      "input_bytes": 81,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00133
+    },
+    {
+      "id": "mini_compiler_open_456",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_open_480",
+      "passed": true,
+      "input_bytes": 35,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00132
+    },
+    {
+      "id": "mini_compiler_open_511",
+      "passed": true,
+      "input_bytes": 4,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.0019
+    },
+    {
+      "id": "mini_compiler_compact_open_14",
+      "passed": true,
+      "input_bytes": 438,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00154
+    },
+    {
+      "id": "mini_compiler_compact_open_37",
+      "passed": true,
+      "input_bytes": 415,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_compact_open_49",
+      "passed": true,
+      "input_bytes": 403,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00156
+    },
+    {
+      "id": "mini_compiler_compact_open_68",
+      "passed": true,
+      "input_bytes": 384,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_compact_open_130",
+      "passed": true,
+      "input_bytes": 322,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00133
+    },
+    {
+      "id": "mini_compiler_compact_open_124",
+      "passed": true,
+      "input_bytes": 328,
+      "actual_hex": "0a0000",
+      "expected_hex": "0a0000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "mini_compiler_compact_open_146",
+      "passed": true,
+      "input_bytes": 306,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_compact_open_168",
+      "passed": true,
+      "input_bytes": 284,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00135
+    },
+    {
+      "id": "mini_compiler_compact_open_136",
+      "passed": true,
+      "input_bytes": 316,
+      "actual_hex": "270000",
+      "expected_hex": "270000",
+      "elapsed_s": 0.00162
+    },
+    {
+      "id": "mini_compiler_compact_open_183",
+      "passed": true,
+      "input_bytes": 269,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "mini_compiler_compact_open_187",
+      "passed": true,
+      "input_bytes": 265,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00132
+    },
+    {
+      "id": "mini_compiler_compact_open_182",
+      "passed": true,
+      "input_bytes": 270,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00132
+    },
+    {
+      "id": "mini_compiler_compact_open_201",
+      "passed": true,
+      "input_bytes": 251,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00129
+    },
+    {
+      "id": "mini_compiler_compact_open_210",
+      "passed": true,
+      "input_bytes": 242,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "mini_compiler_compact_open_234",
+      "passed": true,
+      "input_bytes": 218,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00134
+    },
+    {
+      "id": "mini_compiler_compact_open_193",
+      "passed": true,
+      "input_bytes": 259,
+      "actual_hex": "2f0000",
+      "expected_hex": "2f0000",
+      "elapsed_s": 0.00166
+    },
+    {
+      "id": "mini_compiler_compact_open_77",
+      "passed": true,
+      "input_bytes": 375,
+      "actual_hex": "a80000",
+      "expected_hex": "a80000",
+      "elapsed_s": 0.00432
+    },
+    {
+      "id": "mini_compiler_compact_open_280",
+      "passed": true,
+      "input_bytes": 172,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00131
+    },
+    {
+      "id": "mini_compiler_compact_open_292",
+      "passed": true,
+      "input_bytes": 160,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00141
+    },
+    {
+      "id": "mini_compiler_compact_open_312",
+      "passed": true,
+      "input_bytes": 140,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_compact_open_328",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00192
+    },
+    {
+      "id": "mini_compiler_compact_open_351",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "mini_compiler_compact_open_359",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00155
+    },
+    {
+      "id": "mini_compiler_compact_open_371",
+      "passed": true,
+      "input_bytes": 81,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.0014
+    },
+    {
+      "id": "mini_compiler_compact_open_393",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "mini_compiler_compact_open_417",
+      "passed": true,
+      "input_bytes": 35,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00122
+    },
+    {
+      "id": "mini_compiler_compact_open_448",
+      "passed": true,
+      "input_bytes": 4,
+      "actual_hex": "020000",
+      "expected_hex": "020000",
+      "elapsed_s": 0.00142
+    },
+    {
+      "id": "seed_0",
+      "passed": true,
+      "input_bytes": 50,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "seed_1",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00189
+    },
+    {
+      "id": "seed_2",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00253
+    },
+    {
+      "id": "seed_3",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.00283
+    },
+    {
+      "id": "seed_4",
+      "passed": true,
+      "input_bytes": 99,
+      "actual_hex": "620000",
+      "expected_hex": "620000",
+      "elapsed_s": 0.00235
+    },
+    {
+      "id": "seed_5",
+      "passed": true,
+      "input_bytes": 36,
+      "actual_hex": "230000",
+      "expected_hex": "230000",
+      "elapsed_s": 0.00164
+    },
+    {
+      "id": "seed_6",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.00216
+    },
+    {
+      "id": "seed_7",
+      "passed": true,
+      "input_bytes": 76,
+      "actual_hex": "4b0000",
+      "expected_hex": "4b0000",
+      "elapsed_s": 0.00205
+    },
+    {
+      "id": "seed_8",
+      "passed": true,
+      "input_bytes": 97,
+      "actual_hex": "600000",
+      "expected_hex": "600000",
+      "elapsed_s": 0.00267
+    },
+    {
+      "id": "seed_9",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "480000",
+      "expected_hex": "480000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_10",
+      "passed": true,
+      "input_bytes": 123,
+      "actual_hex": "7a0000",
+      "expected_hex": "7a0000",
+      "elapsed_s": 0.00325
+    },
+    {
+      "id": "seed_11",
+      "passed": true,
+      "input_bytes": 3,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0013
+    },
+    {
+      "id": "seed_12",
+      "passed": true,
+      "input_bytes": 18,
+      "actual_hex": "110000",
+      "expected_hex": "110000",
+      "elapsed_s": 0.00146
+    },
+    {
+      "id": "seed_13",
+      "passed": true,
+      "input_bytes": 61,
+      "actual_hex": "3c0000",
+      "expected_hex": "3c0000",
+      "elapsed_s": 0.00204
+    },
+    {
+      "id": "seed_14",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "210000",
+      "expected_hex": "210000",
+      "elapsed_s": 0.00176
+    },
+    {
+      "id": "seed_15",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00192
+    },
+    {
+      "id": "seed_16",
+      "passed": true,
+      "input_bytes": 24,
+      "actual_hex": "170000",
+      "expected_hex": "170000",
+      "elapsed_s": 0.00157
+    },
+    {
+      "id": "seed_17",
+      "passed": true,
+      "input_bytes": 32,
+      "actual_hex": "1f0000",
+      "expected_hex": "1f0000",
+      "elapsed_s": 0.00167
+    },
+    {
+      "id": "seed_18",
+      "passed": true,
+      "input_bytes": 90,
+      "actual_hex": "590000",
+      "expected_hex": "590000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_19",
+      "passed": true,
+      "input_bytes": 31,
+      "actual_hex": "1e0000",
+      "expected_hex": "1e0000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_20",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00232
+    },
+    {
+      "id": "seed_21",
+      "passed": true,
+      "input_bytes": 13,
+      "actual_hex": "0c0000",
+      "expected_hex": "0c0000",
+      "elapsed_s": 0.00118
+    },
+    {
+      "id": "seed_22",
+      "passed": true,
+      "input_bytes": 142,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00296
+    },
+    {
+      "id": "seed_23",
+      "passed": true,
+      "input_bytes": 70,
+      "actual_hex": "450000",
+      "expected_hex": "450000",
+      "elapsed_s": 0.0019
+    },
+    {
+      "id": "seed_24",
+      "passed": true,
+      "input_bytes": 147,
+      "actual_hex": "920000",
+      "expected_hex": "920000",
+      "elapsed_s": 0.00299
+    },
+    {
+      "id": "seed_25",
+      "passed": true,
+      "input_bytes": 142,
+      "actual_hex": "8d0000",
+      "expected_hex": "8d0000",
+      "elapsed_s": 0.00284
+    },
+    {
+      "id": "seed_26",
+      "passed": true,
+      "input_bytes": 150,
+      "actual_hex": "950000",
+      "expected_hex": "950000",
+      "elapsed_s": 0.00326
+    },
+    {
+      "id": "seed_27",
+      "passed": true,
+      "input_bytes": 45,
+      "actual_hex": "2c0000",
+      "expected_hex": "2c0000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_28",
+      "passed": true,
+      "input_bytes": 90,
+      "actual_hex": "590000",
+      "expected_hex": "590000",
+      "elapsed_s": 0.00245
+    },
+    {
+      "id": "seed_29",
+      "passed": true,
+      "input_bytes": 79,
+      "actual_hex": "4e0000",
+      "expected_hex": "4e0000",
+      "elapsed_s": 0.00209
+    },
+    {
+      "id": "seed_30",
+      "passed": true,
+      "input_bytes": 84,
+      "actual_hex": "530000",
+      "expected_hex": "530000",
+      "elapsed_s": 0.00214
+    },
+    {
+      "id": "seed_31",
+      "passed": true,
+      "input_bytes": 54,
+      "actual_hex": "350000",
+      "expected_hex": "350000",
+      "elapsed_s": 0.00178
+    },
+    {
+      "id": "seed_32",
+      "passed": true,
+      "input_bytes": 77,
+      "actual_hex": "4c0000",
+      "expected_hex": "4c0000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_33",
+      "passed": true,
+      "input_bytes": 136,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00336
+    },
+    {
+      "id": "seed_34",
+      "passed": true,
+      "input_bytes": 81,
+      "actual_hex": "500000",
+      "expected_hex": "500000",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_35",
+      "passed": true,
+      "input_bytes": 64,
+      "actual_hex": "3f0000",
+      "expected_hex": "3f0000",
+      "elapsed_s": 0.00185
+    },
+    {
+      "id": "seed_36",
+      "passed": true,
+      "input_bytes": 82,
+      "actual_hex": "510000",
+      "expected_hex": "510000",
+      "elapsed_s": 0.00208
+    },
+    {
+      "id": "seed_37",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00183
+    },
+    {
+      "id": "seed_38",
+      "passed": true,
+      "input_bytes": 98,
+      "actual_hex": "610000",
+      "expected_hex": "610000",
+      "elapsed_s": 0.00241
+    },
+    {
+      "id": "seed_39",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.00191
+    },
+    {
+      "id": "seed_40",
+      "passed": true,
+      "input_bytes": 72,
+      "actual_hex": "470000",
+      "expected_hex": "470000",
+      "elapsed_s": 0.00277
+    },
+    {
+      "id": "seed_41",
+      "passed": true,
+      "input_bytes": 20,
+      "actual_hex": "130000",
+      "expected_hex": "130000",
+      "elapsed_s": 0.00146
+    },
+    {
+      "id": "seed_42",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00228
+    },
+    {
+      "id": "seed_43",
+      "passed": true,
+      "input_bytes": 53,
+      "actual_hex": "340000",
+      "expected_hex": "340000",
+      "elapsed_s": 0.00158
+    },
+    {
+      "id": "seed_44",
+      "passed": true,
+      "input_bytes": 127,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00244
+    },
+    {
+      "id": "seed_45",
+      "passed": true,
+      "input_bytes": 130,
+      "actual_hex": "810000",
+      "expected_hex": "810000",
+      "elapsed_s": 0.00309
+    },
+    {
+      "id": "seed_46",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00252
+    },
+    {
+      "id": "seed_47",
+      "passed": true,
+      "input_bytes": 31,
+      "actual_hex": "1e0000",
+      "expected_hex": "1e0000",
+      "elapsed_s": 0.00166
+    },
+    {
+      "id": "seed_48",
+      "passed": true,
+      "input_bytes": 27,
+      "actual_hex": "1a0000",
+      "expected_hex": "1a0000",
+      "elapsed_s": 0.00133
+    },
+    {
+      "id": "seed_49",
+      "passed": true,
+      "input_bytes": 72,
+      "actual_hex": "470000",
+      "expected_hex": "470000",
+      "elapsed_s": 0.00204
+    },
+    {
+      "id": "seed_50",
+      "passed": true,
+      "input_bytes": 131,
+      "actual_hex": "820000",
+      "expected_hex": "820000",
+      "elapsed_s": 0.00248
+    },
+    {
+      "id": "seed_51",
+      "passed": true,
+      "input_bytes": 66,
+      "actual_hex": "410000",
+      "expected_hex": "410000",
+      "elapsed_s": 0.00211
+    },
+    {
+      "id": "seed_52",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "480000",
+      "expected_hex": "480000",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_53",
+      "passed": true,
+      "input_bytes": 139,
+      "actual_hex": "8a0000",
+      "expected_hex": "8a0000",
+      "elapsed_s": 0.0029
+    },
+    {
+      "id": "seed_54",
+      "passed": true,
+      "input_bytes": 74,
+      "actual_hex": "490000",
+      "expected_hex": "490000",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_55",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_56",
+      "passed": true,
+      "input_bytes": 77,
+      "actual_hex": "4c0000",
+      "expected_hex": "4c0000",
+      "elapsed_s": 0.0021
+    },
+    {
+      "id": "seed_57",
+      "passed": true,
+      "input_bytes": 140,
+      "actual_hex": "8b0000",
+      "expected_hex": "8b0000",
+      "elapsed_s": 0.00281
+    },
+    {
+      "id": "seed_58",
+      "passed": true,
+      "input_bytes": 122,
+      "actual_hex": "790000",
+      "expected_hex": "790000",
+      "elapsed_s": 0.00286
+    },
+    {
+      "id": "seed_59",
+      "passed": true,
+      "input_bytes": 117,
+      "actual_hex": "740000",
+      "expected_hex": "740000",
+      "elapsed_s": 0.00287
+    },
+    {
+      "id": "seed_60",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.0028
+    },
+    {
+      "id": "seed_61",
+      "passed": true,
+      "input_bytes": 91,
+      "actual_hex": "5a0000",
+      "expected_hex": "5a0000",
+      "elapsed_s": 0.00235
+    },
+    {
+      "id": "seed_62",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "3a0000",
+      "expected_hex": "3a0000",
+      "elapsed_s": 0.00197
+    },
+    {
+      "id": "seed_63",
+      "passed": true,
+      "input_bytes": 120,
+      "actual_hex": "770000",
+      "expected_hex": "770000",
+      "elapsed_s": 0.00249
+    },
+    {
+      "id": "seed_64",
+      "passed": true,
+      "input_bytes": 77,
+      "actual_hex": "4c0000",
+      "expected_hex": "4c0000",
+      "elapsed_s": 0.00196
+    },
+    {
+      "id": "seed_65",
+      "passed": true,
+      "input_bytes": 85,
+      "actual_hex": "540000",
+      "expected_hex": "540000",
+      "elapsed_s": 0.00208
+    },
+    {
+      "id": "seed_66",
+      "passed": true,
+      "input_bytes": 144,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00284
+    },
+    {
+      "id": "seed_67",
+      "passed": true,
+      "input_bytes": 139,
+      "actual_hex": "8a0000",
+      "expected_hex": "8a0000",
+      "elapsed_s": 0.00301
+    },
+    {
+      "id": "seed_68",
+      "passed": true,
+      "input_bytes": 4,
+      "actual_hex": "030000",
+      "expected_hex": "030000",
+      "elapsed_s": 0.00141
+    },
+    {
+      "id": "seed_69",
+      "passed": true,
+      "input_bytes": 6,
+      "actual_hex": "050000",
+      "expected_hex": "050000",
+      "elapsed_s": 0.0014
+    },
+    {
+      "id": "seed_70",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.0017
+    },
+    {
+      "id": "seed_71",
+      "passed": true,
+      "input_bytes": 152,
+      "actual_hex": "970000",
+      "expected_hex": "970000",
+      "elapsed_s": 0.00317
+    },
+    {
+      "id": "seed_72",
+      "passed": true,
+      "input_bytes": 31,
+      "actual_hex": "1e0000",
+      "expected_hex": "1e0000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_73",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00586
+    },
+    {
+      "id": "seed_74",
+      "passed": true,
+      "input_bytes": 121,
+      "actual_hex": "780000",
+      "expected_hex": "780000",
+      "elapsed_s": 0.00263
+    },
+    {
+      "id": "seed_75",
+      "passed": true,
+      "input_bytes": 63,
+      "actual_hex": "3e0000",
+      "expected_hex": "3e0000",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_76",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00242
+    },
+    {
+      "id": "seed_77",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00205
+    },
+    {
+      "id": "seed_78",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "seed_79",
+      "passed": true,
+      "input_bytes": 132,
+      "actual_hex": "830000",
+      "expected_hex": "830000",
+      "elapsed_s": 0.00255
+    },
+    {
+      "id": "seed_80",
+      "passed": true,
+      "input_bytes": 104,
+      "actual_hex": "670000",
+      "expected_hex": "670000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_81",
+      "passed": true,
+      "input_bytes": 142,
+      "actual_hex": "8d0000",
+      "expected_hex": "8d0000",
+      "elapsed_s": 0.00281
+    },
+    {
+      "id": "seed_82",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_83",
+      "passed": true,
+      "input_bytes": 149,
+      "actual_hex": "940000",
+      "expected_hex": "940000",
+      "elapsed_s": 0.00284
+    },
+    {
+      "id": "seed_84",
+      "passed": true,
+      "input_bytes": 94,
+      "actual_hex": "5d0000",
+      "expected_hex": "5d0000",
+      "elapsed_s": 0.00203
+    },
+    {
+      "id": "seed_85",
+      "passed": true,
+      "input_bytes": 43,
+      "actual_hex": "2a0000",
+      "expected_hex": "2a0000",
+      "elapsed_s": 0.00191
+    },
+    {
+      "id": "seed_86",
+      "passed": true,
+      "input_bytes": 39,
+      "actual_hex": "260000",
+      "expected_hex": "260000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "seed_87",
+      "passed": true,
+      "input_bytes": 77,
+      "actual_hex": "4c0000",
+      "expected_hex": "4c0000",
+      "elapsed_s": 0.00221
+    },
+    {
+      "id": "seed_88",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00121
+    },
+    {
+      "id": "seed_89",
+      "passed": true,
+      "input_bytes": 157,
+      "actual_hex": "9c0000",
+      "expected_hex": "9c0000",
+      "elapsed_s": 0.00319
+    },
+    {
+      "id": "seed_90",
+      "passed": true,
+      "input_bytes": 33,
+      "actual_hex": "200000",
+      "expected_hex": "200000",
+      "elapsed_s": 0.00156
+    },
+    {
+      "id": "seed_91",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00169
+    },
+    {
+      "id": "seed_92",
+      "passed": true,
+      "input_bytes": 120,
+      "actual_hex": "770000",
+      "expected_hex": "770000",
+      "elapsed_s": 0.00241
+    },
+    {
+      "id": "seed_93",
+      "passed": true,
+      "input_bytes": 137,
+      "actual_hex": "880000",
+      "expected_hex": "880000",
+      "elapsed_s": 0.00259
+    },
+    {
+      "id": "seed_94",
+      "passed": true,
+      "input_bytes": 108,
+      "actual_hex": "6b0000",
+      "expected_hex": "6b0000",
+      "elapsed_s": 0.00233
+    },
+    {
+      "id": "seed_95",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00272
+    },
+    {
+      "id": "seed_96",
+      "passed": true,
+      "input_bytes": 113,
+      "actual_hex": "700000",
+      "expected_hex": "700000",
+      "elapsed_s": 0.0024
+    },
+    {
+      "id": "seed_97",
+      "passed": true,
+      "input_bytes": 37,
+      "actual_hex": "240000",
+      "expected_hex": "240000",
+      "elapsed_s": 0.00192
+    },
+    {
+      "id": "seed_98",
+      "passed": true,
+      "input_bytes": 60,
+      "actual_hex": "3b0000",
+      "expected_hex": "3b0000",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_99",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00196
+    },
+    {
+      "id": "seed_100",
+      "passed": true,
+      "input_bytes": 71,
+      "actual_hex": "460000",
+      "expected_hex": "460000",
+      "elapsed_s": 0.00247
+    },
+    {
+      "id": "seed_101",
+      "passed": true,
+      "input_bytes": 128,
+      "actual_hex": "7f0000",
+      "expected_hex": "7f0000",
+      "elapsed_s": 0.00289
+    },
+    {
+      "id": "seed_102",
+      "passed": true,
+      "input_bytes": 9,
+      "actual_hex": "080000",
+      "expected_hex": "080000",
+      "elapsed_s": 0.00161
+    },
+    {
+      "id": "seed_103",
+      "passed": true,
+      "input_bytes": 28,
+      "actual_hex": "1b0000",
+      "expected_hex": "1b0000",
+      "elapsed_s": 0.00161
+    },
+    {
+      "id": "seed_104",
+      "passed": true,
+      "input_bytes": 51,
+      "actual_hex": "320000",
+      "expected_hex": "320000",
+      "elapsed_s": 0.00179
+    },
+    {
+      "id": "seed_105",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00396
+    },
+    {
+      "id": "seed_106",
+      "passed": true,
+      "input_bytes": 54,
+      "actual_hex": "350000",
+      "expected_hex": "350000",
+      "elapsed_s": 0.00182
+    },
+    {
+      "id": "seed_107",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00216
+    },
+    {
+      "id": "seed_108",
+      "passed": true,
+      "input_bytes": 16,
+      "actual_hex": "0f0000",
+      "expected_hex": "0f0000",
+      "elapsed_s": 0.00151
+    },
+    {
+      "id": "seed_109",
+      "passed": true,
+      "input_bytes": 49,
+      "actual_hex": "300000",
+      "expected_hex": "300000",
+      "elapsed_s": 0.00231
+    },
+    {
+      "id": "seed_110",
+      "passed": true,
+      "input_bytes": 75,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_111",
+      "passed": true,
+      "input_bytes": 141,
+      "actual_hex": "8c0000",
+      "expected_hex": "8c0000",
+      "elapsed_s": 0.00298
+    },
+    {
+      "id": "seed_112",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00224
+    },
+    {
+      "id": "seed_113",
+      "passed": true,
+      "input_bytes": 112,
+      "actual_hex": "6f0000",
+      "expected_hex": "6f0000",
+      "elapsed_s": 0.00241
+    },
+    {
+      "id": "seed_114",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "640000",
+      "expected_hex": "640000",
+      "elapsed_s": 0.00218
+    },
+    {
+      "id": "seed_115",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00306
+    },
+    {
+      "id": "seed_116",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00272
+    },
+    {
+      "id": "seed_117",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.00282
+    },
+    {
+      "id": "seed_118",
+      "passed": true,
+      "input_bytes": 115,
+      "actual_hex": "720000",
+      "expected_hex": "720000",
+      "elapsed_s": 0.00248
+    },
+    {
+      "id": "seed_119",
+      "passed": true,
+      "input_bytes": 53,
+      "actual_hex": "340000",
+      "expected_hex": "340000",
+      "elapsed_s": 0.00184
+    },
+    {
+      "id": "seed_120",
+      "passed": true,
+      "input_bytes": 57,
+      "actual_hex": "380000",
+      "expected_hex": "380000",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "seed_121",
+      "passed": true,
+      "input_bytes": 7,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_122",
+      "passed": true,
+      "input_bytes": 48,
+      "actual_hex": "2f0000",
+      "expected_hex": "2f0000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "seed_123",
+      "passed": true,
+      "input_bytes": 90,
+      "actual_hex": "590000",
+      "expected_hex": "590000",
+      "elapsed_s": 0.00228
+    },
+    {
+      "id": "seed_124",
+      "passed": true,
+      "input_bytes": 92,
+      "actual_hex": "5b0000",
+      "expected_hex": "5b0000",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_125",
+      "passed": true,
+      "input_bytes": 31,
+      "actual_hex": "1e0000",
+      "expected_hex": "1e0000",
+      "elapsed_s": 0.00146
+    },
+    {
+      "id": "seed_126",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00137
+    },
+    {
+      "id": "seed_127",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "640000",
+      "expected_hex": "640000",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_128",
+      "passed": true,
+      "input_bytes": 148,
+      "actual_hex": "930000",
+      "expected_hex": "930000",
+      "elapsed_s": 0.00325
+    },
+    {
+      "id": "seed_129",
+      "passed": true,
+      "input_bytes": 66,
+      "actual_hex": "410000",
+      "expected_hex": "410000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_130",
+      "passed": true,
+      "input_bytes": 52,
+      "actual_hex": "330000",
+      "expected_hex": "330000",
+      "elapsed_s": 0.0019
+    },
+    {
+      "id": "seed_131",
+      "passed": true,
+      "input_bytes": 146,
+      "actual_hex": "910000",
+      "expected_hex": "910000",
+      "elapsed_s": 0.00262
+    },
+    {
+      "id": "seed_132",
+      "passed": true,
+      "input_bytes": 37,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00179
+    },
+    {
+      "id": "seed_133",
+      "passed": true,
+      "input_bytes": 82,
+      "actual_hex": "510000",
+      "expected_hex": "510000",
+      "elapsed_s": 0.002
+    },
+    {
+      "id": "seed_134",
+      "passed": true,
+      "input_bytes": 123,
+      "actual_hex": "7a0000",
+      "expected_hex": "7a0000",
+      "elapsed_s": 0.00343
+    },
+    {
+      "id": "seed_135",
+      "passed": true,
+      "input_bytes": 65,
+      "actual_hex": "400000",
+      "expected_hex": "400000",
+      "elapsed_s": 0.00222
+    },
+    {
+      "id": "seed_136",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.00292
+    },
+    {
+      "id": "seed_137",
+      "passed": true,
+      "input_bytes": 42,
+      "actual_hex": "290000",
+      "expected_hex": "290000",
+      "elapsed_s": 0.00162
+    },
+    {
+      "id": "seed_138",
+      "passed": true,
+      "input_bytes": 26,
+      "actual_hex": "190000",
+      "expected_hex": "190000",
+      "elapsed_s": 0.00158
+    },
+    {
+      "id": "seed_139",
+      "passed": true,
+      "input_bytes": 26,
+      "actual_hex": "190000",
+      "expected_hex": "190000",
+      "elapsed_s": 0.00136
+    },
+    {
+      "id": "seed_140",
+      "passed": true,
+      "input_bytes": 64,
+      "actual_hex": "3f0000",
+      "expected_hex": "3f0000",
+      "elapsed_s": 0.00254
+    },
+    {
+      "id": "seed_141",
+      "passed": true,
+      "input_bytes": 61,
+      "actual_hex": "3c0000",
+      "expected_hex": "3c0000",
+      "elapsed_s": 0.00185
+    },
+    {
+      "id": "seed_142",
+      "passed": true,
+      "input_bytes": 23,
+      "actual_hex": "160000",
+      "expected_hex": "160000",
+      "elapsed_s": 0.00136
+    },
+    {
+      "id": "seed_143",
+      "passed": true,
+      "input_bytes": 36,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00148
+    },
+    {
+      "id": "seed_144",
+      "passed": true,
+      "input_bytes": 71,
+      "actual_hex": "460000",
+      "expected_hex": "460000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "seed_145",
+      "passed": true,
+      "input_bytes": 113,
+      "actual_hex": "700000",
+      "expected_hex": "700000",
+      "elapsed_s": 0.00253
+    },
+    {
+      "id": "seed_146",
+      "passed": true,
+      "input_bytes": 139,
+      "actual_hex": "8a0000",
+      "expected_hex": "8a0000",
+      "elapsed_s": 0.00273
+    },
+    {
+      "id": "seed_147",
+      "passed": true,
+      "input_bytes": 51,
+      "actual_hex": "320000",
+      "expected_hex": "320000",
+      "elapsed_s": 0.00195
+    },
+    {
+      "id": "seed_148",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00196
+    },
+    {
+      "id": "seed_149",
+      "passed": true,
+      "input_bytes": 53,
+      "actual_hex": "340000",
+      "expected_hex": "340000",
+      "elapsed_s": 0.00207
+    },
+    {
+      "id": "seed_150",
+      "passed": true,
+      "input_bytes": 96,
+      "actual_hex": "5f0000",
+      "expected_hex": "5f0000",
+      "elapsed_s": 0.00259
+    },
+    {
+      "id": "seed_151",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00238
+    },
+    {
+      "id": "seed_152",
+      "passed": true,
+      "input_bytes": 62,
+      "actual_hex": "3d0000",
+      "expected_hex": "3d0000",
+      "elapsed_s": 0.00215
+    },
+    {
+      "id": "seed_153",
+      "passed": true,
+      "input_bytes": 76,
+      "actual_hex": "4b0000",
+      "expected_hex": "4b0000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_154",
+      "passed": true,
+      "input_bytes": 104,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00236
+    },
+    {
+      "id": "seed_155",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "3a0000",
+      "expected_hex": "3a0000",
+      "elapsed_s": 0.00211
+    },
+    {
+      "id": "seed_156",
+      "passed": true,
+      "input_bytes": 64,
+      "actual_hex": "3f0000",
+      "expected_hex": "3f0000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_157",
+      "passed": true,
+      "input_bytes": 121,
+      "actual_hex": "780000",
+      "expected_hex": "780000",
+      "elapsed_s": 0.00267
+    },
+    {
+      "id": "seed_158",
+      "passed": true,
+      "input_bytes": 8,
+      "actual_hex": "070000",
+      "expected_hex": "070000",
+      "elapsed_s": 0.00141
+    },
+    {
+      "id": "seed_159",
+      "passed": true,
+      "input_bytes": 39,
+      "actual_hex": "260000",
+      "expected_hex": "260000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "seed_160",
+      "passed": true,
+      "input_bytes": 4,
+      "actual_hex": "030000",
+      "expected_hex": "030000",
+      "elapsed_s": 0.00117
+    },
+    {
+      "id": "seed_161",
+      "passed": true,
+      "input_bytes": 140,
+      "actual_hex": "8b0000",
+      "expected_hex": "8b0000",
+      "elapsed_s": 0.0026
+    },
+    {
+      "id": "seed_162",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00268
+    },
+    {
+      "id": "seed_163",
+      "passed": true,
+      "input_bytes": 21,
+      "actual_hex": "140000",
+      "expected_hex": "140000",
+      "elapsed_s": 0.00147
+    },
+    {
+      "id": "seed_164",
+      "passed": true,
+      "input_bytes": 139,
+      "actual_hex": "8a0000",
+      "expected_hex": "8a0000",
+      "elapsed_s": 0.00291
+    },
+    {
+      "id": "seed_165",
+      "passed": true,
+      "input_bytes": 92,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0022
+    },
+    {
+      "id": "seed_166",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.00297
+    },
+    {
+      "id": "seed_167",
+      "passed": true,
+      "input_bytes": 39,
+      "actual_hex": "260000",
+      "expected_hex": "260000",
+      "elapsed_s": 0.00157
+    },
+    {
+      "id": "seed_168",
+      "passed": true,
+      "input_bytes": 25,
+      "actual_hex": "180000",
+      "expected_hex": "180000",
+      "elapsed_s": 0.00146
+    },
+    {
+      "id": "seed_169",
+      "passed": true,
+      "input_bytes": 84,
+      "actual_hex": "530000",
+      "expected_hex": "530000",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_170",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00211
+    },
+    {
+      "id": "seed_171",
+      "passed": true,
+      "input_bytes": 125,
+      "actual_hex": "7c0000",
+      "expected_hex": "7c0000",
+      "elapsed_s": 0.0032
+    },
+    {
+      "id": "seed_172",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "640000",
+      "expected_hex": "640000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_173",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00168
+    },
+    {
+      "id": "seed_174",
+      "passed": true,
+      "input_bytes": 80,
+      "actual_hex": "4f0000",
+      "expected_hex": "4f0000",
+      "elapsed_s": 0.0019
+    },
+    {
+      "id": "seed_175",
+      "passed": true,
+      "input_bytes": 91,
+      "actual_hex": "5a0000",
+      "expected_hex": "5a0000",
+      "elapsed_s": 0.00205
+    },
+    {
+      "id": "seed_176",
+      "passed": true,
+      "input_bytes": 44,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "seed_177",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00218
+    },
+    {
+      "id": "seed_178",
+      "passed": true,
+      "input_bytes": 87,
+      "actual_hex": "560000",
+      "expected_hex": "560000",
+      "elapsed_s": 0.00263
+    },
+    {
+      "id": "seed_179",
+      "passed": true,
+      "input_bytes": 29,
+      "actual_hex": "1c0000",
+      "expected_hex": "1c0000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_180",
+      "passed": true,
+      "input_bytes": 132,
+      "actual_hex": "830000",
+      "expected_hex": "830000",
+      "elapsed_s": 0.0027
+    },
+    {
+      "id": "seed_181",
+      "passed": true,
+      "input_bytes": 20,
+      "actual_hex": "130000",
+      "expected_hex": "130000",
+      "elapsed_s": 0.00153
+    },
+    {
+      "id": "seed_182",
+      "passed": true,
+      "input_bytes": 89,
+      "actual_hex": "580000",
+      "expected_hex": "580000",
+      "elapsed_s": 0.00214
+    },
+    {
+      "id": "seed_183",
+      "passed": true,
+      "input_bytes": 142,
+      "actual_hex": "8d0000",
+      "expected_hex": "8d0000",
+      "elapsed_s": 0.00305
+    },
+    {
+      "id": "seed_184",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00223
+    },
+    {
+      "id": "seed_185",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00252
+    },
+    {
+      "id": "seed_186",
+      "passed": true,
+      "input_bytes": 90,
+      "actual_hex": "590000",
+      "expected_hex": "590000",
+      "elapsed_s": 0.00199
+    },
+    {
+      "id": "seed_187",
+      "passed": true,
+      "input_bytes": 121,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00257
+    },
+    {
+      "id": "seed_188",
+      "passed": true,
+      "input_bytes": 40,
+      "actual_hex": "270000",
+      "expected_hex": "270000",
+      "elapsed_s": 0.00175
+    },
+    {
+      "id": "seed_189",
+      "passed": true,
+      "input_bytes": 28,
+      "actual_hex": "1b0000",
+      "expected_hex": "1b0000",
+      "elapsed_s": 0.00139
+    },
+    {
+      "id": "seed_190",
+      "passed": true,
+      "input_bytes": 35,
+      "actual_hex": "220000",
+      "expected_hex": "220000",
+      "elapsed_s": 0.0015
+    },
+    {
+      "id": "seed_191",
+      "passed": true,
+      "input_bytes": 91,
+      "actual_hex": "5a0000",
+      "expected_hex": "5a0000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_192",
+      "passed": true,
+      "input_bytes": 143,
+      "actual_hex": "8e0000",
+      "expected_hex": "8e0000",
+      "elapsed_s": 0.00298
+    },
+    {
+      "id": "seed_193",
+      "passed": true,
+      "input_bytes": 151,
+      "actual_hex": "960000",
+      "expected_hex": "960000",
+      "elapsed_s": 0.003
+    },
+    {
+      "id": "seed_194",
+      "passed": true,
+      "input_bytes": 132,
+      "actual_hex": "830000",
+      "expected_hex": "830000",
+      "elapsed_s": 0.00245
+    },
+    {
+      "id": "seed_195",
+      "passed": true,
+      "input_bytes": 76,
+      "actual_hex": "4b0000",
+      "expected_hex": "4b0000",
+      "elapsed_s": 0.00202
+    },
+    {
+      "id": "seed_196",
+      "passed": true,
+      "input_bytes": 44,
+      "actual_hex": "2b0000",
+      "expected_hex": "2b0000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_197",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "210000",
+      "expected_hex": "210000",
+      "elapsed_s": 0.00136
+    },
+    {
+      "id": "seed_198",
+      "passed": true,
+      "input_bytes": 52,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00169
+    },
+    {
+      "id": "seed_199",
+      "passed": true,
+      "input_bytes": 151,
+      "actual_hex": "960000",
+      "expected_hex": "960000",
+      "elapsed_s": 0.00281
+    },
+    {
+      "id": "seed_200",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.00247
+    },
+    {
+      "id": "seed_201",
+      "passed": true,
+      "input_bytes": 80,
+      "actual_hex": "4f0000",
+      "expected_hex": "4f0000",
+      "elapsed_s": 0.00194
+    },
+    {
+      "id": "seed_202",
+      "passed": true,
+      "input_bytes": 103,
+      "actual_hex": "660000",
+      "expected_hex": "660000",
+      "elapsed_s": 0.0021
+    },
+    {
+      "id": "seed_203",
+      "passed": true,
+      "input_bytes": 50,
+      "actual_hex": "310000",
+      "expected_hex": "310000",
+      "elapsed_s": 0.00168
+    },
+    {
+      "id": "seed_204",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.00182
+    },
+    {
+      "id": "seed_205",
+      "passed": true,
+      "input_bytes": 17,
+      "actual_hex": "100000",
+      "expected_hex": "100000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "seed_206",
+      "passed": true,
+      "input_bytes": 41,
+      "actual_hex": "280000",
+      "expected_hex": "280000",
+      "elapsed_s": 0.0015
+    },
+    {
+      "id": "seed_207",
+      "passed": true,
+      "input_bytes": 151,
+      "actual_hex": "960000",
+      "expected_hex": "960000",
+      "elapsed_s": 0.00286
+    },
+    {
+      "id": "seed_208",
+      "passed": true,
+      "input_bytes": 131,
+      "actual_hex": "820000",
+      "expected_hex": "820000",
+      "elapsed_s": 0.00278
+    },
+    {
+      "id": "seed_209",
+      "passed": true,
+      "input_bytes": 82,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_210",
+      "passed": true,
+      "input_bytes": 89,
+      "actual_hex": "580000",
+      "expected_hex": "580000",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_211",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00253
+    },
+    {
+      "id": "seed_212",
+      "passed": true,
+      "input_bytes": 92,
+      "actual_hex": "5b0000",
+      "expected_hex": "5b0000",
+      "elapsed_s": 0.00216
+    },
+    {
+      "id": "seed_213",
+      "passed": true,
+      "input_bytes": 70,
+      "actual_hex": "450000",
+      "expected_hex": "450000",
+      "elapsed_s": 0.00231
+    },
+    {
+      "id": "seed_214",
+      "passed": true,
+      "input_bytes": 92,
+      "actual_hex": "5b0000",
+      "expected_hex": "5b0000",
+      "elapsed_s": 0.00208
+    },
+    {
+      "id": "seed_215",
+      "passed": true,
+      "input_bytes": 16,
+      "actual_hex": "0f0000",
+      "expected_hex": "0f0000",
+      "elapsed_s": 0.00165
+    },
+    {
+      "id": "seed_216",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00226
+    },
+    {
+      "id": "seed_217",
+      "passed": true,
+      "input_bytes": 107,
+      "actual_hex": "6a0000",
+      "expected_hex": "6a0000",
+      "elapsed_s": 0.00238
+    },
+    {
+      "id": "seed_218",
+      "passed": true,
+      "input_bytes": 66,
+      "actual_hex": "410000",
+      "expected_hex": "410000",
+      "elapsed_s": 0.00211
+    },
+    {
+      "id": "seed_219",
+      "passed": true,
+      "input_bytes": 132,
+      "actual_hex": "830000",
+      "expected_hex": "830000",
+      "elapsed_s": 0.00294
+    },
+    {
+      "id": "seed_220",
+      "passed": true,
+      "input_bytes": 71,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_221",
+      "passed": true,
+      "input_bytes": 41,
+      "actual_hex": "280000",
+      "expected_hex": "280000",
+      "elapsed_s": 0.00165
+    },
+    {
+      "id": "seed_222",
+      "passed": true,
+      "input_bytes": 91,
+      "actual_hex": "5a0000",
+      "expected_hex": "5a0000",
+      "elapsed_s": 0.00214
+    },
+    {
+      "id": "seed_223",
+      "passed": true,
+      "input_bytes": 23,
+      "actual_hex": "160000",
+      "expected_hex": "160000",
+      "elapsed_s": 0.00164
+    },
+    {
+      "id": "seed_224",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.0021
+    },
+    {
+      "id": "seed_225",
+      "passed": true,
+      "input_bytes": 104,
+      "actual_hex": "670000",
+      "expected_hex": "670000",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_226",
+      "passed": true,
+      "input_bytes": 88,
+      "actual_hex": "570000",
+      "expected_hex": "570000",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "seed_227",
+      "passed": true,
+      "input_bytes": 118,
+      "actual_hex": "750000",
+      "expected_hex": "750000",
+      "elapsed_s": 0.00248
+    },
+    {
+      "id": "seed_228",
+      "passed": true,
+      "input_bytes": 49,
+      "actual_hex": "300000",
+      "expected_hex": "300000",
+      "elapsed_s": 0.00166
+    },
+    {
+      "id": "seed_229",
+      "passed": true,
+      "input_bytes": 112,
+      "actual_hex": "6f0000",
+      "expected_hex": "6f0000",
+      "elapsed_s": 0.00311
+    },
+    {
+      "id": "seed_230",
+      "passed": true,
+      "input_bytes": 45,
+      "actual_hex": "2c0000",
+      "expected_hex": "2c0000",
+      "elapsed_s": 0.00184
+    },
+    {
+      "id": "seed_231",
+      "passed": true,
+      "input_bytes": 149,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0034
+    },
+    {
+      "id": "seed_232",
+      "passed": true,
+      "input_bytes": 22,
+      "actual_hex": "150000",
+      "expected_hex": "150000",
+      "elapsed_s": 0.00154
+    },
+    {
+      "id": "seed_233",
+      "passed": true,
+      "input_bytes": 45,
+      "actual_hex": "2c0000",
+      "expected_hex": "2c0000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_234",
+      "passed": true,
+      "input_bytes": 78,
+      "actual_hex": "4d0000",
+      "expected_hex": "4d0000",
+      "elapsed_s": 0.00213
+    },
+    {
+      "id": "seed_235",
+      "passed": true,
+      "input_bytes": 130,
+      "actual_hex": "810000",
+      "expected_hex": "810000",
+      "elapsed_s": 0.00289
+    },
+    {
+      "id": "seed_236",
+      "passed": true,
+      "input_bytes": 131,
+      "actual_hex": "820000",
+      "expected_hex": "820000",
+      "elapsed_s": 0.00266
+    },
+    {
+      "id": "seed_237",
+      "passed": true,
+      "input_bytes": 25,
+      "actual_hex": "180000",
+      "expected_hex": "180000",
+      "elapsed_s": 0.00153
+    },
+    {
+      "id": "seed_238",
+      "passed": true,
+      "input_bytes": 105,
+      "actual_hex": "680000",
+      "expected_hex": "680000",
+      "elapsed_s": 0.00246
+    },
+    {
+      "id": "seed_239",
+      "passed": true,
+      "input_bytes": 8,
+      "actual_hex": "070000",
+      "expected_hex": "070000",
+      "elapsed_s": 0.00121
+    },
+    {
+      "id": "seed_240",
+      "passed": true,
+      "input_bytes": 60,
+      "actual_hex": "3b0000",
+      "expected_hex": "3b0000",
+      "elapsed_s": 0.00186
+    },
+    {
+      "id": "seed_241",
+      "passed": true,
+      "input_bytes": 116,
+      "actual_hex": "730000",
+      "expected_hex": "730000",
+      "elapsed_s": 0.00267
+    },
+    {
+      "id": "seed_242",
+      "passed": true,
+      "input_bytes": 24,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00172
+    },
+    {
+      "id": "seed_243",
+      "passed": true,
+      "input_bytes": 29,
+      "actual_hex": "1c0000",
+      "expected_hex": "1c0000",
+      "elapsed_s": 0.00175
+    },
+    {
+      "id": "seed_244",
+      "passed": true,
+      "input_bytes": 135,
+      "actual_hex": "860000",
+      "expected_hex": "860000",
+      "elapsed_s": 0.0027
+    },
+    {
+      "id": "seed_245",
+      "passed": true,
+      "input_bytes": 52,
+      "actual_hex": "330000",
+      "expected_hex": "330000",
+      "elapsed_s": 0.00192
+    },
+    {
+      "id": "seed_246",
+      "passed": true,
+      "input_bytes": 135,
+      "actual_hex": "860000",
+      "expected_hex": "860000",
+      "elapsed_s": 0.00307
+    },
+    {
+      "id": "seed_247",
+      "passed": true,
+      "input_bytes": 126,
+      "actual_hex": "7d0000",
+      "expected_hex": "7d0000",
+      "elapsed_s": 0.00261
+    },
+    {
+      "id": "seed_248",
+      "passed": true,
+      "input_bytes": 33,
+      "actual_hex": "200000",
+      "expected_hex": "200000",
+      "elapsed_s": 0.0014
+    },
+    {
+      "id": "seed_249",
+      "passed": true,
+      "input_bytes": 52,
+      "actual_hex": "330000",
+      "expected_hex": "330000",
+      "elapsed_s": 0.00161
+    },
+    {
+      "id": "seed_250",
+      "passed": true,
+      "input_bytes": 118,
+      "actual_hex": "750000",
+      "expected_hex": "750000",
+      "elapsed_s": 0.00263
+    },
+    {
+      "id": "seed_251",
+      "passed": true,
+      "input_bytes": 98,
+      "actual_hex": "610000",
+      "expected_hex": "610000",
+      "elapsed_s": 0.00257
+    },
+    {
+      "id": "seed_252",
+      "passed": true,
+      "input_bytes": 86,
+      "actual_hex": "550000",
+      "expected_hex": "550000",
+      "elapsed_s": 0.00241
+    },
+    {
+      "id": "seed_253",
+      "passed": true,
+      "input_bytes": 153,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00295
+    },
+    {
+      "id": "seed_254",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "480000",
+      "expected_hex": "480000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_255",
+      "passed": true,
+      "input_bytes": 41,
+      "actual_hex": "280000",
+      "expected_hex": "280000",
+      "elapsed_s": 0.00266
+    },
+    {
+      "id": "seed_256",
+      "passed": true,
+      "input_bytes": 147,
+      "actual_hex": "920000",
+      "expected_hex": "920000",
+      "elapsed_s": 0.00294
+    },
+    {
+      "id": "seed_257",
+      "passed": true,
+      "input_bytes": 48,
+      "actual_hex": "2f0000",
+      "expected_hex": "2f0000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_258",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00286
+    },
+    {
+      "id": "seed_259",
+      "passed": true,
+      "input_bytes": 63,
+      "actual_hex": "3e0000",
+      "expected_hex": "3e0000",
+      "elapsed_s": 0.00191
+    },
+    {
+      "id": "seed_260",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.00263
+    },
+    {
+      "id": "seed_261",
+      "passed": true,
+      "input_bytes": 96,
+      "actual_hex": "5f0000",
+      "expected_hex": "5f0000",
+      "elapsed_s": 0.00242
+    },
+    {
+      "id": "seed_262",
+      "passed": true,
+      "input_bytes": 123,
+      "actual_hex": "7a0000",
+      "expected_hex": "7a0000",
+      "elapsed_s": 0.00299
+    },
+    {
+      "id": "seed_263",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00207
+    },
+    {
+      "id": "seed_264",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0026
+    },
+    {
+      "id": "seed_265",
+      "passed": true,
+      "input_bytes": 74,
+      "actual_hex": "490000",
+      "expected_hex": "490000",
+      "elapsed_s": 0.0024
+    },
+    {
+      "id": "seed_266",
+      "passed": true,
+      "input_bytes": 62,
+      "actual_hex": "3d0000",
+      "expected_hex": "3d0000",
+      "elapsed_s": 0.00203
+    },
+    {
+      "id": "seed_267",
+      "passed": true,
+      "input_bytes": 148,
+      "actual_hex": "930000",
+      "expected_hex": "930000",
+      "elapsed_s": 0.00306
+    },
+    {
+      "id": "seed_268",
+      "passed": true,
+      "input_bytes": 42,
+      "actual_hex": "290000",
+      "expected_hex": "290000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_269",
+      "passed": true,
+      "input_bytes": 71,
+      "actual_hex": "460000",
+      "expected_hex": "460000",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_270",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00226
+    },
+    {
+      "id": "seed_271",
+      "passed": true,
+      "input_bytes": 57,
+      "actual_hex": "380000",
+      "expected_hex": "380000",
+      "elapsed_s": 0.00231
+    },
+    {
+      "id": "seed_272",
+      "passed": true,
+      "input_bytes": 89,
+      "actual_hex": "580000",
+      "expected_hex": "580000",
+      "elapsed_s": 0.00218
+    },
+    {
+      "id": "seed_273",
+      "passed": true,
+      "input_bytes": 107,
+      "actual_hex": "6a0000",
+      "expected_hex": "6a0000",
+      "elapsed_s": 0.0024
+    },
+    {
+      "id": "seed_274",
+      "passed": true,
+      "input_bytes": 40,
+      "actual_hex": "270000",
+      "expected_hex": "270000",
+      "elapsed_s": 0.0017
+    },
+    {
+      "id": "seed_275",
+      "passed": true,
+      "input_bytes": 75,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00205
+    },
+    {
+      "id": "seed_276",
+      "passed": true,
+      "input_bytes": 85,
+      "actual_hex": "540000",
+      "expected_hex": "540000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_277",
+      "passed": true,
+      "input_bytes": 54,
+      "actual_hex": "350000",
+      "expected_hex": "350000",
+      "elapsed_s": 0.00202
+    },
+    {
+      "id": "seed_278",
+      "passed": true,
+      "input_bytes": 113,
+      "actual_hex": "700000",
+      "expected_hex": "700000",
+      "elapsed_s": 0.00261
+    },
+    {
+      "id": "seed_279",
+      "passed": true,
+      "input_bytes": 26,
+      "actual_hex": "190000",
+      "expected_hex": "190000",
+      "elapsed_s": 0.00171
+    },
+    {
+      "id": "seed_280",
+      "passed": true,
+      "input_bytes": 25,
+      "actual_hex": "180000",
+      "expected_hex": "180000",
+      "elapsed_s": 0.00131
+    },
+    {
+      "id": "seed_281",
+      "passed": true,
+      "input_bytes": 144,
+      "actual_hex": "8f0000",
+      "expected_hex": "8f0000",
+      "elapsed_s": 0.0036
+    },
+    {
+      "id": "seed_282",
+      "passed": true,
+      "input_bytes": 13,
+      "actual_hex": "0c0000",
+      "expected_hex": "0c0000",
+      "elapsed_s": 0.00152
+    },
+    {
+      "id": "seed_283",
+      "passed": true,
+      "input_bytes": 153,
+      "actual_hex": "980000",
+      "expected_hex": "980000",
+      "elapsed_s": 0.00326
+    },
+    {
+      "id": "seed_284",
+      "passed": true,
+      "input_bytes": 149,
+      "actual_hex": "940000",
+      "expected_hex": "940000",
+      "elapsed_s": 0.00325
+    },
+    {
+      "id": "seed_285",
+      "passed": true,
+      "input_bytes": 153,
+      "actual_hex": "980000",
+      "expected_hex": "980000",
+      "elapsed_s": 0.00305
+    },
+    {
+      "id": "seed_286",
+      "passed": true,
+      "input_bytes": 12,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00143
+    },
+    {
+      "id": "seed_287",
+      "passed": true,
+      "input_bytes": 35,
+      "actual_hex": "220000",
+      "expected_hex": "220000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_288",
+      "passed": true,
+      "input_bytes": 152,
+      "actual_hex": "970000",
+      "expected_hex": "970000",
+      "elapsed_s": 0.003
+    },
+    {
+      "id": "seed_289",
+      "passed": true,
+      "input_bytes": 36,
+      "actual_hex": "230000",
+      "expected_hex": "230000",
+      "elapsed_s": 0.00158
+    },
+    {
+      "id": "seed_290",
+      "passed": true,
+      "input_bytes": 151,
+      "actual_hex": "960000",
+      "expected_hex": "960000",
+      "elapsed_s": 0.00291
+    },
+    {
+      "id": "seed_291",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_292",
+      "passed": true,
+      "input_bytes": 84,
+      "actual_hex": "530000",
+      "expected_hex": "530000",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_293",
+      "passed": true,
+      "input_bytes": 95,
+      "actual_hex": "5e0000",
+      "expected_hex": "5e0000",
+      "elapsed_s": 0.00229
+    },
+    {
+      "id": "seed_294",
+      "passed": true,
+      "input_bytes": 110,
+      "actual_hex": "6d0000",
+      "expected_hex": "6d0000",
+      "elapsed_s": 0.00289
+    },
+    {
+      "id": "seed_295",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00189
+    },
+    {
+      "id": "seed_296",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_297",
+      "passed": true,
+      "input_bytes": 135,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00271
+    },
+    {
+      "id": "seed_298",
+      "passed": true,
+      "input_bytes": 49,
+      "actual_hex": "300000",
+      "expected_hex": "300000",
+      "elapsed_s": 0.00155
+    },
+    {
+      "id": "seed_299",
+      "passed": true,
+      "input_bytes": 22,
+      "actual_hex": "150000",
+      "expected_hex": "150000",
+      "elapsed_s": 0.0015
+    },
+    {
+      "id": "seed_300",
+      "passed": true,
+      "input_bytes": 99,
+      "actual_hex": "620000",
+      "expected_hex": "620000",
+      "elapsed_s": 0.00227
+    },
+    {
+      "id": "seed_301",
+      "passed": true,
+      "input_bytes": 45,
+      "actual_hex": "2c0000",
+      "expected_hex": "2c0000",
+      "elapsed_s": 0.00171
+    },
+    {
+      "id": "seed_302",
+      "passed": true,
+      "input_bytes": 120,
+      "actual_hex": "770000",
+      "expected_hex": "770000",
+      "elapsed_s": 0.00236
+    },
+    {
+      "id": "seed_303",
+      "passed": true,
+      "input_bytes": 153,
+      "actual_hex": "980000",
+      "expected_hex": "980000",
+      "elapsed_s": 0.00273
+    },
+    {
+      "id": "seed_304",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00234
+    },
+    {
+      "id": "seed_305",
+      "passed": true,
+      "input_bytes": 15,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00125
+    },
+    {
+      "id": "seed_306",
+      "passed": true,
+      "input_bytes": 118,
+      "actual_hex": "750000",
+      "expected_hex": "750000",
+      "elapsed_s": 0.00234
+    },
+    {
+      "id": "seed_307",
+      "passed": true,
+      "input_bytes": 112,
+      "actual_hex": "6f0000",
+      "expected_hex": "6f0000",
+      "elapsed_s": 0.00221
+    },
+    {
+      "id": "seed_308",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00163
+    },
+    {
+      "id": "seed_309",
+      "passed": true,
+      "input_bytes": 27,
+      "actual_hex": "1a0000",
+      "expected_hex": "1a0000",
+      "elapsed_s": 0.00154
+    },
+    {
+      "id": "seed_310",
+      "passed": true,
+      "input_bytes": 27,
+      "actual_hex": "1a0000",
+      "expected_hex": "1a0000",
+      "elapsed_s": 0.00163
+    },
+    {
+      "id": "seed_311",
+      "passed": true,
+      "input_bytes": 54,
+      "actual_hex": "350000",
+      "expected_hex": "350000",
+      "elapsed_s": 0.00196
+    },
+    {
+      "id": "seed_312",
+      "passed": true,
+      "input_bytes": 120,
+      "actual_hex": "770000",
+      "expected_hex": "770000",
+      "elapsed_s": 0.00262
+    },
+    {
+      "id": "seed_313",
+      "passed": true,
+      "input_bytes": 63,
+      "actual_hex": "3e0000",
+      "expected_hex": "3e0000",
+      "elapsed_s": 0.00197
+    },
+    {
+      "id": "seed_314",
+      "passed": true,
+      "input_bytes": 94,
+      "actual_hex": "5d0000",
+      "expected_hex": "5d0000",
+      "elapsed_s": 0.00221
+    },
+    {
+      "id": "seed_315",
+      "passed": true,
+      "input_bytes": 141,
+      "actual_hex": "8c0000",
+      "expected_hex": "8c0000",
+      "elapsed_s": 0.00283
+    },
+    {
+      "id": "seed_316",
+      "passed": true,
+      "input_bytes": 148,
+      "actual_hex": "930000",
+      "expected_hex": "930000",
+      "elapsed_s": 0.00311
+    },
+    {
+      "id": "seed_317",
+      "passed": true,
+      "input_bytes": 140,
+      "actual_hex": "8b0000",
+      "expected_hex": "8b0000",
+      "elapsed_s": 0.00369
+    },
+    {
+      "id": "seed_318",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "3a0000",
+      "expected_hex": "3a0000",
+      "elapsed_s": 0.00188
+    },
+    {
+      "id": "seed_319",
+      "passed": true,
+      "input_bytes": 143,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00299
+    },
+    {
+      "id": "seed_320",
+      "passed": true,
+      "input_bytes": 93,
+      "actual_hex": "5c0000",
+      "expected_hex": "5c0000",
+      "elapsed_s": 0.00234
+    },
+    {
+      "id": "seed_321",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "210000",
+      "expected_hex": "210000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_322",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00284
+    },
+    {
+      "id": "seed_323",
+      "passed": true,
+      "input_bytes": 92,
+      "actual_hex": "5b0000",
+      "expected_hex": "5b0000",
+      "elapsed_s": 0.00219
+    },
+    {
+      "id": "seed_324",
+      "passed": true,
+      "input_bytes": 155,
+      "actual_hex": "9a0000",
+      "expected_hex": "9a0000",
+      "elapsed_s": 0.00358
+    },
+    {
+      "id": "seed_325",
+      "passed": true,
+      "input_bytes": 146,
+      "actual_hex": "910000",
+      "expected_hex": "910000",
+      "elapsed_s": 0.00312
+    },
+    {
+      "id": "seed_326",
+      "passed": true,
+      "input_bytes": 107,
+      "actual_hex": "6a0000",
+      "expected_hex": "6a0000",
+      "elapsed_s": 0.00276
+    },
+    {
+      "id": "seed_327",
+      "passed": true,
+      "input_bytes": 13,
+      "actual_hex": "0c0000",
+      "expected_hex": "0c0000",
+      "elapsed_s": 0.00129
+    },
+    {
+      "id": "seed_328",
+      "passed": true,
+      "input_bytes": 110,
+      "actual_hex": "6d0000",
+      "expected_hex": "6d0000",
+      "elapsed_s": 0.00262
+    },
+    {
+      "id": "seed_329",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_330",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0025
+    },
+    {
+      "id": "seed_331",
+      "passed": true,
+      "input_bytes": 18,
+      "actual_hex": "110000",
+      "expected_hex": "110000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_332",
+      "passed": true,
+      "input_bytes": 98,
+      "actual_hex": "610000",
+      "expected_hex": "610000",
+      "elapsed_s": 0.00231
+    },
+    {
+      "id": "seed_333",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00134
+    },
+    {
+      "id": "seed_334",
+      "passed": true,
+      "input_bytes": 147,
+      "actual_hex": "920000",
+      "expected_hex": "920000",
+      "elapsed_s": 0.00274
+    },
+    {
+      "id": "seed_335",
+      "passed": true,
+      "input_bytes": 48,
+      "actual_hex": "2f0000",
+      "expected_hex": "2f0000",
+      "elapsed_s": 0.00163
+    },
+    {
+      "id": "seed_336",
+      "passed": true,
+      "input_bytes": 108,
+      "actual_hex": "6b0000",
+      "expected_hex": "6b0000",
+      "elapsed_s": 0.00275
+    },
+    {
+      "id": "seed_337",
+      "passed": true,
+      "input_bytes": 25,
+      "actual_hex": "180000",
+      "expected_hex": "180000",
+      "elapsed_s": 0.00164
+    },
+    {
+      "id": "seed_338",
+      "passed": true,
+      "input_bytes": 32,
+      "actual_hex": "1f0000",
+      "expected_hex": "1f0000",
+      "elapsed_s": 0.00169
+    },
+    {
+      "id": "seed_339",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.00276
+    },
+    {
+      "id": "seed_340",
+      "passed": true,
+      "input_bytes": 51,
+      "actual_hex": "320000",
+      "expected_hex": "320000",
+      "elapsed_s": 0.00188
+    },
+    {
+      "id": "seed_341",
+      "passed": true,
+      "input_bytes": 112,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00257
+    },
+    {
+      "id": "seed_342",
+      "passed": true,
+      "input_bytes": 68,
+      "actual_hex": "430000",
+      "expected_hex": "430000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_343",
+      "passed": true,
+      "input_bytes": 164,
+      "actual_hex": "a30000",
+      "expected_hex": "a30000",
+      "elapsed_s": 0.00286
+    },
+    {
+      "id": "seed_344",
+      "passed": true,
+      "input_bytes": 116,
+      "actual_hex": "730000",
+      "expected_hex": "730000",
+      "elapsed_s": 0.00255
+    },
+    {
+      "id": "seed_345",
+      "passed": true,
+      "input_bytes": 151,
+      "actual_hex": "960000",
+      "expected_hex": "960000",
+      "elapsed_s": 0.00279
+    },
+    {
+      "id": "seed_346",
+      "passed": true,
+      "input_bytes": 110,
+      "actual_hex": "6d0000",
+      "expected_hex": "6d0000",
+      "elapsed_s": 0.00231
+    },
+    {
+      "id": "seed_347",
+      "passed": true,
+      "input_bytes": 84,
+      "actual_hex": "530000",
+      "expected_hex": "530000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_348",
+      "passed": true,
+      "input_bytes": 26,
+      "actual_hex": "190000",
+      "expected_hex": "190000",
+      "elapsed_s": 0.00143
+    },
+    {
+      "id": "seed_349",
+      "passed": true,
+      "input_bytes": 150,
+      "actual_hex": "950000",
+      "expected_hex": "950000",
+      "elapsed_s": 0.0028
+    },
+    {
+      "id": "seed_350",
+      "passed": true,
+      "input_bytes": 7,
+      "actual_hex": "060000",
+      "expected_hex": "060000",
+      "elapsed_s": 0.00131
+    },
+    {
+      "id": "seed_351",
+      "passed": true,
+      "input_bytes": 122,
+      "actual_hex": "790000",
+      "expected_hex": "790000",
+      "elapsed_s": 0.00261
+    },
+    {
+      "id": "seed_352",
+      "passed": true,
+      "input_bytes": 108,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00318
+    },
+    {
+      "id": "seed_353",
+      "passed": true,
+      "input_bytes": 66,
+      "actual_hex": "410000",
+      "expected_hex": "410000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_354",
+      "passed": true,
+      "input_bytes": 51,
+      "actual_hex": "320000",
+      "expected_hex": "320000",
+      "elapsed_s": 0.00174
+    },
+    {
+      "id": "seed_355",
+      "passed": true,
+      "input_bytes": 127,
+      "actual_hex": "7e0000",
+      "expected_hex": "7e0000",
+      "elapsed_s": 0.00252
+    },
+    {
+      "id": "seed_356",
+      "passed": true,
+      "input_bytes": 116,
+      "actual_hex": "730000",
+      "expected_hex": "730000",
+      "elapsed_s": 0.0024
+    },
+    {
+      "id": "seed_357",
+      "passed": true,
+      "input_bytes": 24,
+      "actual_hex": "170000",
+      "expected_hex": "170000",
+      "elapsed_s": 0.00153
+    },
+    {
+      "id": "seed_358",
+      "passed": true,
+      "input_bytes": 38,
+      "actual_hex": "250000",
+      "expected_hex": "250000",
+      "elapsed_s": 0.00213
+    },
+    {
+      "id": "seed_359",
+      "passed": true,
+      "input_bytes": 16,
+      "actual_hex": "0f0000",
+      "expected_hex": "0f0000",
+      "elapsed_s": 0.00173
+    },
+    {
+      "id": "seed_360",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "210000",
+      "expected_hex": "210000",
+      "elapsed_s": 0.00171
+    },
+    {
+      "id": "seed_361",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00163
+    },
+    {
+      "id": "seed_362",
+      "passed": true,
+      "input_bytes": 14,
+      "actual_hex": "0d0000",
+      "expected_hex": "0d0000",
+      "elapsed_s": 0.00141
+    },
+    {
+      "id": "seed_363",
+      "passed": true,
+      "input_bytes": 147,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00405
+    },
+    {
+      "id": "seed_364",
+      "passed": true,
+      "input_bytes": 9,
+      "actual_hex": "080000",
+      "expected_hex": "080000",
+      "elapsed_s": 0.00142
+    },
+    {
+      "id": "seed_365",
+      "passed": true,
+      "input_bytes": 19,
+      "actual_hex": "120000",
+      "expected_hex": "120000",
+      "elapsed_s": 0.00148
+    },
+    {
+      "id": "seed_366",
+      "passed": true,
+      "input_bytes": 37,
+      "actual_hex": "240000",
+      "expected_hex": "240000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_367",
+      "passed": true,
+      "input_bytes": 17,
+      "actual_hex": "100000",
+      "expected_hex": "100000",
+      "elapsed_s": 0.0014
+    },
+    {
+      "id": "seed_368",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00152
+    },
+    {
+      "id": "seed_369",
+      "passed": true,
+      "input_bytes": 4,
+      "actual_hex": "030000",
+      "expected_hex": "030000",
+      "elapsed_s": 0.00138
+    },
+    {
+      "id": "seed_370",
+      "passed": true,
+      "input_bytes": 54,
+      "actual_hex": "350000",
+      "expected_hex": "350000",
+      "elapsed_s": 0.00157
+    },
+    {
+      "id": "seed_371",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00166
+    },
+    {
+      "id": "seed_372",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.00275
+    },
+    {
+      "id": "seed_373",
+      "passed": true,
+      "input_bytes": 102,
+      "actual_hex": "650000",
+      "expected_hex": "650000",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_374",
+      "passed": true,
+      "input_bytes": 118,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00318
+    },
+    {
+      "id": "seed_375",
+      "passed": true,
+      "input_bytes": 82,
+      "actual_hex": "510000",
+      "expected_hex": "510000",
+      "elapsed_s": 0.0021
+    },
+    {
+      "id": "seed_376",
+      "passed": true,
+      "input_bytes": 27,
+      "actual_hex": "1a0000",
+      "expected_hex": "1a0000",
+      "elapsed_s": 0.00144
+    },
+    {
+      "id": "seed_377",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00187
+    },
+    {
+      "id": "seed_378",
+      "passed": true,
+      "input_bytes": 31,
+      "actual_hex": "1e0000",
+      "expected_hex": "1e0000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "seed_379",
+      "passed": true,
+      "input_bytes": 44,
+      "actual_hex": "2b0000",
+      "expected_hex": "2b0000",
+      "elapsed_s": 0.00163
+    },
+    {
+      "id": "seed_380",
+      "passed": true,
+      "input_bytes": 96,
+      "actual_hex": "5f0000",
+      "expected_hex": "5f0000",
+      "elapsed_s": 0.00214
+    },
+    {
+      "id": "seed_381",
+      "passed": true,
+      "input_bytes": 143,
+      "actual_hex": "8e0000",
+      "expected_hex": "8e0000",
+      "elapsed_s": 0.00264
+    },
+    {
+      "id": "seed_382",
+      "passed": true,
+      "input_bytes": 97,
+      "actual_hex": "600000",
+      "expected_hex": "600000",
+      "elapsed_s": 0.00255
+    },
+    {
+      "id": "seed_383",
+      "passed": true,
+      "input_bytes": 124,
+      "actual_hex": "7b0000",
+      "expected_hex": "7b0000",
+      "elapsed_s": 0.00268
+    },
+    {
+      "id": "seed_384",
+      "passed": true,
+      "input_bytes": 61,
+      "actual_hex": "3c0000",
+      "expected_hex": "3c0000",
+      "elapsed_s": 0.0025
+    },
+    {
+      "id": "seed_385",
+      "passed": true,
+      "input_bytes": 138,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00288
+    },
+    {
+      "id": "seed_386",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_387",
+      "passed": true,
+      "input_bytes": 120,
+      "actual_hex": "770000",
+      "expected_hex": "770000",
+      "elapsed_s": 0.00275
+    },
+    {
+      "id": "seed_388",
+      "passed": true,
+      "input_bytes": 138,
+      "actual_hex": "890000",
+      "expected_hex": "890000",
+      "elapsed_s": 0.00288
+    },
+    {
+      "id": "seed_389",
+      "passed": true,
+      "input_bytes": 69,
+      "actual_hex": "440000",
+      "expected_hex": "440000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_390",
+      "passed": true,
+      "input_bytes": 70,
+      "actual_hex": "450000",
+      "expected_hex": "450000",
+      "elapsed_s": 0.0018
+    },
+    {
+      "id": "seed_391",
+      "passed": true,
+      "input_bytes": 42,
+      "actual_hex": "290000",
+      "expected_hex": "290000",
+      "elapsed_s": 0.00145
+    },
+    {
+      "id": "seed_392",
+      "passed": true,
+      "input_bytes": 127,
+      "actual_hex": "7e0000",
+      "expected_hex": "7e0000",
+      "elapsed_s": 0.00269
+    },
+    {
+      "id": "seed_393",
+      "passed": true,
+      "input_bytes": 100,
+      "actual_hex": "630000",
+      "expected_hex": "630000",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_394",
+      "passed": true,
+      "input_bytes": 65,
+      "actual_hex": "400000",
+      "expected_hex": "400000",
+      "elapsed_s": 0.00175
+    },
+    {
+      "id": "seed_395",
+      "passed": true,
+      "input_bytes": 132,
+      "actual_hex": "830000",
+      "expected_hex": "830000",
+      "elapsed_s": 0.00254
+    },
+    {
+      "id": "seed_396",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00168
+    },
+    {
+      "id": "seed_397",
+      "passed": true,
+      "input_bytes": 29,
+      "actual_hex": "1c0000",
+      "expected_hex": "1c0000",
+      "elapsed_s": 0.00145
+    },
+    {
+      "id": "seed_398",
+      "passed": true,
+      "input_bytes": 22,
+      "actual_hex": "150000",
+      "expected_hex": "150000",
+      "elapsed_s": 0.00134
+    },
+    {
+      "id": "seed_399",
+      "passed": true,
+      "input_bytes": 6,
+      "actual_hex": "050000",
+      "expected_hex": "050000",
+      "elapsed_s": 0.0012
+    },
+    {
+      "id": "seed_400",
+      "passed": true,
+      "input_bytes": 91,
+      "actual_hex": "5a0000",
+      "expected_hex": "5a0000",
+      "elapsed_s": 0.00198
+    },
+    {
+      "id": "seed_401",
+      "passed": true,
+      "input_bytes": 34,
+      "actual_hex": "210000",
+      "expected_hex": "210000",
+      "elapsed_s": 0.0015
+    },
+    {
+      "id": "seed_402",
+      "passed": true,
+      "input_bytes": 5,
+      "actual_hex": "040000",
+      "expected_hex": "040000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "seed_403",
+      "passed": true,
+      "input_bytes": 74,
+      "actual_hex": "490000",
+      "expected_hex": "490000",
+      "elapsed_s": 0.00195
+    },
+    {
+      "id": "seed_404",
+      "passed": true,
+      "input_bytes": 135,
+      "actual_hex": "860000",
+      "expected_hex": "860000",
+      "elapsed_s": 0.00297
+    },
+    {
+      "id": "seed_405",
+      "passed": true,
+      "input_bytes": 9,
+      "actual_hex": "080000",
+      "expected_hex": "080000",
+      "elapsed_s": 0.00144
+    },
+    {
+      "id": "seed_406",
+      "passed": true,
+      "input_bytes": 99,
+      "actual_hex": "620000",
+      "expected_hex": "620000",
+      "elapsed_s": 0.00206
+    },
+    {
+      "id": "seed_407",
+      "passed": true,
+      "input_bytes": 52,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00203
+    },
+    {
+      "id": "seed_408",
+      "passed": true,
+      "input_bytes": 82,
+      "actual_hex": "510000",
+      "expected_hex": "510000",
+      "elapsed_s": 0.00229
+    },
+    {
+      "id": "seed_409",
+      "passed": true,
+      "input_bytes": 143,
+      "actual_hex": "8e0000",
+      "expected_hex": "8e0000",
+      "elapsed_s": 0.00269
+    },
+    {
+      "id": "seed_410",
+      "passed": true,
+      "input_bytes": 15,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00135
+    },
+    {
+      "id": "seed_411",
+      "passed": true,
+      "input_bytes": 29,
+      "actual_hex": "1c0000",
+      "expected_hex": "1c0000",
+      "elapsed_s": 0.00136
+    },
+    {
+      "id": "seed_412",
+      "passed": true,
+      "input_bytes": 58,
+      "actual_hex": "390000",
+      "expected_hex": "390000",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "seed_413",
+      "passed": true,
+      "input_bytes": 72,
+      "actual_hex": "470000",
+      "expected_hex": "470000",
+      "elapsed_s": 0.00193
+    },
+    {
+      "id": "seed_414",
+      "passed": true,
+      "input_bytes": 74,
+      "actual_hex": "490000",
+      "expected_hex": "490000",
+      "elapsed_s": 0.00183
+    },
+    {
+      "id": "seed_415",
+      "passed": true,
+      "input_bytes": 37,
+      "actual_hex": "240000",
+      "expected_hex": "240000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_416",
+      "passed": true,
+      "input_bytes": 17,
+      "actual_hex": "100000",
+      "expected_hex": "100000",
+      "elapsed_s": 0.00138
+    },
+    {
+      "id": "seed_417",
+      "passed": true,
+      "input_bytes": 18,
+      "actual_hex": "110000",
+      "expected_hex": "110000",
+      "elapsed_s": 0.00128
+    },
+    {
+      "id": "seed_418",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_419",
+      "passed": true,
+      "input_bytes": 153,
+      "actual_hex": "980000",
+      "expected_hex": "980000",
+      "elapsed_s": 0.00289
+    },
+    {
+      "id": "seed_420",
+      "passed": true,
+      "input_bytes": 81,
+      "actual_hex": "500000",
+      "expected_hex": "500000",
+      "elapsed_s": 0.00216
+    },
+    {
+      "id": "seed_421",
+      "passed": true,
+      "input_bytes": 41,
+      "actual_hex": "280000",
+      "expected_hex": "280000",
+      "elapsed_s": 0.00176
+    },
+    {
+      "id": "seed_422",
+      "passed": true,
+      "input_bytes": 37,
+      "actual_hex": "240000",
+      "expected_hex": "240000",
+      "elapsed_s": 0.00162
+    },
+    {
+      "id": "seed_423",
+      "passed": true,
+      "input_bytes": 142,
+      "actual_hex": "8d0000",
+      "expected_hex": "8d0000",
+      "elapsed_s": 0.00295
+    },
+    {
+      "id": "seed_424",
+      "passed": true,
+      "input_bytes": 103,
+      "actual_hex": "660000",
+      "expected_hex": "660000",
+      "elapsed_s": 0.00225
+    },
+    {
+      "id": "seed_425",
+      "passed": true,
+      "input_bytes": 19,
+      "actual_hex": "120000",
+      "expected_hex": "120000",
+      "elapsed_s": 0.00154
+    },
+    {
+      "id": "seed_426",
+      "passed": true,
+      "input_bytes": 102,
+      "actual_hex": "650000",
+      "expected_hex": "650000",
+      "elapsed_s": 0.00281
+    },
+    {
+      "id": "seed_427",
+      "passed": true,
+      "input_bytes": 43,
+      "actual_hex": "2a0000",
+      "expected_hex": "2a0000",
+      "elapsed_s": 0.00182
+    },
+    {
+      "id": "seed_428",
+      "passed": true,
+      "input_bytes": 50,
+      "actual_hex": "310000",
+      "expected_hex": "310000",
+      "elapsed_s": 0.00181
+    },
+    {
+      "id": "seed_429",
+      "passed": true,
+      "input_bytes": 56,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00186
+    },
+    {
+      "id": "seed_430",
+      "passed": true,
+      "input_bytes": 119,
+      "actual_hex": "760000",
+      "expected_hex": "760000",
+      "elapsed_s": 0.00252
+    },
+    {
+      "id": "seed_431",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00182
+    },
+    {
+      "id": "seed_432",
+      "passed": true,
+      "input_bytes": 90,
+      "actual_hex": "590000",
+      "expected_hex": "590000",
+      "elapsed_s": 0.00215
+    },
+    {
+      "id": "seed_433",
+      "passed": true,
+      "input_bytes": 49,
+      "actual_hex": "300000",
+      "expected_hex": "300000",
+      "elapsed_s": 0.00159
+    },
+    {
+      "id": "seed_434",
+      "passed": true,
+      "input_bytes": 80,
+      "actual_hex": "4f0000",
+      "expected_hex": "4f0000",
+      "elapsed_s": 0.00219
+    },
+    {
+      "id": "seed_435",
+      "passed": true,
+      "input_bytes": 135,
+      "actual_hex": "860000",
+      "expected_hex": "860000",
+      "elapsed_s": 0.00296
+    },
+    {
+      "id": "seed_436",
+      "passed": true,
+      "input_bytes": 12,
+      "actual_hex": "0b0000",
+      "expected_hex": "0b0000",
+      "elapsed_s": 0.00147
+    },
+    {
+      "id": "seed_437",
+      "passed": true,
+      "input_bytes": 104,
+      "actual_hex": "670000",
+      "expected_hex": "670000",
+      "elapsed_s": 0.00223
+    },
+    {
+      "id": "seed_438",
+      "passed": true,
+      "input_bytes": 68,
+      "actual_hex": "430000",
+      "expected_hex": "430000",
+      "elapsed_s": 0.00208
+    },
+    {
+      "id": "seed_439",
+      "passed": true,
+      "input_bytes": 130,
+      "actual_hex": "810000",
+      "expected_hex": "810000",
+      "elapsed_s": 0.00282
+    },
+    {
+      "id": "seed_440",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00191
+    },
+    {
+      "id": "seed_441",
+      "passed": true,
+      "input_bytes": 80,
+      "actual_hex": "4f0000",
+      "expected_hex": "4f0000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_442",
+      "passed": true,
+      "input_bytes": 76,
+      "actual_hex": "4b0000",
+      "expected_hex": "4b0000",
+      "elapsed_s": 0.00209
+    },
+    {
+      "id": "seed_443",
+      "passed": true,
+      "input_bytes": 101,
+      "actual_hex": "640000",
+      "expected_hex": "640000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_444",
+      "passed": true,
+      "input_bytes": 147,
+      "actual_hex": "920000",
+      "expected_hex": "920000",
+      "elapsed_s": 0.00354
+    },
+    {
+      "id": "seed_445",
+      "passed": true,
+      "input_bytes": 27,
+      "actual_hex": "1a0000",
+      "expected_hex": "1a0000",
+      "elapsed_s": 0.00156
+    },
+    {
+      "id": "seed_446",
+      "passed": true,
+      "input_bytes": 29,
+      "actual_hex": "1c0000",
+      "expected_hex": "1c0000",
+      "elapsed_s": 0.00147
+    },
+    {
+      "id": "seed_447",
+      "passed": true,
+      "input_bytes": 88,
+      "actual_hex": "570000",
+      "expected_hex": "570000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_448",
+      "passed": true,
+      "input_bytes": 46,
+      "actual_hex": "2d0000",
+      "expected_hex": "2d0000",
+      "elapsed_s": 0.00158
+    },
+    {
+      "id": "seed_449",
+      "passed": true,
+      "input_bytes": 129,
+      "actual_hex": "800000",
+      "expected_hex": "800000",
+      "elapsed_s": 0.00286
+    },
+    {
+      "id": "seed_450",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.00267
+    },
+    {
+      "id": "seed_451",
+      "passed": true,
+      "input_bytes": 110,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0025
+    },
+    {
+      "id": "seed_452",
+      "passed": true,
+      "input_bytes": 50,
+      "actual_hex": "310000",
+      "expected_hex": "310000",
+      "elapsed_s": 0.00169
+    },
+    {
+      "id": "seed_453",
+      "passed": true,
+      "input_bytes": 15,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.00149
+    },
+    {
+      "id": "seed_454",
+      "passed": true,
+      "input_bytes": 55,
+      "actual_hex": "360000",
+      "expected_hex": "360000",
+      "elapsed_s": 0.00201
+    },
+    {
+      "id": "seed_455",
+      "passed": true,
+      "input_bytes": 30,
+      "actual_hex": "1d0000",
+      "expected_hex": "1d0000",
+      "elapsed_s": 0.00145
+    },
+    {
+      "id": "seed_456",
+      "passed": true,
+      "input_bytes": 79,
+      "actual_hex": "4e0000",
+      "expected_hex": "4e0000",
+      "elapsed_s": 0.00185
+    },
+    {
+      "id": "seed_457",
+      "passed": true,
+      "input_bytes": 105,
+      "actual_hex": "680000",
+      "expected_hex": "680000",
+      "elapsed_s": 0.00236
+    },
+    {
+      "id": "seed_458",
+      "passed": true,
+      "input_bytes": 17,
+      "actual_hex": "100000",
+      "expected_hex": "100000",
+      "elapsed_s": 0.00137
+    },
+    {
+      "id": "seed_459",
+      "passed": true,
+      "input_bytes": 20,
+      "actual_hex": "130000",
+      "expected_hex": "130000",
+      "elapsed_s": 0.00158
+    },
+    {
+      "id": "seed_460",
+      "passed": true,
+      "input_bytes": 60,
+      "actual_hex": "3b0000",
+      "expected_hex": "3b0000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_461",
+      "passed": true,
+      "input_bytes": 22,
+      "actual_hex": "150000",
+      "expected_hex": "150000",
+      "elapsed_s": 0.00155
+    },
+    {
+      "id": "seed_462",
+      "passed": true,
+      "input_bytes": 68,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.0023
+    },
+    {
+      "id": "seed_463",
+      "passed": true,
+      "input_bytes": 63,
+      "actual_hex": "3e0000",
+      "expected_hex": "3e0000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_464",
+      "passed": true,
+      "input_bytes": 136,
+      "actual_hex": "870000",
+      "expected_hex": "870000",
+      "elapsed_s": 0.00306
+    },
+    {
+      "id": "seed_465",
+      "passed": true,
+      "input_bytes": 138,
+      "actual_hex": "890000",
+      "expected_hex": "890000",
+      "elapsed_s": 0.0028
+    },
+    {
+      "id": "seed_466",
+      "passed": true,
+      "input_bytes": 13,
+      "actual_hex": "0c0000",
+      "expected_hex": "0c0000",
+      "elapsed_s": 0.00142
+    },
+    {
+      "id": "seed_467",
+      "passed": true,
+      "input_bytes": 155,
+      "actual_hex": "9a0000",
+      "expected_hex": "9a0000",
+      "elapsed_s": 0.00337
+    },
+    {
+      "id": "seed_468",
+      "passed": true,
+      "input_bytes": 109,
+      "actual_hex": "6c0000",
+      "expected_hex": "6c0000",
+      "elapsed_s": 0.00232
+    },
+    {
+      "id": "seed_469",
+      "passed": true,
+      "input_bytes": 107,
+      "actual_hex": "6a0000",
+      "expected_hex": "6a0000",
+      "elapsed_s": 0.00255
+    },
+    {
+      "id": "seed_470",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.0029
+    },
+    {
+      "id": "seed_471",
+      "passed": true,
+      "input_bytes": 133,
+      "actual_hex": "840000",
+      "expected_hex": "840000",
+      "elapsed_s": 0.00317
+    },
+    {
+      "id": "seed_472",
+      "passed": true,
+      "input_bytes": 113,
+      "actual_hex": "700000",
+      "expected_hex": "700000",
+      "elapsed_s": 0.00276
+    },
+    {
+      "id": "seed_473",
+      "passed": true,
+      "input_bytes": 129,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00271
+    },
+    {
+      "id": "seed_474",
+      "passed": true,
+      "input_bytes": 65,
+      "actual_hex": "400000",
+      "expected_hex": "400000",
+      "elapsed_s": 0.00218
+    },
+    {
+      "id": "seed_475",
+      "passed": true,
+      "input_bytes": 61,
+      "actual_hex": "3c0000",
+      "expected_hex": "3c0000",
+      "elapsed_s": 0.00179
+    },
+    {
+      "id": "seed_476",
+      "passed": true,
+      "input_bytes": 15,
+      "actual_hex": "0e0000",
+      "expected_hex": "0e0000",
+      "elapsed_s": 0.0016
+    },
+    {
+      "id": "seed_477",
+      "passed": true,
+      "input_bytes": 134,
+      "actual_hex": "850000",
+      "expected_hex": "850000",
+      "elapsed_s": 0.0028
+    },
+    {
+      "id": "seed_478",
+      "passed": true,
+      "input_bytes": 79,
+      "actual_hex": "4e0000",
+      "expected_hex": "4e0000",
+      "elapsed_s": 0.00212
+    },
+    {
+      "id": "seed_479",
+      "passed": true,
+      "input_bytes": 86,
+      "actual_hex": "550000",
+      "expected_hex": "550000",
+      "elapsed_s": 0.00217
+    },
+    {
+      "id": "seed_480",
+      "passed": true,
+      "input_bytes": 74,
+      "actual_hex": "490000",
+      "expected_hex": "490000",
+      "elapsed_s": 0.00233
+    },
+    {
+      "id": "seed_481",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "480000",
+      "expected_hex": "480000",
+      "elapsed_s": 0.00207
+    },
+    {
+      "id": "seed_482",
+      "passed": true,
+      "input_bytes": 97,
+      "actual_hex": "600000",
+      "expected_hex": "600000",
+      "elapsed_s": 0.00345
+    },
+    {
+      "id": "seed_483",
+      "passed": true,
+      "input_bytes": 126,
+      "actual_hex": "7d0000",
+      "expected_hex": "7d0000",
+      "elapsed_s": 0.00301
+    },
+    {
+      "id": "seed_484",
+      "passed": true,
+      "input_bytes": 126,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00294
+    },
+    {
+      "id": "seed_485",
+      "passed": true,
+      "input_bytes": 131,
+      "actual_hex": "820000",
+      "expected_hex": "820000",
+      "elapsed_s": 0.00311
+    },
+    {
+      "id": "seed_486",
+      "passed": true,
+      "input_bytes": 67,
+      "actual_hex": "420000",
+      "expected_hex": "420000",
+      "elapsed_s": 0.0025
+    },
+    {
+      "id": "seed_487",
+      "passed": true,
+      "input_bytes": 38,
+      "actual_hex": "250000",
+      "expected_hex": "250000",
+      "elapsed_s": 0.00202
+    },
+    {
+      "id": "seed_488",
+      "passed": true,
+      "input_bytes": 26,
+      "actual_hex": "190000",
+      "expected_hex": "190000",
+      "elapsed_s": 0.00153
+    },
+    {
+      "id": "seed_489",
+      "passed": true,
+      "input_bytes": 73,
+      "actual_hex": "480000",
+      "expected_hex": "480000",
+      "elapsed_s": 0.00202
+    },
+    {
+      "id": "seed_490",
+      "passed": true,
+      "input_bytes": 60,
+      "actual_hex": "3b0000",
+      "expected_hex": "3b0000",
+      "elapsed_s": 0.00184
+    },
+    {
+      "id": "seed_491",
+      "passed": true,
+      "input_bytes": 59,
+      "actual_hex": "3a0000",
+      "expected_hex": "3a0000",
+      "elapsed_s": 0.00177
+    },
+    {
+      "id": "seed_492",
+      "passed": true,
+      "input_bytes": 10,
+      "actual_hex": "090000",
+      "expected_hex": "090000",
+      "elapsed_s": 0.00126
+    },
+    {
+      "id": "seed_493",
+      "passed": true,
+      "input_bytes": 126,
+      "actual_hex": "7d0000",
+      "expected_hex": "7d0000",
+      "elapsed_s": 0.0032
+    },
+    {
+      "id": "seed_494",
+      "passed": true,
+      "input_bytes": 127,
+      "actual_hex": "7e0000",
+      "expected_hex": "7e0000",
+      "elapsed_s": 0.00297
+    },
+    {
+      "id": "seed_495",
+      "passed": true,
+      "input_bytes": 113,
+      "actual_hex": "000002",
+      "expected_hex": "000002",
+      "elapsed_s": 0.00234
+    },
+    {
+      "id": "seed_496",
+      "passed": true,
+      "input_bytes": 46,
+      "actual_hex": "2d0000",
+      "expected_hex": "2d0000",
+      "elapsed_s": 0.00172
+    },
+    {
+      "id": "seed_497",
+      "passed": true,
+      "input_bytes": 136,
+      "actual_hex": "870000",
+      "expected_hex": "870000",
+      "elapsed_s": 0.00324
+    },
+    {
+      "id": "seed_498",
+      "passed": true,
+      "input_bytes": 107,
+      "actual_hex": "6a0000",
+      "expected_hex": "6a0000",
+      "elapsed_s": 0.00272
+    },
+    {
+      "id": "seed_499",
+      "passed": true,
+      "input_bytes": 97,
+      "actual_hex": "600000",
+      "expected_hex": "600000",
+      "elapsed_s": 0.00246
+    }
+  ],
+  "compiler_bracket_queries": [
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 14,
+      "opening_source_byte_offset": 704,
+      "target_command_index": 34,
+      "target_source_byte_offset": 724,
+      "distance": 20,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 37,
+      "opening_source_byte_offset": 727,
+      "target_command_index": 39,
+      "target_source_byte_offset": 729,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 49,
+      "opening_source_byte_offset": 740,
+      "target_command_index": 63,
+      "target_source_byte_offset": 754,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 68,
+      "opening_source_byte_offset": 759,
+      "target_command_index": 70,
+      "target_source_byte_offset": 761,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 130,
+      "opening_source_byte_offset": 1030,
+      "target_command_index": 132,
+      "target_source_byte_offset": 1032,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 124,
+      "opening_source_byte_offset": 1024,
+      "target_command_index": 134,
+      "target_source_byte_offset": 1034,
+      "distance": 10,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 146,
+      "opening_source_byte_offset": 1133,
+      "target_command_index": 148,
+      "target_source_byte_offset": 1135,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 168,
+      "opening_source_byte_offset": 1155,
+      "target_command_index": 170,
+      "target_source_byte_offset": 1157,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 201,
+      "opening_source_byte_offset": 1193,
+      "target_command_index": 203,
+      "target_source_byte_offset": 1195,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 213,
+      "opening_source_byte_offset": 1210,
+      "target_command_index": 227,
+      "target_source_byte_offset": 1224,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 233,
+      "opening_source_byte_offset": 1230,
+      "target_command_index": 235,
+      "target_source_byte_offset": 1232,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 136,
+      "opening_source_byte_offset": 1113,
+      "target_command_index": 241,
+      "target_source_byte_offset": 1246,
+      "distance": 105,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 249,
+      "opening_source_byte_offset": 1323,
+      "target_command_index": 251,
+      "target_source_byte_offset": 1325,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 253,
+      "opening_source_byte_offset": 1327,
+      "target_command_index": 255,
+      "target_source_byte_offset": 1329,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 248,
+      "opening_source_byte_offset": 1322,
+      "target_command_index": 257,
+      "target_source_byte_offset": 1331,
+      "distance": 9,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 267,
+      "opening_source_byte_offset": 1429,
+      "target_command_index": 269,
+      "target_source_byte_offset": 1431,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 279,
+      "opening_source_byte_offset": 1446,
+      "target_command_index": 293,
+      "target_source_byte_offset": 1460,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 297,
+      "opening_source_byte_offset": 1464,
+      "target_command_index": 299,
+      "target_source_byte_offset": 1466,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 331,
+      "opening_source_byte_offset": 1503,
+      "target_command_index": 333,
+      "target_source_byte_offset": 1505,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 343,
+      "opening_source_byte_offset": 1520,
+      "target_command_index": 357,
+      "target_source_byte_offset": 1534,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 363,
+      "opening_source_byte_offset": 1540,
+      "target_command_index": 365,
+      "target_source_byte_offset": 1542,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 259,
+      "opening_source_byte_offset": 1411,
+      "target_command_index": 369,
+      "target_source_byte_offset": 1554,
+      "distance": 110,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 77,
+      "opening_source_byte_offset": 838,
+      "target_command_index": 374,
+      "target_source_byte_offset": 1608,
+      "distance": 297,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 391,
+      "opening_source_byte_offset": 1671,
+      "target_command_index": 411,
+      "target_source_byte_offset": 1691,
+      "distance": 20,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 414,
+      "opening_source_byte_offset": 1694,
+      "target_command_index": 416,
+      "target_source_byte_offset": 1696,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 422,
+      "opening_source_byte_offset": 1703,
+      "target_command_index": 424,
+      "target_source_byte_offset": 1705,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 434,
+      "opening_source_byte_offset": 1716,
+      "target_command_index": 448,
+      "target_source_byte_offset": 1730,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 456,
+      "opening_source_byte_offset": 1738,
+      "target_command_index": 458,
+      "target_source_byte_offset": 1740,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 480,
+      "opening_source_byte_offset": 1763,
+      "target_command_index": 494,
+      "target_source_byte_offset": 1777,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler",
+      "opening_command_index": 511,
+      "opening_source_byte_offset": 1794,
+      "target_command_index": 513,
+      "target_source_byte_offset": 1796,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 14,
+      "opening_source_byte_offset": 868,
+      "target_command_index": 34,
+      "target_source_byte_offset": 888,
+      "distance": 20,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 37,
+      "opening_source_byte_offset": 891,
+      "target_command_index": 39,
+      "target_source_byte_offset": 893,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 49,
+      "opening_source_byte_offset": 904,
+      "target_command_index": 63,
+      "target_source_byte_offset": 918,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 68,
+      "opening_source_byte_offset": 923,
+      "target_command_index": 70,
+      "target_source_byte_offset": 925,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 130,
+      "opening_source_byte_offset": 1163,
+      "target_command_index": 132,
+      "target_source_byte_offset": 1165,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 124,
+      "opening_source_byte_offset": 1157,
+      "target_command_index": 134,
+      "target_source_byte_offset": 1167,
+      "distance": 10,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 146,
+      "opening_source_byte_offset": 1239,
+      "target_command_index": 148,
+      "target_source_byte_offset": 1241,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 168,
+      "opening_source_byte_offset": 1261,
+      "target_command_index": 170,
+      "target_source_byte_offset": 1263,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 136,
+      "opening_source_byte_offset": 1219,
+      "target_command_index": 175,
+      "target_source_byte_offset": 1276,
+      "distance": 39,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 183,
+      "opening_source_byte_offset": 1354,
+      "target_command_index": 185,
+      "target_source_byte_offset": 1356,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 187,
+      "opening_source_byte_offset": 1358,
+      "target_command_index": 189,
+      "target_source_byte_offset": 1360,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 182,
+      "opening_source_byte_offset": 1353,
+      "target_command_index": 191,
+      "target_source_byte_offset": 1362,
+      "distance": 9,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 201,
+      "opening_source_byte_offset": 1435,
+      "target_command_index": 203,
+      "target_source_byte_offset": 1437,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 210,
+      "opening_source_byte_offset": 1449,
+      "target_command_index": 230,
+      "target_source_byte_offset": 1469,
+      "distance": 20,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 234,
+      "opening_source_byte_offset": 1473,
+      "target_command_index": 236,
+      "target_source_byte_offset": 1475,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 193,
+      "opening_source_byte_offset": 1417,
+      "target_command_index": 240,
+      "target_source_byte_offset": 1487,
+      "distance": 47,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 77,
+      "opening_source_byte_offset": 1002,
+      "target_command_index": 245,
+      "target_source_byte_offset": 1529,
+      "distance": 168,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 280,
+      "opening_source_byte_offset": 1620,
+      "target_command_index": 282,
+      "target_source_byte_offset": 1622,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 292,
+      "opening_source_byte_offset": 1633,
+      "target_command_index": 306,
+      "target_source_byte_offset": 1647,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 312,
+      "opening_source_byte_offset": 1653,
+      "target_command_index": 314,
+      "target_source_byte_offset": 1655,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 328,
+      "opening_source_byte_offset": 1727,
+      "target_command_index": 348,
+      "target_source_byte_offset": 1747,
+      "distance": 20,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 351,
+      "opening_source_byte_offset": 1750,
+      "target_command_index": 353,
+      "target_source_byte_offset": 1752,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 359,
+      "opening_source_byte_offset": 1759,
+      "target_command_index": 361,
+      "target_source_byte_offset": 1761,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 371,
+      "opening_source_byte_offset": 1772,
+      "target_command_index": 385,
+      "target_source_byte_offset": 1786,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 393,
+      "opening_source_byte_offset": 1794,
+      "target_command_index": 395,
+      "target_source_byte_offset": 1796,
+      "distance": 2,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 417,
+      "opening_source_byte_offset": 1819,
+      "target_command_index": 431,
+      "target_source_byte_offset": 1833,
+      "distance": 14,
+      "passed": true
+    },
+    {
+      "source": "mini_compiler_compact",
+      "opening_command_index": 448,
+      "opening_source_byte_offset": 1850,
+      "target_command_index": 450,
+      "target_source_byte_offset": 1852,
+      "distance": 2,
+      "passed": true
+    }
+  ],
+  "legacy": [
+    {
+      "name": "original_tiny_app_a",
+      "passed": true,
+      "bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3",
+      "seconds": 2.4427
+    },
+    {
+      "name": "original_tiny_app_b",
+      "passed": true,
+      "bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624",
+      "seconds": 2.473
+    },
+    {
+      "name": "original_held_out",
+      "passed": true,
+      "bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8",
+      "seconds": 2.6042
+    },
+    {
+      "name": "compact_tiny_app_a",
+      "passed": true,
+      "bytes": 140,
+      "sha256": "2a252722e1679156d109c8994f0fd0e9eb2f211a68e1f444c5a631ac9529601f",
+      "seconds": 1.7077
+    },
+    {
+      "name": "compact_tiny_app_b",
+      "passed": true,
+      "bytes": 144,
+      "sha256": "36af586b0929f05ef8bff362928d9e61ad494fe89a72eb2f2a88e902d845fbe6",
+      "seconds": 1.7456
+    },
+    {
+      "name": "compact_held_out",
+      "passed": true,
+      "bytes": 148,
+      "sha256": "76ae6e5ba3a154be3af547a0b8fc0d84b032188d86009f56da98ebe95e5fc12a",
+      "seconds": 1.7839
+    }
+  ],
+  "source_audits": [
+    {
+      "path": "examples/held_out.bf",
+      "passed": true,
+      "commands": 35
+    },
+    {
+      "path": "examples/tiny_app_a.bf",
+      "passed": true,
+      "commands": 33
+    },
+    {
+      "path": "examples/tiny_app_b.bf",
+      "passed": true,
+      "commands": 34
+    },
+    {
+      "path": "src/annotated_source_normalizer.bf",
+      "passed": true,
+      "commands": 872
+    },
+    {
+      "path": "src/annotated_source_stream_gate.bf",
+      "passed": true,
+      "commands": 7278
+    },
+    {
+      "path": "src/bf_in_bf.bf",
+      "passed": true,
+      "commands": 103
+    },
+    {
+      "path": "src/bf_in_bf_dynamic_bidirectional_clear.bf",
+      "passed": true,
+      "commands": 1265
+    },
+    {
+      "path": "src/bf_in_bf_dynamic_clear_loop.bf",
+      "passed": true,
+      "commands": 1155
+    },
+    {
+      "path": "src/bf_in_bf_dynamic_linear.bf",
+      "passed": true,
+      "commands": 801
+    },
+    {
+      "path": "src/bf_in_bf_reference.bf",
+      "passed": true,
+      "commands": 423
+    },
+    {
+      "path": "src/bf_in_bf_six_cell.bf",
+      "passed": true,
+      "commands": 8907
+    },
+    {
+      "path": "src/bf_in_bf_six_cell_fuel.bf",
+      "passed": true,
+      "commands": 3839140
+    },
+    {
+      "path": "src/bounded_arithmetic_fuel_executor.bf",
+      "passed": true,
+      "commands": 6356
+    },
+    {
+      "path": "src/bracket_depth_gate.bf",
+      "passed": true,
+      "commands": 342
+    },
+    {
+      "path": "src/bracket_stream_gate.bf",
+      "passed": true,
+      "commands": 554
+    },
+    {
+      "path": "src/chunked_atomic_compiler_handoff.bf",
+      "passed": true,
+      "commands": 1529
+    },
+    {
+      "path": "src/general_forward_bracket_probe.bf",
+      "passed": true,
+      "commands": 863
+    },
+    {
+      "path": "src/mini_compiler.bf",
+      "passed": true,
+      "commands": 515
+    },
+    {
+      "path": "src/mini_compiler_compact.bf",
+      "passed": true,
+      "commands": 452
+    },
+    {
+      "path": "src/normalized_source_atomic_gate.bf",
+      "passed": true,
+      "commands": 1524
+    },
+    {
+      "path": "src/normalized_source_stream_gate.bf",
+      "passed": true,
+      "commands": 1609
+    },
+    {
+      "path": "src/printable_subset_gate.bf",
+      "passed": true,
+      "commands": 831
+    },
+    {
+      "path": "src/raw_subset_gate.bf",
+      "passed": true,
+      "commands": 606
+    },
+    {
+      "path": "src/six_cell_static_safety_gate.bf",
+      "passed": true,
+      "commands": 6352
+    },
+    {
+      "path": "src/stage_a_atomic_printable_gate.bf",
+      "passed": true,
+      "commands": 1441
+    },
+    {
+      "path": "src/stage_a_atomic_subset_gate.bf",
+      "passed": true,
+      "commands": 1033
+    },
+    {
+      "path": "tests/compiler_request_framer.bf",
+      "passed": true,
+      "commands": 99
+    },
+    {
+      "path": "tests/nested_arithmetic_driver.bf",
+      "passed": true,
+      "commands": 1748
+    },
+    {
+      "path": "tests/nested_reference_transport.bf",
+      "passed": true,
+      "commands": 59
+    },
+    {
+      "path": "tests/oracle.bf",
+      "passed": true,
+      "commands": 108
+    }
+  ],
+  "limitations": [
+    "Diagnostic terminator zero does not prove source length or physical stream closure",
+    "Input is required to be a completely preflighted normalized suffix",
+    "Forward matching for opening bracket only, not backward program counter dispatch",
+    "Relative offset represented as checked u16 and nesting as checked u8 in this bounded component",
+    "No output certificate for source offset errors, guest fuel, tape traps, nested self-hosting or Android"
+  ]
+}

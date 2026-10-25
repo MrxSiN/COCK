@@ -1,0 +1,28 @@
+{
+  "classification": "frozen before new BF source drafting and diagnostic execution",
+  "protocol": "u8 source_length + exact raw source bytes + A5; actual byte-count and closure externally checked",
+  "expected_output": "one provisional decision byte 01=admit, 00=reject",
+  "cases": [
+    {"name":"zero_period_reject", "input_hex":"012ea5", "expected_hex":"00"},
+    {"name":"one_addition_reject", "input_hex":"022b2ea5", "expected_hex":"00"},
+    {"name":"ascii_space_direct", "input_hex":"02202ea5", "expected_hex":"00"},
+    {"name":"ascii_space_using_minus", "source_arithmetic":{"minus":224}, "expected_hex":"01"},
+    {"name":"ascii_space_using_plus", "source_arithmetic":{"plus":32}, "expected_hex":"01"},
+    {"name":"below_space", "source_arithmetic":{"plus":31}, "expected_hex":"00"},
+    {"name":"ascii_tilde", "source_arithmetic":{"plus":126}, "expected_hex":"01"},
+    {"name":"above_tilde", "source_arithmetic":{"plus":127}, "expected_hex":"00"},
+    {"name":"above_signed_boundary", "source_arithmetic":{"plus":128}, "expected_hex":"00"},
+    {"name":"wrapped_ff", "source_arithmetic":{"plus":255}, "expected_hex":"00"},
+    {"name":"wrapped_zero", "source_arithmetic":{"plus":128,"minus":128}, "expected_hex":"00"},
+    {"name":"valid_mixed", "source_arithmetic":{"plus":50,"minus":7}, "expected_hex":"01"},
+    {"name":"invalid_mixed", "source_arithmetic":{"plus":20,"minus":7}, "expected_hex":"00"},
+    {"name":"missing_output", "input_hex":"012ba5", "expected_hex":"00"},
+    {"name":"duplicate_output", "input_hex":"022e2ea5", "expected_hex":"00"},
+    {"name":"suffix_after_output", "input_hex":"032b2e2da5", "expected_hex":"00"},
+    {"name":"invalid_embedded_nul", "input_hex":"03002b2ea5", "expected_hex":"00"},
+    {"name":"unsupported_loop", "input_hex":"035b5d2ea5", "expected_hex":"00"},
+    {"name":"no_trailer", "input_hex":"022b2e", "expected_hex":"00"},
+    {"name":"wrong_trailer", "input_hex":"022b2e00", "expected_hex":"00"},
+    {"name":"trailing_forged_data", "input_hex":"022b2ea578", "expected_hex":"00", "requires_host_closure_rejection":true}
+  ]
+}

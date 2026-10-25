@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-24",
+  "source_file": "src/annotated_source_normalizer.bf",
+  "source_sha256": "0246930a44280f9fde0fe91100a17dd8eefcffe333cd6b6a82e7d933c4eeaec1",
+  "source_bytes": 2053,
+  "source_commands": 872,
+  "counts": {
+    "fixed": 8,
+    "single_byte": 256,
+    "random_admitted": 300,
+    "repo": 11,
+    "compiler_regressions": 6,
+    "rejects": 3
+  },
+  "failures": [],
+  "diagnostic_root": "/usr/local/bin/cock-bf-diagnostic",
+  "recorded_elapsed_seconds": 3.788,
+  "android": "NOT RUN",
+  "trusted_host_closure": "NOT RUN",
+  "repository_bf_gate_and_projection_passes": 11,
+  "repository_bf_gate_and_projection_total": 11,
+  "additional_failures": [],
+  "docker_android": {
+    "docker": "NOT INSTALLED",
+    "podman": "NOT INSTALLED",
+    "kvm": "UNAVAILABLE",
+    "github_dns": "BLOCKED",
+    "adb": "NOT INSTALLED",
+    "android": "NOT RUN",
+    "upstream_default_image_abi": "x86_64; not COCK arm64-v8a"
+  },
+  "stage_a_accepted": false
+}

@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-24",
+  "classification": "diagnostic component only; not Stage A acceptance or independent root BF bootstrap",
+  "host": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "diagnostic_evaluator": "/usr/local/bin/cock-bf-diagnostic",
+  "diagnostic_evaluator_sha256": "062b8c3784983c353e8ab9c5f44adbd2fefd9c2e9401f69c5895f9555b5d3b78",
+  "test_batches": [
+    {
+      "component": "src/bracket_depth_gate.bf",
+      "first_pass": {
+        "cases": 420,
+        "failures": 24,
+        "root_cause": "later legal close cleared older sticky rejection"
+      },
+      "after_repair": {
+        "cases": 420,
+        "passed": 420,
+        "failed": 0
+      },
+      "source_sha256": "8b57f6ae831185b41f5e2705a2e8396071b37a77a7f5a698d4873ad5151a9456"
+    },
+    {
+      "component": "src/bracket_stream_gate.bf",
+      "cases": 721,
+      "passed": 721,
+      "failed": 0,
+      "includes": {
+        "frozen_fixtures": 8,
+        "seeded_random": 700,
+        "mini_compiler_515": 1,
+        "depth_boundaries": 8,
+        "transport_negative": 4
+      },
+      "source_sha256": "d0bd637880b616311be5e9760376a9403aa9f74626ce63fcf7210ff53cc80d9e"
+    }
+  ],
+  "source_audit": {
+    "total": 10,
+    "passed": 10,
+    "files": [
+      {
+        "source": "examples/held_out.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 205,
+        "sha256": "242d5375574e6b2c2890183fe66313e1d35eb4d46a147535a037d4a8048ad46e"
+      },
+      {
+        "source": "examples/tiny_app_a.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 187,
+        "sha256": "3bea2e1b5e1a8c7e1430b1ad83f6a7b08dad1d14525ce6008618479310bbf651"
+      },
+      {
+        "source": "examples/tiny_app_b.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 194,
+        "sha256": "49b0436e6ff4eb1b88dd8bd6f91abf9a5b79121a1dfcd65721bc123b0fb5d7df"
+      },
+      {
+        "source": "src/bf_in_bf.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 1031,
+        "sha256": "6f04241ea4d0fd7b0d8217472b39a974c76e361c294cc2502070106663aba2af"
+      },
+      {
+        "source": "src/bracket_depth_gate.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 2076,
+        "sha256": "8b57f6ae831185b41f5e2705a2e8396071b37a77a7f5a698d4873ad5151a9456"
+      },
+      {
+        "source": "src/bracket_stream_gate.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 2539,
+        "sha256": "d0bd637880b616311be5e9760376a9403aa9f74626ce63fcf7210ff53cc80d9e"
+      },
+      {
+        "source": "src/mini_compiler.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 1845,
+        "sha256": "3edbaa35c420eb14ba2421e74520362ac03894ec118c5fe9d616f08809d5efe7"
+      },
+      {
+        "source": "src/printable_subset_gate.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 3391,
+        "sha256": "63fe76d9c0eba41bb3d5c5079c356018a78ace552315edb7fc0d7ab15f013e5b"
+      },
+      {
+        "source": "src/raw_subset_gate.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 2497,
+        "sha256": "f80e2be6458473a7064148651a14d50dd94b3644185c89ae0a9dc5fe8f1d83cd"
+      },
+      {
+        "source": "tests/oracle.bf",
+        "valid": true,
+        "reason": null,
+        "bytes": 995,
+        "sha256": "4a0f58cf2d6ea4fdf19ef47e313b24c477cc44abff3795e05559012db0b6cb6b"
+      }
+    ]
+  },
+  "existing_raw_candidates_rechecked": {
+    "tiny_app_a": {
+      "commands": 33,
+      "identical_to_previous": true,
+      "raw_bytes": 264,
+      "sha256": "04008592e9c873d3e8e9eaebeaed4000c55c85e78ff1bce5d2006c03b43365d3"
+    },
+    "tiny_app_b": {
+      "commands": 34,
+      "identical_to_previous": true,
+      "raw_bytes": 272,
+      "sha256": "860d6f0bd7df32d0e93fc50268c25180ef2694b1df3f32c68fdbd23cb2d31624"
+    },
+    "held_out": {
+      "commands": 35,
+      "identical_to_previous": true,
+      "raw_bytes": 280,
+      "sha256": "bbe379ca1beca74c941aebf057be95facc470a46b06f72933e05f9488c2de9c8"
+    }
+  },
+  "not_run": [
+    "external independent root evaluator and independently trusted input closure",
+    "full Part 1 annotated source lexer and original error offsets",
+    "validated BFIO or BHIO production input transport",
+    "BF in BF interpreter running actual compiler",
+    "bounded nested BF in BF interpreter self interpretation",
+    "Android ELF bridge APK and device"
+  ],
+  "important_limitations": [
+    "bracket gates expect separately prevalidated lexically normalized eight command source bytes",
+    "single frame gate limit 255 source bytes per invocation",
+    "stream gate has record size limit 255 but no fixed total source size; nesting depth over 255 is rejected",
+    "stream gate uses custom development-only diagnostic records rather than COCK-FRAME-v1",
+    "raw BF cannot authenticate EOF filled extra zero bytes; trustworthy host byte count and closure are absent",
+    "provisional gate Boolean is never production publication authority"
+  ]
+}

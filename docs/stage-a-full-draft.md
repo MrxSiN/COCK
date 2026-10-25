@@ -1,5 +1,9 @@
 # Full Stage A design draft
 
+Execution continuation: [the uploaded-component run and BF identity repair](upload-executable-run-evidence.md) supplies new bounded Linux diagnostics and tests of the nested serializer. Those results do not close the missing Android implementation or whole-stage draft/acceptance gates below.
+
+Subsequent emulator execution and the new BF-native loader probe are recorded in [the retry evidence](emulator-retry-evidence.md). The fixed ET_DYN/no-op entry test passes BF/structural checks and debug packaging; Android installation failed during framework startup. It is not the source-derived compiler/runtime listed as missing below.
+
 This package covers **A01–A14, including A09a**, rather than only the next nested-input slice. It fixes the proposed product boundary, every required executable responsibility, the input and output contracts, Android/native ownership, debug packaging, tests, measurements and final acceptance criteria. It follows the attached master prompt as an engineering specification; it does not treat unchecked boxes in that document as completed work.
 
 **Design draft: complete. Whole Stage A executable draft: INCOMPLETE. Stage A acceptance: BLOCKED.** Several required BF implementations do not exist, identical-kernel compiler execution has timed out, and the installed emulators did not provide a stable Android target. The master prompt's Part 23 draft gate requires complete actual BF implementations, not an inventory or placeholder. Accordingly this package does not mark A05 complete and does not open the whole-Stage-A test gate. The already completed bounded-source checkpoints remain separately restorable.
@@ -34,12 +38,15 @@ Names below ending in **NOT CREATED** are proposed deliverable paths, not files 
 | `src/source_pc_dynamic_tape.bf` | BF interpreter; normalized counted source, fuel and logical capacity; executes real compiler | Present, tested as component; mandatory nested execution BLOCKED |
 | `src/mini_compiler.bf` | Preserved original raw AArch64 arithmetic producer | Present, component tested; not Android ELF/ABI |
 | `src/mini_compiler_compact.bf` | Preserved compact raw arithmetic producer | Present, component tested; not the automatically selected default |
+| `src/experimental_aarch64_elf_compiler.bf`, `src/experimental_aarch64_exec_elf.bf` | Uploaded Linux ET_EXEC source compiler and raw-function wrapper | Present, reproduced directly and as COCK guests; not Android ET_DYN or ABI implementations |
+| `tests/duplicate_counted_source.bf` | Guarded counted-buffer source duplication for the diagnostic two-pass compiler | Present, bounded root/COCK guest tests pass; source admission and physical closure remain separate |
+| `tests/android_native_entry_probe.bf` | No-input BF generator for a fixed Android ET_DYN/NativeActivity return-only feasibility test | Present; structural/direct/COCK guest checks pass; device install failed; not a compiler or native guest ABI implementation |
 | `src/stage_a_source.bf` | Integrated exact-source admission, annotation/bracket precedence, original-offset projection and printable subset; input/output in the source contract | **NOT CREATED**; existing separate gates do not replace it |
 | `src/stage_a_native.bf` | Checked context/result entry, source-derived arithmetic, logging and OS callback code; instruction/relocation records owned by BF | **NOT CREATED** |
 | `src/stage_a_elf.bf` | ELF64 layout, symbols, dynamic linking/import relocations, load permissions/alignment, checked offsets and serialized bytes | **NOT CREATED** |
 | `src/stage_a_artifact.bf` | One-artifact BFIO declaration/chunks/END/terminal status; trusted producer completion distinct from host success | **NOT CREATED** |
 | `devtools/stage_a_build.bf` | BF-side stage selection, status propagation, invocation and source identity; emits only the documented physical service requests or BF-produced streams | **NOT CREATED**; no hidden external build planner may substitute |
-| `tests/nested_request.bf` | Exact two-level diagnostic request construction for interpreter plus real compiler plus input | Present first-pass source, UNTESTED |
+| `tests/nested_request.bf` | Exact two-level diagnostic request construction for interpreter plus real compiler plus input | Present; 12/12 current serializer checks pass, not nested compiler execution |
 | `tests/wide_request.bf` | Existing counted one-level request construction | Present, component tested |
 | `tests/wide_request_from_legacy.bf` | Existing legacy fixture adapter | Present, component tested |
 | `tests/source_guard_records.bf` | Exact-byte physical source record construction | Present, component tested; does not certify host close |

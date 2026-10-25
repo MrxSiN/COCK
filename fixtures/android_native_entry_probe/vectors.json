@@ -1,0 +1,22 @@
+{
+  "kind":"Literal structure expectations for a fixed BF-native loader probe; not executable configuration",
+  "compiler_claim":false,
+  "input_bytes":0,
+  "elf_bytes":1232,
+  "elf_header_hex":"7f454c46020101000000000000000000 0300b70001000000 0000000000000000 4000000000000000 1003000000000000 00000000 400038000300400007000600",
+  "type":"ET_DYN",
+  "machine":"AArch64",
+  "program_headers":3,
+  "load":{"offset":0,"vaddr":0,"file_bytes":772,"memory_bytes":772,"flags":5,"alignment":16384},
+  "dynamic":{"offset":384,"bytes":112,"entries":7},
+  "hash":{"offset":512,"bytes":20,"buckets":1,"chains":2},
+  "dynamic_strings":{"offset":544,"bytes":43,"export_name_index":1,"soname_index":26},
+  "dynamic_symbols":{"offset":592,"bytes":48,"defined_global_function":"ANativeActivity_onCreate","function_value":768,"function_bytes":4,"function_section":1},
+  "section_strings":{"offset":640,"bytes":48},
+  "native_return":{"offset":768,"hex":"c0035fd6"},
+  "section_headers":{"offset":784,"count":7,"entry_bytes":64,"names_section_index":6},
+  "imports":[],
+  "relocations":[],
+  "android_positive_expected":"NativeActivity loads the BF library and returns from its no-op OS callback; no source-derived output or UI claim",
+  "whole_stage_a":"Still incomplete; this target test must not replace the actual compiler or context/result/logging runtime"
+}

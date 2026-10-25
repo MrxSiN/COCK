@@ -1,0 +1,42 @@
+{
+  "kind": "Literal binary tests and uploaded expected files; not executable configuration",
+  "copy_input": "u16 count exact bytes A5",
+  "copy_output": "bytes 00 identical bytes; empty on invalid guard",
+  "copy_vectors": [
+    {"name":"empty","input_hex":"0000a5","expected_hex":"00"},
+    {"name":"plus_dot","input_hex":"02002b2ea5","expected_hex":"2b2e002b2e"},
+    {"name":"binary","input_hex":"030000a5ffa5","expected_hex":"00a5ff0000a5ff"},
+    {"name":"single_zero","input_hex":"010000a5","expected_hex":"000000"},
+    {"name":"single_ff","input_hex":"0100ffa5","expected_hex":"ff00ff"},
+    {"name":"bad_guard","input_hex":"02002b2e00","expected_hex":""},
+    {"name":"missing_guard","input_hex":"01002b","expected_hex":""},
+    {"name":"truncated_payload","input_hex":"02002b","expected_hex":""}
+  ],
+  "boundary_source": {
+    "file":"fixtures/dynamic_kernel/cell_256.input.bin",
+    "offset":8,
+    "counts":[256,257],
+    "expected":"The same sealed range twice with one zero separator; never execute as an arithmetic app"
+  },
+  "physical_authority_negative": {
+    "input_hex":"01002ba558",
+    "raw_adapter_output_hex":"2b002b",
+    "overall":"NO COMMIT; extra byte after guard requires independent closure veto"
+  },
+  "sources": [
+    {"example":"examples/tiny_app_a.bf","expected_file":"tiny_app_a.elf","oracle_hex":"20","elf_bytes":272,"raw_compact_bytes":140},
+    {"example":"examples/tiny_app_b.bf","expected_file":"tiny_app_b.elf","oracle_hex":"21","elf_bytes":276,"raw_compact_bytes":144},
+    {"example":"examples/held_out.bf","expected_file":"held_out.elf","oracle_hex":"22","elf_bytes":280,"raw_compact_bytes":148},
+    {"example":"examples/heldout_mixed_ascii.bf","expected_file":"heldout_mixed_ascii.elf","oracle_hex":"21","elf_bytes":284,"raw_compact_bytes":152}
+  ],
+  "mismatched_pass_witness": {
+    "first_source":"32 plus commands then dot",
+    "second_source":"33 plus commands then dot",
+    "uploaded_observation":"Exit zero; declared ELF size 272 but actual 276",
+    "current_observation":"NOT RUN at draft time",
+    "acceptance":"Reject; use of the new buffer adapter does not make direct mismatched use safe"
+  },
+  "uploaded_claimed_tests": "158; NOT current local passes until individually reproduced",
+  "linux_execution": "Not needed to inspect headers; no native runtime claim without a completed target run",
+  "android_stage_a": "NOT COMPLETE; Linux ET_EXEC syscall exit is not Android ET_DYN NativeActivity"
+}

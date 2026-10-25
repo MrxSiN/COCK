@@ -1,0 +1,91 @@
+{
+  "kind": "Inert Stage B design policy; no implemented configuration parser or new public protocol version",
+  "design_date": "2026-10-25",
+  "design_timezone": "Asia/Kuala_Lumpur",
+  "state": {
+    "documentary_draft": "COMPLETE B01-B09",
+    "executable_draft": "INCOMPLETE",
+    "implemented": false,
+    "tested": "NOT RUN",
+    "optimized": false,
+    "integrated": false,
+    "acceptance": "BLOCKED"
+  },
+  "prerequisite": "Verified Stage A A01-A14 including A09a, full real-compiler nesting and actual Android proof; currently unmet",
+  "target": {
+    "instruction_set": "AArch64",
+    "android_abi": "arm64-v8a",
+    "min_sdk": 35,
+    "target_sdk": 35,
+    "elf_type": "ET_DYN",
+    "elf_load_alignment_bytes": 16384,
+    "native_library_compression": "stored",
+    "native_zip_alignment_bytes": 16384,
+    "extract_native_libs": false,
+    "distribution": "direct-install DEBUG-ONLY",
+    "tested_compatibility_rows": []
+  },
+  "application": {
+    "package": "org.cock.stagea.debug",
+    "activity": "android.app.NativeActivity",
+    "library": "cockstagea",
+    "os_entry": "ANativeActivity_onCreate",
+    "internal_entry": "cock_guest_run_v1",
+    "context_bytes": 40,
+    "result_bytes": 56,
+    "runtime_handle": "Nonzero registered invocation-scoped BF-generated service",
+    "main_thread_guest_execution": false,
+    "worker": "BF-generated lifetime-managed detached worker; NOT IMPLEMENTED or verified",
+    "app_specific_dex": false,
+    "external_app_specific_native_code": false,
+    "requested_permissions": []
+  },
+  "guest": {
+    "profile": "COCK",
+    "commands": "+-<>[].,",
+    "source": "Full Part 1 annotated-source grammar with original-byte offsets and complete preflight",
+    "cells": "Unsigned wrapping bytes; initially zero",
+    "initial_pointer": 0,
+    "initial_logical_cell_count": 1,
+    "growth": "Commit on successful rightward movement; configured logical budget checked before physical allocation",
+    "left_of_zero": "LEFT_BOUNDARY before movement",
+    "eof": "Write zero; consume no byte",
+    "close_bracket_nonzero_target": "First command after paired opening bracket",
+    "fuel": "Optional in runtime; explicit finite enabled value required by normal Android debug launch policy",
+    "fuel_charge": "One per executed original command before its own checks/effects; skipped commands uncharged",
+    "logical_cell_limit": "Explicit optional u64 maximum >=1; no universal small tape cap",
+    "outer_limits": "Recorded separately; never reported as guest fuel or logical-budget error"
+  },
+  "internal_design_layouts": {
+    "command_record_bytes": 32,
+    "service_table_bytes": 96,
+    "service_version": 1,
+    "abi_status": "Proposed internal binding, not a shipped or tested public service ABI",
+    "tape_backing_unit_bytes": 4096,
+    "tape_backing_unit_meaning": "Allocator unit independent of Android device page size"
+  },
+  "bridge": {
+    "input": "Sealed finite binary snapshot copied by BF into immutable ELF data",
+    "output": "Exact raw app-private file bytes plus separate BFIO status and physical completion evidence",
+    "binary_values": "All byte values including 00, A5 and FF",
+    "interactive_input": "UNSUPPORTED",
+    "logcat_binary_stdout": false,
+    "extraction": "Independent debug device extraction; missing extraction is NOT VERIFIED",
+    "partial_output": "Retained and marked incomplete/failed on runtime or physical failure"
+  },
+  "input_session": {
+    "kind": "Narrow development-only sealed record; NOT BFIO/BHIO or COCK-BUILD-INPUT-v1",
+    "marker_hex": "4342444900000001",
+    "fixed_header_bytes": 88,
+    "total_bytes": "89 + exact source byte count + exact binary input byte count, all additions checked",
+    "terminal_guard_hex": "a5",
+    "standard_multi_file_mode": "UNSUPPORTED by this narrow build route",
+    "implementation": "BF admission/checker and physical binding NOT IMPLEMENTED"
+  },
+  "artifact_session": "Unchanged COCK-FRAME-v1 artifact declaration/chunks/END/terminal grammar; BF producer and independent physical completion required",
+  "normal_compiler_execution": "BF-in-BF guest; same-interpreter nested actual compiler proof mandatory",
+  "external_debug_only_tools": ["aapt2", "zip", "zipalign", "keytool", "apksigner", "adb"],
+  "independent_verifiers": ["llvm-readelf", "llvm-objdump", "cmp", "sha256sum", "unzip", "apkanalyzer", "adb"],
+  "optimization": "O0 source-order lowering; no optional optimization until mandatory baseline gates pass",
+  "release_signing": "UNSUPPORTED; disposable debug keys only; no release publication"
+}

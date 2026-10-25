@@ -2,6 +2,8 @@
 
 This ledger records actual missing work and known failures. No entry is fixed by describing an implementation. The complete Stage A design is indexed in `stage-a-full-draft.md`; the source draft remains incomplete. No new implementation tests were run in this documentation/configuration change.
 
+Subsequent executable continuation: `upload-executable-run-evidence.md` records actual new BF/Linux diagnostic and regression tests. The original documentary-change statement above refers to its earlier checkpoint. A guarded BF buffer adapter now constructs identical diagnostic source passes; Linux ET_EXEC output was reproduced directly and under the COCK interpreter. These are partial components, not the missing Android implementation or a close of the major gates below.
+
 | ID | Severity / affected master requirements | Expected versus actual | Reproducer/evidence | Required resolution |
 | --- | --- | --- | --- | --- |
 | A-NEST | MAJOR / A02, A10, A11 | Identical-kernel nested real compiler must complete; five attempts exceeded 300/600 s, at best three-byte initialization prefix | `dynamic-kernel-evidence.md`, JSON and frozen `fixtures/dynamic_kernel/nested/` inputs/expected outputs | Diagnose resource/functional feasibility, freeze any necessary repair, complete full result with both statuses and clean process/physical completion; no optional optimization or direct-root substitution |
@@ -23,3 +25,15 @@ Stale original setup statements in `stage-a-decisions.md` are updated in this ch
 Part 23's operative restriction is: “If an unresolved critical bug, failing check or unavailable mandatory target remains, STOP / BLOCKED: do not optimize, integrate or represent the feature as working.” This prevents promotion and optional optimization of the affected failing path. Part 25.4 still allows independently supportable BF implementation and drafting. These are engineering gates, not a request for another development-start approval.
 
 Close an issue only with changed source/contract where needed, exact completed command/input/output identities, independent checks and applicable target observations. Record a new failure rather than weakening the expected result, disguising a skip or moving a mandatory Stage A proof to Stage C/F.
+
+## Uploaded two-pass authority witness
+
+The imported Linux source-to-ELF compiler accepts inconsistent source passes. Reproduced locally: process exit zero, ELF declared size 272, actual file size 276; the independent BF comparator rejects equality. `tests/duplicate_counted_source.bf` constructs both passes from one guarded retained buffer and passed 10 root and 12 COCK-guest cases. This resolves that input-construction dependency for the bounded diagnostic path. Direct unbound compiler invocation remains unsafe/unsupported, and source admission, physical closure, BF orchestration and Android production authority remain open. No full frontend or ELF issue is closed by this helper.
+
+## Actual emulator and native-entry probe continuation
+
+`docs/emulator-retry-evidence.md` adds concrete A-TARGET failures after a changed one-core/4-GiB/540×960 software run: no completed boot, transient package services, install exits 20/255 with uninitialized StorageManager/PackageManager internals, failed Settings activity, black screenshot and SDK exit 139 after shutdown request. No watchdog/security override was written, no OOM occurred, and the emulator is stopped. A stable target was requested for remaining device tests.
+
+A new complete BF test generator, `tests/android_native_entry_probe.bf`, emits a structurally checked 1,232-byte Android ET_DYN with a return-only OS entry. Its source admission, three BF comparisons, direct/COCK guest output and debug APK signature/alignment/identity checks pass. Actual native loading is unverified because installation failed. The probe does not implement app-source compilation, context/result records or logging, so A-NATIVE/A-ELF/full Stage A remain open.
+
+The external root C backend at O3 passed 73 regression controls, then the same-kernel compact compiler retry timed out at 900.014 seconds with only `00 00 80` of the expected 18 bytes. A-NEST now has six completed dynamic-candidate timeout attempts. This is not an optimization of project source or a passing self-host proof.

@@ -1,0 +1,57 @@
+
+/workspace/test-results/android-native-guest-20261026/callback/inspection.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start>:
+       0: a9b67bfd     	stp	x29, x30, [sp, #-0xa0]!
+       4: 910003fd     	mov	x29, sp
+       8: a90153f3     	stp	x19, x20, [sp, #0x10]
+       c: 90000833     	adrp	x19, 0x104000 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_end+0x103f34>
+      10: 91002273     	add	x19, x19, #0x8
+      14: 885ffe69     	ldaxr	w9, [x19]
+      18: 350004c9     	cbnz	w9, 0xb0 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start+0xb0>
+      1c: 5280002a     	mov	w10, #0x1               // =1
+      20: 880bfe6a     	stlxr	w11, w10, [x19]
+      24: 3500046b     	cbnz	w11, 0xb0 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start+0xb0>
+      28: f85f8269     	ldur	x9, [x19, #-0x8]
+      2c: b1000529     	adds	x9, x9, #0x1
+      30: 54000380     	b.eq	0xa0 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start+0xa0>
+      34: f81f8269     	stur	x9, [x19, #-0x8]
+      38: f9000a69     	str	x9, [x19, #0x10]
+      3c: 5280002a     	mov	w10, #0x1               // =1
+      40: b90033ea     	str	w10, [sp, #0x30]
+      44: 5280050a     	mov	w10, #0x28              // =40
+      48: b90037ea     	str	w10, [sp, #0x34]
+      4c: a903ffff     	stp	xzr, xzr, [sp, #0x38]
+      50: f90027e9     	str	x9, [sp, #0x48]
+      54: f9002bff     	str	xzr, [sp, #0x50]
+      58: 5280002a     	mov	w10, #0x1               // =1
+      5c: b9005bea     	str	w10, [sp, #0x58]
+      60: 5280070a     	mov	w10, #0x38              // =56
+      64: b9005fea     	str	w10, [sp, #0x5c]
+      68: 9100c3e0     	add	x0, sp, #0x30
+      6c: 910163e1     	add	x1, sp, #0x58
+      70: 940001e4     	bl	0x800 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_end+0x734>
+      74: b9000a60     	str	w0, [x19, #0x8]
+      78: a945abe9     	ldp	x9, x10, [sp, #0x58]
+      7c: a901aa69     	stp	x9, x10, [x19, #0x18]
+      80: a946abe9     	ldp	x9, x10, [sp, #0x68]
+      84: a902aa69     	stp	x9, x10, [x19, #0x28]
+      88: a947abe9     	ldp	x9, x10, [sp, #0x78]
+      8c: a903aa69     	stp	x9, x10, [x19, #0x38]
+      90: f94047e9     	ldr	x9, [sp, #0x88]
+      94: f9002669     	str	x9, [x19, #0x48]
+      98: 889ffe7f     	stlr	wzr, [x19]
+      9c: 14000009     	b	0xc0 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start+0xc0>
+      a0: 52800140     	mov	w0, #0xa                // =10
+      a4: b9000a60     	str	w0, [x19, #0x8]
+      a8: 889ffe7f     	stlr	wzr, [x19]
+      ac: 14000005     	b	0xc0 <_binary__workspace_test_results_android_native_guest_20261026_callback_callback_raw_start+0xc0>
+      b0: 528001c9     	mov	w9, #0xe                // =14
+      b4: b9000669     	str	w9, [x19, #0x4]
+      b8: d5033f5f     	clrex
+      bc: d503201f     	nop
+      c0: a94153f3     	ldp	x19, x20, [sp, #0x10]
+      c4: a8ca7bfd     	ldp	x29, x30, [sp], #0xa0
+      c8: d65f03c0     	ret

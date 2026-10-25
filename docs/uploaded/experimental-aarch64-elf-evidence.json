@@ -1,0 +1,814 @@
+{
+  "title": "Experimental BF ELF diagnostic and nested request test batch",
+  "date_utc": "2026-10-25T10:36:58.049814+00:00",
+  "bootstrap": "locally compiled temporary C diagnostic evaluator, not independently qualified COCK bootstrap",
+  "phase": "Diagnostic only; Stage A not accepted",
+  "tests": [
+    {
+      "name": "nested literal all_empty",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested literal distinct_headers_and_three_payloads",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested literal empty_interpreter_nonempty_compiler_and_input",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested literal empty_compiler_preserves_final_payload",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested literal binary_payloads_are_transported_without_admission",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested literal all_empty_with_full_capacity_bits",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested boundary interpreter_count_256",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested boundary compiler_count_256",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested boundary app_input_count_256",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested boundary all_three_counts_257",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested stored request compact_real_compiler_short_diagnostic",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "nested stored request original_real_compiler_short_diagnostic",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "entire 61 BF source syntax audit",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "name": "BF source admission src/experimental_aarch64_exec_elf.bf",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "BF source admission src/experimental_aarch64_elf_compiler.bf",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "BF source to inspected ELF tiny_app_a",
+      "result": "PASS",
+      "detail": "native bytes 140 ELF bytes 272"
+    },
+    {
+      "name": "BF source to inspected ELF tiny_app_b",
+      "result": "PASS",
+      "detail": "native bytes 144 ELF bytes 276"
+    },
+    {
+      "name": "BF source to inspected ELF held_out",
+      "result": "PASS",
+      "detail": "native bytes 148 ELF bytes 280"
+    },
+    {
+      "name": "BF source to inspected ELF heldout_mixed_ascii",
+      "result": "PASS",
+      "detail": "native bytes 152 ELF bytes 284"
+    },
+    {
+      "name": "random ELF source 1",
+      "result": "PASS",
+      "detail": "commands 196 guest 0x5f"
+    },
+    {
+      "name": "random ELF source 2",
+      "result": "PASS",
+      "detail": "commands 101 guest 0x2c"
+    },
+    {
+      "name": "random ELF source 3",
+      "result": "PASS",
+      "detail": "commands 92 guest 0x29"
+    },
+    {
+      "name": "random ELF source 4",
+      "result": "PASS",
+      "detail": "commands 135 guest 0x3e"
+    },
+    {
+      "name": "random ELF source 5",
+      "result": "PASS",
+      "detail": "commands 115 guest 0x4c"
+    },
+    {
+      "name": "random ELF source 6",
+      "result": "PASS",
+      "detail": "commands 163 guest 0x46"
+    },
+    {
+      "name": "random ELF source 7",
+      "result": "PASS",
+      "detail": "commands 156 guest 0x65"
+    },
+    {
+      "name": "random ELF source 8",
+      "result": "PASS",
+      "detail": "commands 170 guest 0x5f"
+    },
+    {
+      "name": "random ELF source 9",
+      "result": "PASS",
+      "detail": "commands 92 guest 0x21"
+    },
+    {
+      "name": "random ELF source 10",
+      "result": "PASS",
+      "detail": "commands 183 guest 0x74"
+    },
+    {
+      "name": "random ELF source 11",
+      "result": "PASS",
+      "detail": "commands 163 guest 0x64"
+    },
+    {
+      "name": "random ELF source 12",
+      "result": "PASS",
+      "detail": "commands 65 guest 0x26"
+    },
+    {
+      "name": "random ELF source 13",
+      "result": "PASS",
+      "detail": "commands 86 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 14",
+      "result": "PASS",
+      "detail": "commands 220 guest 0x69"
+    },
+    {
+      "name": "random ELF source 15",
+      "result": "PASS",
+      "detail": "commands 148 guest 0x4d"
+    },
+    {
+      "name": "random ELF source 16",
+      "result": "PASS",
+      "detail": "commands 85 guest 0x24"
+    },
+    {
+      "name": "random ELF source 17",
+      "result": "PASS",
+      "detail": "commands 133 guest 0x36"
+    },
+    {
+      "name": "random ELF source 18",
+      "result": "PASS",
+      "detail": "commands 154 guest 0x51"
+    },
+    {
+      "name": "random ELF source 19",
+      "result": "PASS",
+      "detail": "commands 128 guest 0x4d"
+    },
+    {
+      "name": "random ELF source 20",
+      "result": "PASS",
+      "detail": "commands 165 guest 0x70"
+    },
+    {
+      "name": "random ELF source 21",
+      "result": "PASS",
+      "detail": "commands 197 guest 0x78"
+    },
+    {
+      "name": "random ELF source 22",
+      "result": "PASS",
+      "detail": "commands 201 guest 0x48"
+    },
+    {
+      "name": "random ELF source 23",
+      "result": "PASS",
+      "detail": "commands 139 guest 0x40"
+    },
+    {
+      "name": "random ELF source 24",
+      "result": "PASS",
+      "detail": "commands 204 guest 0x75"
+    },
+    {
+      "name": "random ELF source 25",
+      "result": "PASS",
+      "detail": "commands 105 guest 0x44"
+    },
+    {
+      "name": "random ELF source 26",
+      "result": "PASS",
+      "detail": "commands 207 guest 0x66"
+    },
+    {
+      "name": "random ELF source 27",
+      "result": "PASS",
+      "detail": "commands 208 guest 0x5d"
+    },
+    {
+      "name": "random ELF source 28",
+      "result": "PASS",
+      "detail": "commands 151 guest 0x6c"
+    },
+    {
+      "name": "random ELF source 29",
+      "result": "PASS",
+      "detail": "commands 111 guest 0x3a"
+    },
+    {
+      "name": "random ELF source 30",
+      "result": "PASS",
+      "detail": "commands 78 guest 0x2b"
+    },
+    {
+      "name": "random ELF source 31",
+      "result": "PASS",
+      "detail": "commands 112 guest 0x31"
+    },
+    {
+      "name": "random ELF source 32",
+      "result": "PASS",
+      "detail": "commands 159 guest 0x5c"
+    },
+    {
+      "name": "random ELF source 33",
+      "result": "PASS",
+      "detail": "commands 92 guest 0x41"
+    },
+    {
+      "name": "random ELF source 34",
+      "result": "PASS",
+      "detail": "commands 122 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 35",
+      "result": "PASS",
+      "detail": "commands 226 guest 0x6d"
+    },
+    {
+      "name": "random ELF source 36",
+      "result": "PASS",
+      "detail": "commands 113 guest 0x2a"
+    },
+    {
+      "name": "random ELF source 37",
+      "result": "PASS",
+      "detail": "commands 137 guest 0x2a"
+    },
+    {
+      "name": "random ELF source 38",
+      "result": "PASS",
+      "detail": "commands 173 guest 0x36"
+    },
+    {
+      "name": "random ELF source 39",
+      "result": "PASS",
+      "detail": "commands 80 guest 0x25"
+    },
+    {
+      "name": "random ELF source 40",
+      "result": "PASS",
+      "detail": "commands 135 guest 0x40"
+    },
+    {
+      "name": "random ELF source 41",
+      "result": "PASS",
+      "detail": "commands 216 guest 0x75"
+    },
+    {
+      "name": "random ELF source 42",
+      "result": "PASS",
+      "detail": "commands 176 guest 0x39"
+    },
+    {
+      "name": "random ELF source 43",
+      "result": "PASS",
+      "detail": "commands 161 guest 0x74"
+    },
+    {
+      "name": "random ELF source 44",
+      "result": "PASS",
+      "detail": "commands 178 guest 0x6f"
+    },
+    {
+      "name": "random ELF source 45",
+      "result": "PASS",
+      "detail": "commands 149 guest 0x44"
+    },
+    {
+      "name": "random ELF source 46",
+      "result": "PASS",
+      "detail": "commands 101 guest 0x24"
+    },
+    {
+      "name": "random ELF source 47",
+      "result": "PASS",
+      "detail": "commands 220 guest 0x6f"
+    },
+    {
+      "name": "random ELF source 48",
+      "result": "PASS",
+      "detail": "commands 174 guest 0x71"
+    },
+    {
+      "name": "random ELF source 49",
+      "result": "PASS",
+      "detail": "commands 137 guest 0x28"
+    },
+    {
+      "name": "random ELF source 50",
+      "result": "PASS",
+      "detail": "commands 183 guest 0x7c"
+    },
+    {
+      "name": "random ELF source 51",
+      "result": "PASS",
+      "detail": "commands 215 guest 0x72"
+    },
+    {
+      "name": "random ELF source 52",
+      "result": "PASS",
+      "detail": "commands 145 guest 0x40"
+    },
+    {
+      "name": "random ELF source 53",
+      "result": "PASS",
+      "detail": "commands 190 guest 0x3b"
+    },
+    {
+      "name": "random ELF source 54",
+      "result": "PASS",
+      "detail": "commands 153 guest 0x48"
+    },
+    {
+      "name": "random ELF source 55",
+      "result": "PASS",
+      "detail": "commands 174 guest 0x41"
+    },
+    {
+      "name": "random ELF source 56",
+      "result": "PASS",
+      "detail": "commands 174 guest 0x5b"
+    },
+    {
+      "name": "random ELF source 57",
+      "result": "PASS",
+      "detail": "commands 220 guest 0x79"
+    },
+    {
+      "name": "random ELF source 58",
+      "result": "PASS",
+      "detail": "commands 93 guest 0x20"
+    },
+    {
+      "name": "random ELF source 59",
+      "result": "PASS",
+      "detail": "commands 190 guest 0x65"
+    },
+    {
+      "name": "random ELF source 60",
+      "result": "PASS",
+      "detail": "commands 129 guest 0x48"
+    },
+    {
+      "name": "random ELF source 61",
+      "result": "PASS",
+      "detail": "commands 160 guest 0x29"
+    },
+    {
+      "name": "random ELF source 62",
+      "result": "PASS",
+      "detail": "commands 168 guest 0x7b"
+    },
+    {
+      "name": "random ELF source 63",
+      "result": "PASS",
+      "detail": "commands 170 guest 0x71"
+    },
+    {
+      "name": "random ELF source 64",
+      "result": "PASS",
+      "detail": "commands 95 guest 0x3c"
+    },
+    {
+      "name": "random ELF source 65",
+      "result": "PASS",
+      "detail": "commands 157 guest 0x5c"
+    },
+    {
+      "name": "random ELF source 66",
+      "result": "PASS",
+      "detail": "commands 170 guest 0x51"
+    },
+    {
+      "name": "random ELF source 67",
+      "result": "PASS",
+      "detail": "commands 135 guest 0x5a"
+    },
+    {
+      "name": "random ELF source 68",
+      "result": "PASS",
+      "detail": "commands 148 guest 0x47"
+    },
+    {
+      "name": "random ELF source 69",
+      "result": "PASS",
+      "detail": "commands 242 guest 0x79"
+    },
+    {
+      "name": "random ELF source 70",
+      "result": "PASS",
+      "detail": "commands 152 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 71",
+      "result": "PASS",
+      "detail": "commands 127 guest 0x42"
+    },
+    {
+      "name": "random ELF source 72",
+      "result": "PASS",
+      "detail": "commands 177 guest 0x54"
+    },
+    {
+      "name": "random ELF source 73",
+      "result": "PASS",
+      "detail": "commands 213 guest 0x7a"
+    },
+    {
+      "name": "random ELF source 74",
+      "result": "PASS",
+      "detail": "commands 121 guest 0x56"
+    },
+    {
+      "name": "random ELF source 75",
+      "result": "PASS",
+      "detail": "commands 134 guest 0x51"
+    },
+    {
+      "name": "random ELF source 76",
+      "result": "PASS",
+      "detail": "commands 153 guest 0x38"
+    },
+    {
+      "name": "random ELF source 77",
+      "result": "PASS",
+      "detail": "commands 138 guest 0x4d"
+    },
+    {
+      "name": "random ELF source 78",
+      "result": "PASS",
+      "detail": "commands 83 guest 0x26"
+    },
+    {
+      "name": "random ELF source 79",
+      "result": "PASS",
+      "detail": "commands 169 guest 0x5e"
+    },
+    {
+      "name": "random ELF source 80",
+      "result": "PASS",
+      "detail": "commands 147 guest 0x3e"
+    },
+    {
+      "name": "random ELF source 81",
+      "result": "PASS",
+      "detail": "commands 135 guest 0x50"
+    },
+    {
+      "name": "random ELF source 82",
+      "result": "PASS",
+      "detail": "commands 127 guest 0x54"
+    },
+    {
+      "name": "random ELF source 83",
+      "result": "PASS",
+      "detail": "commands 157 guest 0x2e"
+    },
+    {
+      "name": "random ELF source 84",
+      "result": "PASS",
+      "detail": "commands 126 guest 0x4f"
+    },
+    {
+      "name": "random ELF source 85",
+      "result": "PASS",
+      "detail": "commands 102 guest 0x35"
+    },
+    {
+      "name": "random ELF source 86",
+      "result": "PASS",
+      "detail": "commands 107 guest 0x50"
+    },
+    {
+      "name": "random ELF source 87",
+      "result": "PASS",
+      "detail": "commands 171 guest 0x60"
+    },
+    {
+      "name": "random ELF source 88",
+      "result": "PASS",
+      "detail": "commands 167 guest 0x78"
+    },
+    {
+      "name": "random ELF source 89",
+      "result": "PASS",
+      "detail": "commands 199 guest 0x64"
+    },
+    {
+      "name": "random ELF source 90",
+      "result": "PASS",
+      "detail": "commands 106 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 91",
+      "result": "PASS",
+      "detail": "commands 218 guest 0x75"
+    },
+    {
+      "name": "random ELF source 92",
+      "result": "PASS",
+      "detail": "commands 170 guest 0x75"
+    },
+    {
+      "name": "random ELF source 93",
+      "result": "PASS",
+      "detail": "commands 230 guest 0x71"
+    },
+    {
+      "name": "random ELF source 94",
+      "result": "PASS",
+      "detail": "commands 141 guest 0x44"
+    },
+    {
+      "name": "random ELF source 95",
+      "result": "PASS",
+      "detail": "commands 131 guest 0x50"
+    },
+    {
+      "name": "random ELF source 96",
+      "result": "PASS",
+      "detail": "commands 206 guest 0x5d"
+    },
+    {
+      "name": "random ELF source 97",
+      "result": "PASS",
+      "detail": "commands 194 guest 0x6b"
+    },
+    {
+      "name": "random ELF source 98",
+      "result": "PASS",
+      "detail": "commands 172 guest 0x3b"
+    },
+    {
+      "name": "random ELF source 99",
+      "result": "PASS",
+      "detail": "commands 123 guest 0x3a"
+    },
+    {
+      "name": "random ELF source 100",
+      "result": "PASS",
+      "detail": "commands 138 guest 0x59"
+    },
+    {
+      "name": "random ELF source 101",
+      "result": "PASS",
+      "detail": "commands 140 guest 0x61"
+    },
+    {
+      "name": "random ELF source 102",
+      "result": "PASS",
+      "detail": "commands 119 guest 0x4c"
+    },
+    {
+      "name": "random ELF source 103",
+      "result": "PASS",
+      "detail": "commands 166 guest 0x37"
+    },
+    {
+      "name": "random ELF source 104",
+      "result": "PASS",
+      "detail": "commands 94 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 105",
+      "result": "PASS",
+      "detail": "commands 178 guest 0x6f"
+    },
+    {
+      "name": "random ELF source 106",
+      "result": "PASS",
+      "detail": "commands 196 guest 0x5d"
+    },
+    {
+      "name": "random ELF source 107",
+      "result": "PASS",
+      "detail": "commands 146 guest 0x2d"
+    },
+    {
+      "name": "random ELF source 108",
+      "result": "PASS",
+      "detail": "commands 171 guest 0x3a"
+    },
+    {
+      "name": "random ELF source 109",
+      "result": "PASS",
+      "detail": "commands 151 guest 0x44"
+    },
+    {
+      "name": "random ELF source 110",
+      "result": "PASS",
+      "detail": "commands 128 guest 0x4f"
+    },
+    {
+      "name": "random ELF source 111",
+      "result": "PASS",
+      "detail": "commands 132 guest 0x21"
+    },
+    {
+      "name": "random ELF source 112",
+      "result": "PASS",
+      "detail": "commands 138 guest 0x43"
+    },
+    {
+      "name": "random ELF source 113",
+      "result": "PASS",
+      "detail": "commands 222 guest 0x75"
+    },
+    {
+      "name": "random ELF source 114",
+      "result": "PASS",
+      "detail": "commands 152 guest 0x71"
+    },
+    {
+      "name": "random ELF source 115",
+      "result": "PASS",
+      "detail": "commands 152 guest 0x4d"
+    },
+    {
+      "name": "random ELF source 116",
+      "result": "PASS",
+      "detail": "commands 125 guest 0x48"
+    },
+    {
+      "name": "random ELF source 117",
+      "result": "PASS",
+      "detail": "commands 108 guest 0x3f"
+    },
+    {
+      "name": "random ELF source 118",
+      "result": "PASS",
+      "detail": "commands 91 guest 0x24"
+    },
+    {
+      "name": "random ELF source 119",
+      "result": "PASS",
+      "detail": "commands 96 guest 0x2f"
+    },
+    {
+      "name": "random ELF source 120",
+      "result": "PASS",
+      "detail": "commands 144 guest 0x5f"
+    },
+    {
+      "name": "ELF transport u16 length 0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 1",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 2",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 4",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 124",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 125",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 255",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 256",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 257",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 515",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 1024",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 4096",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 65280",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "ELF transport u16 length 65535",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restricted BF gate rejects nonprintable",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restricted BF gate rejects move",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restricted BF gate rejects unbalanced",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restricted BF gate rejects loop",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "restricted BF gate rejects double_dot",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "passed": 158,
+    "failed": 0,
+    "mandatory_nested_compiler": "NOT RUN; prior timeouts remain",
+    "Android": "NOT RUN; no stable ARM64 target in supplied workspace; no BF Android loader ABI",
+    "full_stage_A": "BLOCKED"
+  },
+  "negative_security_witness": {
+    "case": "different source copies are accepted by the stand-alone diagnostic emitter",
+    "first_program_commands": 33,
+    "second_program_commands": 34,
+    "observed_process_exit": 0,
+    "header_declared_elf_bytes": 272,
+    "actual_stdout_bytes": 276,
+    "classification": "EXPECTED UNSAFE DIAGNOSTIC; NO COMMIT; not a passing production check"
+  }
+}

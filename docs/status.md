@@ -262,3 +262,19 @@ The documentary design package is complete. **The whole Stage A executable draft
 | INTEGRATED | NO; candidate branch only, main unchanged |
 
 `docs/stage-a-issues.md` records the exact missing source and major feasibility/target gates. The design pretest identity is in `docs/stage-a-full-draft-checkpoint.md`; it does not certify missing source or any Android behavior. Nested execution remains blocked by completed timeouts, and stable ARM64 target/ELF/APK/launch evidence remains unavailable. No accepted Android compiler or release is claimed.
+
+## 2026-10-25 — Uploaded executable diagnostics actually rerun
+
+Imported the two complete uploaded Linux AArch64 BF emitters as diagnostics and retained their reports under `docs/uploaded/` as historical attachment claims. Implemented `tests/duplicate_counted_source.bf` to construct both compiler passes from one retained guarded buffer. No conventional executable source or native template was authored for this continuation.
+
+Actual current checks: four BF implementation/serializer admissions plus four example admissions; 10 root and 12 COCK-guest duplicate-buffer cases; 12 nested-request serializer cases; four actual source-to-Linux-ELF results directly and under the COCK interpreter; four separate-wrapper results both ways; eight binary/length wrapper boundaries; four independent arithmetic values; 47 expected BF comparator decisions; and 73 adapted regression replays including six frozen raw compiler artifacts. Groups overlap. Independent ELF/native inspection confirmed Linux ET_EXEC, syscall 93 and source-derived arithmetic. All executed process cases completed; no new unchanged nested timeout or Android boot was attempted.
+
+The direct mismatched-pass negative again exits zero while declaring 272 bytes and writing 276. The new adapter avoids construction from separate passes, but direct unsafe use and trailing-input/host closure authority remain explicit negatives. The current file set is not an Android library or APK. No native AArch64 process or Android callback/log was executed.
+
+| Capability | DRAFTED | IMPLEMENTED | TESTED | OPTIMIZED | INTEGRATED |
+| --- | --- | --- | --- | --- | --- |
+| Guarded duplicate-buffer helper | YES | YES | Bounded root/COCK guest checks pass | NO | NO default integration |
+| Uploaded Linux ELF diagnostics | YES, imported | YES | Direct and COCK guest/component checks pass | NO in this continuation | NO Android integration |
+| Full Android A01–A14 | INCOMPLETE | INCOMPLETE | Complete stage NOT RUN | NO | NO |
+
+ADB currently lists no device and `/dev/kvm` is absent. Android frontend/native ABI/NativeActivity ELF/artifact/build/test implementations and the mandatory identical-interpreter final compiler proof are still missing or blocked. `docs/upload-executable-run-evidence.md` and JSON contain current commands, identities and exact scope. The upload's historical 158-test claim is not presented as a current run. Main remains unchanged; no APK/release/signing claim is made.

@@ -2,6 +2,8 @@
 
 This ledger records actual missing work and known failures. No entry is fixed by describing an implementation. The complete Stage A design is indexed in `stage-a-full-draft.md`; the source draft remains incomplete. No new implementation tests were run in this documentation/configuration change.
 
+Subsequent executable continuation: `upload-executable-run-evidence.md` records actual new BF/Linux diagnostic and regression tests. The original documentary-change statement above refers to its earlier checkpoint. A guarded BF buffer adapter now constructs identical diagnostic source passes; Linux ET_EXEC output was reproduced directly and under the COCK interpreter. These are partial components, not the missing Android implementation or a close of the major gates below.
+
 | ID | Severity / affected master requirements | Expected versus actual | Reproducer/evidence | Required resolution |
 | --- | --- | --- | --- | --- |
 | A-NEST | MAJOR / A02, A10, A11 | Identical-kernel nested real compiler must complete; five attempts exceeded 300/600 s, at best three-byte initialization prefix | `dynamic-kernel-evidence.md`, JSON and frozen `fixtures/dynamic_kernel/nested/` inputs/expected outputs | Diagnose resource/functional feasibility, freeze any necessary repair, complete full result with both statuses and clean process/physical completion; no optional optimization or direct-root substitution |
@@ -23,3 +25,7 @@ Stale original setup statements in `stage-a-decisions.md` are updated in this ch
 Part 23's operative restriction is: “If an unresolved critical bug, failing check or unavailable mandatory target remains, STOP / BLOCKED: do not optimize, integrate or represent the feature as working.” This prevents promotion and optional optimization of the affected failing path. Part 25.4 still allows independently supportable BF implementation and drafting. These are engineering gates, not a request for another development-start approval.
 
 Close an issue only with changed source/contract where needed, exact completed command/input/output identities, independent checks and applicable target observations. Record a new failure rather than weakening the expected result, disguising a skip or moving a mandatory Stage A proof to Stage C/F.
+
+## Uploaded two-pass authority witness
+
+The imported Linux source-to-ELF compiler accepts inconsistent source passes. Reproduced locally: process exit zero, ELF declared size 272, actual file size 276; the independent BF comparator rejects equality. `tests/duplicate_counted_source.bf` constructs both passes from one guarded retained buffer and passed 10 root and 12 COCK-guest cases. This resolves that input-construction dependency for the bounded diagnostic path. Direct unbound compiler invocation remains unsafe/unsupported, and source admission, physical closure, BF orchestration and Android production authority remain open. No full frontend or ELF issue is closed by this helper.

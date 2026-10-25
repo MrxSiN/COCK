@@ -1,6 +1,8 @@
 # COCK — Stage A engineering workspace
 
-Full Stage A scope: [A01–A14 design, complete inventory and actual draft status](docs/stage-a-full-draft.md), [whole-stage acceptance plan](docs/stage-a-test-draft.md), and [open implementation/target issues](docs/stage-a-issues.md). The design package covers every Stage A requirement; the whole-stage executable BF draft remains incomplete, and no new runtime/device test is claimed.
+Latest execution: [uploaded BF components, source-identity repair and actual test results](docs/upload-executable-run-evidence.md). Four Linux AArch64 ELF examples reproduce directly and through the COCK interpreter; the new BF buffer adapter and prior serializer/regressions pass their bounded checks. These are Linux diagnostics. The missing Android NativeActivity/ET_DYN/APK implementation and stable target still block A01–A14.
+
+Full Stage A scope: [A01–A14 design, complete inventory and actual draft status](docs/stage-a-full-draft.md), [whole-stage acceptance plan](docs/stage-a-test-draft.md), and [open implementation/target issues](docs/stage-a-issues.md). The design package covers every Stage A requirement; the whole-stage executable BF draft remains incomplete. Current diagnostic execution is recorded separately above; Android device tests remain NOT RUN.
 
 Next draft: [nested-proof input driver and full slice inventory](docs/next-stage-draft.md), [queued acceptance batch](docs/next-stage-acceptance.md), and [remaining development stages](docs/development-roadmap.md). The new BF driver is first-pass source only; its tests have not run and the existing nested/Android blockers remain.
 

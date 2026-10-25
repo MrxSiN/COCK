@@ -1,0 +1,69 @@
+{
+  "checkpoint_date": "2026-10-25",
+  "source": "COCK-main.zip with Stage A A01-A14 full design and the COCK_Stage_A_Engineering_Workspace.zip compared",
+  "scope": "narrow verified BF-executable AArch64 Linux diagnostic plus nested-request driver",
+  "user_goal_full_stage_a": "NOT COMPLETE",
+  "full_stage_a_status": "BLOCKED",
+  "diagnostic_status": "158 of 158 passing including fixed copy loop; one intentionally unsafe input identity witness",
+  "evaluator": "external local diagnostic C evaluator outside repository, unqualified as COCK root",
+  "arm64_execution": "NOT RUN",
+  "android_apk": "NOT BUILT",
+  "same_kernel_nested_real_compiler": "NOT RUN in this batch; prior failed timeouts persist",
+  "files": [
+    {
+      "path": "src/experimental_aarch64_elf_compiler.bf",
+      "sha256": "07705e2ca1b5b726c045708075cb0939f76693e1957b5b13cfa59dbdeb63bf1e",
+      "bytes": 6903
+    },
+    {
+      "path": "src/experimental_aarch64_exec_elf.bf",
+      "sha256": "2809cd66f8c3081096690ad5d268d716e9dabb0378a76614540132c8528bedca",
+      "bytes": 4411
+    },
+    {
+      "path": "tests/nested_request.bf",
+      "sha256": "7517028af22fb2acf6587f31ee3457f28d084ad4e0b9a3a8ba30858597f3fa50",
+      "bytes": 2650
+    },
+    {
+      "path": "src/mini_compiler_compact.bf",
+      "sha256": "738857d78bc0839cb84ff0d4d5033c983b649368ecf1ca93b3bc04b3ab724afd",
+      "bytes": 1891
+    },
+    {
+      "path": "src/source_pc_dynamic_tape.bf",
+      "sha256": "cd59d94bbf9dee3faea5c19ee62f2c5c910d13e01100769e29cbfeea8104ec82",
+      "bytes": 12118
+    },
+    {
+      "path": "artifacts/tiny_app_a.experimental.aarch64-linux.elf",
+      "sha256": "58b5c97b6e2a0ce2d151586707e89806ab05410d025aa119923bf99b8d3dc435",
+      "bytes": 272
+    },
+    {
+      "path": "artifacts/tiny_app_b.experimental.aarch64-linux.elf",
+      "sha256": "9e43e1eb1501177c4e53cdecb464552f32699fc3774d02fa76a68b153ac92988",
+      "bytes": 276
+    },
+    {
+      "path": "artifacts/held_out.experimental.aarch64-linux.elf",
+      "sha256": "f7314c781044ea048cdca8d016ce0d84421641ba24c70f8aaaafd7305bf9bc2d",
+      "bytes": 280
+    },
+    {
+      "path": "artifacts/heldout_mixed_ascii.experimental.aarch64-linux.elf",
+      "sha256": "2759531af50d4bc8f454f8617e14f82f91fd295a5e7da48af653681c2a96b71e",
+      "bytes": 284
+    },
+    {
+      "path": "docs/experimental-aarch64-elf-evidence.json",
+      "sha256": "3660e405a84b3d567b59447d437c1087450cf64c0515f077b25a1f47e736cd78",
+      "bytes": 19355
+    },
+    {
+      "path": "docs/experimental-aarch64-elf-evidence.md",
+      "sha256": "819f8574822e9f64eb369c322a52ba6a5fce4dfb22a214d79b79995ee5bd321c",
+      "bytes": 9552
+    }
+  ]
+}

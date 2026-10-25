@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-25",
+  "report_timezone": "Asia/Kuala_Lumpur",
+  "base_commit": "3a6a10ba7a20407f9315a8e0bc4b6ae63757a9f1",
+  "user_goal": "Remaining complete A01-A14 Android implementation",
+  "overall": "BLOCKED / NOT COMPLETE; uploaded executable additions are Linux diagnostics",
+  "uploaded_zip_sha256": "621aed8bd62b178572b332ad44a226b34899924dfcaa1b7d4698d8bf0292f967",
+  "historical_claims": "docs/uploaded is attachment evidence only; its 158 tests are not asserted as this run",
+  "pretest": {
+    "path": "/workspace/test-results/upload-executable/pretest.tar",
+    "sha256": "f01b566c4fdde4ed6e154344b286244d4fc58b0dce2ed11216e76d27621aab2f",
+    "source_repaired_after_checkpoint": false
+  },
+  "root": {
+    "path": "/workspace/tools/bin/tritium",
+    "sha256": "0ac670ed3128db52bfa73347d6f81eccd864ebd91f8a7d450d8efb2278178a5b",
+    "direct_flags": "-r -b -z -B -O1 -fno-negtape",
+    "guest_root_flags": "-r -c -b -z -B -O1 -fno-negtape -mem 2097152",
+    "fully_qualified_cock_bootstrap": false,
+    "compiled_backend": "Internal external-executor implementation; no conventional source authored in repository"
+  },
+  "source_identities": [
+    {"path":"src/experimental_aarch64_elf_compiler.bf","sha256":"07705e2ca1b5b726c045708075cb0939f76693e1957b5b13cfa59dbdeb63bf1e","normalized_commands":3305,"origin":"unchanged uploaded BF"},
+    {"path":"src/experimental_aarch64_exec_elf.bf","sha256":"2809cd66f8c3081096690ad5d268d716e9dabb0378a76614540132c8528bedca","normalized_commands":2531,"origin":"unchanged uploaded BF"},
+    {"path":"tests/duplicate_counted_source.bf","sha256":"04957841ddf5c9c0a966eaa66d5bc1b3f3a480596efee79aa20b55b625780ffd","normalized_commands":672,"origin":"new handwritten BF; storage reuses existing BF comparator"},
+    {"path":"tests/nested_request.bf","sha256":"7517028af22fb2acf6587f31ee3457f28d084ad4e0b9a3a8ba30858597f3fa50","normalized_commands":1024,"origin":"unchanged prior draft"}
+  ],
+  "groups_overlap": true,
+  "checks": [
+    {"group":"new/imported and nested BF admission","passed":4,"executed":4},
+    {"group":"example BF admission","passed":4,"executed":4},
+    {"group":"unsafe comment rejection","passed":1,"executed":1},
+    {"group":"duplicate literal root cases","passed":8,"executed":8},
+    {"group":"duplicate root count boundaries","passed":2,"executed":2,"counts":[256,257]},
+    {"group":"duplicate as COCK guest","passed":12,"executed":12,"includes":"eight literal cases and four admitted example inputs"},
+    {"group":"nested serializer literals/boundaries/reconstructions","passed":12,"executed":12,"subcounts":[6,4,2],"nested_compiler_execution":false},
+    {"group":"BF arithmetic oracle","passed":4,"executed":4,"values_hex":["20","21","22","21"]},
+    {"group":"Linux compiler direct root","passed":4,"executed":4},
+    {"group":"Linux compiler as COCK guest","passed":4,"executed":4},
+    {"group":"frozen compact body identity","passed":4,"executed":4},
+    {"group":"raw wrapper real bodies direct","passed":4,"executed":4},
+    {"group":"raw wrapper real bodies COCK guest","passed":4,"executed":4},
+    {"group":"raw wrapper transport/size cases","passed":8,"executed":8,"zero_counts":[0,1,255,256,257,65280,65535],"binary_payload_hex":"00a5ff","native_payload_execution":false},
+    {"group":"BF comparator expected decisions","passed":47,"executed":47,"equality_results":46,"inequality_results":1},
+    {"group":"legacy adapted regression","passed":73,"executed":73,"six_frozen_compiler_payloads_included":true,"depth_256_expected":"00; previous documented wider-profile change"},
+    {"group":"ELF inspection and byte-preserving disassembly container","passed":4,"executed":4}
+  ],
+  "limits": {
+    "direct_timeout_seconds":30,
+    "longer_guest_timeout_seconds":60,
+    "all_executed_processes_exit_zero":true,
+    "buffer_format_count_max":65535,
+    "buffer_max_count_executed":257,
+    "bf_comparator_count_bits":16,
+    "oversized_whole_file_comparison":"Not narrowed; independent cmp/readelf and literal size-field expectations used",
+    "benchmark_or_optimization_claim":false
+  },
+  "outputs": [
+    {"example":"tiny_app_a","elf_bytes":272,"raw_compact_bytes":140,"sha256":"58b5c97b6e2a0ce2d151586707e89806ab05410d025aa119923bf99b8d3dc435"},
+    {"example":"tiny_app_b","elf_bytes":276,"raw_compact_bytes":144,"sha256":"9e43e1eb1501177c4e53cdecb464552f32699fc3774d02fa76a68b153ac92988"},
+    {"example":"held_out","elf_bytes":280,"raw_compact_bytes":148,"sha256":"f7314c781044ea048cdca8d016ce0d84421641ba24c70f8aaaafd7305bf9bc2d"},
+    {"example":"heldout_mixed_ascii","elf_bytes":284,"raw_compact_bytes":152,"sha256":"2759531af50d4bc8f454f8617e14f82f91fd295a5e7da48af653681c2a96b71e"}
+  ],
+  "native_format": {"type":"ET_EXEC","machine":"AArch64","entry":"0x400078","load_base":"0x400000","alignment":"0x1000","native_body_file_offset":132,"observation":"Linux syscall 93 exit","android_compatible_claim":false,"native_execution":"NOT RUN"},
+  "authority_negatives": [
+    {"case":"direct mismatched source passes","process_exit":0,"declared_elf_bytes":272,"actual_elf_bytes":276,"bf_comparator_hex":"01","acceptance":"REJECT"},
+    {"case":"trailing input after duplicate guard","input_hex":"01002ba558","physical_input_bytes":5,"declared_record_bytes":4,"raw_output_hex":"2b002b","acceptance":"NO COMMIT; independent closure veto required"}
+  ],
+  "invocation_notes": [
+    "Optional unmatched archive fixture glob caused unzip exit 11; explicit expected entries were imported and hashes verified",
+    "Sectionless ELF did not decode with initial llvm-objdump -D; inspection-only relocatable container then disassembled with exact text round trip",
+    "Generic Git diff check treated three valid BF pointer runs as conflict markers; BF gate accepted source and per-invocation external conflict-marker-size=128 attribute produced clean diff check without source edits",
+    "No BF source repair, weakened assertion or changed historical golden after checkpoint"
+  ],
+  "android": {
+    "adb_devices":0,
+    "dev_kvm_present":false,
+    "exposed_android_device_service":false,
+    "new_emulator_boot_attempt":false,
+    "nativeactivity_elf_producer":"NOT IMPLEMENTED",
+    "apk":"NOT BUILT",
+    "install_launch_log_lifecycle":"NOT RUN",
+    "missing_implementation_inventory":"docs/stage-a-full-draft.md",
+    "same_kernel_nested_compiler":"BLOCKED; five prior timeouts unchanged, no repeated identical attempt"
+  },
+  "feature_states": {
+    "new_adapter_and_linux_components":{"drafted":true,"implemented":true,"tested":"bounded diagnostics","optimized":false,"default_integrated":false},
+    "whole_android_stage_a":{"drafted":"incomplete","implemented":"incomplete","tested":"NOT RUN as a complete stage","optimized":false,"integrated":false}
+  },
+  "local_raw_evidence_root":"/workspace/test-results/upload-executable",
+  "main_promoted":false,
+  "apk_release_or_signing_claim":false
+}

@@ -218,3 +218,17 @@ A new candidate `src/source_pc_16bit_eight_cell_exec.bf` supports full-source le
 `src/source_pc_16bit_eight_cell_loops.bf` is a new **single integrated BF-in-BF interpreter** using 16-bit normalized-source length, 16-bit original-command fuel, eight checked guest cells, full lexical/bracket preflight, binary input/output and **general nested loops**, with no guest execution before admission. It passed **1,160/1,160** differential diagnostics, 67 saved diagnostic fixture replays and **all six frozen real AArch64 outputs produced directly by the NEW interpreter** using both 515-command original and 452-command compact BF mini compilers on all three applications. **73** total literal input/expected fixture pairs and **50/50** repository BF syntax audits passed. See `docs/source-pc-16bit-eight-cell-loops-evidence.md` and JSON for instruction/fuel limits and negative tests.
 
 **Stage A STILL NOT ACCEPTED:** the mandatory identical-interpreter nested real compiler proof is not established. Eight guest cells and 16-bit fuel/source format do not support full self-hosting. This is not a dynamic large guest tape and does not provide trusted physical stream closure, full annotated-original-source offset preflight, qualified BF-only development process, authoritative framing or Android ELF/APK/device acceptance. Android remains deferred.
+
+## 2026-10-25 — Dynamic tape and wide fuel candidate
+
+The separately preserved candidate `src/source_pc_dynamic_tape.bf` replaces the fixed guest-cell switch with a per-invocation capacity-backed logical tape, and uses 32-bit guest fuel and 16-bit normalized source/depth. Seven new annotated BF implementation/test files passed the BF source gate. Thirty literal vectors, two pointer-growth boundaries, the 256-level bracket case, 73 legacy replays and 19 common-profile BF comparisons passed; the legacy depth-256 expected result intentionally changes from rejection to success. All six real compiler payloads match the unchanged native artifacts. A postdraft printable ASCII held-out input also passed both compilers and the independent BF oracle. These groups overlap.
+
+| State | Evidence |
+| --- | --- |
+| DRAFTED | Complete source/test inventory frozen before testing; archive hash in the ledger |
+| IMPLEMENTED | Normalized diagnostic interpreter and BF-only serializers/comparator |
+| TESTED | Component checks pass; mandatory nested compiler runs time out |
+| OPTIMIZED | No BF source optimization performed |
+| INTEGRATED | No; candidate branch only, prior compiler path preserved |
+
+**BLOCKED:** five completed same-kernel nested attempts exceeded their 300/600-second wall budgets. JIT and compiled seed modes emitted only the three-byte native initialization prefix, never a completed compiled result or both status bytes. No nested self-hosting PASS, usable Android compiler, completed frontend/framing, accepted runtime or production release is asserted. Per Part 23, the mandatory failure prevents optimization and promotion. See `docs/dynamic-kernel-evidence.md` and `.json` for exact inputs, hashes, commands and outcomes. SDK tools are installed, but the separately recorded Android runtime checks remain unresolved.

@@ -1,0 +1,78 @@
+
+/workspace/test-results/dynamic-kernel/heldout-inspection-only.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <_binary__workspace_test_results_dynamic_kernel_heldout_ascii_original_native_start>:
+       0: 52800000     	mov	w0, #0x0                // =0
+       4: 11000400     	add	w0, w0, #0x1
+       8: 53001c00     	uxtb	w0, w0
+       c: 11000400     	add	w0, w0, #0x1
+      10: 53001c00     	uxtb	w0, w0
+      14: 11000400     	add	w0, w0, #0x1
+      18: 53001c00     	uxtb	w0, w0
+      1c: 11000400     	add	w0, w0, #0x1
+      20: 53001c00     	uxtb	w0, w0
+      24: 11000400     	add	w0, w0, #0x1
+      28: 53001c00     	uxtb	w0, w0
+      2c: 11000400     	add	w0, w0, #0x1
+      30: 53001c00     	uxtb	w0, w0
+      34: 11000400     	add	w0, w0, #0x1
+      38: 53001c00     	uxtb	w0, w0
+      3c: 11000400     	add	w0, w0, #0x1
+      40: 53001c00     	uxtb	w0, w0
+      44: 11000400     	add	w0, w0, #0x1
+      48: 53001c00     	uxtb	w0, w0
+      4c: 11000400     	add	w0, w0, #0x1
+      50: 53001c00     	uxtb	w0, w0
+      54: 11000400     	add	w0, w0, #0x1
+      58: 53001c00     	uxtb	w0, w0
+      5c: 11000400     	add	w0, w0, #0x1
+      60: 53001c00     	uxtb	w0, w0
+      64: 11000400     	add	w0, w0, #0x1
+      68: 53001c00     	uxtb	w0, w0
+      6c: 11000400     	add	w0, w0, #0x1
+      70: 53001c00     	uxtb	w0, w0
+      74: 11000400     	add	w0, w0, #0x1
+      78: 53001c00     	uxtb	w0, w0
+      7c: 11000400     	add	w0, w0, #0x1
+      80: 53001c00     	uxtb	w0, w0
+      84: 11000400     	add	w0, w0, #0x1
+      88: 53001c00     	uxtb	w0, w0
+      8c: 11000400     	add	w0, w0, #0x1
+      90: 53001c00     	uxtb	w0, w0
+      94: 11000400     	add	w0, w0, #0x1
+      98: 53001c00     	uxtb	w0, w0
+      9c: 11000400     	add	w0, w0, #0x1
+      a0: 53001c00     	uxtb	w0, w0
+      a4: 11000400     	add	w0, w0, #0x1
+      a8: 53001c00     	uxtb	w0, w0
+      ac: 11000400     	add	w0, w0, #0x1
+      b0: 53001c00     	uxtb	w0, w0
+      b4: 11000400     	add	w0, w0, #0x1
+      b8: 53001c00     	uxtb	w0, w0
+      bc: 11000400     	add	w0, w0, #0x1
+      c0: 53001c00     	uxtb	w0, w0
+      c4: 11000400     	add	w0, w0, #0x1
+      c8: 53001c00     	uxtb	w0, w0
+      cc: 11000400     	add	w0, w0, #0x1
+      d0: 53001c00     	uxtb	w0, w0
+      d4: 11000400     	add	w0, w0, #0x1
+      d8: 53001c00     	uxtb	w0, w0
+      dc: 11000400     	add	w0, w0, #0x1
+      e0: 53001c00     	uxtb	w0, w0
+      e4: 11000400     	add	w0, w0, #0x1
+      e8: 53001c00     	uxtb	w0, w0
+      ec: 11000400     	add	w0, w0, #0x1
+      f0: 53001c00     	uxtb	w0, w0
+      f4: 11000400     	add	w0, w0, #0x1
+      f8: 53001c00     	uxtb	w0, w0
+      fc: 11000400     	add	w0, w0, #0x1
+     100: 53001c00     	uxtb	w0, w0
+     104: 11000400     	add	w0, w0, #0x1
+     108: 53001c00     	uxtb	w0, w0
+     10c: 11000400     	add	w0, w0, #0x1
+     110: 53001c00     	uxtb	w0, w0
+     114: 51000400     	sub	w0, w0, #0x1
+     118: 53001c00     	uxtb	w0, w0
+     11c: d65f03c0     	ret

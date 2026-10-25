@@ -1,5 +1,7 @@
 # COCK — Stage A engineering workspace
 
+Experimental dynamic-tape/wide-fuel kernel: [candidate evidence](docs/dynamic-kernel-evidence.md). Component and compiler regressions pass, but mandatory nested execution timed out. The candidate is not promoted to the default compiler path or accepted as Stage A. Current installed SDK and failed emulator checks are recorded in [Android environment evidence](docs/cloud-android-environment.md).
+
 **Development in progress. Not an accepted Stage A build and not an Android compiler yet.** All authored executable source in this folder is annotated original eight-command Brainfuck. There is no hidden conventional production compiler or launcher. The restricted component passed exact raw-byte diagnostics under a nonqualifying external test evaluator; **the mandatory independently qualified root BF evaluator and full nested self-hosting path are absent**. See `docs/evidence.md`.
 
 ## Implemented component and observed diagnostics

@@ -1,0 +1,53 @@
+{
+  "kind": "Inert Stage E wire/body/state and feature acceptance expectations",
+  "state": "NOT RUN; illustrative app BF source/assets and full exact native/frame fixtures absent",
+  "literal_vectors": [
+    {"id":"text_hi","action_data_hex":"01000000020000004869","expected":"VALID body with requested ui.text","action_data_bytes":10,"text":"Hi"},
+    {"id":"text_clear","action_data_hex":"0100000000000000","expected":"VALID empty label body","action_data_bytes":8},
+    {"id":"text_bad_version","action_data_hex":"0200000000000000","expected":"REJECT unsupported profile version"},
+    {"id":"text_nonzero_reserved","action_data_hex":"0100010000000000","expected":"REJECT reserved bits"},
+    {"id":"text_length_mismatch","action_data_hex":"010000000200000048","expected":"REJECT truncated text"},
+    {"id":"text_binary_nul","action_data_hex":"010000000100000000","expected":"REJECT nonprintable text; raw binary data remains valid elsewhere"},
+    {"id":"touch_origin","event_type":1,"event_data_hex":"0000000000000000","event_data_bytes":8,"expected":"VALID only in live nonempty surface and with ui.touch"},
+    {"id":"touch_xy","event_type":1,"event_data_hex":"0100000002000000","expected_x":1,"expected_y":2,"expected":"VALID only if within live surface"},
+    {"id":"touch_short","event_type":1,"event_data_hex":"00000000000000","expected":"REJECT seven-byte touch data"},
+    {"id":"touch_long","event_type":1,"event_data_hex":"000000000000000000","expected":"REJECT nine-byte touch data"},
+    {"id":"surface_ready","event_type":2,"event_data_hex":"","expected":"VALID only with ui.text/live window"},
+    {"id":"surface_nonempty","event_type":2,"event_data_hex":"00","expected":"REJECT unexpected data"},
+    {"id":"counter_empty_render","schema":1,"prior_state_hex":"","event_type":2,"expected_text":"0","expected_next_state_hex":"0000000000000000"},
+    {"id":"counter_one_touch","schema":1,"prior_state_hex":"0000000000000000","event_type":1,"expected_text":"1","expected_next_state_hex":"0100000000000000"},
+    {"id":"counter_wrap","schema":1,"prior_state_hex":"ffffffffffffffff","event_type":1,"expected_text":"0","expected_next_state_hex":"0000000000000000"},
+    {"id":"coordinate_initial","schema":2,"prior_state_hex":"","event_type":2,"expected_text":"READY","expected_next_state_hex":""},
+    {"id":"coordinate_odd_touch","schema":2,"prior_state_hex":"","event_type":1,"event_data_hex":"0100000002000000","expected_text":"ODD","expected_next_state_hex":"0100000002000000"},
+    {"id":"coordinate_even_touch","schema":2,"prior_state_hex":"0100000002000000","event_type":1,"event_data_hex":"0200000001000000","expected_text":"EVEN","expected_next_state_hex":"0200000001000000"},
+    {"id":"main_swap_binary","input_hex":"00ff","expected_output_hex":"ff00","expected_input_consumed":2},
+    {"id":"main_swap_eof","input_hex":"","expected_output_hex":"0000","expected_input_consumed":0}
+  ],
+  "frame_size_anchors": [
+    {"id":"opaque_two_byte_touch_event","payload_header_bytes":32,"prior_state_bytes":2,"event_data_bytes":8,"expected_payload_bytes":42,"expected_frame_bytes":67},
+    {"id":"opaque_two_byte_hi_action","payload_header_bytes":32,"next_state_bytes":2,"action_data_bytes":10,"expected_payload_bytes":44,"expected_frame_bytes":69},
+    {"id":"empty_state_surface_event","payload_header_bytes":32,"prior_state_bytes":0,"event_data_bytes":0,"expected_payload_bytes":32,"expected_frame_bytes":57},
+    {"id":"bhio_guarded_empty_data","metadata_bytes":1,"data_bytes":0,"expected_record_bytes":34}
+  ],
+  "schema_negative_cases": [
+    {"id":"escaped_duplicate_key","json_text":"{\"id\":1,\"\\u0069d\":2}","expected":"REJECT decoded duplicate before generation"},
+    {"id":"integer_exponent","json_text":"{\"config_version\":1e0}","expected":"REJECT non-integer token"},
+    {"id":"lone_surrogate","json_text":"{\"id\":\"\\ud800\"}","expected":"REJECT malformed Unicode escape value"},
+    {"id":"unknown_code_field","field":"script","expected":"REJECT unknown schema key, never execute"},
+    {"id":"direct_call_import","imports":["other.run"],"expected":"UNSUPPORTED_CAPABILITY"},
+    {"id":"dependency_cycle","edges":[["a","b"],["b","a"]],"expected":"REJECT complete manifest"},
+    {"id":"path_escape","path":"../secret","expected":"REJECT before physical open/generation"},
+    {"id":"state_without_handler","module_fields":["id","source","_profile","state_schema"],"expected":"REJECT invalid main role"}
+  ],
+  "required_authority_device_groups": [
+    "BHIO exact direction/identity/status and larger-than-pipe deadlock/race cases",
+    "Separate envelope/build-input/artifact/event grammar and physical completion",
+    "Action then trap, forged status, duplicate action and unknown handler return",
+    "FIFO saturation, queued/in-flight cancellation, stale correlation/generation",
+    "Render failure keeps old logical state; lost visual acknowledgement marks UNKNOWN",
+    "Real visible text/touch/state/redraw/lifecycle on task-owned Android apps",
+    "Both different app structures and post-freeze held-out input through same compiler",
+    "Permission/JNI/DEX/services/AAB unsupported until exact selected capability tests",
+    "Actual per-row API/ABI/page-size/package/signature and prior stage regressions"
+  ]
+}

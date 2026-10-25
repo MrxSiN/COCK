@@ -1,0 +1,27 @@
+{
+  "kind": "Inert Stage C literal expectations and acceptance obligations",
+  "state": "NOT RUN; independent BF oracle and actual interpreter results required",
+  "literal_vectors": [
+    {"id":"empty","source_ascii":"","input_hex":"","fuel":0,"expected_status":0,"executed":0,"output_hex":""},
+    {"id":"skip_empty_loop","source_ascii":"[]","input_hex":"","fuel":1,"expected_status":0,"executed":1,"output_hex":""},
+    {"id":"clear_twice","source_ascii":"++[-]","input_hex":"","fuel":7,"expected_status":0,"executed":7,"output_hex":""},
+    {"id":"close_targets_after_open","source_ascii":"++[-]","input_hex":"","fuel":5,"expected_status":6,"executed":5,"failure_offset":3,"cell_zero":1,"output_hex":""},
+    {"id":"binary_roundtrip","source_ascii":",.,.,.","input_hex":"00a5ff","fuel":6,"expected_status":0,"executed":6,"input_consumed":3,"output_hex":"00a5ff"},
+    {"id":"eof_overwrite","source_ascii":",.,.","input_hex":"ff","fuel":4,"expected_status":0,"executed":4,"input_consumed":1,"output_hex":"ff00"},
+    {"id":"fuel_before_left","source_ascii":"<","input_hex":"","fuel":0,"expected_status":6,"executed":0,"failure_offset":0,"output_hex":""},
+    {"id":"left_charged","source_ascii":"<","input_hex":"","fuel":1,"expected_status":4,"executed":1,"failure_offset":0,"output_hex":""},
+    {"id":"logical_growth_charged","source_ascii":"><","input_hex":"","fuel":2,"max_cells":1,"expected_status":5,"executed":1,"failure_offset":0,"output_hex":""},
+    {"id":"invalid_suffix_atomic","source_hex":"2e00","input_hex":"","fuel":0,"expected_status":1,"executed":0,"failure_offset":1,"output_hex":""},
+    {"id":"nested_transfer","source_ascii":"++[>++[>+<-]<-]>>.","input_hex":"","fuel":40,"max_cells":3,"expected_status":0,"executed":40,"pointer":2,"logical_cells":3,"output_hex":"04"},
+    {"id":"annotated_offset","source_ascii":"# safe\n+.","input_hex":"","fuel":1,"expected_status":6,"executed":1,"failure_offset":8,"output_hex":""}
+  ],
+  "required_groups": [
+    "All 54 Stage B semantic vectors plus 2 trace anchors independently rerun",
+    "Source and counter boundaries 255/256 and 65535/65536",
+    "Actual storage-stride boundaries, source/guest/outer isolation and overflow",
+    "Full actual compiler outputs and identical-interpreter two-level completion",
+    "Physical resource/closure failure distinct from guest status",
+    "Affected Stage A/B build and Android regressions",
+    "Cold/warm full-cost baseline and optional-sharing rollback"
+  ]
+}

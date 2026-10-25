@@ -1,5 +1,7 @@
 # Full Stage B design draft
 
+Actual implementation continuation: [checked u64 addition and other real BF components](real-bcde-implementation-evidence.md) are now implemented and tested directly/through BF-in-BF. `src/stage_b_u64_add.bf` is a complete new arithmetic subcomponent, not the missing frontend/native/compiler/runtime files below. The whole-stage source and acceptance gates remain incomplete.
+
 Prepared on 2026-10-25 (Asia/Kuala_Lumpur), against candidate `57b625c47d17d682080f050f0b0ee9755169b663` and independently fetched main `c5b02dcd1d0eae6793ef7eb84c4bb17fa00c3d8c`.
 
 **All B01–B09 have documentary draft coverage. Executable Stage B first-pass draft: INCOMPLETE. Implementation acceptance: BLOCKED.** This package contains design, inert policy and hand-derived reference data. It creates no placeholder BF modules, generated native templates or claimed test results. In the master prompt, DRAFTED requires complete actual first-pass source; documentary completion does not satisfy that gate.

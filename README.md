@@ -1,5 +1,9 @@
 # COCK — Stage A engineering workspace
 
+Real implementation: [eight executable BF components and actual results](docs/real-bcde-implementation-evidence.md). Checked u64 arithmetic, retained binary input/EOF, CRC-32, BFIO/text validation, two real app modules and a parameter-driven stored ZIP writer now run directly and through BF-in-BF. **91 direct cases and 15 BF-in-BF cases passed**, with independent BF comparisons, ZIP inspection and old compiler regressions. Full B–E Android/compiler/signing/UI implementation remains incomplete; this is executable progress, not whole-stage acceptance.
+
+Stage C–E drafts: [C01–C06 interpreter expansion](docs/stage-c-full-draft.md), [D01–D08 BF-native APK/signing](docs/stage-d-full-draft.md), [E01–E13 app/configuration/events/UI/capabilities](docs/stage-e-full-draft.md), and [shared checkpoint/issues](docs/stages-cde-draft-checkpoint.md). Design coverage, exact proposed file inventories, contracts and acceptance plans are complete. Executable drafts remain incomplete; no new compiler, crypto or device tests are claimed.
+
 Stage B draft: [complete B01–B09 design, file inventories and gates](docs/stage-b-full-draft.md), [acceptance plan](docs/stage-b-test-draft.md), and [open issues](docs/stage-b-issues.md). Source, AOT, runtime/binary bridge, fuel, regression and benchmark contracts are drafted with literal reference data. Executable Stage B source is not complete; Stage A and device blockers remain open.
 
 Latest emulator run: [actual APK installation failures, BF-native entry probe and nested retry](docs/emulator-retry-evidence.md). A new BF test generator emits a structurally checked Android ET_DYN entry library and a signed debug probe APK was prepared. The software emulator failed to finish boot/install after about 39 minutes; the 900-second nested retry also failed. Full A01–A14 is not accepted.

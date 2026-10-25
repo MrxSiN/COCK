@@ -1,0 +1,8 @@
+{
+  "kind": "Additional literal data selected after complete actual source freezes",
+  "state": "Expectations written before these extra executions; no actual output captured as a golden",
+  "cases": [
+    {"id":"crc_postfreeze","source":"src/stage_d_crc32.bf","input_hex_parts":["2b00","54686520717569636b2062726f776e20666f78206a756d7073206f76657220746865206c617a7920646f67","0000a5"],"expected_hex_parts":["00","39a34f41"]},
+    {"id":"zip_crc_chain","source":"src/stage_d_stored_zip.bf","crc_producer_case":"crc_hello","crc_routing":"The actual BF-produced final four CRC bytes were mechanically copied after the validated status byte; this is component-test orchestration, not an implemented production BF build graph","input_hex_parts":["0200","6869","a5","0500","86a61036","68656c6c6f","a5"],"expected_hex_parts":["504b03041400000800000000210086a61036050000000500000002000000686968656c6c6f","504b010214001400000800000000210086a6103605000000050000000200000000000000000000000000000000006869","504b0506000000000100010030000000250000000000"]}
+  ]
+}

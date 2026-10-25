@@ -1,0 +1,18 @@
+{
+  "kind": "Literal ZIP serializer input and independently specified expected records",
+  "source": "src/stage_d_stored_zip.bf",
+  "encoding": "Concatenate exact hex parts then decode bytes",
+  "cases": [
+    {"id":"zip_empty_file","archive_valid":true,"input_hex_parts":["0100","61","a5","0000","00000000","a5"],"expected_hex_parts":["504b0304","14000008000000002100","00000000","00000000","00000000","01000000","61","504b0102","140014000008000000002100","00000000","00000000","00000000","0100","00000000000000000000000000000000","61","504b05060000000001000100","2f000000","1f000000","0000"]},
+    {"id":"zip_abc","archive_valid":true,"input_hex_parts":["0100","61","a5","0300","c2412435","616263","a5"],"expected_hex_parts":["504b0304","14000008000000002100","c2412435","03000000","03000000","01000000","61","616263","504b0102","140014000008000000002100","c2412435","03000000","03000000","0100","00000000000000000000000000000000","61","504b05060000000001000100","2f000000","22000000","0000"]},
+    {"id":"zip_binary_ff","archive_valid":true,"input_hex_parts":["0200","6162","a5","0100","000000ff","ff","a5"],"expected_hex_parts":["504b0304","14000008000000002100","000000ff","01000000","01000000","02000000","6162","ff","504b0102","140014000008000000002100","000000ff","01000000","01000000","0200","00000000000000000000000000000000","6162","504b05060000000001000100","30000000","21000000","0000"]},
+    {"id":"zip_digits_path","archive_valid":true,"input_hex_parts":["0500","6469722f61","a5","0900","2639f4cb","313233343536373839","a5"],"expected_hex_parts":["504b0304","14000008000000002100","2639f4cb","09000000","09000000","05000000","6469722f61","313233343536373839","504b0102","140014000008000000002100","2639f4cb","09000000","09000000","0500","00000000000000000000000000000000","6469722f61","504b05060000000001000100","33000000","2c000000","0000"]},
+    {"id":"zip_bad_path_guard","archive_valid":false,"input_hex_parts":["0100","61","00","0300","c2412435","616263","a5"],"expected_hex_parts":[""]},
+    {"id":"zip_bad_final_guard","archive_valid":false,"input_hex_parts":["0100","61","a5","0300","c2412435","616263","00"],"expected_hex_parts":["504b0304","14000008000000002100","c2412435","03000000","03000000","01000000","61","616263"]},
+    {"id":"zip_wrong_crc","archive_valid":false,"input_hex_parts":["0100","61","a5","0300","00000000","616263","a5"],"expected_hex_parts":["504b0304","14000008000000002100","00000000","03000000","03000000","01000000","61","616263","504b0102","140014000008000000002100","00000000","03000000","03000000","0100","00000000000000000000000000000000","61","504b05060000000001000100","2f000000","22000000","0000"],"scope":"Deliberately violates BF CRC producer precondition; independent verifier must reject"}
+  ],
+  "binary_fixtures": [
+    {"id":"zip_name_carry","input":"zip_name_carry.input.bin","expected":"zip_name_carry.expected.bin","archive_valid":true,"name_bytes":226,"data_bytes":0,"expected_zip_bytes":550},
+    {"id":"zip_data_carry","input":"zip_data_carry.input.bin","expected":"zip_data_carry.expected.bin","archive_valid":true,"name_bytes":2,"data_bytes":256,"expected_zip_bytes":358}
+  ]
+}

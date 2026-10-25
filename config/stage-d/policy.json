@@ -1,0 +1,14 @@
+{
+  "kind": "Inert proposed Stage D signing/container policy; not implementation or current release approval",
+  "state": "DESIGN COMPLETE D01-D08; executable draft INCOMPLETE; tests NOT RUN; integration BLOCKED",
+  "target": {"os":"Android","abi":"arm64-v8a","min_sdk":35,"target_sdk":35,"channel":"direct-install APK"},
+  "zip": {"method":"stored","canonical_order":"unsigned normalized UTF-8 path bytes","timestamp":"1980-01-01T00:00:00 DOS metadata","native_data_alignment":16384,"zip64":"UNSUPPORTED initially","post_sign_realign":false},
+  "resources": "BF binary XML, string pools and resource IDs; no resources.arsc when plan needs no resource table; other forms gated",
+  "signing": {"scheme":"APK Signature Scheme v2","block_id_hex":"7109871a","algorithm_id_hex":"0103","algorithm":"RSA PKCS1 v1.5 SHA-256","rsa_min_bits":2048,"public_exponent":65537,"signers":1,"certificate":"BF-generated profile-fixed self-signed X.509, controlled disposable test input key","additional_schemes":"UNSUPPORTED until separately selected and tested"},
+  "crypto_states": {"crypto_correct":"NOT VERIFIED","test_key_signed":"NOT RUN","key_custody_reviewed":false,"production_signing_authorized":false},
+  "real_release_keys": "UNSUPPORTED pending master threat-model/security/custody/device gates and explicit release instruction",
+  "production_ownership": "All resource/ZIP/CRC/hash/DER/RSA/APK-scheme algorithms authored in BF; external verifiers veto only",
+  "external_debug_fallback": "Retained and clearly DEBUG-ONLY; cannot satisfy D07",
+  "tested_compatibility_rows": [],
+  "play_aab": "UNSUPPORTED by initial D policy; no publication requested"
+}

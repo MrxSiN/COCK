@@ -89,5 +89,6 @@
   },
   "local_raw_evidence_root":"/workspace/test-results/upload-executable",
   "main_promoted":false,
+  "origin_main_observed_at_finish":"c5b02dcd1d0eae6793ef7eb84c4bb17fa00c3d8c; independent merge of prior design checkpoint 3a6a10b, not this diagnostic implementation",
   "apk_release_or_signing_claim":false
 }

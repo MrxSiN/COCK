@@ -1,0 +1,52 @@
+[
+  {
+    "serial": "emulator-5554",
+    "args": [
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    "returncode": 0,
+    "stdout": "\n",
+    "stderr": "",
+    "seconds": 4.446
+  },
+  {
+    "serial": "emulator-5554",
+    "args": [
+      "shell",
+      "service",
+      "check",
+      "activity"
+    ],
+    "returncode": 0,
+    "stdout": "Service activity: found\n",
+    "stderr": "",
+    "seconds": 4.996
+  },
+  {
+    "serial": "emulator-5556",
+    "args": [
+      "shell",
+      "getprop",
+      "sys.boot_completed"
+    ],
+    "returncode": 0,
+    "stdout": "\n",
+    "stderr": "",
+    "seconds": 8.88
+  },
+  {
+    "serial": "emulator-5556",
+    "args": [
+      "shell",
+      "service",
+      "check",
+      "activity"
+    ],
+    "returncode": 0,
+    "stdout": "Service activity: found\n",
+    "stderr": "",
+    "seconds": 8.085
+  }
+]

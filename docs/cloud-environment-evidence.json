@@ -8,7 +8,10 @@
   "sdk_archive_sha256": "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee",
   "sdk_archive_sha1_from_google_repository_xml": "5fdcc763663eefb86a5b8879697aa6088b041e70",
   "kvm_available": false,
-  "sdk_package_license_accepted": false,
-  "emulator_installed": false,
-  "android_device_tests": "NOT RUN"
+  "sdk_package_license_accepted": true,
+  "emulator_installed": true,
+  "android_device_tests": "FAILED readiness: boot timeouts and unstable framework; COCK app tests NOT RUN",
+  "license_authorization": "Owner explicitly agreed to all Android licenses in the onboarding conversation",
+  "android_runtime_ready": false,
+  "installer_repeatability": "Complete SDK/evaluator installer passed; both AVD creation steps preserve existing AVDs"
 }

@@ -1,0 +1,69 @@
+{
+  "android_runtime_ready": false,
+  "kvm_available": false,
+  "acceleration_check": "KVM requires a CPU that supports vmx or svm",
+  "container_oom_kills": 0,
+  "sdk_install_exit": 0,
+  "installer_repeat_exit": 0,
+  "google_apis": {
+    "initial_boot_timeout_seconds": 914.78,
+    "extended_boot_timeout_seconds": 903.28,
+    "reported_abis": [
+      "x86_64",
+      "arm64-v8a"
+    ],
+    "native_bridge": "libndk_translation.so",
+    "reported_api": 35,
+    "page_size": 4096,
+    "stable_boot": false,
+    "framework_restart_guest_seconds": 1882.5
+  },
+  "aosp_atd": {
+    "initial_boot_timeout_seconds": 900.79,
+    "retry_boot_completed_observed": true,
+    "basic_shell_property_checks_passed": 6,
+    "ui_service_checks_failed": 3,
+    "screenshot_transport_passed": true,
+    "visual_inspection": "Black frame; no Settings UI was demonstrated",
+    "reported_abis": [
+      "x86_64"
+    ],
+    "native_bridge": "0",
+    "reported_api": 35,
+    "page_size": 4096,
+    "stable_runtime": false,
+    "framework_restart_guest_seconds": [
+      851.49,
+      1158.348
+    ],
+    "diagnostic_watchdog_setting": {
+      "name": "watchdog_timeout_millis",
+      "stored_value": 600000,
+      "runtime_effect_verified": false,
+      "restored": "Task-created ATD deleted and recreated from the official image after testing; diagnostic userdata removed"
+    }
+  },
+  "cock_app_tests": "NOT RUN: project contains no ELF/APK",
+  "processes_stopped": true,
+  "next_required_capability": "Use a KVM-capable test host or an ADB-accessible Android device; rerun readiness and UI checks. A specific emulator image defect has not been established.",
+  "kernel_events": {
+    "google_apis": [
+      "[ 1877.566203] CPU: 0 PID: 677 Comm: watchdog Tainted: G           OE      6.6.50-android15-8-g8adecb593e9b-ab12525588 #1 03466743f55c4b5f087fe5c3134f2e4d2835d3e1",
+      "[ 1882.500049] init: Service 'zygote' (pid 357) received signal 9"
+    ],
+    "aosp_atd": [
+      "[  845.418557] CPU: 1 PID: 658 Comm: watchdog Tainted: G           OE      6.6.30-android15-8-gdd9c02ccfe27-ab11987101 #1 490cdd7f01b5f1ecd6812eca655cf3f79cf58134",
+      "[  851.490449] init: Service 'zygote' (pid 370) received signal 9",
+      "[ 1069.852017] CPU: 0 PID: 1500 Comm: watchdog Tainted: G           OE      6.6.30-android15-8-gdd9c02ccfe27-ab11987101 #1 490cdd7f01b5f1ecd6812eca655cf3f79cf58134",
+      "[ 1158.348003] init: Service 'zygote' (pid 1388) received signal 9"
+    ]
+  },
+  "container_memory_events": [
+    "low 0",
+    "high 0",
+    "max 0",
+    "oom 0",
+    "oom_kill 0",
+    "oom_group_kill 0"
+  ]
+}

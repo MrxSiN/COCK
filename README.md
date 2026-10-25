@@ -22,7 +22,7 @@ Do not label any resulting raw instruction stream as an ELF, Android shared libr
 
 The next bounded draft added `src/raw_subset_gate.bf` and `fixtures/raw-subset-gate-vectors.json`. Fixed raw-source diagnostic vectors passed 13/13 and deterministic additional differential diagnostics passed 400/400 on 2026-10-24. **These are local diagnostics**, not the self-hosted compiler or complete Part 1 source preflight. See `docs/stage-a-followup-evidence.md` and its JSON companion.
 
-The official Android SDK and emulator cannot be downloaded or booted from this sandbox due blocked external DNS and missing KVM. A locally compiled outside-repository diagnostic evaluator is installed in the running environment; it is **not** the independently supplied standards-only executor required by Stage A. See `docs/sdk-environment.md` for official verified-download instructions and prerequisites for a real `arm64-v8a` test host.
+The current cloud environment has the official Android SDK and both API 35 emulator images installed; software runtime validation failed with boot timeouts and framework restarts. See `docs/cloud-android-environment.md` for current evidence. An independently supplied upstream Tritium evaluator is now installed for bounded component checks; full COCK bootstrap qualification remains incomplete. The observations in `docs/sdk-environment.md` describe the archived host.
 
 ## Printable admission extension — current bounded slice
 

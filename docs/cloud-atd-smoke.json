@@ -1,0 +1,126 @@
+{
+  "boot_completed": true,
+  "boot_wait_seconds": 161.34,
+  "checks": [
+    {
+      "name": "shell-functional",
+      "args": [
+        "shell",
+        "echo",
+        "COCK_ANDROID_SHELL_OK"
+      ],
+      "returncode": 0,
+      "stdout": "COCK_ANDROID_SHELL_OK\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ro.build.version.sdk",
+      "args": [
+        "shell",
+        "getprop",
+        "ro.build.version.sdk"
+      ],
+      "returncode": 0,
+      "stdout": "35\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ro.product.cpu.abilist",
+      "args": [
+        "shell",
+        "getprop",
+        "ro.product.cpu.abilist"
+      ],
+      "returncode": 0,
+      "stdout": "x86_64\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "ro.dalvik.vm.native.bridge",
+      "args": [
+        "shell",
+        "getprop",
+        "ro.dalvik.vm.native.bridge"
+      ],
+      "returncode": 0,
+      "stdout": "0\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "sys.boot_completed",
+      "args": [
+        "shell",
+        "getprop",
+        "sys.boot_completed"
+      ],
+      "returncode": 0,
+      "stdout": "1\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "page-size",
+      "args": [
+        "shell",
+        "getconf",
+        "PAGE_SIZE"
+      ],
+      "returncode": 0,
+      "stdout": "4096\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "package-manager",
+      "args": [
+        "shell",
+        "pm",
+        "path",
+        "com.android.settings"
+      ],
+      "returncode": 224,
+      "stdout": "cmd: Failure calling service package: Broken pipe (32)\n",
+      "stderr": "",
+      "passed": false
+    },
+    {
+      "name": "settings-launch",
+      "args": [
+        "shell",
+        "am",
+        "start",
+        "-W",
+        "-a",
+        "android.settings.SETTINGS"
+      ],
+      "returncode": 20,
+      "stdout": "",
+      "stderr": "cmd: Can't find service: activity\n",
+      "passed": false
+    },
+    {
+      "name": "foreground-activity",
+      "args": [
+        "shell",
+        "dumpsys",
+        "activity",
+        "activities"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Can't find service: activity\n",
+      "passed": false
+    },
+    {
+      "name": "screenshot",
+      "returncode": 0,
+      "bytes": 4196,
+      "passed": true
+    }
+  ],
+  "cock_app_tests": "NOT RUN: no ELF/APK exists in the supplied project"
+}

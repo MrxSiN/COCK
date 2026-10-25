@@ -1,0 +1,6 @@
+{
+  "boot_completed": false,
+  "boot_wait_seconds": 914.78,
+  "checks": [],
+  "cock_app_tests": "NOT RUN: no ELF/APK exists in the supplied project"
+}

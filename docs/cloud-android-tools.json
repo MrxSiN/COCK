@@ -1,0 +1,96 @@
+{
+  "packages": {
+    "cmdline-tools/19.0": {
+      "Pkg.Revision": "19.0",
+      "Pkg.Path": "cmdline-tools;19.0",
+      "Pkg.Desc": "Android SDK Command-line Tools"
+    },
+    "platform-tools": {
+      "Pkg.UserSrc": "false",
+      "Pkg.Revision": "37.0.1"
+    },
+    "platforms/android-35": {
+      "Pkg.Desc": "Android SDK Platform 15",
+      "Pkg.UserSrc": "false",
+      "Platform.Version": "15",
+      "Platform.CodeName": "",
+      "Pkg.Revision": "2",
+      "AndroidVersion.ApiLevel": "35",
+      "AndroidVersion.ExtensionLevel": "13",
+      "AndroidVersion.IsBaseSdk": "true",
+      "Layoutlib.Api": "15",
+      "Layoutlib.Revision": "1",
+      "Platform.MinToolsRev": "22"
+    },
+    "build-tools/35.0.0": {
+      "Pkg.UserSrc": "false",
+      "Pkg.Revision": "35.0.0"
+    },
+    "ndk/28.2.13676358": {
+      "Pkg.Desc": "Android NDK",
+      "Pkg.Revision": "28.2.13676358",
+      "Pkg.BaseRevision": "28.2.13676358",
+      "Pkg.ReleaseName": "r28c"
+    },
+    "emulator": {
+      "Pkg.UserSrc": "false",
+      "Pkg.Revision": "37.2.12",
+      "Pkg.Path": "emulator",
+      "Pkg.Desc": "Android Emulator",
+      "Pkg.BuildId": "16428233"
+    },
+    "system-images/android-35/google_apis/x86_64": {
+      "Pkg.Desc": "System Image x86_64 with Google APIs.",
+      "Pkg.Revision": "9",
+      "Pkg.Dependencies": "emulator#33.1.24",
+      "AndroidVersion.ApiLevel": "35",
+      "AndroidVersion.ExtensionLevel": "13",
+      "AndroidVersion.IsBaseSdk": "true",
+      "SystemImage.Abi": "x86_64",
+      "SystemImage.TagId": "google_apis",
+      "SystemImage.TagDisplay": "Google APIs",
+      "SystemImage.GpuSupport": "true",
+      "Addon.VendorId": "google",
+      "Addon.VendorDisplay": "Google Inc."
+    },
+    "system-images/android-35/aosp_atd/x86_64": {
+      "Pkg.Desc": "AOSP Automated Test Device System Image x86_64",
+      "Pkg.Revision": "1",
+      "Pkg.Dependencies": "emulator#30.9.2",
+      "AndroidVersion.ApiLevel": "35",
+      "SystemImage.Abi": "x86_64",
+      "SystemImage.TagId": "aosp_atd",
+      "SystemImage.TagDisplay": "AOSP ATD",
+      "SystemImage.GpuSupport": "true",
+      "Addon.VendorId": "google",
+      "Addon.VendorDisplay": "Google Inc."
+    }
+  },
+  "version_checks": {
+    "adb": {
+      "returncode": 0,
+      "stdout": "Android Debug Bridge version 1.0.41\nVersion 37.0.1-15733141\nInstalled as /workspace/android-sdk/platform-tools/adb\nRunning on Linux 6.18.55 (x86_64)\n",
+      "stderr": ""
+    },
+    "aapt2": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "Android Asset Packaging Tool (aapt) 2.19-11948202\n"
+    },
+    "apksigner": {
+      "returncode": 0,
+      "stdout": "0.9\n",
+      "stderr": ""
+    },
+    "d8": {
+      "returncode": 0,
+      "stdout": "D8 8.6.2-dev (build abaab469b5ebd4dd2bb91ba0ed6f45277faae4ca from go/r8bot (luci-r8-custom-ci-archive-0-77gl))\n",
+      "stderr": ""
+    },
+    "ndk-clang": {
+      "returncode": 0,
+      "stdout": "Android (13624864, +pgo, +bolt, +lto, +mlgo, based on r530567e) clang version 19.0.1 (https://android.googlesource.com/toolchain/llvm-project 97a699bf4812a18fb657c2779f5296a4ab2694d2)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /workspace/android-sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/linux-x86_64/bin\n",
+      "stderr": ""
+    }
+  }
+}

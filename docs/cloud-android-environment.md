@@ -1,41 +1,67 @@
-# Cloud Android testing environment — 2026-10-25
+# Cloud Android test environment — 2026-10-25
 
-This report supersedes the archived machine observations in `sdk-environment.md` and `docker-android-feasibility.md` for this cloud instance. Older reports remain historical evidence, not current machine status.
+**Tools installed; Android runtime is not ready on this host.** SDK/evaluator setup and repeat installation succeeded. Android software-emulation tests exposed boot timeouts and framework restarts; UI readiness is not established. No COCK application was installed or launched.
 
-## Scope and provenance
+This report supersedes archived machine observations in `sdk-environment.md` and `docker-android-feasibility.md`. Older evidence describes the uploaded workspace's previous host.
 
-Imported the supplied Stage A workspace unchanged, including its previous evidence, and retained the supplied master engineering prompt as reference material. This task installs external development tools and tests existing BF components; it does not implement the prompt's broader compiler roadmap. Imported historical test counts are not results from this task.
+## Installed and verified
 
-All 50 repository executable sources are still Brainfuck. SDK, evaluator sources, binaries, download archives and the independent verification harness reside outside the checkout under `/workspace`. No conventional compiler/test implementation was added to the project.
+All SDK licenses were explicitly authorized by the owner in this conversation. The complete installer succeeded and passed its repeat run. Exact revisions and successful version-command outcomes are in `cloud-android-tools.json`.
 
-## Verified here
+| Component | Installed revision/location |
+| --- | --- |
+| Java | OpenJDK 21 |
+| SDK command-line tools | 19.0, `/workspace/android-sdk/cmdline-tools/19.0` |
+| Platform tools | 37.0.1; ADB 1.0.41 |
+| Android platform | API 35 |
+| Build tools | 35.0.0; aapt2, apksigner and D8 version checks passed |
+| NDK | 28.2.13676358 / r28c; Clang 19.0.1 version check passed |
+| Emulator | 37.2.12 |
+| Google APIs system image | API 35 x86_64 revision 9; AVD `COCK_API35`, port 5554 |
+| AOSP Automated Test Device image | API 35 x86_64 revision 1; AVD `COCK_ATD35`, port 5556 |
+| Independent BF evaluator | Pinned upstream Tritium, `/workspace/tools/bin/tritium` |
 
-- Linux x86_64; OpenJDK 21; no `/dev/kvm`.
-- Official SDK command-line tools 19.0 installed at `/workspace/android-sdk/cmdline-tools/19.0`. Its archive matched the checksum in Google's HTTPS repository metadata. SHA-256 and provenance are in `cloud-environment-evidence.json`.
-- SDK Manager 19.0 runs, and its remote package listing succeeds with the existing network proxy. An additional official 22.0 tool installation is retained; its deprecated `sdkmanager` does not perform the legacy package-list action. Use the tested 19.0 path.
-- Independent upstream Tritium built outside the repository from the pinned upstream commit in the evidence JSON. Installed executable: `/workspace/tools/bin/tritium`.
-- **50/50** BF files passed an independent static annotation/command/bracket audit.
-- **73/73** stored `source_pc_16bit_eight_cell_loops` fixture replays passed with exact output bytes and successful process completion. Six of these execute the real original/compact mini compilers through the BF-in-BF interpreter and match frozen native instruction payloads plus their terminal diagnostic status.
-- Executor probes passed modulo-256 cells, NUL/FF binary transport, EOF-to-zero, nested loops and a 100,000-cell rightward traversal. These are bounded probes, not unlimited-tape proof.
+SDK tools, evaluator sources/binaries, inspection harnesses and AVDs remain outside the checkout. No conventional executable source or SDK binaries were added to the project. The SDK CLI archive was independently checksum-verified; its provenance and the evaluator hash remain in `cloud-environment-evidence.json`. Use SDK Manager 19.0; the separately retained 22.0 legacy `sdkmanager` does not perform the old package-list operation.
 
-The invocation tested was `tritium -r -b -z -B -O1 -fno-negtape src/source_pc_16bit_eight_cell_loops.bf`, with each stored `.input.bin` supplied on stdin and stdout compared byte-for-byte with its `.expected.bin`. Run from `/workspace/COCK`. Each replay had a 120-second timeout. Detailed results and timings are in `cloud-bf-fixtures.json`. The external Python inspection harness only reads fixtures, invokes the BF evaluator and compares bytes; it does not implement production transformations or a guest-semantics oracle.
+## Android runtime outcomes
 
-## Evaluator qualification limits
+The x86_64 host has no `/dev/kvm`; the emulator acceleration probe reports no VMX/SVM support. Both AVDs were attempted using software CPU emulation and SwiftShader. Each used two guest cores and 2048 MiB RAM; ATD used a 540 by 960 display. Container memory events recorded zero OOM kills.
 
-Tritium is an independent installed evaluator, but is **not a qualified complete COCK bootstrap**. Unmatched brackets emit warnings yet exit zero and can emit earlier output. A left-boundary probe did not trap. The `-fno-negtape` option must not be represented as a runtime boundary guarantee. The outer memory implementation uses a large finite mmap reservation with lazy physical backing; it is not an unlimited dynamic tape.
+| Check | Actual outcome |
+| --- | --- |
+| Google APIs initial boot wait | Failed after 914.78 seconds |
+| Google APIs extended wait | Failed after another 903.28 seconds; framework restart also observed |
+| ATD initial boot wait | Failed after 900.79 seconds |
+| ATD subsequent run | Boot property briefly reached 1; six shell/property probes passed |
+| ATD package-manager lookup | Failed: broken pipe calling package service |
+| ATD Settings launch | Failed: activity service unavailable |
+| ATD foreground activity | Failed: activity service unavailable |
+| ATD PNG transport | Valid PNG bytes, but independent visual inspection found a black frame |
+| COCK APK/native integration | NOT RUN: no ELF library or APK exists in this project |
 
-An interactive `,.,.` probe produced `AB` correctly at completion but did not expose `A` before the second input was supplied. BHIO interactive routing is therefore unsupported in this tested configuration. Malformed-source admission, trusted closure, guest limits and framing must remain BF-owned responsibilities. The stored fixtures validate only the existing bounded noninteractive component. Full same-interpreter nested self-hosting remains unverified.
+The complete ATD driver exited **1**. Its raw result is `cloud-atd-smoke.json`; boot failures and framework summary are in `cloud-*-boot.json` and `cloud-android-runtime-summary.json`. A completed boot property alone did not establish stable services. The black frame is retained as `cloud-atd-blank-frame.png`, not as proof of a working Settings screen.
 
-## Android status and next steps
+Google APIs shell probes reported API 35, 4096-byte pages, `x86_64,arm64-v8a`, and `libndk_translation.so`. This advertises native bridging; it does not prove COCK native loading. ATD reported API 35, 4096-byte pages, x86_64 only and no native bridge. These are different target capabilities.
 
-SDK license acceptance is pending explicit owner authorization, as required by the supplied workspace instructions. Licensed platform tools, API 35 platform, build tools 35.0.0, NDK 28.2.13676358, emulator and system image have not been installed. No emulator boot, ADB functional request, APK installation or application launch is claimed.
+## Diagnosis and corrections attempted
 
-After authorization, use SDK Manager 19.0 to accept the Android SDK license and install `platform-tools`, `platforms;android-35`, `build-tools;35.0.0`, `ndk;28.2.13676358`, `emulator`, and `system-images;android-35;google_apis;x86_64`. Confirm each required license separately if additional terms appear.
+- ADB required its standard `/home/agent/.android` directory; narrow filesystem initialization and local emulator-console authentication setup restored ADB access. Authentication contents were never printed or committed.
+- A detached emulator exited with SIGKILL without a recorded container OOM. Managed foreground execution kept the emulator observable and running. Confirmed stale locks were removed only after the earlier process had terminated.
+- Framework traces and logs showed ongoing Settings/database initialization and expensive ART bytecode verification. Chrome alone took approximately 187 seconds of dex verification. The ATD image reduced bundled applications but did not yield a stable runtime.
+- ATD watchdog diagnostics were followed by zygote/framework restarts at approximately 851 and 1158 guest seconds. A supported global `watchdog_timeout_millis=600000` setting was stored and read back, but its runtime effect was not confirmed and stable UI checks still failed. After stopping both emulators, the task-created ATD was deleted and recreated from the official image to remove the diagnostic override and failed userdata. The Google APIs AVD and its compiled cache are retained. No test assertions, package checksums, TLS verification or application source were weakened.
 
-Create an AVD outside the repository. Attempt headless software execution with `-accel off -gpu swiftshader_indirect -no-window -no-audio -no-snapshot -no-boot-anim`, and verify completed boot, an actual shell operation, API, ABI list and page size using ADB. No KVM is available; software boot performance and viability are unverified. An x86_64 emulator is not evidence of `arm64-v8a` native compatibility. Verify actual ABI/translation support and native loading separately, or use a physical arm64 device/compatible host.
+Both test emulators were stopped gracefully. The remaining practical prerequisite is a KVM-capable host or an actual ADB-accessible Android device. Rerun completed boot, shell, package-manager, activity-launch, foreground and screenshot checks there. The evidence does not establish a specific Android image defect or guarantee that acceleration alone fixes every failure. COCK additionally needs BF-produced ELF/APK integration before any application acceptance test can run.
 
-The imported outputs are raw AArch64 instruction bytes, not ELF libraries or signed APKs. Installing Android tools cannot turn them into an installable app. Android functional acceptance remains blocked on the project's ELF/APK/self-hosting implementation as well as the test device. The saved environment draft is separate from publication; restoring a new task has not been tested.
+## Existing BF diagnostics
+
+The prior independently replayed batch passed **73/73** stored `source_pc_16bit_eight_cell_loops` fixture pairs, including six real original/compact mini-compiler outputs, and **50/50** BF files passed the static annotation/command/bracket audit. Those results are retained in `cloud-bf-fixtures.json`; SDK installation did not change project executable source or fixtures, and this continuation did not rerun that batch.
+
+The tested host invocation is `tritium -r -b -z -B -O1 -fno-negtape src/source_pc_16bit_eight_cell_loops.bf` from `/workspace/COCK`, with each stored input on stdin and exact stdout compared to its paired expected bytes. Independent conventional checkers only invoke tools and compare outputs; they do not implement production transformations.
+
+Tritium is not a fully qualified COCK bootstrap. Its malformed-bracket and left-boundary probes did not enforce the locked COCK contract, and its interactive output probe buffered until completion. Its tape uses a large finite lazy-backed reservation. Separate BF-owned admission, closure, pointer/fuel controls and framing remain necessary. Full same-interpreter nested self-hosting is unverified.
 
 ## Reusable configuration
 
-Saved `install_script` and `start_skill` in the environment draft. The install script reproduces the checksum-verified CLI 19.0 and pinned external Tritium build; its repeat run passed and retained the same evaluator binary hash. The startup guidance records the current BF fixture workflow and unresolved Android prerequisites. Licensed package installation and AVD startup are not claimed as tested. Review and save the draft in environment settings, then publish when appropriate; no publication or fresh-task restoration was performed here.
+Saved complete `install_script`, `start_skill`, and suggested `ANDROID_HOME`, `ANDROID_USER_HOME`, `ANDROID_AVD_HOME` variables in the environment draft. Installation reproduces the official CLI, pinned evaluator, licensed SDK packages, both system images and both AVD definitions. It preserves existing AVDs. Runtime startup and readiness commands are saved separately; live processes must restart after publication. No worktree is needed: use the existing checkout in each isolated task.
+
+Review and save the draft in environment settings before publishing. Draft persistence does not publish or validate a new task. This host supports the installed toolchain and existing BF component workflow, but Android UI/runtime readiness remains unresolved.

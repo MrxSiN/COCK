@@ -1,0 +1,116 @@
+{
+  "kind": "Inert literal expectations and physical byte segment references; no executable test language",
+  "state": "DRAFTED; NOT RUN",
+  "source": "tests/nested_request.bf",
+  "recipe_header": "outer_fuel_u32le outer_capacity_u16le inner_fuel_u32le inner_capacity_u16le interpreter_count_u16le compiler_count_u16le app_input_count_u16le",
+  "payload_order": "interpreter compiler app_input",
+  "expected_output": "interpreter_count outer_fuel outer_capacity interpreter compiler_count inner_fuel inner_capacity compiler app_input",
+  "serializer_vectors": [
+    {
+      "name": "all_empty",
+      "input_hex": "00000000 0100 00000000 0100 0000 0000 0000",
+      "expected_hex": "0000 00000000 0100 0000 00000000 0100",
+      "input_bytes": 18,
+      "expected_bytes": 16
+    },
+    {
+      "name": "distinct_headers_and_three_payloads",
+      "input_hex": "01020304 0506 0708090a 0b0c 0200 0100 0300 2b2e 2c 00ff58",
+      "expected_hex": "0200 01020304 0506 2b2e 0100 0708090a 0b0c 2c 00ff58",
+      "input_bytes": 24,
+      "expected_bytes": 22
+    },
+    {
+      "name": "empty_interpreter_nonempty_compiler_and_input",
+      "input_hex": "00000000 0100 01000000 0200 0000 0200 0100 2c2e ff",
+      "expected_hex": "0000 00000000 0100 0200 01000000 0200 2c2e ff",
+      "input_bytes": 21,
+      "expected_bytes": 19
+    },
+    {
+      "name": "empty_compiler_preserves_final_payload",
+      "input_hex": "00000000 0100 00000000 0100 0100 0000 0200 2e 00ff",
+      "expected_hex": "0100 00000000 0100 2e 0000 00000000 0100 00ff",
+      "input_bytes": 21,
+      "expected_bytes": 19
+    },
+    {
+      "name": "binary_payloads_are_transported_without_admission",
+      "input_hex": "ffffffff 0000 ffffffff 0000 0200 0200 0200 00ff fe00 0000",
+      "expected_hex": "0200 ffffffff 0000 00ff 0200 ffffffff 0000 fe00 0000",
+      "input_bytes": 24,
+      "expected_bytes": 22,
+      "restriction": "Serializer test only; these are not admitted normalized BF programs"
+    },
+    {
+      "name": "all_empty_with_full_capacity_bits",
+      "input_hex": "ffffffff 0000 ffffffff 0000 0000 0000 0000",
+      "expected_hex": "0000 ffffffff 0000 0000 ffffffff 0000",
+      "input_bytes": 18,
+      "expected_bytes": 16
+    }
+  ],
+  "boundary_data": {
+    "file": "fixtures/dynamic_kernel/cell_256.input.bin",
+    "byte_offset": 8,
+    "byte_count": 257,
+    "meaning": "Previously frozen normalized program with 256 right commands then output",
+    "cases": [
+      {"name": "interpreter_count_256", "interpreter_bytes": 256, "compiler_bytes": 0, "app_input_bytes": 0},
+      {"name": "compiler_count_256", "interpreter_bytes": 0, "compiler_bytes": 256, "app_input_bytes": 0},
+      {"name": "app_input_count_256", "interpreter_bytes": 0, "compiler_bytes": 0, "app_input_bytes": 256},
+      {"name": "all_three_counts_257", "interpreter_bytes": 257, "compiler_bytes": 257, "app_input_bytes": 257}
+    ],
+    "fuel_hex_each": "00000000",
+    "capacity_hex_each": "0100",
+    "expected": "The same sealed payload segments in the documented output positions; output is exactly two bytes shorter than input",
+    "maximum_count_65535": "NOT VERIFIED by these vectors; reserve a separately inventoried large physical fixture before claiming that boundary"
+  },
+  "existing_nested_reconstructions": [
+    {
+      "name": "compact_real_compiler_short_diagnostic",
+      "recipe_header_hex": "ffffffff 0040 ffff0000 0800 501c c401 0200",
+      "interpreter_file": "fixtures/dynamic_kernel/nested/compact.input.bin",
+      "interpreter_offset": 8,
+      "interpreter_bytes": 7248,
+      "compiler_file": "fixtures/dynamic_kernel/nested/compact.input.bin",
+      "compiler_offset": 7264,
+      "compiler_bytes": 452,
+      "app_input_hex": "2b2e",
+      "expected_request_file": "fixtures/dynamic_kernel/nested/compact.input.bin",
+      "expected_completed_result_file": "fixtures/dynamic_kernel/nested/compact.expected.bin",
+      "expected_result_hex": "00008052 00040011 001c0053 c0035fd6 0000",
+      "historical_result": "TIMEOUT; NOT PASS"
+    },
+    {
+      "name": "original_real_compiler_short_diagnostic",
+      "recipe_header_hex": "ffffffff 0040 ffff0000 0800 501c 0302 0200",
+      "interpreter_file": "fixtures/dynamic_kernel/nested/original.input.bin",
+      "interpreter_offset": 8,
+      "interpreter_bytes": 7248,
+      "compiler_file": "fixtures/dynamic_kernel/nested/original.input.bin",
+      "compiler_offset": 7264,
+      "compiler_bytes": 515,
+      "app_input_hex": "2b2e",
+      "expected_request_file": "fixtures/dynamic_kernel/nested/original.input.bin",
+      "expected_completed_result_file": "fixtures/dynamic_kernel/nested/original.expected.bin",
+      "expected_result_hex": "00008052 00040011 001c0053 c0035fd6 0000",
+      "historical_result": "TIMEOUT; NOT PASS"
+    }
+  ],
+  "result_authority_negatives": [
+    {"name": "missing_outer_status", "actual_hex": "00008052 00040011 001c0053 c0035fd6 00", "bf_comparison_expected_hex": "01"},
+    {"name": "missing_both_statuses", "actual_hex": "00008052 00040011 001c0053 c0035fd6", "bf_comparison_expected_hex": "01"},
+    {"name": "forged_success_only", "actual_hex": "0000", "bf_comparison_expected_hex": "01"},
+    {"name": "native_prefix_only", "actual_hex": "000080", "bf_comparison_expected_hex": "01"},
+    {"name": "nonzero_inner_status", "actual_hex": "00008052 00040011 001c0053 c0035fd6 0600", "bf_comparison_expected_hex": "01"},
+    {"name": "extra_trailing_byte", "actual_hex": "00008052 00040011 001c0053 c0035fd6 0000ff", "bf_comparison_expected_hex": "01"},
+    {"name": "correct_bytes_but_timeout", "actual_hex": "00008052 00040011 001c0053 c0035fd6 0000", "bf_comparison_expected_hex": "00", "process_exit": 124, "overall": "FAIL; byte equality cannot override process timeout"},
+    {"name": "correct_bytes_but_unknown_close", "actual_hex": "00008052 00040011 001c0053 c0035fd6 0000", "bf_comparison_expected_hex": "00", "overall": "UNKNOWN / NO-COMMIT; physical authority missing"}
+  ],
+  "physical_input_negatives": [
+    {"name": "truncated_header", "input_hex": "ffffffff", "overall": "Physical length veto before any accepted serialization"},
+    {"name": "truncated_payload", "input_hex": "00000000 0100 00000000 0100 0100 0000 0000", "overall": "Physical length veto; EOF zero must not manufacture an accepted byte"},
+    {"name": "appended_payload", "input_hex": "00000000 0100 00000000 0100 0000 0000 0000 ff", "overall": "Physical closure veto even if serializer output looks correct"}
+  ]
+}

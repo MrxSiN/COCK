@@ -232,3 +232,17 @@ The separately preserved candidate `src/source_pc_dynamic_tape.bf` replaces the 
 | INTEGRATED | No; candidate branch only, prior compiler path preserved |
 
 **BLOCKED:** five completed same-kernel nested attempts exceeded their 300/600-second wall budgets. JIT and compiled seed modes emitted only the three-byte native initialization prefix, never a completed compiled result or both status bytes. No nested self-hosting PASS, usable Android compiler, completed frontend/framing, accepted runtime or production release is asserted. Per Part 23, the mandatory failure prevents optimization and promotion. See `docs/dynamic-kernel-evidence.md` and `.json` for exact inputs, hashes, commands and outcomes. SDK tools are installed, but the separately recorded Android runtime checks remain unresolved.
+
+## 2026-10-25 — Next bounded Stage A draft
+
+The user requested drafting the next stage. The complete next-slice inventory is `docs/next-stage-draft.md`: one BF-owned three-payload nested-request driver, inert literal/boundary/authority test data, a consolidated acceptance contract and a dependency map covering remaining Stage A and Stages B–F. Later-stage designs have no executable implementation claim. No kernel/compiler source or historical expected result changes.
+
+| State | Evidence |
+| --- | --- |
+| DRAFTED | YES: full first-pass content for this bounded driver slice; physical archive identity in `docs/next-stage-draft-checkpoint.md` |
+| IMPLEMENTED | First-pass `tests/nested_request.bf` written; correctness UNVERIFIED |
+| TESTED | NOT RUN; no source, byte, compiler, runtime or device tests during drafting |
+| OPTIMIZED | NO |
+| INTEGRATED | NO; draft remains on the existing candidate branch |
+
+Mandatory identical-kernel compiler execution remains **BLOCKED** by the prior completed timeouts. The new driver only constructs diagnostic requests; it does not repair those timeouts or certify physical source/closure/process authority. Android entry/ELF/APK and stable target evidence remain unimplemented/unavailable. The queued acceptance batch retains every mandatory gate and requires an explicit changed-resource record before a further nested attempt. Stage A is **NOT ACCEPTED**.

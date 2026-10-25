@@ -278,3 +278,19 @@ The direct mismatched-pass negative again exits zero while declaring 272 bytes a
 | Full Android A01–A14 | INCOMPLETE | INCOMPLETE | Complete stage NOT RUN | NO | NO |
 
 ADB currently lists no device and `/dev/kvm` is absent. Android frontend/native ABI/NativeActivity ELF/artifact/build/test implementations and the mandatory identical-interpreter final compiler proof are still missing or blocked. `docs/upload-executable-run-evidence.md` and JSON contain current commands, identities and exact scope. The upload's historical 158-test claim is not presented as a current run. Main remains unchanged; no APK/release/signing claim is made.
+
+## 2026-10-25 — Actual emulator APK attempts and BF-native entry probe
+
+Ran the API 35 Google AVD with a changed one-core/4-GiB/540×960 software profile and retained cache. After 38:34 active time it still had no completed boot or Settings activity; package services appeared transiently. Real install attempts failed with missing-service and null StorageManager/PackageManager errors. The screenshot is black. Console shutdown was acknowledged, then the SDK process exited 139; ADB is now empty and no OOM was recorded. No watchdog/security check was disabled.
+
+Implemented `tests/android_native_entry_probe.bf`, a complete BF-owned fixed ET_DYN serializer with a four-byte `ANativeActivity_onCreate` return. It passed BF admission, literal header/return and whole-output BF comparison, direct/COCK guest generation and independent readelf/disassembly. Three real DEBUG-ONLY APKs (missing library, invalid Linux ELF, and this entry probe) passed signature/alignment/manifest/inventory checks. Extracted native bytes match the BF outputs. The no-op probe is a target test, **not a source compiler, internal native ABI or app-output proof**. Neither negative loader test nor positive callback could execute because installation failed.
+
+The external seed's O3 C backend passed 73 stored regression controls, including six real frozen compiler payloads; the unchanged nested compact control then timed out at 900.014 seconds, exit 124, with three bytes instead of 18. The BF comparator rejected it. Six same-dynamic-kernel timeout attempts are now recorded. No BF kernel/compiler optimization or default integration was performed.
+
+| Capability | DRAFTED | IMPLEMENTED | TESTED | OPTIMIZED | INTEGRATED |
+| --- | --- | --- | --- | --- | --- |
+| Fixed BF native-entry probe | YES | YES | BF/structural checks pass; Android install fails | NO | NO default integration |
+| Emulator execution target | Configured | SDK/AVD exists | Startup/install/Settings fail | Not applicable | Not a verified target |
+| Whole Android A01–A14 | INCOMPLETE | INCOMPLETE | BLOCKED; complete stage not passed | NO | NO |
+
+Actual identities, APK paths and full gate disposition are in `docs/emulator-retry-evidence.md` and JSON. Remaining device tests need a stable ARM64 API-35-or-newer ADB target or suitable accelerated environment; the target request remains pending. Missing full source/native/runtime/artifact/build/test implementations must also be completed. No completed COCK app, release or production signing is claimed.

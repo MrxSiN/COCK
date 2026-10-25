@@ -218,3 +218,47 @@ A new candidate `src/source_pc_16bit_eight_cell_exec.bf` supports full-source le
 `src/source_pc_16bit_eight_cell_loops.bf` is a new **single integrated BF-in-BF interpreter** using 16-bit normalized-source length, 16-bit original-command fuel, eight checked guest cells, full lexical/bracket preflight, binary input/output and **general nested loops**, with no guest execution before admission. It passed **1,160/1,160** differential diagnostics, 67 saved diagnostic fixture replays and **all six frozen real AArch64 outputs produced directly by the NEW interpreter** using both 515-command original and 452-command compact BF mini compilers on all three applications. **73** total literal input/expected fixture pairs and **50/50** repository BF syntax audits passed. See `docs/source-pc-16bit-eight-cell-loops-evidence.md` and JSON for instruction/fuel limits and negative tests.
 
 **Stage A STILL NOT ACCEPTED:** the mandatory identical-interpreter nested real compiler proof is not established. Eight guest cells and 16-bit fuel/source format do not support full self-hosting. This is not a dynamic large guest tape and does not provide trusted physical stream closure, full annotated-original-source offset preflight, qualified BF-only development process, authoritative framing or Android ELF/APK/device acceptance. Android remains deferred.
+
+## 2026-10-25 — Dynamic tape and wide fuel candidate
+
+The separately preserved candidate `src/source_pc_dynamic_tape.bf` replaces the fixed guest-cell switch with a per-invocation capacity-backed logical tape, and uses 32-bit guest fuel and 16-bit normalized source/depth. Seven new annotated BF implementation/test files passed the BF source gate. Thirty literal vectors, two pointer-growth boundaries, the 256-level bracket case, 73 legacy replays and 19 common-profile BF comparisons passed; the legacy depth-256 expected result intentionally changes from rejection to success. All six real compiler payloads match the unchanged native artifacts. A postdraft printable ASCII held-out input also passed both compilers and the independent BF oracle. These groups overlap.
+
+| State | Evidence |
+| --- | --- |
+| DRAFTED | Complete source/test inventory frozen before testing; archive hash in the ledger |
+| IMPLEMENTED | Normalized diagnostic interpreter and BF-only serializers/comparator |
+| TESTED | Component checks pass; mandatory nested compiler runs time out |
+| OPTIMIZED | No BF source optimization performed |
+| INTEGRATED | No; candidate branch only, prior compiler path preserved |
+
+**BLOCKED:** five completed same-kernel nested attempts exceeded their 300/600-second wall budgets. JIT and compiled seed modes emitted only the three-byte native initialization prefix, never a completed compiled result or both status bytes. No nested self-hosting PASS, usable Android compiler, completed frontend/framing, accepted runtime or production release is asserted. Per Part 23, the mandatory failure prevents optimization and promotion. See `docs/dynamic-kernel-evidence.md` and `.json` for exact inputs, hashes, commands and outcomes. SDK tools are installed, but the separately recorded Android runtime checks remain unresolved.
+
+## 2026-10-25 — Next bounded Stage A draft
+
+The user requested drafting the next stage. The complete next-slice inventory is `docs/next-stage-draft.md`: one BF-owned three-payload nested-request driver, inert literal/boundary/authority test data, a consolidated acceptance contract and a dependency map covering remaining Stage A and Stages B–F. Later-stage designs have no executable implementation claim. No kernel/compiler source or historical expected result changes.
+
+| State | Evidence |
+| --- | --- |
+| DRAFTED | YES: full first-pass content for this bounded driver slice; physical archive identity in `docs/next-stage-draft-checkpoint.md` |
+| IMPLEMENTED | First-pass `tests/nested_request.bf` written; correctness UNVERIFIED |
+| TESTED | NOT RUN; no source, byte, compiler, runtime or device tests during drafting |
+| OPTIMIZED | NO |
+| INTEGRATED | NO; draft remains on the existing candidate branch |
+
+Mandatory identical-kernel compiler execution remains **BLOCKED** by the prior completed timeouts. The new driver only constructs diagnostic requests; it does not repair those timeouts or certify physical source/closure/process authority. Android entry/ELF/APK and stable target evidence remain unimplemented/unavailable. The queued acceptance batch retains every mandatory gate and requires an explicit changed-resource record before a further nested attempt. Stage A is **NOT ACCEPTED**.
+
+## 2026-10-25 — Full Stage A design package
+
+Expanded the requested scope to every A01–A14 item including A09a. `docs/stage-a-full-draft.md` indexes complete source/authority, Android/native/ELF, debug packaging, test, measurement and acceptance designs, plus a complete inventory identifying existing and missing BF implementations. Added proposed inert native-only manifest/target policy and literal source/error/ABI/session/device requirements. Refreshed the original decision sheet to reflect the installed SDK/evaluator and unresolved runtime evidence. No implementation/source-gate/byte/compiler/device tests were executed for this draft.
+
+The documentary design package is complete. **The whole Stage A executable draft is not complete**: integrated BF source admission, native runtime/callback, ELF writer, artifact framer, actual orchestration and independent whole-stage test modules are absent. Part 23 requires actual first-pass BF source for its DRAFTED gate. The missing files are listed as NOT CREATED; no placeholder or design text counts as implementation.
+
+| Whole Stage A state | Actual evidence |
+| --- | --- |
+| DRAFTED | NO for executable source; full documentary A01–A14/A09a design prepared |
+| IMPLEMENTED | NO; only separately recorded components exist |
+| TESTED | NOT RUN as a complete stage; historical component passes and nested failures unchanged |
+| OPTIMIZED | NO for whole Stage A |
+| INTEGRATED | NO; candidate branch only, main unchanged |
+
+`docs/stage-a-issues.md` records the exact missing source and major feasibility/target gates. The design pretest identity is in `docs/stage-a-full-draft-checkpoint.md`; it does not certify missing source or any Android behavior. Nested execution remains blocked by completed timeouts, and stable ARM64 target/ELF/APK/launch evidence remains unavailable. No accepted Android compiler or release is claimed.

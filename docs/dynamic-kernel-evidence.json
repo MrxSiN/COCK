@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-25",
+  "base_commit": "defd60ff21a97c006a8e9a0b847f7146aaacb7b5",
+  "status": "BLOCKED_ON_MANDATORY_NESTED_RUNTIME_GATE",
+  "feature_states": {
+    "drafted": true,
+    "implemented": "normalized diagnostic kernel and BF test utilities",
+    "tested": "component checks pass; all completed nested attempts time out",
+    "optimized": false,
+    "integrated": false
+  },
+  "pretest_snapshot": {
+    "path": "/workspace/test-results/dynamic-kernel/pretest-draft.tar",
+    "sha256": "1163de71778b7f57ee4f1169d10c876916f4f2cf983ffbe5787f21cc9195563c",
+    "kernel_matches_snapshot": true
+  },
+  "kernel": {
+    "path": "src/source_pc_dynamic_tape.bf",
+    "source_bytes": 12118,
+    "source_sha256": "cd59d94bbf9dee3faea5c19ee62f2c5c910d13e01100769e29cbfeea8104ec82",
+    "command_count": 7248,
+    "normalized_sha256": "491fc291ad26316452416210d430b1cc5b78669ad1d1805133124bacfdc8c130",
+    "source_count_bits": 16,
+    "guest_fuel_bits": 32,
+    "capacity_bits": 16,
+    "zero_capacity_encoding": 65536,
+    "record_stride": 16,
+    "allocation": "capacity markers prepared eagerly; guest values initialized zero; no universal application cap"
+  },
+  "seed": {
+    "implementation": "rdebath/Brainfuck Tritium v1.2.73",
+    "upstream_commit": "525d346c006ea30dfc847ae3b32ed44d44fa9925",
+    "binary_sha256": "0ac670ed3128db52bfa73347d6f81eccd864ebd91f8a7d450d8efb2278178a5b",
+    "interpreter_flags": "-r -b -z -B -O1 -fno-negtape",
+    "jit_flags": "-q -b -z -B -O1 -fno-negtape -mem 2097152",
+    "compiled_flags": "-r -c -b -z -B -O1 -fno-negtape -mem 2097152",
+    "nested_stdout": "stdbuf -o0 for JIT and compiled backend attempts",
+    "qualification": "component regression profiles only; full COCK bootstrap qualification and BHIO are not certified"
+  },
+  "passing_checks": {
+    "new_BF_source_gate": {
+      "passed": 7,
+      "total": 7,
+      "gate": "src/annotated_source_stream_gate.bf",
+      "serializer": "tests/source_guard_records.bf",
+      "full_kernel_guarded_bytes": 36356,
+      "unsafe_comment_rejected": true
+    },
+    "literal_kernel_vectors": {
+      "passed": 30,
+      "total": 30
+    },
+    "pointer_growth_boundaries": {
+      "passed": 2,
+      "total": 2,
+      "maximum_guest_index_exercised": 256
+    },
+    "depth_256": {
+      "passed": true,
+      "old_fixture": "excess_depth.input.bin",
+      "old_expected_hex": "0d",
+      "new_expected_hex": "00",
+      "reason": "sixteen-bit bracket depth supersedes prior prototype's byte-sized depth cap"
+    },
+    "frozen_legacy_replays": {
+      "passed": 73,
+      "total": 73,
+      "unchanged_expected": 72,
+      "explicit_depth_expectation_change": 1,
+      "includes_six_compiler_cases": true,
+      "comparison": "BF byte_compare plus independent cmp"
+    },
+    "common_profile_BF_differentials": {
+      "passed": 19,
+      "total": 19,
+      "reference": "src/bf_in_bf_pc_dynamic_prototype.bf",
+      "includes_postdraft_ASCII_heldout": true
+    },
+    "comparator_self_checks": {
+      "passed": 5,
+      "total": 5,
+      "covers": "empty, binary equality, unequal byte, shorter actual, longer actual"
+    },
+    "additional_BF_binary_comparisons": {
+      "passed": 41,
+      "total": 41,
+      "overlaps_other_groups": true
+    },
+    "actual_compiler_outputs": {
+      "passed": 6,
+      "total": 6,
+      "compilers": [
+        "src/mini_compiler.bf",
+        "src/mini_compiler_compact.bf"
+      ],
+      "examples": [
+        "tiny_app_a",
+        "tiny_app_b",
+        "held_out"
+      ],
+      "scope": "single BF-in-BF layer; frozen raw native bytes plus terminal diagnostic status"
+    },
+    "seed_backend_controls": {
+      "interpreter": 32,
+      "jit": 32,
+      "compiled": 33,
+      "compiled_includes_depth_256": true,
+      "all_passed": true
+    },
+    "heldout": {
+      "selected_after_draft": true,
+      "raw_source": "34 additions then subtraction then output",
+      "independent_BF_oracle": "tests/oracle.bf",
+      "guest_value_hex": "21",
+      "original_native_bytes": 288,
+      "compact_native_bytes": 152,
+      "compiler_outputs_passed": 2,
+      "Android_observation": "NOT RUN",
+      "annotated_source": "examples/heldout_mixed_ascii.bf",
+      "annotated_bytes": 418,
+      "annotated_sha256": "bccc0a4403154d03f7a584804676680922b6eac4ddfc5cf65ebf73d8f38cd241",
+      "normalized_source_bytes": 36,
+      "normalized_source_sha256": "9ad47b43525e4bb901d44c5da726f1ddb5dd5d8503642587d48f6afefdacd134"
+    },
+    "native_inspection": {
+      "tool": "NDK LLVM objcopy and objdump",
+      "decoded": [
+        "mov w0, #0",
+        "add w0, w0, #1",
+        "uxtb w0, w0",
+        "ret"
+      ],
+      "inspection_wrapper_roundtrip": true,
+      "Android_ELF_claim": false
+    },
+    "heldout_source_gate": {
+      "passed": 1,
+      "total": 1,
+      "selected_after_draft": true,
+      "normalized_stream_matches_original_literal": true
+    }
+  },
+  "single_layer_compiler_wall_seconds": {
+    "compact_held_out": 0.098,
+    "compact_tiny_app_a": 0.077,
+    "compact_tiny_app_b": 0.08,
+    "original_held_out": 0.153,
+    "original_tiny_app_a": 0.13,
+    "original_tiny_app_b": 0.136
+  },
+  "timing_scope": "One parallel diagnostic batch; includes process/setup work; not a controlled optimization benchmark.",
+  "nested_attempts": [
+    {
+      "backend": "interpreter",
+      "compiler": "compact",
+      "app": "tiny_app_a",
+      "outer_cells": 16384,
+      "outer_fuel": 4294967295,
+      "limit_seconds": 300,
+      "observed_seconds": 300.519,
+      "exit_code": 124,
+      "actual_bytes": 0,
+      "expected_bytes": 142,
+      "result": "TIMEOUT_NO_PASS"
+    },
+    {
+      "backend": "interpreter",
+      "compiler": "original",
+      "app": "tiny_app_a",
+      "outer_cells": 16384,
+      "outer_fuel": 4294967295,
+      "limit_seconds": 300,
+      "observed_seconds": 300.527,
+      "exit_code": 124,
+      "actual_bytes": 0,
+      "expected_bytes": 266,
+      "result": "TIMEOUT_NO_PASS"
+    },
+    {
+      "backend": "jit",
+      "compiler": "compact",
+      "app": "+.",
+      "outer_cells": 16384,
+      "outer_fuel": 4294967295,
+      "limit_seconds": 600,
+      "observed_seconds": 600.007,
+      "exit_code": 124,
+      "actual_hex": "000080",
+      "expected_bytes": 18,
+      "result": "TIMEOUT_PARTIAL_INITIALIZATION_ONLY"
+    },
+    {
+      "backend": "jit",
+      "compiler": "original",
+      "app": "+.",
+      "outer_cells": 16384,
+      "outer_fuel": 4294967295,
+      "limit_seconds": 600,
+      "observed_seconds": 600.005,
+      "exit_code": 124,
+      "actual_hex": "000080",
+      "expected_bytes": 18,
+      "result": "TIMEOUT_PARTIAL_INITIALIZATION_ONLY"
+    },
+    {
+      "backend": "compiled",
+      "compiler": "compact",
+      "app": "+.",
+      "outer_cells": 16384,
+      "outer_fuel": 4294967295,
+      "limit_seconds": 600,
+      "observed_seconds": 600.108,
+      "exit_code": 124,
+      "actual_hex": "000080",
+      "expected_bytes": 18,
+      "result": "TIMEOUT_PARTIAL_INITIALIZATION_ONLY"
+    }
+  ],
+  "nesting_identity": {
+    "inner_source_matches_normalized_kernel": true,
+    "verification": "Extracted all 7248 source bytes from frozen nested request and cmp against BF normalizer output; nested guest stdin also compared byte-for-byte."
+  },
+  "invocation_repairs": [
+    {
+      "issue": "/usr/bin/time absent",
+      "outcome": "30 vector commands initially not executed; used Bash time with underlying exit status preserved and reran all 30."
+    },
+    {
+      "issue": "mechanical comparison length formatter overescaped octal",
+      "outcome": "41 malformed comparison packets rejected; fixed physical byte-count encoding, verified 0100 for count one, and reran all 41 successfully. No BF algorithm or expectation was weakened."
+    }
+  ],
+  "authority_boundaries": {
+    "truncated_source_observed_hex": "0d",
+    "trailing_guest_bytes_observed_hex": "0100",
+    "physical_closure": "NOT AUTHENTICATED by the raw BF component",
+    "production_framing": "NOT IMPLEMENTED",
+    "original_annotated_offsets": "NOT INTEGRATED",
+    "allocator_failure_injection": "NOT RUN",
+    "Android": "NOT RUN: no BF-produced ELF/APK and no stable device",
+    "historical_development_purity": "NOT CERTIFIED; this slice hand-authored BF and did not use the earlier foreign layout/oracle scripts"
+  },
+  "promotion": "Candidate branch only. Mandatory nesting timeout blocks optimization and integration under Part 23. Existing source, tests and artifacts remain unchanged.",
+  "repository_BF_inventory": {
+    "unchanged_legacy_sources": 50,
+    "new_interpreter_and_test_tools": 7,
+    "new_postdraft_heldout_example": 1,
+    "total": 58
+  }
+}

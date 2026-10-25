@@ -1,0 +1,10 @@
+
+/workspace/test-results/dynamic-kernel/inspection-only.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <_binary__workspace_test_results_dynamic_kernel_short_original_native_start>:
+       0: 52800000     	mov	w0, #0x0                // =0
+       4: 11000400     	add	w0, w0, #0x1
+       8: 53001c00     	uxtb	w0, w0
+       c: d65f03c0     	ret

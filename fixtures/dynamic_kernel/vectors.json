@@ -1,0 +1,79 @@
+{
+  "kind": "Literal diagnostic vectors; not executable configuration",
+  "request_layout": "source_u16le fuel_u32le capacity_u16le source guest_stdin",
+  "physical_input": "Each input is an exact closed byte sequence supplied mechanically",
+  "vectors": [
+    {"name":"empty","request_hex":"0000000000000100","expected_hex":"00"},
+    {"name":"empty_full_capacity","request_hex":"0000000000000000","expected_hex":"00"},
+    {"name":"plus_dot","request_hex":"02000200000001002b2e","expected_hex":"0100"},
+    {"name":"minus_dot","request_hex":"02000200000001002d2e","expected_hex":"ff00"},
+    {"name":"binary_and_eof","request_hex":"06000600000001002c2e2c2e2c2e00ff","expected_hex":"00ff0000"},
+    {"name":"left_trap","request_hex":"01000100000002003c","expected_hex":"04"},
+    {"name":"right_trap","request_hex":"01000100000001003e","expected_hex":"05"},
+    {"name":"new_cell_zero","request_hex":"02000200000002003e2e","expected_hex":"0000"},
+    {"name":"zero_fuel","request_hex":"02000000000001002b2e","expected_hex":"06"},
+    {"name":"one_fuel","request_hex":"02000100000001002b2e","expected_hex":"06"},
+    {"name":"empty_loop","request_hex":"02000100000001005b5d","expected_hex":"00"},
+    {"name":"nontermination_fuel","request_hex":"03000400000001002b5b5d","expected_hex":"06"},
+    {"name":"invalid_suffix","request_hex":"03000300000001002b2e58","expected_hex":"0d"},
+    {"name":"unmatched_open","request_hex":"03000300000001002b2e5b","expected_hex":"0d"},
+    {"name":"unmatched_close","request_hex":"03000300000001002b2e5d","expected_hex":"0d"},
+    {"name":"nul_suffix","request_hex":"03000300000001002b2e00","expected_hex":"0d"},
+    {"name":"nonascii","request_hex":"03000300000001002bc3a9","expected_hex":"0d"},
+    {"name":"nested_exact_fuel","request_hex":"12002800000003002b2b5b3e2b2b5b3e2b3c2d5d3c2d5d3e3e2e","expected_hex":"0400"},
+    {"name":"nested_underfuel","request_hex":"12002700000003002b2b5b3e2b2b5b3e2b3c2d5d3c2d5d3e3e2e","expected_hex":"06"},
+    {"name":"nested_zero_skip","request_hex":"07000300000001005b5b2b5d5d2b2e","expected_hex":"0100"},
+    {"name":"cell_retention","request_hex":"09000900000002002b3e2b3c2d3e2e3c2e","expected_hex":"010000"},
+    {"name":"partial_then_right_trap","request_hex":"02000200000001002e3e","expected_hex":"0005"},
+    {"name":"left_fuel_priority","request_hex":"01000000000001003c","expected_hex":"06"},
+    {"name":"right_fuel_priority","request_hex":"01000000000001003e","expected_hex":"06"},
+    {"name":"fuel_byte_carry","request_hex":"02000001000001002b2e","expected_hex":"0100"},
+    {"name":"fuel_word_carry","request_hex":"02000000010001002b2e","expected_hex":"0100"},
+    {"name":"fuel_top_byte_carry","request_hex":"02000000000101002b2e","expected_hex":"0100"},
+    {"name":"wide_fuel_exact","request_hex":"0a00fe01020002002d5b2d3e2d5b2d5d3c5d","expected_hex":"00"},
+    {"name":"wide_fuel_short","request_hex":"0a00fd01020002002d5b2d3e2d5b2d5d3c5d","expected_hex":"06"},
+    {"name":"wide_fuel_old_max","request_hex":"0a00ffff000002002d5b2d3e2d5b2d5d3c5d","expected_hex":"06"}
+  ],
+  "generated_boundaries": [
+    {"name":"cell_256","header_hex":"0101010100000101","source_producer":"tests/dynamic_boundary_source.bf","expected_hex":"0000"},
+    {"name":"capacity_256_trap","header_hex":"0101010100000001","source_producer":"tests/dynamic_boundary_source.bf","expected_hex":"05"}
+  ],
+  "comparison_vectors": [
+    {"name":"empty_equal","input_hex":"00000000","expected_hex":"00"},
+    {"name":"binary_equal","input_hex":"020000ff020000ff","expected_hex":"00"},
+    {"name":"byte_mismatch","input_hex":"0100000100ff","expected_hex":"01"},
+    {"name":"short_actual","input_hex":"0100000000","expected_hex":"01"},
+    {"name":"long_actual","input_hex":"0000010000","expected_hex":"01"}
+  ],
+  "postdraft_heldout": {
+    "annotated_source": "examples/heldout_mixed_ascii.bf",
+    "source_description": "34 additions then subtraction then output",
+    "source_bytes": 36,
+    "oracle_hex": "21",
+    "kernel_input": "heldout_ascii.input.bin",
+    "kernel_expected": "heldout_ascii.expected.bin",
+    "original_compiler_input": "heldout_ascii_original.input.bin",
+    "original_compiler_expected": "heldout_ascii_original.expected.bin",
+    "compact_compiler_input": "heldout_ascii_compact.input.bin",
+    "compact_compiler_expected": "heldout_ascii_compact.expected.bin"
+  },
+  "legacy_depth_boundary": {
+    "input": "fixtures/source_pc_16bit_eight_cell_loops/excess_depth.input.bin",
+    "adapter": "tests/wide_request_from_legacy.bf",
+    "new_expected_hex": "00",
+    "reason": "256 balanced levels now fit the sixteen bit depth counter"
+  },
+  "nested_reproduction": {
+    "compact_input": "nested/compact.input.bin",
+    "compact_expected": "nested/compact.expected.bin",
+    "original_input": "nested/original.input.bin",
+    "original_expected": "nested/original.expected.bin",
+    "expected_native_bytes": 16,
+    "expected_status_bytes": 2,
+    "state": "All completed bounded attempts timed out; no nested PASS"
+  },
+  "unsupported_authority_probes": [
+    {"name":"physical_truncation","request_hex":"02000200000001002b","production_acceptance":"NO COMMIT; physical byte count is not authenticated by raw BF"},
+    {"name":"trailing_data","request_hex":"02000200000001002b2e58","production_acceptance":"NO COMMIT; trailing stream closure is not authenticated by this diagnostic kernel"}
+  ]
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Proposed inert DEBUG ONLY metadata; no generated library or tested APK exists. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.cock.stagea.debug"
+    android:versionCode="1"
+    android:versionName="debug">
+    <uses-sdk android:minSdkVersion="35" android:targetSdkVersion="35" />
+    <application
+        android:label="COCK Stage A Debug"
+        android:hasCode="false"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:extractNativeLibs="false">
+        <activity
+            android:name="android.app.NativeActivity"
+            android:label="COCK Stage A Debug"
+            android:exported="true">
+            <meta-data android:name="android.app.lib_name" android:value="cockstagea" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

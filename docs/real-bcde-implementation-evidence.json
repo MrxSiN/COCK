@@ -1,0 +1,35 @@
+{
+  "kind": "Actual BF executable component results; not whole-stage acceptance",
+  "parent": "56bb7e2",
+  "branch": "codex/dynamic-kernel-candidate",
+  "fetched_main": "b1250780e67e7988e30ec06469468abfb7be6c39",
+  "full_stages_complete": false,
+  "implementation": "PARTIAL Stage B-C-D-E; eight real complete component programs",
+  "root": {"path":"/workspace/tools/bin/tritium","version":"1.2.73","sha256":"0ac670ed3128db52bfa73347d6f81eccd864ebd91f8a7d450d8efb2278178a5b","direct_flags":"-r -c -b -z -B -O3 -fno-negtape","guest_flags":"-r -c -b -z -B -O3 -fno-negtape -mem 2097152","guest_capacity":128,"guest_fuel_hex":"ffffffff"},
+  "sources": [
+    {"path":"src/stage_b_u64_add.bf","sha256":"3c9487d93ed58596acdac4e23c7dc88fae1c0c88907df98a28bc408faa4d2a3d","normalized_commands":1303,"direct_cases":10,"guest_cases":2},
+    {"path":"src/stage_c_binary_input.bf","sha256":"140d76395003a971f4a9803ad73fdda203041d74e82d3430cd57d3c990b178fb","normalized_commands":1212,"direct_cases":11,"guest_cases":1},
+    {"path":"src/stage_d_crc32.bf","sha256":"83361816c5aba3d0b383c47269b5640ea85491ef0da997b818b13d4ff9974085","normalized_commands":4955,"direct_cases":11,"guest_cases":2},
+    {"path":"src/stage_e_bfio_envelope.bf","sha256":"715c63cb17a7d49497eddb936696155c6cd46ace9cd97ee8a8d5a27cf8234a3b","normalized_commands":4241,"direct_cases":18,"guest_cases":2},
+    {"path":"src/stage_e_text_body.bf","sha256":"d2fb560193c38d71d54bf1dee4d881c679f24e0df7c0af1695ed8d7c768644af","normalized_commands":1392,"direct_cases":14,"guest_cases":2},
+    {"path":"examples/stage_e/convert.bf","sha256":"beb20e61a4d4372207dde5c298b728f97d044321bfa07bdbb2b184890f3e39ae","normalized_commands":6,"direct_cases":5,"guest_cases":1},
+    {"path":"examples/stage_e/coordinates.bf","sha256":"8fcfaf7289c4bf1e0ef7c82dfbe89036b83b2d955dd58a73f388588b82791431","normalized_commands":3142,"direct_cases":12,"guest_cases":3},
+    {"path":"src/stage_d_stored_zip.bf","sha256":"c5a99f95df8197eb13e6f7ce63dd710e87776dc458e56f61ee50ba3d2cf3bb05","normalized_commands":3845,"direct_cases":10,"guest_cases":2}
+  ],
+  "completed_checks": {"source_admission":8,"direct_exact_byte_cases":91,"bf_in_bf_exact_cases":15,"bf_equal_comparisons":106,"bf_inequality_controls":1,"legacy_real_compiler_regressions":6,"generated_action_envelope_checks":6,"generated_action_body_checks":6,"valid_archives_independently_verified":7,"intended_invalid_archives_rejected":3},
+  "independent_zip_verifier": "Info-ZIP UnZip 6.00, Debian build, 20 April 2009",
+  "test_count_note": "Groups overlap; comparisons and validators are corroboration, not additional distinct applications",
+  "invocation_error": {"attempts":9,"unsupported_option":"-mem2097152","exit":1,"executed_bf":false,"repaired_command":"-mem 2097152","source_changes":false,"corrected_cases_passed":9,"logs":"/workspace/test-results/real-bcde-20261025/guest/invalid-command/"},
+  "pretest_archives": [
+    {"path":"/workspace/test-results/real-bcde-20261025/pretest.tar","sha256":"daf9be2cac90207553ba6c252fc1a933783dcef10ecde8010cc6a26ff256c52c"},
+    {"path":"/workspace/test-results/real-stage-e-20261025/pretest.tar","sha256":"83ffabd5a6ee1f69eadee07abd9d40f9dd10370b608411df836febb549b4f0a8"},
+    {"path":"/workspace/test-results/real-stage-d-zip-20261025/pretest.tar","sha256":"6cd7e09e7c66048e65ce3bacc770a012fe820202cd4787a2b75fc1a25d9ee10a"}
+  ],
+  "source_repairs_after_freeze":0,
+  "project_optimizations":0,
+  "current_adb_devices":[],
+  "new_android_device_checks":"NOT RUN",
+  "full_nested_real_compiler":"Not rerun unchanged; prior mandatory proof remains unpassed",
+  "release_signing":"NOT IMPLEMENTED or performed",
+  "production_build_graph":"NOT IMPLEMENTED; orchestration here is component testing only"
+}

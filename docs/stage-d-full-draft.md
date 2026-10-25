@@ -1,5 +1,7 @@
 # Full Stage D design draft
 
+Actual implementation continuation: [real CRC-32 and stored ZIP source/results](real-bcde-implementation-evidence.md) now exist. `src/stage_d_crc32.bf` implements the planned checksum primitive; `src/stage_d_stored_zip.bf` generates a real one-entry archive from variable path/data and BF-produced/verified CRC metadata. Neither supplies binary resources, general aligned APK layout or signing. Whole D acceptance remains unpassed.
+
 Prepared 2026-10-25 (Asia/Kuala_Lumpur) against `fe9d57a`, following master Parts 8, 10–11, 19, 21 and 23–25. **D01–D08 documentary draft: complete. Executable first-pass draft: INCOMPLETE. TESTED: NOT RUN. Acceptance/integration: BLOCKED.** This request is for design; no signing key is created, requested or used, and no release is published.
 
 ## Product boundary and policy
@@ -23,13 +25,13 @@ Release-key use stays a separate unsupported gate until the master threat-model,
 
 ## Exact proposed executable inventory
 
-All new paths are **NOT CREATED**. Every authored implementation, test and developer tool is annotated original-eight-command BF.
+Except the now implemented/tested CRC-32 path noted below, proposed paths remain **NOT CREATED**. Every authored implementation, test and developer tool is annotated original-eight-command BF. The separate stored-ZIP subcomponent above is not substituted for the full APK writer.
 
 | Path | Responsibility |
 | --- | --- |
 | `src/stage_d_manifest.bf` | Binary XML strings/nodes/typed attributes/resource IDs from validated target/app plan |
 | `src/stage_d_resources.bf` | Shared Android resource-chunk/string-pool encoding and only registered resource forms; unsupported references rejected |
-| `src/stage_d_crc32.bf` | ZIP CRC-32 over exact sealed entry bytes |
+| `src/stage_d_crc32.bf` | **IMPLEMENTED / COMPONENT TESTED**: ZIP CRC-32 over exact guarded chunk bytes; input/output and actual test identities in the implementation ledger |
 | `src/stage_d_zip.bf` | Checked stored local/central/EOCD records, canonical entry set and native alignment |
 | `src/stage_d_sha256.bf` | SHA-256 compression/padding/streaming digest over exact bytes, checked length |
 | `src/stage_d_bigint.bf` | Checked multiprecision parsing/arithmetic/modular exponentiation and key consistency checks |

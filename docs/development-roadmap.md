@@ -1,5 +1,7 @@
 # Remaining development stages
 
+Actual source continuation: [eight implemented BF components and measured test outcomes](real-bcde-implementation-evidence.md) now supply checked integers, binary EOF, CRC, BFIO/text parsing, app event/main logic and real stored-ZIP serialization. Full-stage source inventories below remain incomplete; only the exact component boundaries in that ledger are implemented/tested. No accepted Android baseline or signing/UI pipeline is inferred.
+
 The [full Stage A design package](stage-a-full-draft.md) now covers all A01–A14/A09a contracts, proposed metadata, test requirements and missing executable responsibilities. Its complete documentary coverage does not imply that the whole Stage A BF source draft exists.
 
 This is a dependency and acceptance draft grounded in the master prompt and current repository evidence. It is not a statement that the platform, Android app or later-stage source exists. The [bounded nested-input slice](next-stage-draft.md) has a complete executable draft and its subsequent tests are recorded in the [uploaded-component run](upload-executable-run-evidence.md). Stages B–E have full documentary packages and exact proposed source/test inventories; their executable drafts remain incomplete. Stage F remains roadmap-only. No empty modules are created.

@@ -1,5 +1,7 @@
 # Full Stage E design draft
 
+Actual implementation continuation: [BFIO envelope/text-body validators and two real app modules](real-bcde-implementation-evidence.md) are now implemented/tested. `examples/stage_e/convert.bf` and `examples/stage_e/coordinates.bf` execute actual binary/event logic and the latter emits complete source-derived provisional actions. The BFIO/text helper paths are `src/stage_e_bfio_envelope.bf` and `src/stage_e_text_body.bf`. No native renderer, dispatcher authority, completed build or installed UI is supplied by them.
+
 Prepared 2026-10-25 (Asia/Kuala_Lumpur), against `fe9d57a`, using master Parts 2–3, 8–12, 19–21 and 23–25. **All E01–E13 have documentary coverage. Actual executable first-pass draft: INCOMPLETE; IMPLEMENTED: NO; TESTED: NOT RUN; OPTIMIZED/INTEGRATED: NO.** No generated app, renderer, platform gateway, release capability or device result is claimed.
 
 ## Scope and dependency policy
@@ -26,7 +28,7 @@ Stage A/B are not currently accepted and Stage C/D are designs. E cannot bypass 
 
 ## Exact proposed executable inventory
 
-All new paths below are **NOT CREATED**; they enumerate complete responsibilities. All authored implementation/test/developer source must be annotated original eight-command BF. Existing A/B/C/D source proposals remain missing dependencies until actually accepted.
+Except the converter/coordinate example paths now implemented/tested below, proposed paths are **NOT CREATED**; they enumerate complete responsibilities. All authored implementation/test/developer source must be annotated original eight-command BF. Existing A/B/C/D source proposals remain missing dependencies until actually accepted. The new BFIO/text subcomponents above do not stand in for the broader frame/router/renderer paths.
 
 | Path | Responsibility / group |
 | --- | --- |
@@ -62,14 +64,14 @@ All new paths below are **NOT CREATED**; they enumerate complete responsibilitie
 | `devtools/stage_e_smoke.bf` | Per-feature coordinated acceptance and old-compiler regression ledger |
 | `devtools/stage_e_bench.bf` | BF measurement/workload comparison for accepted features only |
 | `examples/stage_e/counter.bf` | App-owned counter handler consuming full event and emitting one action |
-| `examples/stage_e/convert.bf` | Independent main-module binary conversion example, isolated from handlers |
-| `examples/stage_e/coordinates.bf` | Coordinate-label event handler with a different state/schema/behavior |
+| `examples/stage_e/convert.bf` | **IMPLEMENTED / COMPONENT TESTED**: independent main-module two-byte binary conversion, isolated from handlers |
+| `examples/stage_e/coordinates.bf` | **IMPLEMENTED / COMPONENT TESTED**: coordinate-label full-event/full-action handler, with dispatcher-checked envelope as its explicit precondition |
 
 Optional paths are not prerequisites for the first touch/text slice and are not created in advance. Selecting any optional group requires its full concrete operation/byte/API/fixture inventory and actual source freeze; these design responsibilities cannot imply a finished universal implementation. A permitted preinstalled physical router is an external dependency with its own trust-boundary proof, not an untracked semantic wrapper supplied by this package. Module source composition is BF-owned; no foreign scripts/includes/linker implement it.
 
 ## Complete inert inventory and groups
 
-Present files: `docs/stage-e-full-draft.md`, `docs/stage-e-input-draft.md`, `docs/stage-e-events-draft.md`, `docs/stage-e-ui-draft.md`, `docs/stage-e-capabilities-draft.md`, `docs/stage-e-test-draft.md`, `config/stage-e/capabilities.json`, `fixtures/stage_e_full/acceptance.json`, `fixtures/stage_e_full/counter.build.json`, and `fixtures/stage_e_full/coordinates.build.json`. Both illustrative manifests reference **not-created** BF sources/assets; they are not complete buildable projects. Proposed non-executable glyph asset `assets/stage_e/ascii8x8.bitmap` and coordinate asset `assets/stage_e/palette.bin` are NOT CREATED and require exact validated data before their UI fixture freeze. Shared issues/archive/navigation are in the C–E checkpoint and README/roadmap/status.
+Present design files: `docs/stage-e-full-draft.md`, `docs/stage-e-input-draft.md`, `docs/stage-e-events-draft.md`, `docs/stage-e-ui-draft.md`, `docs/stage-e-capabilities-draft.md`, `docs/stage-e-test-draft.md`, `config/stage-e/capabilities.json`, `fixtures/stage_e_full/acceptance.json`, `fixtures/stage_e_full/counter.build.json`, and `fixtures/stage_e_full/coordinates.build.json`. The coordinate manifest's two BF sources now exist as component-tested app logic; the counter source and both asset sets remain missing, and neither manifest is a complete buildable Android project. Proposed non-executable glyph asset `assets/stage_e/ascii8x8.bitmap` and coordinate asset `assets/stage_e/palette.bin` are NOT CREATED and require exact validated data before their UI fixture freeze. Shared original design issues/archive/navigation are in the C–E checkpoint; actual implementation fixtures and source hashes are in the new implementation ledger.
 
 E-INPUT completes JSON/path/config/snapshot/frame sources and independent config/snapshot/session tests plus all exact protocol data. E-SESSION completes artifact/receipt with actual host physical results. E-EVENT completes dispatcher/state/native lifetime and event oracle. E-UI completes renderer/resources/three example BF sources, glyph/assets and real target checks. Optional PLATFORM, DEX, SERVICES and DISTRIBUTION groups each add their complete exact typed wire, format/operation source/tests/fixtures and platform policy before testing. Combine inseparable groups; do not test an unfinished slice. Preserve independent oracle algorithms and rollback.
 

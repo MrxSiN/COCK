@@ -1,5 +1,8 @@
 # Emulator retry and remaining-gate test plan
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 The user explicitly requested emulator testing and continued A01–A14 diagnosis. This batch uses existing complete BF components and inert manifest metadata; it does not invent the absent positive Android compiler/runtime. No BF implementation is edited or optimized while mandatory gates fail.
 
 ## Changed emulator experiment

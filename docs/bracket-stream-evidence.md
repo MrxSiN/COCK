@@ -1,5 +1,8 @@
 # Streaming bracket gate evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 2026-10-24. All reported executions used the local, **nonqualifying** out-of-repository BF diagnostic evaluator `/usr/local/bin/cock-bf-diagnostic`. No Android, independently supplied BF host or trusted physical source-closure tests were run.
 
 The first-pass inventory and tests were frozen in `docs/bracket-stream-plan.md`; the first consolidated diagnostic batch passed **721 of 721** cases. Breakdown: 8 fixed vectors, 700 deterministic random streams, one actual 515-command mini compiler stream in chunks of 200 plus 200 plus 115, 8 nesting-boundary cases including depth 256 rejection, and four corrupted or missing trailer and termination cases. Source and annotation static audit passed.

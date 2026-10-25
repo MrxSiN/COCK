@@ -1,6 +1,8 @@
 {
   "kind": "Inert proposed single-source debug policy; not a COCK-BUILD-CONFIG-v1 implementation",
-  "state": "DESIGNED; native producer, whole-stage source draft and device acceptance incomplete",
+  "state": "Native components implemented and device tested; whole-stage source/build authority and acceptance incomplete",
+  "current_evidence": "docs/windows-device-evidence.json",
+  "tested_device": {"model":"Pixel 8 Pro","device":"husky","api":37,"abi":"arm64-v8a","page_bytes":4096,"minimum_api_execution":"NOT RUN","sixteen_kib_execution":"NOT RUN"},
   "target": {
     "instruction_set": "AArch64",
     "android_abi": "arm64-v8a",
@@ -56,5 +58,5 @@
   "external_debug_only_tools": ["aapt2", "zip", "zipalign", "keytool", "apksigner", "adb"],
   "independent_verifiers": ["llvm-readelf", "llvm-objdump", "cmp", "sha256sum", "unzip", "apkanalyzer", "adb"],
   "release_signing": "UNSUPPORTED; no release key use or production publication authorized by this config",
-  "runtime_status": "BLOCKED; no stable ARM64-capable target or BF-produced ELF/APK verified"
+  "runtime_status": "Restricted BF-native ELF/debug APKs load and log expected source-derived bytes on the pinned device; full same-interpreter nesting and authoritative frontend/build graph remain incomplete"
 }

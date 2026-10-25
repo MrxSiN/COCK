@@ -1,5 +1,8 @@
 # HQarroum docker Android feasibility for COCK Stage A
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Date checked: 2026-10-24. Status: BLOCKED / NOT RUN. Nothing from the Docker project has been vendored or installed into the COCK repository.
 
 ## Public repository interface

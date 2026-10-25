@@ -1,6 +1,6 @@
 # MODULE Android activity callback CPU diagnostic executable wrapper
 # PURPOSE execute real callback and unchanged guest under Linux AArch64 CPU emulator
-# INPUT unsigned two byte guest length then callback bytes two hundred four then guest
+# INPUT unsigned two byte guest length then callback bytes two hundred twenty then guest
 # OUTPUT Linux ELF diagnostic not Android production library
 # TAPE zero and one remaining guest count two byte three through six loop scratch
 # TAPE eight byte printer nine through eleven literal zero run scratch
@@ -155,11 +155,11 @@
 >++++++++++++[>++++++++++++++++[<<.>>-]<-]<
 
 # Retain exactly the BF generated callback bytes at the native callback address
->++++++++++++[>+++++++++++++++++[<<,.>>-]<-]<[-]
+>+++++++++++[>++++++++++++++++++++[<<,.>>-]<-]<[-]
 
-# Pad one thousand eight hundred forty four bytes to guest entry
+# Pad one thousand eight hundred twenty eight bytes to guest entry
 >+++++++[>++++++++++++++++[>++++++++++++++++[<<<.>>>-]<-]<-]<
->+++[>++++++++++++++++[<<.>>-]<-]<....
+>++[>++++++++++++++++[<<.>>-]<-]<....
 
 # Copy exactly declared guest bytes while subtracting from the diagnostic RX budget
 <<<<<<<<[->>>+>+<<<<]>>>>[-<<<<+>>>>]<[[-]>>>[-]+<<<]

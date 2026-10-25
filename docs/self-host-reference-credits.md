@@ -1,5 +1,8 @@
 # Reference interpreter attribution and limitations
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 `src/bf_in_bf_reference.bf` contains Daniel B Cristofani's `dbfi.b` 423-command Brainfuck self-interpreter (originally distributed at https://brainfuck.org/dbfi.b). It is supplied here as a separately identified reference implementation, with an annotation header and source formatting; the instruction stream is not changed. The author states at https://brainfuck.org/ that the programs are licensed under **Creative Commons Attribution-ShareAlike 4.0 International**. See https://creativecommons.org/licenses/by-sa/4.0/ for the license terms. This adaptation is offered under CC BY-SA 4.0 with the same attribution. The adaptation consists of additional Part 1-safe annotation lines and line breaks. The original work and this adaptation are not implied to be endorsed by their author.
 
 Original interpreter input contract: `program!input`; `!` is a separator, not an instruction. This is **not** a COCK-BUILD-INPUT-v1, COCK-FRAME-v1, or COCK-HOST-IO-v1 transport. This reference is used only for scoped diagnostics. In particular it does not independently satisfy COCK's exact input-closure, source preflight, error-offset, fuel, logical-tape-budget or structured-status guarantees. It is **not** an installed standards-only evaluator, Android backend, signed artifact producer, or complete native self-hosting claim.

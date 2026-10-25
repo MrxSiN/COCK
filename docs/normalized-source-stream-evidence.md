@@ -1,5 +1,8 @@
 # Normalized source streaming admission evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Diagnostic date: 2026-10-24. **Component passed its bounded local test batch; this is not Stage A acceptance.** Android development remains deferred at user direction.
 
 ## Implemented component

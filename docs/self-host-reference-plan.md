@@ -1,5 +1,8 @@
 # Stage A bounded reference interpretation slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 State before drafting: Stage A own BF interpreter does not support pointer traversal or loops. Android is deferred. This slice adds a separately licensed Brainfuck-authored *reference interpreter*, not an assertion that the existing COCK interpreter is complete.
 
 ## Inventory before bulk draft

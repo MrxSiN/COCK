@@ -1,5 +1,8 @@
 # Real BF implementation continuation
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 The user explicitly requested executable BF work and authorized proceeding despite previously recorded blockers. This continuation implements actual bounded reusable components; it does not convert missing Android behavior, crypto security or unavailable device evidence into a pass. All new authored executable source is original-eight-command annotated BF. Existing accepted/diagnostic sources and expected outputs remain unchanged.
 
 The first complete-source batch contains `src/stage_b_u64_add.bf`, `src/stage_c_binary_input.bf`, `src/stage_d_crc32.bf`, `src/stage_e_bfio_envelope.bf` and `src/stage_e_text_body.bf`, together with inert `fixtures/real_bcde/acceptance.json`, this plan and the subsequent actual-result ledger. Each is a complete executable component at its stated boundary, not an empty stage module or a claimed full Android implementation. Their precise contracts are in their source annotations and acceptance data.

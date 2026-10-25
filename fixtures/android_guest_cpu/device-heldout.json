@@ -1,0 +1,10 @@
+{
+  "kind": "Fresh held-out application selected after callback repair source checkpoints",
+  "source": "examples/heldout_device_h.bf",
+  "normalized_source": "---+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.",
+  "expected_message_hex": "48",
+  "arithmetic_commands": 78,
+  "commands_including_dot": 79,
+  "expected_guest_bytes": 768,
+  "acceptance": "Complete BF-generated guest, unchanged callback, ELF and extracted APK identity; fresh installed-device log H. This fixture does not certify integrated source admission or Stage A."
+}

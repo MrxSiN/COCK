@@ -1,5 +1,8 @@
 # Stage A sixteen bit guest execution step evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status:** LOCAL DIAGNOSTIC PASS only. Stage A self hosting acceptance remains blocked. Android stays deferred.
 
 ## Change implemented

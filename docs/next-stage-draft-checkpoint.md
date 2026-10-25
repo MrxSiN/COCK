@@ -1,5 +1,8 @@
 # Untested next-stage checkpoint
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 The first-pass nested-request slice was frozen on 2026-10-25 before any implementation test. This records physical file identity, not a successful source audit, byte comparison, self-hosting run or Android check.
 
 The read-only local archive is `/workspace/test-results/nested-proof-draft/pretest-draft.tar`, SHA-256:

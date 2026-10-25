@@ -1,5 +1,8 @@
 # Full Stage C design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Actual source continuation: [the retained binary input/EOF primitive](real-bcde-implementation-evidence.md) now exists at `src/stage_c_binary_input.bf`, with exact consumption counts and direct/BF-in-BF checks. It supports the interpreter's input responsibility; it is not a replacement interpreter or the missing expansion/nesting proof. The proposed full-source inventory below remains incomplete.
 
 Prepared 2026-10-25 (Asia/Kuala_Lumpur) against `fe9d57a`, using the [master specification](COCK_Master_Engineering_Prompt_Updated.md), Parts 1–2, 6, 18, 21 and 23–25. **C01–C06 documentary coverage is complete; actual executable first-pass draft is INCOMPLETE, tests NOT RUN, acceptance BLOCKED.** Proposed paths are responsibilities, not created placeholders. The user's request authorizes this design work; specification checkboxes are not execution evidence.

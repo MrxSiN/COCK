@@ -1,5 +1,8 @@
 # Stage A retained source arithmetic execution evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Outcome: 966 of 966 local diagnostic execution cases passed, including two additional long source cases. This is not Stage A acceptance.** Android remains deferred.
 
 ## BF authored implementation

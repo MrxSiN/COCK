@@ -1,5 +1,8 @@
 # Annotated source streaming admission evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Diagnostic date:** 2026-10-24. **Result:** BF-authored lexical and bracket component passed 589/589 initial tests after repair plus 924/924 extended tests. This is **not** full COCK source preflight and does not complete Stage A acceptance.
 
 ## What was implemented

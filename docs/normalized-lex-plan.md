@@ -1,5 +1,8 @@
 # Normalized source admission and bracket slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 First pass scope and complete file inventory before implementation testing.
 
 Source file: `src/normalized_source_stream_gate.bf`. It extends the existing chunked bracket-depth gate with an independently BF-authored exact eight-command alphabet admission step. It preserves the separate original bracket gate unchanged.

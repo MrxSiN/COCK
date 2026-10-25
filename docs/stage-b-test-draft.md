@@ -1,5 +1,8 @@
 # Stage B consolidated acceptance and benchmark draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN. Executable test gate CLOSED.** This package supplies prospective acceptance criteria and inert literal data. The complete BF test/oracle/compiler/runtime files are not created, Stage A is not accepted and no stable Android target is available. Static document/JSON/link review is not implementation testing.
 
 ## Pretest readiness

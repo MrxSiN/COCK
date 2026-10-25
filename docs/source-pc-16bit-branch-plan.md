@@ -1,5 +1,8 @@
 # Stage A sixteen bit next command and fuel slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Purpose:** add one Brainfuck-authored dispatch decision over an existing validated source index and matching bracket map. The component does not execute guest tape or I/O effects and does not replace the working six-cell interpreter.
 
 ## Frozen slice inventory

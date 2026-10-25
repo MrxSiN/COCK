@@ -1,7 +1,14 @@
 # BF-generated Android native candidates
 
-These are source-dependent candidate libraries, not accepted Android apps or release artifacts. See [implementation evidence](../../docs/android-native-implementation-evidence.md) and its JSON for exact provenance, inputs, hashes, tests and remaining work.
+Current candidate libraries use the repaired 220-byte callback. Each file is 16,640 bytes and retains the real source-derived guest, NativeActivity export, checked context/result ABI and dynamic `liblog` import. [Current evidence](../../docs/windows-device-evidence.md) records exact hashes and the [acceptance matrix](../../docs/acceptance.md) records remaining gates.
 
-All three 16,640-byte ELF files contain the actual BF-generated NativeActivity callback and guest entry, with a real dynamic liblog import. Space and bang compute bytes 20 and 21 respectively. Held-out executes 128 subtractions followed by 160 additions, computes byte 20 and reports 289 commands.
+| Library | Application behavior on the tested Pixel 8 Pro |
+| --- | --- |
+| `space.so` | 32 additions emit space (`20`) |
+| `bang.so` | 33 additions emit exclamation (`21`) |
+| `heldout.so` | Earlier mixed/wrapping 289-command fixture emits space (`20`) |
+| `fresh-h.so` | Fresh 79-command held-out fixture emits H (`48`) |
 
-Native instructions were generated only by the BF sources. No conventional assembler/linker supplied the runtime. CPU tests exercise identical callback/guest bytes under QEMU. The shared libraries themselves have not been loaded by Android Bionic on a working device. The complete source/offset/framing build graph and mandatory full nested proof remain unfinished.
+All four load through Bionic in verified externally debug-signed native-only APKs. Exact packaged/installed identities are checked. No conventional assembler/linker supplies these app instructions. The three prior guest regions are unchanged by the callback repair; original libraries remain recoverable from Git history.
+
+These remain **candidates, not an accepted complete Stage A compiler or release**. Full same-interpreter nesting, exact-source/build authority and a usable BF build entry are unfinished. External debug packaging does not satisfy Stage D.

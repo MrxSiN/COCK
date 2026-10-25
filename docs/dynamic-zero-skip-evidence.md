@@ -1,5 +1,8 @@
 # Dynamic logical tape general zero valued loop skipping — local evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Result:** COMPONENT DIAGNOSTIC PASSED. No Stage A acceptance is claimed. Android remains deferred.
 
 The new `src/bf_in_bf_dynamic_zero_skip.bf` retains the previous checked right-growing guest tape and exact `[-]` and `[+]` nonzero loop behavior. On a zero current guest cell it scans the rest of a general nested bracket body to the matching close and performs no guest effects within the skipped region. This matches the locked Brainfuck rule for a zero-valued opening bracket in the tested subset. It does not execute general nonzero loops.

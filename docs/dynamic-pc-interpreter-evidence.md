@@ -1,5 +1,8 @@
 # General program counter and checked dynamic guest tape — local evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Result:** LOCAL DIAGNOSTIC PASSED. **Stage A not accepted.** Android remains deferred.
 
 `src/bf_in_bf_pc_dynamic_prototype.bf` is executable annotated eight-command Brainfuck. Its dynamic records preserve guest instruction bytes while the program counter scans forward or backward and carries tape bytes through a separate right-growing storage area. It executes arbitrary balanced loops in the tested bounded profile; no specially hardcoded clear-loop implementation is needed.

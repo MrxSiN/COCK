@@ -1,5 +1,8 @@
 # Stage A exact-source and completion draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only.** The integrated frontend, artifact framer and BF build driver named in the full inventory are not implemented. This document specifies their complete first-pass responsibilities without replacing missing code with prose. Frozen BFIO/BHIO definitions in the master prompt retain authority; no new public wire/profile version is introduced.
 
 ## One-source debug input

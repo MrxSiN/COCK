@@ -1,5 +1,8 @@
 # Observed Stage A component diagnostic evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Evidence classification: OUTSIDE REPOSITORY DIAGNOSTIC ONLY.** The basic BF evaluator for these tests was an ephemeral Python diagnostic outside the checked-in source tree, not a preinstalled, externally supplied, independently certified BF executor. It cannot establish the specification's accepted root bootstrap, self-hosting or production build chain. No non-BF executable source is included in this package.
 
 ## Passed component checks

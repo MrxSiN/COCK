@@ -1,5 +1,8 @@
 # Stage E modules, Android gateway and optional capability draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only.** A registry is a checked set of supported contracts with evidence, not a list of APIs automatically implemented. Initial `ui.touch`/`ui.text` requests are themselves still unsupported. This package creates no new public event/action IDs or callable instructions.
 
 ## Modules and registry

@@ -1,5 +1,8 @@
 # Stage E exact inputs, configuration and publication draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only; no general multi-file parser/router/build session is implemented.** Preserve `COCK-FRAME-v1`, `COCK-BUILD-INPUT-v1`, `COCK-HOST-IO-v1` and `COCK-BUILD-CONFIG-v1` exactly as frozen in the master. Stage B's narrow debug input record is a different grammar and cannot masquerade as this mode.
 
 ## Physical file authority and BHIO

@@ -1,5 +1,8 @@
 # General forward bracket probe evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status: LOCAL DIAGNOSTIC PASSED; NOT FULL STAGE A ACCEPTANCE.**
 
 The BF-authored source `src/general_forward_bracket_probe.bf` locates the matching closing bracket for the **first opening bracket** in a prevalidated normalized BF command suffix. Its data output is a two-byte little-endian relative command offset followed by a one-byte diagnostic status. On any failure the returned offset is zero. This private diagnostic format is not a new wire protocol or ABI.

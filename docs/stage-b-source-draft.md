@@ -1,5 +1,8 @@
 # Stage B source and execution contract draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only; integrated BF frontend and full oracle are NOT CREATED.** The locked `COCK` profile, `COCK-FRAME-v1`, `COCK-NATIVE-ENTRY-v1` and existing status numbers remain unchanged. This text does not establish a new public input/config version.
 
 ## Input authority and policy

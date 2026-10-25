@@ -1,5 +1,8 @@
 # Stage C interpreter, source and resource contract draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only.** Preserve the locked `COCK` semantics and all existing public wire/ABI identifiers. Extend an accepted Stage A interpreter rather than declaring the current failed candidate accepted.
 
 ## Source and internal records

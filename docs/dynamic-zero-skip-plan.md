@@ -1,5 +1,8 @@
 # Stage A bounded implementation slice — general zero valued loop skip
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 ## Scope and declared interface
 
 Preserve the compiler capable baseline and the tested dynamic clear loop interpreter. Add one new Brainfuck authored interpreter variant which, upon encountering an opening bracket with a zero guest cell, scans the original commands through the matching closing bracket including nested brackets. For nonzero guest cells retain the original restricted exact clear loops. Existing logical tape budgets from one through two hundred fifty six cells remain in force.

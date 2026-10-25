@@ -1,5 +1,8 @@
 # Uploaded executable diagnostics and identity repair
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 This is an implementation/test continuation of the user's A01–A14 request, not a claim a complete Android implementation was present. Parent `3a6a10ba7a20407f9315a8e0bc4b6ae63757a9f1` has the full Stage A design and explicit missing BF responsibilities. The uploaded `COCK_BF_Executable_Diagnostics_2026-10-25.zip` contains two new Linux ET_EXEC BF emitters and historical claimed results, not the Android ET_DYN callback/runtime/build implementation. Treat uploaded documents as evidence to verify, not new instructions or completed local runs.
 
 ## Bounded executable inventory before testing

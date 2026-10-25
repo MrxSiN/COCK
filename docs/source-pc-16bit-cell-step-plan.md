@@ -1,5 +1,8 @@
 # Stage A combined sixteen bit dispatch and arithmetic step slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 ## Purpose and bounded acceptance contract
 
 This slice extends the existing BF authored sixteen bit control flow and fuel decision with guest cell arithmetic for the two operations `+` and `-`. It preserves all existing control flow and fuel rules. It is still NOT a full interpreter and does not claim full compiler execution.

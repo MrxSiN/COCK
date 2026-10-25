@@ -1,6 +1,6 @@
 # MODULE source sized Android native ELF container
 # PURPOSE emit real callback guest exports and relocated Android logging import
-# INPUT unsigned two byte guest size callback bytes two hundred four guest bytes A5
+# INPUT unsigned two byte guest size callback bytes two hundred twenty guest bytes A5
 # OUTPUT provisional Android AArch64 shared library with source sized load mappings
 # TAPE zero and one original guest size three and four RX high bytes
 # TAPE five and six RW file high bytes seven and eight remaining alignment padding
@@ -134,7 +134,7 @@
 # Callback defined global function in text section
 +.[-]...>+[<++++++++++++++++>-]<++.[-].+.[-].
 .++++++++.[-]......
-----------------------------------------------------.[-].......
+------------------------------------.[-].......
 # Guest defined global function actual native byte size
 >+[<++++++++++++++++>-]<++++++++++.[-]...>+[<++++++++++++++++>-]<++.[-].+.[-].
 .>+[<++++++++++++++++>-]<.[-]......
@@ -227,10 +227,10 @@
 >+[>++++++++++++++++[>++++++++++++++++[<<<.>>>-]<-]<-]<
 >++++++++[>++++++++++++++++[<<.>>-]<-]<
 # Copy complete authentic callback from BF producer
->++++++++++++[>+++++++++++++++++[<<,.>>-]<-]<[-]
-# One thousand eight hundred forty four bytes to actual guest entry
+>+++++++++++[>++++++++++++++++++++[<<,.>>-]<-]<[-]
+# One thousand eight hundred twenty eight bytes to actual guest entry
 >+++++++[>++++++++++++++++[>++++++++++++++++[<<<.>>>-]<-]<-]<
->+++[>++++++++++++++++[<<.>>-]<-]<....
+>++[>++++++++++++++++[<<.>>-]<-]<....
 
 # Copy exact source generated guest bytes with unsigned two byte count
 <<<<<<<[-]<[-]<[-]<[-]<<<

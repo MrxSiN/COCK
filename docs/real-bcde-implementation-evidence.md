@@ -1,5 +1,8 @@
 # Real BF implementation and actual execution evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 This continuation adds **eight complete executable BF components**, not placeholder files or another design-only checkpoint. It follows the user's instruction to proceed with real code despite the previously recorded blockers. **Full Stage B, C, D and E implementation is still incomplete.** The implemented boundaries and remaining production work are stated separately below; no unavailable check is converted to a pass.
 
 Parent: `56bb7e2` on `codex/dynamic-kernel-candidate`. Fetched main remains `b1250780e67e7988e30ec06469468abfb7be6c39`. No main promotion, release signing or publication occurs. The master specification and earlier kernel/compiler/native golden files are unchanged.

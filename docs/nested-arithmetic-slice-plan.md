@@ -1,5 +1,8 @@
 # COCK nested arithmetic smoke slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status before execution: planned and drafted; test outcomes recorded separately.
 
 ## Scope

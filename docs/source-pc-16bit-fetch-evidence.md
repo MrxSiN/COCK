@@ -1,5 +1,8 @@
 # Stage A repeated sixteen bit instruction fetch evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Outcome:** LOCAL DIAGNOSTIC PASS for indexed source-command retrieval. **Not an accepted general-loop COCK interpreter or Android build.**
 
 ## Implemented component

@@ -1,5 +1,8 @@
 # Full Stage A documentary checkpoint
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Prepared on 2026-10-25 in Asia/Kuala_Lumpur. This checkpoint covers the complete A01–A14/A09a **design package**, proposed inert metadata and literal acceptance requirements. It does not claim the missing first-pass BF source exists, that the whole-stage bulk draft gate passed, or that implementation/device checks ran.
 
 Parent: `80d5de71ad784a51eb8ae0df70eef198084f2bcd`. The local read-only archive is `/workspace/test-results/stage-a-full-draft/pretest-design.tar`, SHA-256:

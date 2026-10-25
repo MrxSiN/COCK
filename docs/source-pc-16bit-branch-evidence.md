@@ -1,5 +1,8 @@
 # Stage A sixteen bit PC and fuel branch decision evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Result: LOCAL DIAGNOSTIC PASS for the isolated BF decision component. This is not a completed compiler capable interpreter or nested self hosting proof.**
 
 ## New artifact and exact contract

@@ -1,5 +1,8 @@
 # Stage A sixteen bit eight cell general loop interpreter evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Result: 1,160/1,160 local differential executions passed; 73 exact-byte fixture pairs saved, including all six real compiler applications. Both actual BF mini compilers now execute in this new interpreter and produce all six frozen raw AArch64 artifacts. This is not Stage A acceptance.** Android remains deferred.
 
 ## BF implementation and input contract

@@ -1,5 +1,8 @@
 # Atomic normalized command handoff slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Scope: one complete restricted normalized Brainfuck source record, with one unsigned byte length, exactly that many literal data bytes and an A5 completion guard. The BF-authored admission component must buffer all source characters, check each against the original eight-command alphabet and validate bracket depth before publishing any command byte. It emits one leading pass/fail status byte; success additionally emits the original command stream, failure has no extra stdout bytes. An external host still owns factual exact byte counts and stream closure, because a guard alone cannot establish no extra trailing bytes.
 
 Files inventoried before batch: `src/normalized_source_atomic_gate.bf`; inert `fixtures/normalized-source-atomic-vectors.json`; `docs/normalized-source-atomic-plan.md`; `docs/normalized-source-atomic-evidence.md` and `.json` after tests; README/status updates after test; workspace ZIP after acceptance of component diagnostics.

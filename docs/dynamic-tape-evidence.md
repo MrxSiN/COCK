@@ -1,5 +1,8 @@
 # Dynamic tape interpreter diagnostic evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status: **COMPONENT DIAGNOSTICS PASSED; STAGE A NOT ACCEPTED**.
 
 The BF-only `src/bf_in_bf_dynamic_linear.bf` reads a **pre-admitted linear five-command subset** (`+ - < > .`) and represents each guest tape cell using a twelve-cell outer BF record. It traverses the logical guest tape rightward on demand; the component contains no fixed tape-cell maximum. Under an already initialized zeroed right-growing BF host, fresh cells start at zero. A guest move `<` at address zero reports `04` without physically moving the outer tape left. Unsupported commands produce `0D`. Guest output is followed by one terminal diagnostic status byte; this is not the official COCK frame/status ABI.

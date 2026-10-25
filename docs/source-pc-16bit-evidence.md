@@ -1,5 +1,8 @@
 # Stage A source program counter ledger evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status: LOCAL DIAGNOSTIC PASS. Not an accepted Stage A interpreter or Android build.**
 
 `src/source_pc_16bit_ledger.bf` is a BF executable component that indexes already normalized source commands with little endian sixteen bit source positions. It does not interpret instructions or change any of the existing production compiler sources. This intermediate diagnostic layout is not a new compatibility wire protocol or document release number.

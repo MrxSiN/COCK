@@ -1,5 +1,8 @@
 # Stage D cryptography, v2 signing and key boundary draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only, not certified cryptography.** No key material is part of this package. All cryptographic algorithms, encoding, certificate/signature creation and APK scheme semantics in the production path must be BF-authored. External standard tools provide independent verification only; external signing remains a separately labeled disposable debug fallback.
 
 ## Fixed first scheme profile

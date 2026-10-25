@@ -1,5 +1,8 @@
 # Whole Stage A consolidated acceptance draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN as a complete stage. Test gate CLOSED until every required first-pass BF implementation/test exists and is frozen.** Existing component outcomes remain in their historical ledgers, including the failing nested execution attempts. This complete batch covers A01–A14 and A09a without inferring any pass from this document or the presence of installed tools.
 
 ## Draft readiness before execution

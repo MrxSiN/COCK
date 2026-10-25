@@ -1,5 +1,8 @@
 # Stages C, D and E documentary checkpoint and issues
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Prepared 2026-10-25, Asia/Kuala_Lumpur. Candidate parent: `fe9d57a510388de7614089ff648fc7b306345b01` on `codex/dynamic-kernel-candidate`. Independently fetched main: `b1250780e67e7988e30ec06469468abfb7be6c39`, the user's merge of the previous candidate through PR #2. Main's tree equals the parent candidate tree; no new implementation or target result arrived with that merge. This change remains a reviewable design commit on the existing development branch.
 
 Complete documentary coverage is recorded for [C01–C06](stage-c-full-draft.md), [D01–D08](stage-d-full-draft.md) and [E01–E13](stage-e-full-draft.md): **27 master feature IDs**. Each package includes exact proposed BF/inert inventories, contracts, bounded implementation groups, independent acceptance/measurement plans and explicit incomplete-source/target states. The master prompt remains an engineering specification, not a source of invented completed results.

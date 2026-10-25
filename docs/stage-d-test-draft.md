@@ -1,5 +1,8 @@
 # Stage D independent acceptance and benchmark draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN; executable draft/test gate closed.** Freeze each complete actual-source group in [the inventory](stage-d-full-draft.md), including all independent exact byte/KAT data, before source/hash/crypto/package tests. The C–E archive freezes documents only. Do not use real release keys for development tests.
 
 | Batch | Required independent checks |

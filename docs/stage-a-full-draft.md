@@ -1,5 +1,8 @@
 # Full Stage A design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Execution continuation: [the uploaded-component run and BF identity repair](upload-executable-run-evidence.md) supplies new bounded Linux diagnostics and tests of the nested serializer. Those results do not close the missing Android implementation or whole-stage draft/acceptance gates below.
 
 Subsequent emulator execution and the new BF-native loader probe are recorded in [the retry evidence](emulator-retry-evidence.md). The fixed ET_DYN/no-op entry test passes BF/structural checks and debug packaging; Android installation failed during framework startup. It is not the source-derived compiler/runtime listed as missing below.

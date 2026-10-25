@@ -1,5 +1,8 @@
 # General program counter interpreter diagnostic evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Date:** 2026-10-24. **Status:** component diagnostic passed; Stage A NOT ACCEPTED.
 
 `src/bf_in_bf_pc_dispatch.bf` implements general guest bracket execution using a real program counter, together with all eight guest BF commands, pointer movement, binary I/O, and before-command fuel checks. Both a zero-valued opening bracket skip and a nonzero closing bracket return jump to the first command after its matching opener. Evaluated opening and closing commands count as guest fuel. Source command streams are **required to have passed complete-source preflight independently**; the component does not perform that preflight or prove stream closure.

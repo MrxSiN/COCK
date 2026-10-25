@@ -1,5 +1,8 @@
 # Stage A debug build, target and usage draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Prospective workflow, NOT EXECUTED.** No BF-produced Android ELF or APK exists, the BF build driver is absent, the full Stage A source draft is incomplete, mandatory nesting has timed out and Android services were unstable. These instructions specify what A09–A14 must eventually demonstrate; they are not a working CLI claim.
 
 ## Readable-source build boundary

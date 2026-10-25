@@ -1,5 +1,8 @@
 # Dynamic tape and wide fuel candidate evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status: component diagnostics pass; mandatory nested execution gate is BLOCKED. Not optimized, not integrated, not an accepted Stage A compiler.** The previous compilers, kernels, tests and six native artifacts remain unchanged. This candidate is saved on `codex/dynamic-kernel-candidate` for review.
 
 ## Implemented scope

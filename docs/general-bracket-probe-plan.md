@@ -1,5 +1,8 @@
 # General forward bracket probe — bounded Stage A slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Scope frozen before implementation tests. This component is a BF-authored **diagnostic branch-target primitive**, not a general loop interpreter. It consumes an already admitted, raw, **forward** Brainfuck command suffix whose first byte must be `[` and returns a little-endian 16-bit **relative offset** to the matching `]`, followed by a single status byte. Examples: `[]` returns `01 00 00`; `[+]` returns `02 00 00`. Input to the diagnostic evaluator consists of the suffix followed by `00`; this terminator is **not** authoritative source transport and **must not** be confused with a trusted complete-input closure. All user-meaningful source syntax and bracket admission is upstream. This is a private development test interface, not a new COCK wire/ABI version.
 
 Planned file inventory: `src/general_forward_bracket_probe.bf`, `fixtures/general_forward_bracket_probe/vectors.json` (inert), `docs/general-forward-bracket-evidence.md` and `.json` (inert), and an updated root README/status. An outside-repository diagnostic harness may test but not serve as production implementation. Existing interpreter/compiler sources and frozen binaries remain unchanged.

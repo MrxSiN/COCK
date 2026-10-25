@@ -1,5 +1,8 @@
 # Cloud Android test environment — 2026-10-25
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 2026-10-26 update: independently installed QEMU AArch64 10.0.13 now runs the [real BF-generated guest and callback CPU tests](android-native-implementation-evidence.md). Actual source-generated shared libraries and two verified debug APK candidates exist. This supersedes the older “no ELF/APK exists” observations below. No connected Android target or KVM is available, so device/runtime readiness remains unresolved. The saved installation/startup draft now includes QEMU; publication remains a separate environment-settings action.
 
 **Tools installed; Android runtime is not ready on this host.** SDK/evaluator setup and repeat installation succeeded. Android software-emulation tests exposed boot timeouts and framework restarts; UI readiness is not established. No COCK application was installed or launched.

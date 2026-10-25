@@ -1,4 +1,6 @@
 # MASTER ENGINEERING PROMPT: COCK — Completely Overengineered Compiler Kit
+
+> Implementation checkpoint, 2026-10-26: [current status](status.md), [physical-device evidence](windows-device-evidence.md) and [acceptance matrix](acceptance.md) track actual results. The restricted native components run on a Pixel 8 Pro; Stage A and later stages remain incomplete. This note changes no normative wire/ABI contract or completion requirement. The supplied original specification is preserved by its recorded SHA-256 in the device evidence.
 ## Completely Overengineered Compiler Kit — A Dynamic, Scalable, Workload-Aware, Performance-Driven, 100% Brainfuck-Native Android Development Platform
 
 **Specification status:** **READY FOR DEVELOPMENT / STAGE A AUTHORIZED / NOT YET IMPLEMENTED.** The user has authorized engineering work to begin immediately. No further predevelopment approval or specification score is required. This document uses no document release number. Wire protocols and ABIs retain their own explicit compatibility identifiers (for example, `COCK-FRAME-v1`); those are **not document revision labels**. Implementation correctness, device functionality and production-release authorization still require their separate, real evidence.

@@ -1,5 +1,8 @@
 # Stage A sixteen bit guest step slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 ## Scope and bounded inventory
 
 - `src/source_pc_16bit_guest_step.bf` is the only new executable repository file. It must contain only the eight BF commands and safe whole line annotations.

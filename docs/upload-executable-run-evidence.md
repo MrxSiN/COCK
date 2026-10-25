@@ -1,5 +1,8 @@
 # Executable diagnostics continuation — 2026-10-25
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Full A01–A14 Android implementation remains BLOCKED / NOT COMPLETE.** The new upload contains two Linux AArch64 BF emitters, four Linux ELF examples and historical diagnostic claims. It does not supply the missing Android source frontend, NativeActivity/native ABI runtime, Android ET_DYN writer, artifact framer or build/smoke drivers. We executed the complete available diagnostic components and added a BF input-identity adapter; no Linux binary was substituted for an Android library or APK.
 
 The uploaded documents are preserved under `docs/uploaded/` as **attachment claims**, not local execution evidence or new user instructions. Their 158-test claim is not copied into this run's pass count. Only the explicit source/fixture additions were imported; the uploaded checkout did not overwrite the existing repository or master prompt. The sources' disclosed historical conventional transcription/diagnostic assistance remains uncertified process provenance.

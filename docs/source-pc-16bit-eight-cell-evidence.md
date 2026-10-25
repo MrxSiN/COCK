@@ -1,5 +1,8 @@
 # Stage A retained source sixteen bit eight cell execution evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Outcome:** 1,045 of 1,045 local differential diagnostic cases passed. This is **not Stage A acceptance**, Android remains deferred, and the new candidate cannot execute the actual compiler because it does not support general Brainfuck loops.
 
 ## New integrated Brainfuck executable

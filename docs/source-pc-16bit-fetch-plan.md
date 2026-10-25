@@ -1,5 +1,8 @@
 # Stage A bounded source fetch slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Goal:** BF-authored repeatable instruction lookup using sixteen-bit unsigned positions over a source program loaded once, with nonmonotonic query order, including the 255/256 boundary and both actual mini compiler sources. This is an execution primitive for a later program-counter dispatcher, **not** guest execution.
 
 ## Inventory frozen for this slice

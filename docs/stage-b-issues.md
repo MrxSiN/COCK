@@ -1,5 +1,8 @@
 # Stage B issues and closure requirements
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 All entries are open at the 2026-10-25 design checkpoint. No runtime check was performed while drafting this package. [Actual latest execution](emulator-retry-evidence.md) remains the source of emulator/nesting observations.
 
 | Issue | Severity / affected IDs | Evidence and impact | Required closure |

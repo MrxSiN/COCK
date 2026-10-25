@@ -1,5 +1,8 @@
 # Consolidated batch for the nested-proof draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN.** These are prospective invocations and acceptance rules, not evidence of execution. The new source is frozen at the [draft checkpoint](next-stage-draft-checkpoint.md). Do not test during the draft, silently regenerate expectations from actual output, or replace a nested run with direct execution of the compiler.
 
 ## Execution boundary

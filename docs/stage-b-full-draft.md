@@ -1,5 +1,8 @@
 # Full Stage B design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Actual implementation continuation: [checked u64 addition and other real BF components](real-bcde-implementation-evidence.md) are now implemented and tested directly/through BF-in-BF. `src/stage_b_u64_add.bf` is a complete new arithmetic subcomponent, not the missing frontend/native/compiler/runtime files below. The whole-stage source and acceptance gates remain incomplete.
 
 Prepared on 2026-10-25 (Asia/Kuala_Lumpur), against candidate `57b625c47d17d682080f050f0b0ee9755169b663` and independently fetched main `c5b02dcd1d0eae6793ef7eb84c4bb17fa00c3d8c`.

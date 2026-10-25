@@ -1,5 +1,8 @@
 # Reference BF in BF evaluation evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Date: 2026-10-24. This is **diagnostic evidence only**, not accepted Stage A L1 or Android functionality. Android development remains deferred.
 
 ## Artifact source and tool boundaries

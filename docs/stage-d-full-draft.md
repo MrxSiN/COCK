@@ -1,5 +1,8 @@
 # Full Stage D design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Actual implementation continuation: [real CRC-32 and stored ZIP source/results](real-bcde-implementation-evidence.md) now exist. `src/stage_d_crc32.bf` implements the planned checksum primitive; `src/stage_d_stored_zip.bf` generates a real one-entry archive from variable path/data and BF-produced/verified CRC metadata. Neither supplies binary resources, general aligned APK layout or signing. Whole D acceptance remains unpassed.
 
 Prepared 2026-10-25 (Asia/Kuala_Lumpur) against `fe9d57a`, following master Parts 8, 10–11, 19, 21 and 23–25. **D01–D08 documentary draft: complete. Executable first-pass draft: INCOMPLETE. TESTED: NOT RUN. Acceptance/integration: BLOCKED.** This request is for design; no signing key is created, requested or used, and no release is published.

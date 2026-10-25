@@ -1,5 +1,8 @@
 # BF executable implementation checkpoint — Linux AArch64 diagnostic
 
+> Checkpoint document. See [current status](../status.md) and [physical-device evidence](../windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **2026-10-25; executable BF source implemented and locally diagnosed. Not an accepted Stage A Android build.** The archived master prompt and the A01–A14 full design remain authoritative. This bounded addition addresses a real executable gap without claiming that its *Linux* ABI meets the specified Android `arm64-v8a` NativeActivity/ELF/shared-library contract.
 
 ## Complete bounded source and executable inventory

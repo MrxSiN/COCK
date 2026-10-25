@@ -1,5 +1,8 @@
 # Backward bracket target and BF owned reversal evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status: LOCAL DIAGNOSTIC PASSED for the documented component contract. Stage A self hosting is NOT ACCEPTED. Android testing is DEFERRED.**
 
 ## Implementation

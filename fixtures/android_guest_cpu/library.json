@@ -1,6 +1,6 @@
 {
   "kind":"Android library structural acceptance vectors",
-  "input":"u16 native guest size, BF callback bytes 204, BF guest bytes, A5",
+  "input":"u16 native guest size, BF callback bytes 220, BF guest bytes, A5",
   "cases":[
     {"id":"space","guest_bytes":584,"rx_bytes":4680,"rw_file_offset":16384,"file_bytes":16640,"guest_symbol_size":584},
     {"id":"heldout","guest_bytes":1608,"rx_bytes":5704,"rw_file_offset":16384,"file_bytes":16640,"guest_symbol_size":1608},

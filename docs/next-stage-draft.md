@@ -1,5 +1,8 @@
 # Next Stage A draft: reproducible nested proof inputs
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status: **DRAFT COMPLETE / UNTESTED**. This is a bounded development slice under Parts 22–23 of the master prompt. It prepares the missing dedicated BF nested-input driver; it does not repair the interpreter's execution cost or complete Stage A. The user requested drafting on 2026-10-25; implementation execution is deliberately deferred to the consolidated batch in [the acceptance contract](next-stage-acceptance.md).
 
 The starting checkpoint is `a6fc6f9da9643e449b7f5239b0d48abab9cf7c51` on `codex/dynamic-kernel-candidate`. The last main checkpoint remains `defd60ff21a97c006a8e9a0b847f7146aaacb7b5`. Five bounded nesting attempts timed out. Their evidence and expected bytes remain authoritative historical inputs; this draft does not change those outcomes.

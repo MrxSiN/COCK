@@ -1,5 +1,8 @@
 # Android native implementation — 2026-10-26
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Three real BF components now generate a source-dependent AArch64 guest, NativeActivity creation callback and Android shared library. Their native CPU and byte-level checks pass. Two externally debug-signed APK candidates pass signature, alignment, manifest and native-identity checks. **Android installation, Bionic loading, actual liblog delivery and lifecycle acceptance remain NOT RUN. Stage A–E are not complete.**
 
 ## Implemented behavior

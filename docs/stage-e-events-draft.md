@@ -1,5 +1,8 @@
 # Stage E invocation, state and lifecycle draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only.** Preserve the master `COCK-APP-ABI-v1`; a long-lived Android process can complete many handlers. Process exit is not required per event, while a guest printing status is never proof of handler return.
 
 ## Exact byte ownership

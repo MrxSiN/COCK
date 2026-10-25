@@ -1,5 +1,8 @@
 # Dynamic guest tape requirement for the next Stage A interpreter slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status: DESIGN ONLY. Neither a new ABI nor an implemented runtime.
 
 The new nested execution diagnostic proves the existing COCK six-cell interpreter can itself be executed as Brainfuck guest source by a dynamically addressable external BF-in-BF reference. It does not prove the existing six-cell interpreter can execute itself. The latter source uses host memory addresses beyond the six guest cells that its own BF-in-BF kernel can represent. Increasing its outer host command budget does not fix the addressability mismatch.

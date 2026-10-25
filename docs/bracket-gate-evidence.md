@@ -1,5 +1,8 @@
 # Bracket depth gate evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 2026-10-24. Local diagnostics only, not accepted self hosting.
 
 First-pass source, frozen plan and passive vector fixtures were drafted before running the batch. First consolidated run had **24 mismatches out of 420**, all later-balanced malformed prefixes erroneously becoming accepted due to a non-sticky error accumulator. Repaired the error state in one batch and reran **420 of 420 passing** cases. Covers 12 frozen cases, 400 seeded randomized cases, 6 depth tests, and 2 full-length stress cases.

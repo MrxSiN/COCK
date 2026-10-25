@@ -1,5 +1,8 @@
 # Stage B documentary draft checkpoint
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Date: 2026-10-25, Asia/Kuala_Lumpur. Parent candidate: `57b625c47d17d682080f050f0b0ee9755169b663`. Fetched main: `c5b02dcd1d0eae6793ef7eb84c4bb17fa00c3d8c`. The existing development branch is `codex/dynamic-kernel-candidate`; main is not promoted or replaced by this design checkpoint.
 
 The [full package](stage-b-full-draft.md) supplies documentary coverage for every B01–B09 requirement: exact proposed executable/inert inventories, source/input/preflight and original-offset rules, AOT blocks/branches/ABI, tape/binary service/worker lifetime, fuel and trace behavior, independent oracle/differential tests, unchanged Stage A regressions, unoptimized benchmarks and rollback. It adds no executable source or generated native artifact.

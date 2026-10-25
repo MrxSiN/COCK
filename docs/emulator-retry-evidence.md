@@ -1,5 +1,8 @@
 # Emulator and remaining-gate execution — 2026-10-25
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **A01–A14 remains BLOCKED / NOT COMPLETE.** We ran the software emulator, attempted actual APK installations, implemented and packaged a BF-generated native-entry probe, and reran the nested compiler test with a different external execution configuration. Failed startup, installation and nesting results are not passes.
 
 ## Actual emulator run

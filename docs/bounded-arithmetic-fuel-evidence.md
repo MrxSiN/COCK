@@ -1,5 +1,8 @@
 # Bounded arithmetic guest fuel executor evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Date:** 2026-10-24. **Status:** LOCAL DIAGNOSTIC COMPONENT PASSED; STAGE A NOT ACCEPTED.
 
 ## New component

@@ -1,5 +1,8 @@
 # Stage A Android, native ABI and ELF draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design contract with partial actual implementation.** [Restricted BF guest, NativeActivity callback and ELF components now exist](android-native-implementation-evidence.md), with native CPU tests and candidate libraries/APKs. Complete source/offset/framed-build integration, full nested compiler proof and actual Android loading/log/lifecycle acceptance remain unfinished. The earlier raw return payload alone does not implement this contract.
 
 ## Platform contracts and target gate

@@ -1,5 +1,8 @@
 # Stage C acceptance and measurement draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN; actual-source freeze absent.** Finish every file/fixture in the selected [inventory group](stage-c-full-draft.md), including exact representation and input contracts, before implementation tests. The C–E design archive is not that source checkpoint. Freeze the complete actual BF source and independent expectations, then select fresh held-out guests.
 
 The complete batch covers annotated grammar/offset/bracket precedence; empty source/input; all byte values; EOF versus real zero; all eight commands; nested loops/empty nonzero loop; wrapping; new cells/revisits/sparse travel; left and logical growth traps; checked counter/address overflow; allocation/outer-resource failures; finite-fuel cutoffs at every opcode and both loop branches; cancellation; partial output; forged/missing completion; and independent physical closure. Use the hand-derived [C expectations](../fixtures/stage_c_full/acceptance.json) and existing [B semantic data](../fixtures/stage_b_full/semantics.json) as literal references, never as evidence already run under C.

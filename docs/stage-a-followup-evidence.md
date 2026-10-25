@@ -1,5 +1,8 @@
 # Stage A followup development and tool installation result
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **2026-10-24. Classification: development-only diagnostics, not an accepted Stage A or Android application milestone.**
 
 ## Installation and feasibility

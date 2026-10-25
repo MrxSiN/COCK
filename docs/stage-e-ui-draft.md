@@ -1,5 +1,8 @@
 # Stage E native touch/text and two-app draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Actual app-source update: [converter/coordinate BF execution and action checks](real-bcde-implementation-evidence.md) now pass bounded component tests. The counter, native renderer, glyph/assets, production dispatcher/build integration and actual visible UI are still missing/unverified. The illustrative manifests remain incomplete Android projects.
 
 **Design only. No visible UI or input test has run.** Use the master `COCK-UI-BASIC-v1` exactly. The initial capability is one printable-ASCII window label, not rich widgets, keyboard, accessibility compliance, persistence or a general screen framework.

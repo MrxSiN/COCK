@@ -1,5 +1,8 @@
 # Stage B native service and Android bridge draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only. No BF-generated service, worker, binary sink or service-ABI test implementation exists.** The installed NDK r28c header confirms NativeActivity's `internalDataPath` and `onDestroy` callback and Bionic's pthread declarations. This is interface inspection, not a running binding. Exact native structure offsets, imported symbol signatures, machine instructions and synchronization vectors must be pinned in the executable slice before testing.
 
 ## Invocation service surface

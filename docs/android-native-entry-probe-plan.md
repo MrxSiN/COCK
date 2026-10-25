@@ -1,5 +1,8 @@
 # BF-generated Android native entry feasibility probe
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 This bounded test addresses a specific missing A01 observation: whether the selected emulator can load and execute an ARM64 NativeActivity entry. It is **not a compiler, COCK guest runtime, app-output demonstration or A01–A14 acceptance substitute**. It accepts no application source and must not be called a self-hosted mini compiler. The prior Linux files are invalid Android libraries and remain negative fixtures.
 
 Before testing this new probe, complete and freeze `tests/android_native_entry_probe.bf`, `fixtures/android_native_entry_probe/vectors.json`, and this plan. Existing BF source gate/normalizer, wide request serializer and byte comparator are unchanged executable test dependencies. Record results with the emulator retry evidence. No foreign app source, assembler, host linker or native binary template produces the library; its entire serialization and one native instruction are actual BF output.

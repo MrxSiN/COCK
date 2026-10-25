@@ -1,5 +1,8 @@
 # Stage E consolidated acceptance and device draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT RUN.** For each bounded group in [the full inventory](stage-e-full-draft.md), complete actual annotated BF implementation/test source and all literal protocol/native/resource/expected bytes before its first unit/integration batch. Freeze exact source/policy/fixtures, then select fresh held-out input/app configuration. A documentary checkpoint is not actual source readiness.
 
 | Group | Required independent batch |

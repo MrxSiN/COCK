@@ -1,5 +1,8 @@
 # Six cell Brainfuck in Brainfuck interpreter evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Date: 2026-10-24. Status: **diagnostic execution component passed; Stage A acceptance not passed**.
 
 ## Implementation and owned execution

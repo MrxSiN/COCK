@@ -1,5 +1,8 @@
 # Compiler-capable dynamic tape kernel slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status: BULK TEST COMPLETE / BLOCKED ON NESTED RUNTIME. The original pretest plan is preserved in the immutable draft archive. See `dynamic-kernel-evidence.md` for actual outcomes; no default integration or optimization is authorized by the passing component checks.
 
 This implements a candidate successor to the fixed eight-cell interpreter, not a new wire ABI or an accepted Stage A release. The original kernels, compilers and frozen native payloads remain unchanged. Android API 35 / arm64-v8a / NativeActivity remains the selected application target; actual native entry, ELF/APK and device evidence remain blocked or unimplemented as recorded in the current Android report. No host executable is substituted for an Android proof.

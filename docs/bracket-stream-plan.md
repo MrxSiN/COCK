@@ -1,5 +1,8 @@
 # Stage A streaming bracket gate slice
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 First pass inventory and test design frozen before source drafting and execution testing.
 
 - `src/bracket_stream_gate.bf`: Brainfuck authored streaming bracket depth validator supporting multiple physical data chunks followed by a mandatory terminal record.

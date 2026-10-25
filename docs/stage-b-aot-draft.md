@@ -1,5 +1,8 @@
 # Stage B AArch64 AOT design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **NOT IMPLEMENTED.** This design fixes semantic lowering responsibilities. Exact emitted instruction/relocation goldens must be authored independently when the BF emitter is drafted, before its test gate. No assembler/compiler-generated app code or checked-in native byte template may supply the implementation.
 
 ## O0 native control flow

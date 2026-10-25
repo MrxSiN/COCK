@@ -1,5 +1,8 @@
 # Chunked normalized source preflight and original command offsets
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Date:** 2026-10-24. **Status:** local component diagnostics passed; Stage A **NOT ACCEPTED**. Android tests deferred.
 
 ## Implementation

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- DEBUG ONLY candidate metadata; native CPU and APK checks exist, device acceptance remains unrun. -->
+<!-- DEBUG ONLY metadata; Pixel 8 Pro component checks pass, whole Stage A remains incomplete. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.cock.stagea.debug"
     android:versionCode="1"

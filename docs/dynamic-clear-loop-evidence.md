@@ -1,5 +1,8 @@
 # Dynamic right growing tape with restricted clearing loop
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Status: LOCAL DIAGNOSTIC PASSED / STAGE A NOT ACCEPTED.** Android remains deferred. This milestone is deliberately narrower than a general Brainfuck loop interpreter.
 
 ## Implementation

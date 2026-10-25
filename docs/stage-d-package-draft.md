@@ -1,5 +1,8 @@
 # Stage D binary resources and APK container draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 **Design only.** The input is the exact accepted BF-generated file set plus a validated non-executable app/target plan and independently sealed byte identities. The BF packager derives entries from that set; no fixed sample APK, host path enumeration or externally generated manifest is a production template.
 
 ## Binary manifest and resource scope

@@ -1,5 +1,8 @@
 # Native guest implementation batch
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Implement the restricted Android guest backend as actual annotated BF, retaining the existing compilers. This is a native ABI component, not yet the complete Stage A compiler or Android activity. Inventory: `src/android_guest_entry.bf`, `tests/android_guest_cpu_elf.bf`, `fixtures/android_guest_cpu/acceptance.json`, this plan and subsequent evidence. Finish both implementations and literal fixtures, then freeze the first pass before executing them.
 
 The backend receives eight little-endian bytes giving the original final-dot source offset, then an already admitted normalized arithmetic source ending in one dot and physical EOF. Source admission, exact closure and the offset ledger are caller preconditions. Each plus/minus emits one real AArch64 arithmetic instruction in source order. The output is a position-independent guest entry at library virtual offset 0x1000 with a relocated log-function slot at 0x100000. It implements context/result validation, one inline byte, a 30-byte invocation-specific tag, a two-byte message, checked log return and result accounting. The normalizer and existing source gate remain separate; this backend does not independently authorize untrusted source.

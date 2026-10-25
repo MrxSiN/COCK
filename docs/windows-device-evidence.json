@@ -1,0 +1,509 @@
+{
+  "date": "2026-10-26",
+  "timezone": "Asia/Kuala_Lumpur",
+  "scope": "Restricted Stage A physical-device verification and bounded native callback guard repair",
+  "whole_stage_completion": false,
+  "baseline_commit": "69b163d4b236cdabeb34fe3851280cbed1cca868",
+  "repository_recovery": "Existing directory had no Git metadata; initialized and attached origin/main with mixed reset, no file replacement, clean content before changes",
+  "supplied_original_specification_sha256": "5524bd878b66d5aea43b477ed696b8a802e9168b6b388abb5b47a5c4beb3d7fd",
+  "specification_edit": "Added implementation-status navigation only; original supplied external file unchanged",
+  "target": {
+    "api_35_execution": "NOT RUN",
+    "abi": "arm64-v8a",
+    "api": 37,
+    "page_bytes": 4096,
+    "other_connected_device_modified": false,
+    "serial_sha256": "3b8d9643da3fe3960c44618fb68c5e0865f3a61bbda0e737f0c52eed4a32195e",
+    "build_fingerprint": "google/husky/husky:17/CP3A.261005.005/16271449:user/release-keys",
+    "transport_id": 1,
+    "sixteen_kib_execution": "NOT RUN",
+    "model": "Pixel 8 Pro",
+    "device": "husky"
+  },
+  "external_bootstrap": {
+    "flags": "-r -b -z -B -O3 -fno-negtape -mem 2097152",
+    "full_profile_and_physical_authority": "NOT QUALIFIED",
+    "probe_output_bytes": 257,
+    "backend_source_sha256": "2cf8df146af832dc36bedac102602bbb6ad4a8c7b98afd676cfd12dd6671c932",
+    "windows_seed": "REJECTED: CRLF conversion and 0x1a physical EOF",
+    "upstream": "https://github.com/rdebath/Brainfuck",
+    "frozen_interpreter_compiler_controls": 5,
+    "android_binary_sha256": "ea3162818ae74c52d51b494784faa5d1a2426dae02ed1155d12e4533a4f43743",
+    "source_modified": false,
+    "commit": "525d346c006ea30dfc847ae3b32ed44d44fa9925",
+    "accelerated_backend": "Upstream -c output for unchanged COCK BF interpreter, compiled externally with -include stdlib.h -O3 -fwrapv; no handwritten C or app generator",
+    "literal_interpreter_controls": 30,
+    "backend_sha256": "1622c4eb4bf9198f954e8fe269134b720e287fc079f2c206d5389804c4126fb9",
+    "build": "NDK r28c aarch64-linux-android35-clang -std=gnu11 -O3 -fwrapv, upstream tritium C files",
+    "binary_values_and_eof_checked": 257
+  },
+  "repair": {
+    "callback_sha256": "498639173a77f4ee909f0a07905f1e5ea965f1f29ab1da5e0dbf31f3e9e74dc6",
+    "old_callback_bytes": 204,
+    "forced_load_hex": "690240b9",
+    "forced_failure_adapter": "tests/android_callback_exclusive_failure.bf",
+    "native_entry_offset": 2048,
+    "guest_entry_offset": 4096,
+    "observed_failure": "Library loads and callback returns, but no log; ID 0, guard 0, overlap status 14",
+    "new_callback_bytes": 220,
+    "prior_guest_regions_unchanged": 3,
+    "public_abi_changed": false,
+    "mechanism": "A failed store-exclusive was treated as final busy admission; bounded retry restores output",
+    "attempt_limit": 16,
+    "forced_load_offset": 28
+  },
+  "sources": [
+    {
+      "path": "src/android_activity_callback.bf",
+      "normalized_commands": 5911,
+      "sha256": "211512d806641b9dd92bfa1a4d72a8526af9db9cb2c7642bf22231bd99a311cf"
+    },
+    {
+      "path": "src/android_library_elf.bf",
+      "normalized_commands": 9596,
+      "sha256": "986d74214c29451772d1c9cc0fddec7b6d41f5a80a94d7f104c2e657add3f185"
+    },
+    {
+      "path": "tests/android_callback_cpu_elf.bf",
+      "normalized_commands": 6244,
+      "sha256": "021f291bb6dba82726fb1a4a096acf5c3e8beecf133685f0e8cc95c917f6724c"
+    },
+    {
+      "path": "tests/android_callback_exclusive_failure.bf",
+      "normalized_commands": 218,
+      "sha256": "1f9ed84def5c7ebd9e706d7249e10a8d037f6ad812edb1e2c6dfdcfb3405c94c"
+    },
+    {
+      "path": "examples/heldout_device_h.bf",
+      "normalized_commands": 79,
+      "sha256": "ea4fc95e76d74a20842494a52fa12f5bf7b2d5b83819e45500e93f3a18276384"
+    }
+  ],
+  "source_audit": {
+    "limits": "Independent static annotation/bracket inspection of all BF source; complete production source frontend remains missing",
+    "bf_files": 78,
+    "bf_component_gate": [
+      {
+        "passed": true,
+        "source": "src/android_activity_callback.bf",
+        "answer": "01"
+      },
+      {
+        "passed": true,
+        "source": "src/android_library_elf.bf",
+        "answer": "01"
+      },
+      {
+        "passed": true,
+        "source": "tests/android_callback_cpu_elf.bf",
+        "answer": "01"
+      },
+      {
+        "passed": true,
+        "source": "tests/android_callback_exclusive_failure.bf",
+        "answer": "01"
+      },
+      {
+        "passed": true,
+        "source": "examples/heldout_device_h.bf",
+        "answer": "01"
+      }
+    ],
+    "failures": 0,
+    "other_authored_executable_languages": 0
+  },
+  "callback_native_cases": [
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "two_success",
+      "bytes": 160,
+      "passed": true
+    },
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "two_sink_failures",
+      "bytes": 160,
+      "passed": true
+    },
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "busy_guard",
+      "bytes": 96,
+      "passed": true
+    },
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "exhausted_id",
+      "bytes": 96,
+      "passed": true
+    },
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "maximum_id_then_wrap",
+      "bytes": 128,
+      "passed": true
+    },
+    {
+      "exit": "EXIT:0",
+      "bf_comparison": "00",
+      "id": "forced_exclusive_failure",
+      "bytes": 96,
+      "passed": true
+    }
+  ],
+  "native_test_runtime": "BF-produced Linux syscall ELF wrappers executed on the actual Android ARM64 kernel, separate from Bionic APK proof",
+  "one_layer_bf_in_bf": [
+    {
+      "bytes": 221,
+      "seconds": 0.9784459,
+      "exit": "EXIT:0",
+      "source_commands": 5911,
+      "request_exit": "EXIT:0",
+      "normalizer_exit": "EXIT:0",
+      "id": "callback",
+      "passed": true
+    },
+    {
+      "bytes": 585,
+      "seconds": 3.7214936,
+      "exit": "EXIT:0",
+      "source_commands": 11390,
+      "request_exit": "EXIT:0",
+      "normalizer_exit": "EXIT:0",
+      "id": "guest",
+      "passed": true
+    },
+    {
+      "bytes": 16641,
+      "seconds": 168.4341493,
+      "exit": "EXIT:0",
+      "source_commands": 9596,
+      "request_exit": "EXIT:0",
+      "normalizer_exit": "EXIT:0",
+      "id": "library",
+      "passed": true
+    }
+  ],
+  "distinct_guest_bf_in_bf": [
+    {
+      "bytes": 589,
+      "seconds": 3.8397332,
+      "id": "bang",
+      "passed": true,
+      "exit": "EXIT:0"
+    },
+    {
+      "bytes": 769,
+      "seconds": 6.2657403,
+      "id": "fresh",
+      "passed": true,
+      "exit": "EXIT:0"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "space",
+      "alignment_passed": true,
+      "native_identity": true,
+      "apk_sha256": "3bcbb7b3dde5d66be19e576b408a19f0704060f45f6bb819d74c12e4bcc829b2",
+      "elf_bytes": 16640,
+      "elf_inspection": true,
+      "entries": [
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "lib/arm64-v8a/libcockstagea.so",
+        "META-INF/COCK-STA.SF",
+        "META-INF/COCK-STA.RSA",
+        "META-INF/MANIFEST.MF"
+      ],
+      "signature_passed": true,
+      "apk_bytes": 41382,
+      "elf_sha256": "d617542622f2977d0921f53a3f27959e34f7510d2ebbc537fe3707c86d9748d3"
+    },
+    {
+      "id": "bang",
+      "alignment_passed": true,
+      "native_identity": true,
+      "apk_sha256": "73ff0dfbbe2ba50db63e40d68b10376b0345a971605954d409060ec9c1103915",
+      "elf_bytes": 16640,
+      "elf_inspection": true,
+      "entries": [
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "lib/arm64-v8a/libcockstagea.so",
+        "META-INF/COCK-STA.SF",
+        "META-INF/COCK-STA.RSA",
+        "META-INF/MANIFEST.MF"
+      ],
+      "signature_passed": true,
+      "apk_bytes": 41382,
+      "elf_sha256": "972dd558d416820f35dc75ee09cd72ecfd0858a5e9f6806b369854955db5cda9"
+    },
+    {
+      "id": "heldout",
+      "alignment_passed": true,
+      "native_identity": true,
+      "apk_sha256": "350d1c41498b5d7abe11cd9998eb188b3098c80d8112963766ee6a74b7911811",
+      "elf_bytes": 16640,
+      "elf_inspection": true,
+      "entries": [
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "lib/arm64-v8a/libcockstagea.so",
+        "META-INF/COCK-STA.SF",
+        "META-INF/COCK-STA.RSA",
+        "META-INF/MANIFEST.MF"
+      ],
+      "signature_passed": true,
+      "apk_bytes": 41382,
+      "elf_sha256": "2d1014e6d7b2deec1079fdb50d75f14a242c6e158e4e9b05691b52e9408c1187"
+    },
+    {
+      "id": "fresh",
+      "alignment_passed": true,
+      "native_identity": true,
+      "apk_sha256": "c242f0a92d2eac5e5af8e701796b573898295dffe31528b5a96924f8a5140415",
+      "elf_bytes": 16640,
+      "elf_inspection": true,
+      "entries": [
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "lib/arm64-v8a/libcockstagea.so",
+        "META-INF/COCK-STA.SF",
+        "META-INF/COCK-STA.RSA",
+        "META-INF/MANIFEST.MF"
+      ],
+      "signature_passed": true,
+      "apk_bytes": 41382,
+      "elf_sha256": "bde3e5dd69633376ee8a5a32eb8babe9013609e4def1d9c787b6f0feb52407a6"
+    },
+    {
+      "id": "negative",
+      "alignment_passed": true,
+      "native_identity": true,
+      "apk_sha256": "23c98f271d64b2a78ceb42f6cd6e244f3e1eff8136ebf18707025a3e4db6282c",
+      "elf_bytes": 16640,
+      "elf_inspection": true,
+      "entries": [
+        "AndroidManifest.xml",
+        "resources.arsc",
+        "lib/arm64-v8a/libcockstagea.so",
+        "META-INF/COCK-STA.SF",
+        "META-INF/COCK-STA.RSA",
+        "META-INF/MANIFEST.MF"
+      ],
+      "signature_passed": true,
+      "apk_bytes": 41382,
+      "elf_sha256": "d617542622f2977d0921f53a3f27959e34f7510d2ebbc537fe3707c86d9748d3"
+    }
+  ],
+  "device_cases": [
+    {
+      "recreate": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, intent has been delivered to currently running top-most instance.",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 0",
+        "WaitTime: 16",
+        "Complete"
+      ],
+      "foreground": true,
+      "pid": 30567,
+      "recreated_pid": 30567,
+      "installed_apk_sha256": "3bcbb7b3dde5d66be19e576b408a19f0704060f45f6bb819d74c12e4bcc829b2",
+      "messages": [
+        "10-26 06:12:49.308 30567 30567 I COCK_STAGE_A_0000000000000001:  "
+      ],
+      "launch": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Status: ok",
+        "LaunchState: COLD",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 252",
+        "WaitTime: 257",
+        "Complete"
+      ],
+      "resume": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, its current task has been brought to the front",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "WaitTime: 13",
+        "Complete"
+      ],
+      "id": "space",
+      "raw_message_hex": "2d2d2d2d2d2d2d2d2d20626567696e6e696e67206f66206d61696e0a200a"
+    },
+    {
+      "recreate": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, intent has been delivered to currently running top-most instance.",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 0",
+        "WaitTime: 6",
+        "Complete"
+      ],
+      "foreground": true,
+      "pid": 30745,
+      "recreated_pid": 30745,
+      "installed_apk_sha256": "73ff0dfbbe2ba50db63e40d68b10376b0345a971605954d409060ec9c1103915",
+      "messages": [
+        "10-26 06:13:03.433 30745 30745 I COCK_STAGE_A_0000000000000001: !"
+      ],
+      "launch": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Status: ok",
+        "LaunchState: COLD",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 314",
+        "WaitTime: 318",
+        "Complete"
+      ],
+      "resume": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, its current task has been brought to the front",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "WaitTime: 16",
+        "Complete"
+      ],
+      "id": "bang",
+      "raw_message_hex": "2d2d2d2d2d2d2d2d2d20626567696e6e696e67206f66206d61696e0a210a"
+    },
+    {
+      "recreate": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, intent has been delivered to currently running top-most instance.",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 0",
+        "WaitTime: 18",
+        "Complete"
+      ],
+      "foreground": true,
+      "pid": 30900,
+      "recreated_pid": 30900,
+      "installed_apk_sha256": "350d1c41498b5d7abe11cd9998eb188b3098c80d8112963766ee6a74b7911811",
+      "messages": [
+        "10-26 06:13:09.713 30900 30900 I COCK_STAGE_A_0000000000000001:  "
+      ],
+      "launch": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Status: ok",
+        "LaunchState: COLD",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "TotalTime: 257",
+        "WaitTime: 260",
+        "Complete"
+      ],
+      "resume": [
+        "Starting: Intent { cmp=org.cock.stagea.debug/android.app.NativeActivity }",
+        "Warning: Activity not started, its current task has been brought to the front",
+        "Status: ok",
+        "LaunchState: UNKNOWN (0)",
+        "Activity: org.cock.stagea.debug/android.app.NativeActivity",
+        "WaitTime: 19",
+        "Complete"
+      ],
+      "id": "heldout",
+      "raw_message_hex": "2d2d2d2d2d2d2d2d2d20626567696e6e696e67206f66206d61696e0a200a"
+    }
+  ],
+  "fresh_heldout": {
+    "native_state": {
+      "pid": 1395,
+      "commands": 79,
+      "returned_status": 0,
+      "passed": true,
+      "guard": 0,
+      "state_hex": "010000000000000000000000000000000000000000000000010000000000000001000000380000000000000000000000ffffffffffffffff4f000000000000000000000000000000010000000000000001000000000000000000000000000000",
+      "guest_status": 0,
+      "outputs": 1
+    },
+    "device": {
+      "pid": 31524,
+      "elf_sha256": "bde3e5dd69633376ee8a5a32eb8babe9013609e4def1d9c787b6f0feb52407a6",
+      "messages": [
+        "10-26 06:15:54.001 31524 31524 I COCK_STAGE_A_0000000000000001: H"
+      ],
+      "apk_sha256": "c242f0a92d2eac5e5af8e701796b573898295dffe31528b5a96924f8a5140415"
+    },
+    "generation": {
+      "elf_sha256": "bde3e5dd69633376ee8a5a32eb8babe9013609e4def1d9c787b6f0feb52407a6",
+      "source_sha256": "ea4fc95e76d74a20842494a52fa12f5bf7b2d5b83819e45500e93f3a18276384",
+      "original_dot_offset": 284,
+      "guest_bytes": 768,
+      "normalized_commands": 79
+    }
+  },
+  "negative_entry": {
+    "pid": 31624,
+    "passed": true,
+    "expected_rejection": "Unable to find native function COCK_missing_entry",
+    "apk_sha256": "23c98f271d64b2a78ceb42f6cd6e244f3e1eff8136ebf18707025a3e4db6282c"
+  },
+  "mandatory_same_interpreter_nested_compiler": {
+    "expected": "fixtures/dynamic_kernel/nested/compact.expected.bin",
+    "output_hex": "000080",
+    "input_sha256": "b0c92c6db20a2fab6c654bc8c6d1e1d5e62eb9a4343b7962690cb445b028c6e5",
+    "timeout_seconds": 900,
+    "passed": false,
+    "input": "fixtures/dynamic_kernel/nested/compact.input.bin",
+    "full_proof": "UNPASSED; partial output cannot be accepted",
+    "output_bytes": 3,
+    "exit": 124,
+    "observed_duration_seconds": 900,
+    "expected_bytes": 18,
+    "empty_stderr": true
+  },
+  "packaging": {
+    "scheme": "APK Signature Scheme v3",
+    "build_tools": "36.0.0",
+    "dex_files": 0,
+    "key": "Fresh disposable RSA-2048 debug key, 30-day validity, outside repository; not a release key",
+    "production_signing": "NOT IMPLEMENTED",
+    "target_sdk": 35,
+    "native_zip_alignment": 16384,
+    "metadata_platform": "android-36",
+    "minimum_sdk": 35,
+    "certificate_sha256": "2082b1aaf00599e20aae908806a52f0071c8d667eff61f6bef4aa275c3a901b9"
+  },
+  "measurement_limits": "One-layer timings include remote evaluator call; concurrent nested run, no stable performance comparison or whole-build baseline. Power and peak memory NOT MEASURED. Foreground/back checks did not prove activity recreation; CPU fixture separately proves two callback invocations.",
+  "retained_failures": [
+    "Initial GCC default-standard build rejected; gnu11/fwrapv selected without upstream edits",
+    "Windows all-byte probe failed; all Windows binary artifact outputs excluded",
+    "First 7z packaging draft reused working directory; rebuilt from explicit paths before verification/install",
+    "Immediate launch during Android package-update transition did not start app; later batch backgrounds and waits for completion",
+    "Debugger attach did not produce usable session; detached/stopped helper and resumed process",
+    "Initial state-read automation indexed one character of a scalar map line; capture rejected and corrected 96-byte result verified",
+    "Nested full compiler timed out with partial output"
+  ],
+  "raw_local_results": "D:/Android/cock-runs/20261026-device",
+  "project_optimizations": 0,
+  "remaining": [
+    "Complete mandatory full nested compiler execution",
+    "Integrated exact-source/frontend/original offsets/capability errors and trusted physical closure",
+    "BF-owned build/session/artifact authority and usable source-to-APK entry",
+    "Full whole-stage independent oracle/negative acceptance",
+    "Full B-E implementation and separate release gates"
+  ],
+  "documentation_validation": {
+    "json_parse_failures": 0,
+    "markdown_files": 132,
+    "git_diff_whitespace_errors": 0,
+    "json_files": 111,
+    "broken_relative_file_links": 0
+  }
+}

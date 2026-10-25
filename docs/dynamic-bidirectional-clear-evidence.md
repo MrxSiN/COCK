@@ -1,5 +1,8 @@
 # Dynamic bidirectional clearing loop diagnostic evidence
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Status: **835/835 local guest diagnostic checks passed; Stage A NOT ACCEPTED**.
 
 `src/bf_in_bf_dynamic_bidirectional_clear.bf` extends the preserved dynamic right growing twelve cell tape kernel. It recognizes exactly the original guest commands `[-]` and `[+]` as clearing loops, including zero iteration and wrapping unsigned byte behavior, on arbitrary addresses supported by the outer BF host. For the selected unrestricted guest fuel mode only, the two forms both leave the addressed byte at zero. Input and output retain the earlier diagnostic interface: exact trusted raw program bytes then zero delimiter, output guest bytes followed by status byte. This is **not** COCK FRAME status framing.

@@ -1,5 +1,8 @@
 # Real BF stored ZIP component batch
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Implement `src/stage_d_stored_zip.bf` as an actual parameter-driven one-entry stored ZIP serializer. Input is u16 path length, exact already validated nonempty UTF-8 relative path, A5, u16 data length, four little-endian CRC bytes produced/verified by the BF CRC component, exact data and A5. Output consists solely of actual ZIP bytes. The native APK alignment/multi-entry plan, CRC producer orchestration, resource/signature layers and artifact finalizer are separate missing responsibilities; this component cannot be relabeled the complete Stage D packager.
 
 BF retains the path for identical local/central names, generates all local/central/EOCD metadata, uses fixed reproducible DOS date/time, counts actual serialized path/data sizes with carry and emits the central directory/EOCD only after the final guard. A bad first guard emits nothing; a bad final guard leaves an incomplete local prefix that must never publish. Root exit alone is not a producer OK. Input CRC correctness is an explicit BF-producer precondition, independently checked by archive verification; a deliberately wrong CRC must fail independent validation.

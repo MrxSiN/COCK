@@ -1,5 +1,8 @@
 # Full Stage E design draft
 
+> Checkpoint document. See [current status](status.md) and [physical-device evidence](windows-device-evidence.md). Results, hashes and environment paths below belong to their recorded checkpoint; use that Git checkpoint to reproduce old commands. Designs are not implementation or whole-stage acceptance.
+
+
 Actual implementation continuation: [BFIO envelope/text-body validators and two real app modules](real-bcde-implementation-evidence.md) are now implemented/tested. `examples/stage_e/convert.bf` and `examples/stage_e/coordinates.bf` execute actual binary/event logic and the latter emits complete source-derived provisional actions. The BFIO/text helper paths are `src/stage_e_bfio_envelope.bf` and `src/stage_e_text_body.bf`. No native renderer, dispatcher authority, completed build or installed UI is supplied by them.
 
 Prepared 2026-10-25 (Asia/Kuala_Lumpur), against `fe9d57a`, using master Parts 2–3, 8–12, 19–21 and 23–25. **All E01–E13 have documentary coverage. Actual executable first-pass draft: INCOMPLETE; IMPLEMENTED: NO; TESTED: NOT RUN; OPTIMIZED/INTEGRATED: NO.** No generated app, renderer, platform gateway, release capability or device result is claimed.

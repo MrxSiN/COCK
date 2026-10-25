@@ -1,0 +1,60 @@
+{
+  "kind": "Inert proposed single-source debug policy; not a COCK-BUILD-CONFIG-v1 implementation",
+  "state": "DESIGNED; native producer, whole-stage source draft and device acceptance incomplete",
+  "target": {
+    "instruction_set": "AArch64",
+    "android_abi": "arm64-v8a",
+    "min_sdk": 35,
+    "target_sdk": 35,
+    "distribution": "direct-install DEBUG-ONLY",
+    "elf_type": "ET_DYN",
+    "elf_load_alignment_bytes": 16384,
+    "native_library_compression": "stored",
+    "native_zip_alignment_bytes": 16384,
+    "extract_native_libs": false
+  },
+  "application": {
+    "package": "org.cock.stagea.debug",
+    "activity": "android.app.NativeActivity",
+    "library": "cockstagea",
+    "os_entry": "ANativeActivity_onCreate",
+    "internal_entry": "cock_guest_run_v1",
+    "context_bytes": 40,
+    "result_bytes": 56,
+    "runtime_handle": 0,
+    "app_specific_dex": false,
+    "external_app_specific_native_code": false,
+    "requested_permissions": []
+  },
+  "application_guest": {
+    "source_grammar": "Full Part 1 annotated BF preflight before subset admission",
+    "arithmetic": "Unsigned wrapping byte, initial zero, source-order arithmetic",
+    "output": "Exactly one final dot, computed byte 32 through 126",
+    "loops_input_pointer_travel": "UNSUPPORTED_CAPABILITY",
+    "binary_stdout": "UNSUPPORTED",
+    "generic_runtime_fuel": "UNSUPPORTED; bounded loop-free command admission instead"
+  },
+  "proposed_per_invocation_defaults": {
+    "raw_source_bytes": 1048576,
+    "normalized_app_commands": 4096,
+    "native_bytes": 1048576,
+    "meaning": "Configurable resource policy, not a permanent app/language limit; downstream representation limits must be checked independently",
+    "tool_interpreter_source_capacity": "Current u16 diagnostic bound only; final compiler working-set feasibility unverified",
+    "root_memory_wall_cpu": "Must be selected and recorded per actual run; no guessed production default"
+  },
+  "observation": {
+    "service": "__android_log_write",
+    "library": "liblog.so",
+    "priority": 4,
+    "tag_prefix": "COCK_STAGE_A_",
+    "invocation_tag_suffix": "16 hexadecimal digits from the fresh native invocation ID",
+    "message_bytes": 1,
+    "message_terminator": 0,
+    "required_return": 1,
+    "required_independent_evidence": "Matching installed APK identity, process/launch interval, invocation tag, raw printable message, callback/lifecycle success"
+  },
+  "external_debug_only_tools": ["aapt2", "zip", "zipalign", "keytool", "apksigner", "adb"],
+  "independent_verifiers": ["llvm-readelf", "llvm-objdump", "cmp", "sha256sum", "unzip", "apkanalyzer", "adb"],
+  "release_signing": "UNSUPPORTED; no release key use or production publication authorized by this config",
+  "runtime_status": "BLOCKED; no stable ARM64-capable target or BF-produced ELF/APK verified"
+}

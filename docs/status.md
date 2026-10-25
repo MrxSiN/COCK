@@ -246,3 +246,19 @@ The user requested drafting the next stage. The complete next-slice inventory is
 | INTEGRATED | NO; draft remains on the existing candidate branch |
 
 Mandatory identical-kernel compiler execution remains **BLOCKED** by the prior completed timeouts. The new driver only constructs diagnostic requests; it does not repair those timeouts or certify physical source/closure/process authority. Android entry/ELF/APK and stable target evidence remain unimplemented/unavailable. The queued acceptance batch retains every mandatory gate and requires an explicit changed-resource record before a further nested attempt. Stage A is **NOT ACCEPTED**.
+
+## 2026-10-25 — Full Stage A design package
+
+Expanded the requested scope to every A01–A14 item including A09a. `docs/stage-a-full-draft.md` indexes complete source/authority, Android/native/ELF, debug packaging, test, measurement and acceptance designs, plus a complete inventory identifying existing and missing BF implementations. Added proposed inert native-only manifest/target policy and literal source/error/ABI/session/device requirements. Refreshed the original decision sheet to reflect the installed SDK/evaluator and unresolved runtime evidence. No implementation/source-gate/byte/compiler/device tests were executed for this draft.
+
+The documentary design package is complete. **The whole Stage A executable draft is not complete**: integrated BF source admission, native runtime/callback, ELF writer, artifact framer, actual orchestration and independent whole-stage test modules are absent. Part 23 requires actual first-pass BF source for its DRAFTED gate. The missing files are listed as NOT CREATED; no placeholder or design text counts as implementation.
+
+| Whole Stage A state | Actual evidence |
+| --- | --- |
+| DRAFTED | NO for executable source; full documentary A01–A14/A09a design prepared |
+| IMPLEMENTED | NO; only separately recorded components exist |
+| TESTED | NOT RUN as a complete stage; historical component passes and nested failures unchanged |
+| OPTIMIZED | NO for whole Stage A |
+| INTEGRATED | NO; candidate branch only, main unchanged |
+
+`docs/stage-a-issues.md` records the exact missing source and major feasibility/target gates. The design pretest identity is in `docs/stage-a-full-draft-checkpoint.md`; it does not certify missing source or any Android behavior. Nested execution remains blocked by completed timeouts, and stable ARM64 target/ELF/APK/launch evidence remains unavailable. No accepted Android compiler or release is claimed.

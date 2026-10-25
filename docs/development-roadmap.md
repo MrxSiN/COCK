@@ -1,5 +1,7 @@
 # Remaining development stages
 
+The [full Stage A design package](stage-a-full-draft.md) now covers all A01–A14/A09a contracts, proposed metadata, test requirements and missing executable responsibilities. Its complete documentary coverage does not imply that the whole Stage A BF source draft exists.
+
 This is a dependency and acceptance draft grounded in the master prompt and current repository evidence. It is not a statement that the platform, Android app or later-stage source exists. Only the [bounded nested-input slice](next-stage-draft.md) has a complete new executable first-pass draft in this change. Stages B–F remain design-only and receive exact source/test inventories at their own bounded slice boundaries; no empty modules are created now.
 
 ## Complete Stage A first

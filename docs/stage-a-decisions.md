@@ -1,6 +1,6 @@
 # Stage A feasibility and scope decision
 
-Status: **development in progress, acceptance BLOCKED**. All artifacts below are development inputs, not production releases.
+Status: **development in progress, acceptance BLOCKED**. All artifacts below are development inputs, not production releases. The complete current design is [the full Stage A draft](stage-a-full-draft.md). Installed tool/runtime evidence is [the cloud Android report](cloud-android-environment.md); old tools-unavailable observations are superseded below.
 
 ## Platform and entry
 
@@ -8,10 +8,10 @@ Status: **development in progress, acceptance BLOCKED**. All artifacts below are
 |---|---|---|
 | Target CPU | AArch64 | Design selected |
 | Android target ABI | `arm64-v8a` | Design selected |
-| Planned Android API | 35 | Not installed or device verified |
-| Device or emulator | None available in the current execution environment | BLOCKED |
-| Android NDK and platform tools | `adb`, `emulator`, `aapt2`, `apksigner`, `zipalign` unavailable | BLOCKED |
-| Root BF executor | No installed standards-only BF evaluator found | BLOCKED for required self-hosting proof |
+| Planned Android API | Minimum/target 35, direct-install debug | SDK installed; device compatibility unverified |
+| Device or emulator | Google APIs and ATD API 35 images installed | BLOCKED: unstable software runtime; ATD lacks ARM64 bridge |
+| Android NDK and platform tools | NDK r28c, adb, emulator and build tools 35.0.0 installed | Tool version/install evidence in cloud report; app build NOT RUN |
+| Root BF executor | Pinned external Tritium installed | Component execution available; full guest/outer qualification and mandatory nesting unresolved |
 | Native OS entry | `ANativeActivity_onCreate(ANativeActivity*, void*, size_t)` | Contract checked, no generated bridge |
 | Internal entry | `cock_guest_run_v1(context*, result*)` | Contract defined in master specification, no generated bridge |
 | Android log import | `__android_log_write` via `liblog` | Defined service, not generated or linked |
@@ -46,4 +46,4 @@ Each input arithmetic command generates the appropriate arithmetic word *and* th
 
 ## Feasibility decision
 
-The declared Android loader entry is supported in the published Android API. Its native callback is **not** the internal two-pointer COCK guest entry. There is no SDK/device to prove ELF loader, import resolution, native logging or responsive callback execution, and no BF-generated bridge yet. Therefore raw-code component development can proceed, but **Android proof A01-A14 is BLOCKED**. No fallback desktop ELF is an Android acceptance substitute.
+The declared Android loader entry is supported in the published Android API and installed NDK header. Its native callback is **not** the internal two-pointer COCK guest entry. SDK/NDK/evaluator tools are installed, but no stable ARM64-capable execution target or BF-generated bridge/ELF exists to prove native loading, import resolution, logging or responsive callback execution. Therefore independent BF component development can proceed, but **Android proof A01-A14 is BLOCKED**. No fallback desktop ELF is an Android acceptance substitute.

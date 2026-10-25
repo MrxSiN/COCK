@@ -1,6 +1,6 @@
 # Stage A Android, native ABI and ELF draft
 
-**Complete design contract; native/runtime/ELF BF source is NOT IMPLEMENTED.** The existing raw return-value payload is a compiler component, not a loadable app, valid context/result ABI implementation or OS callback. This draft does not supply a prebuilt executable template or claim native instructions have been generated.
+**Design contract with partial actual implementation.** [Restricted BF guest, NativeActivity callback and ELF components now exist](android-native-implementation-evidence.md), with native CPU tests and candidate libraries/APKs. Complete source/offset/framed-build integration, full nested compiler proof and actual Android loading/log/lifecycle acceptance remain unfinished. The earlier raw return payload alone does not implement this contract.
 
 ## Platform contracts and target gate
 

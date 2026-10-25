@@ -1,0 +1,48 @@
+{
+  "date":"2026-10-26",
+  "timezone":"Asia/Kuala_Lumpur",
+  "scope":"Actual restricted BF-native guest, NativeActivity callback and Android ELF components; candidate APKs",
+  "whole_stage_completion":false,
+  "root":{"path":"/workspace/tools/bin/tritium","version":"1.2.73","sha256":"0ac670ed3128db52bfa73347d6f81eccd864ebd91f8a7d450d8efb2278178a5b","flags":"-r -c -b -z -B -O3 -fno-negtape","interpreter_extra_flags":"-mem 2097152","interpreter":"src/source_pc_dynamic_tape.bf","guest_capacity":128,"guest_fuel_hex":"ffffffff"},
+  "cpu_evaluator":{"path":"/workspace/tools/qemu/usr/bin/qemu-aarch64","version":"10.0.13 Debian 1:10.0.13+ds-0+deb13u1","sha256":"73cc2584f119f9e74c85c0a8549dbb6fd104ae3897a06a7500797f9e5b4d0943","package_sha256":"ca6ede739327a20ae5a3498230c8a3a9a072c586e131bc6bcc1201eb1725e336","packages_xz_sha256":"7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498","authentication":"Debian InRelease verified by sqv with installed Debian archive keyring, then authenticated index and package SHA256","android_device":false},
+  "sources":[
+    {"path":"src/android_guest_entry.bf","sha256":"d05e0639ec8301981d17297ec223b77158e7c52d5fe12fb09ba63554c69bd4d8","normalized_commands":11390,"postfreeze_repairs":0},
+    {"path":"src/android_activity_callback.bf","sha256":"557962f4fa339175f8be150eba6e58dadcafafb8816dce7f6df66cdaa03841d5","normalized_commands":5629,"postfreeze_repairs":0},
+    {"path":"src/android_library_elf.bf","sha256":"bce1e210889af557ffae8b1871b8853759e2980fdcf3be2d78909dd9d778206a","normalized_commands":9611,"postfreeze_repair_batches":3},
+    {"path":"tests/android_guest_cpu_elf.bf","sha256":"804b31cf318c97f77efedb56feda76bc64311fe71f9ec745f1bb7b96a738eeaa","normalized_commands":6445,"postfreeze_repairs":1},
+    {"path":"tests/android_callback_cpu_elf.bf","sha256":"dc28d9f2e7e6cb303eec7c5d079583a6e650223949e7f801ebb413251b1f1cad","normalized_commands":6243,"postfreeze_repairs":0}
+  ],
+  "checks":{"source_admission":5,"native_guest_cpu_cases":17,"heldout_cpu_cases":1,"callback_cpu_cases":5,"total_distinct_cpu_cases":23,"bf_in_bf_complete_component_matches":3,"bf_equal_comparisons":26,"bf_inequality_controls":1,"unchanged_legacy_compiler_outputs":6,"valid_real_source_libraries":3,"inert_container_boundary_libraries":2,"incomplete_guard_cases":2,"layout_callback_extractions":4,"layout_guest_extractions":4,"verified_debug_apks":2},
+  "one_layer_bf_in_bf":[
+    {"component":"guest","output_bytes_including_status":585,"wall_seconds":6.235,"exact_match":true},
+    {"component":"callback","output_bytes_including_status":205,"wall_seconds":1.977,"exact_match":true},
+    {"component":"library","output_bytes_including_status":16641,"wall_seconds":227.297,"exact_match":true}
+  ],
+  "candidate_libraries":[
+    {"path":"artifacts/android-native-candidate/space.so","bytes":16640,"sha256":"c63264ab718f37ba6c5ebaab717d0e4671ba1ea13c457f0af06c868b527d054b","guest_bytes":584,"message_hex":"20"},
+    {"path":"artifacts/android-native-candidate/bang.so","bytes":16640,"sha256":"9893167ccf23703724c0c7c456980d9e2207449a777988edf73bd84fe4220ee8","guest_bytes":588,"message_hex":"21"},
+    {"path":"artifacts/android-native-candidate/heldout.so","bytes":16640,"sha256":"83b19175f861eecd26fd7e76a542e0ce2a94e425a29f033b5b850e7a8d3272eb","guest_bytes":1608,"message_hex":"20","commands":289}
+  ],
+  "debug_apks":[
+    {"path":"/workspace/test-results/android-native-guest-20261026/apks/space/debug.apk","sha256":"ba50906b62430a72996738dde4194ed574c9baa5cf5ca73adfd33af078aba82b","signature_v3":true,"zip_alignment_16k":true,"native_identity":true,"device_install":"NOT RUN"},
+    {"path":"/workspace/test-results/android-native-guest-20261026/apks/bang/debug.apk","sha256":"68e92d23254d1d6a36463e72b9f587b7e82e8efee8bf12cece421c3eddd687b5","signature_v3":true,"zip_alignment_16k":true,"native_identity":true,"device_install":"NOT RUN"}
+  ],
+  "pretest_archives":[
+    {"path":"/workspace/test-results/android-native-guest-20261026/pretest.tar","sha256":"e2bb808f4a7021c4cbe81ae403a42bd4baa8c5feb808f1b29f236166176e2d7f"},
+    {"path":"/workspace/test-results/android-native-guest-20261026/callback/pretest.tar","sha256":"70e950b27863ffeef54fddba49024b894210869f929aa278cf5c038a7959bcbf"},
+    {"path":"/workspace/test-results/android-native-guest-20261026/library/pretest.tar","sha256":"7924a39505c148c6d37c668010af249f5c6bc0ed3695e41be4dc15ab6e3baf11"}
+  ],
+  "repairs":["CPU wrapper ELF magic byte","ELF native/literal scratch separation and text carry/RELRO permissions","ELF section-name printer reset","ELF wide-copy scratch initialization at maximum count"],
+  "invocation_error":{"command":"/usr/bin/time","exit":127,"bf_executed":false,"correction":"Shell time keyword; actual BF run passed"},
+  "project_optimizations":0,
+  "environment_draft":{"saved_fields":["install_script","start_skill"],"status":"saved","requires_publish":true,"network_changed":false},
+  "raw_results":"/workspace/test-results/android-native-guest-20261026",
+  "adb_devices":[],
+  "kvm_available":false,
+  "android_loader_log_lifecycle":"NOT RUN",
+  "mandatory_full_same_interpreter_nested_compiler":"Prior proof remains unpassed; not rerun unchanged",
+  "full_eight_command_aot_runtime":"NOT IMPLEMENTED",
+  "complete_source_offset_and_framed_build_graph":"NOT IMPLEMENTED",
+  "bf_native_signing_and_event_ui_platform":"NOT IMPLEMENTED",
+  "notes":"Groups overlap. CPU evidence and static ELF/APK inspection do not establish actual Android execution or whole-stage acceptance."
+}

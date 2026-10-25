@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Proposed inert DEBUG ONLY metadata; no generated library or tested APK exists. -->
+<!-- DEBUG ONLY candidate metadata; native CPU and APK checks exist, device acceptance remains unrun. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.cock.stagea.debug"
     android:versionCode="1"

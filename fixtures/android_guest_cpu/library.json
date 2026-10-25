@@ -1,0 +1,17 @@
+{
+  "kind":"Android library structural acceptance vectors",
+  "input":"u16 native guest size, BF callback bytes 204, BF guest bytes, A5",
+  "cases":[
+    {"id":"space","guest_bytes":584,"rx_bytes":4680,"rw_file_offset":16384,"file_bytes":16640,"guest_symbol_size":584},
+    {"id":"heldout","guest_bytes":1608,"rx_bytes":5704,"rw_file_offset":16384,"file_bytes":16640,"guest_symbol_size":1608},
+    {"id":"page_crossing","guest_bytes":16384,"rx_bytes":20480,"rw_file_offset":32768,"file_bytes":33024,"guest_symbol_size":16384,"payload":"Inert zero padding fixture for container boundaries only; not executable acceptance"},
+    {"id":"maximum_count","guest_bytes":65535,"rx_bytes":69631,"rw_file_offset":81920,"file_bytes":82176,"guest_symbol_size":65535,"payload":"Inert zero padding fixture for count boundaries only; not executable acceptance"}
+  ],
+  "exports":["ANativeActivity_onCreate","cock_guest_run_v1"],
+  "needed":"liblog.so",
+  "relocation":{"address_hex":"100000","symbol":"__android_log_write","type":"R_AARCH64_GLOB_DAT","symbol_index":3},
+  "fixed_layout":{"strings_hex":"180","symbols_hex":"200","hash_hex":"260","rela_hex":"280","section_names_hex":"300","section_table_hex":"400","callback_hex":"800","guest_hex":"1000","dynamic_hex":"100010","state_hex":"104000"},
+  "hardening":"RX and RW separate, 16-KiB loads and file congruence, nonexecuting stack, RELRO import page, no TEXTREL",
+  "negative":"Final guard zero or absent must omit the entire 256-byte RW file area and fail a complete-artifact admission",
+  "scope":"ELF generator component and candidate library; target Android loading remains unrun"
+}

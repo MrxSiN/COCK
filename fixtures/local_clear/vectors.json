@@ -1,0 +1,24 @@
+{
+ "encodings":[
+  {"source":"", "expected_hex":"00"},
+  {"source":"+", "expected_hex":"0800"},
+  {"source":"-", "expected_hex":"0600"},
+  {"source":">", "expected_hex":"0300"},
+  {"source":"<", "expected_hex":"0400"},
+  {"source":".", "expected_hex":"0500"},
+  {"source":",", "expected_hex":"0700"},
+  {"source":"[]", "expected_hex":"020100"},
+  {"source":"++", "expected_hex":"080800"},
+  {"source":">>", "expected_hex":"030300"},
+  {"source":"<<", "expected_hex":"040400"},
+  {"source":"[-]", "expected_hex":"0900"},
+  {"source":"[+]", "expected_hex":"02080100"},
+  {"source":"[>]", "expected_hex":"02030100"},
+  {"source":"[<]", "expected_hex":"02040100"},
+  {"source":"[>>]", "expected_hex":"0203030100"},
+  {"source":"[<<]", "expected_hex":"0204040100"}
+ ],
+ "controls":"../trusted_interpreter/vectors.json",
+ "request_driver":"../../tests/encoded_kernel_request.bf",
+ "semantics":"unfuelled wrapping trusted BF tools only"
+}

@@ -1,7 +1,7 @@
 {
   "kind": "Inert proposed single-source debug policy; not a COCK-BUILD-CONFIG-v1 implementation",
   "state": "Native components implemented and device tested; whole-stage source/build authority and acceptance incomplete",
-  "current_evidence": "docs/windows-device-evidence.json",
+  "current_evidence": "docs/android-native-compiler-evidence.json",
   "tested_device": {"model":"Pixel 8 Pro","device":"husky","api":37,"abi":"arm64-v8a","page_bytes":4096,"minimum_api_execution":"NOT RUN","sixteen_kib_execution":"NOT RUN"},
   "target": {
     "instruction_set": "AArch64",

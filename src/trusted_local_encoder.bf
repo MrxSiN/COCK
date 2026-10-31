@@ -1,0 +1,189 @@
+# MODULE BF source decoder with local clear instruction serialization
+# PURPOSE prepare existing compact instruction records before nested execution
+# AUTHOR decoder and combination pass by Clive Gifford December two thousand six
+# CREDIT initial ASCII decoder by Daniel B Cristofani and Oleg Mazonka
+# INPUT normalized admitted BF source then bang with no guest input
+# OUTPUT primitive instruction codes and clear code nine followed by zero
+# TAPE original paired instruction records owned by original algorithm
+# REQUIREMENT exact admitted source identity and independent physical closure
+# LIMITATION trusted source only and at most two hundred fifty five loop levels
+# ADAPTATION original decoder followed by BF record serialization
+>>>>
++
+[
+->>>
+++>+>+++++++
+[<++++>>++<-]++>>+>+>
++++++[>++>++++++<<-]
++>>>,<++
+[
+[>[->>]<[>>]<<-]
+<[<]<+>>[>]>
+[
+<+>-
+[[<+>-]>]
+<
+[
+[[-]<]
+++<-
+[
+<+++++++++>[<->-]>>
+]
+>>
+]
+]
+<<
+]
+>[-]+<<
+[
+--
+[
+[-]
+>>- <<<+>
+]
+>>
+[
+-
+<<<<[>+<-]
++<<+
+[
+->
+[<+>>>>>>+<<<<<-]
+<[>+<-]>>>>>>
+>+<
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+[-]
+>-<
+]>[-<<+++++++>>] <
+]
+]
+]>[-]<
+]>[-<<+++>>]<
+]>[-<<+>>]<
+]>[-]<
+]>[-<<<<<<<+>>>>>>>]<
+]>[-]<
+<<<<
+]
+>>>[<<+>>-]
+<+<
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+[-]
+>-<<<[-]<<+>>
+]
+]
+]
+]>[-]<
+]>[-<<<[-]<<+++++++>>>]<
+]
+]
+]>[-]<
+]>[-<<<[-]<<+++++++>>>]<
+]
+]>[-]<
+<<<<<[-]>>
+[
+-
+<<<[>+>>+<<<-]>[<+>-]>>
+[
+-[
+-[
+[-]
+>>
+]
+>
+[
+<<[<+>>+<-]>[<+>-]+<<
+-
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-
+<+>
+]<+++++++++++++>>[-]>->-<<
+]
+]
+]>>[->>>>>]<<
+]>>[-<<<++++++++++++>>[-]>>-]<<
+]>>[->>>>>]<<
+]>>[-<<<+++++++++++>>[-]>>-]<<
+]>>[-<<<++++++++++>>[-]>>-]<<
+]
+]>>[->>>>>]<<
+]
+<
+]
+]>[>>]<
+<<
+]
+>>+>>>
+]
+<<
+]
+>> [->+>] <<
+<
+]
+<<[<<]>>
+# Serialize original operations and the verified decrement clear combination
+# Cell before each code is the case flag and cell after it is a zero printer
+[
+ <[-]+>>[-]<
+ -[
+  -[
+   -[
+    -[
+     -[
+      -[
+       -[
+        -[
+         -[
+          -[
+           -[
+            -[
+             -[
+              -[
+               -[
+                [-]<[[-]>>++.++..---.[-]<<]>
+               ]<[[-]>>++.+..--.[-]<<]>
+              ]<[[-]>>+++++++++.[-]<<]>
+             ]<[[-]>>++.++.---.[-]<<]>
+            ]<[[-]>>++.+.--.[-]<<]>
+           ]<[[-]>>++++..[-]<<]>
+          ]<[[-]>>+++..[-]<<]>
+         ]<[[-]>>++++++++..[-]<<]>
+        ]<[[-]>>++++++++.[-]<<]>
+       ]<[[-]>>+++++++.[-]<<]>
+      ]<[[-]>>++++++.[-]<<]>
+     ]<[[-]>>+++++.[-]<<]>
+    ]<[[-]>>++++.[-]<<]>
+   ]<[[-]>>+++.[-]<<]>
+  ]<[[-]>>++.[-]<<]>
+ ]<[[-]>>+.[-]<<]>
+ >>
+]
+.

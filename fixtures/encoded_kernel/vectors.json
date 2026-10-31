@@ -1,0 +1,28 @@
+{
+  "scope": "existing cgbfi2 internal codes serialized by BF",
+  "encodings": [
+    {"source":"", "expected_hex":"00"},
+    {"source":"+", "expected_hex":"0800"},
+    {"source":"-", "expected_hex":"0600"},
+    {"source":">", "expected_hex":"0300"},
+    {"source":"<", "expected_hex":"0400"},
+    {"source":".", "expected_hex":"0500"},
+    {"source":",", "expected_hex":"0700"},
+    {"source":"[]", "expected_hex":"020100"},
+    {"source":"++", "expected_hex":"0900"},
+    {"source":">>", "expected_hex":"0a00"},
+    {"source":"<<", "expected_hex":"0b00"},
+    {"source":"[>]", "expected_hex":"0c00"},
+    {"source":"[<]", "expected_hex":"0d00"},
+    {"source":"[-]", "expected_hex":"0e00"},
+    {"source":"[+]", "expected_hex":"02080100"},
+    {"source":"[>>]", "expected_hex":"0f00"},
+    {"source":"[<<]", "expected_hex":"1000"}
+  ],
+  "request_vectors": [
+    {"name":"empty-bodies", "input_hex":"000000", "expected_hex":""},
+    {"name":"binary-bodies", "input_hex":"020800000205000003000aff00", "expected_hex":"08000500000aff"},
+    {"name":"multi-chunk", "input_hex":"01080100000105010000012101ff00", "expected_hex":"0800050021ff"}
+  ],
+  "controls": "../trusted_interpreter/vectors.json"
+}

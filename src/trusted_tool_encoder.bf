@@ -1,0 +1,153 @@
+# MODULE BF trusted tool source decoder and serializer
+# PURPOSE prepare existing compact instruction records before nested execution
+# AUTHOR decoder and combination pass by Clive Gifford December two thousand six
+# CREDIT initial ASCII decoder by Daniel B Cristofani and Oleg Mazonka
+# INPUT normalized admitted BF source then bang with no guest input
+# OUTPUT instruction code bytes one through sixteen followed by zero
+# TAPE original paired instruction records owned by original algorithm
+# REQUIREMENT exact admitted source identity and independent physical closure
+# LIMITATION trusted source only and at most two hundred fifty five loop levels
+# ADAPTATION original decoder followed by BF record serialization
+>>>>
++
+[
+->>>
+++>+>+++++++
+[<++++>>++<-]++>>+>+>
++++++[>++>++++++<<-]
++>>>,<++
+[
+[>[->>]<[>>]<<-]
+<[<]<+>>[>]>
+[
+<+>-
+[[<+>-]>]
+<
+[
+[[-]<]
+++<-
+[
+<+++++++++>[<->-]>>
+]
+>>
+]
+]
+<<
+]
+>[-]+<<
+[
+--
+[
+[-]
+>>- <<<+>
+]
+>>
+[
+-
+<<<<[>+<-]
++<<+
+[
+->
+[<+>>>>>>+<<<<<-]
+<[>+<-]>>>>>>
+>+<
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+[-]
+>-<
+]>[-<<+++++++>>] <
+]
+]
+]>[-]<
+]>[-<<+++>>]<
+]>[-<<+>>]<
+]>[-]<
+]>[-<<<<<<<+>>>>>>>]<
+]>[-]<
+<<<<
+]
+>>>[<<+>>-]
+<+<
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+[-]
+>-<<<[-]<<+>>
+]
+]
+]
+]>[-]<
+]>[-<<<[-]<<+++++++>>>]<
+]
+]
+]>[-]<
+]>[-<<<[-]<<+++++++>>>]<
+]
+]>[-]<
+<<<<<[-]>>
+[
+-
+<<<[>+>>+<<<-]>[<+>-]>>
+[
+-[
+-[
+[-]
+>>
+]
+>
+[
+<<[<+>>+<-]>[<+>-]+<<
+-
+[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-[
+-
+<+>
+]<+++++++++++++>>[-]>->-<<
+]
+]
+]>>[->>>>>]<<
+]>>[-<<<++++++++++++>>[-]>>-]<<
+]>>[->>>>>]<<
+]>>[-<<<+++++++++++>>[-]>>-]<<
+]>>[-<<<++++++++++>>[-]>>-]<<
+]
+]>>[->>>>>]<<
+]
+<
+]
+]>[>>]<
+<<
+]
+>>+>>>
+]
+<<
+]
+>> [->+>] <<
+<
+]
+<<[<<]>>
+# Emit each complete prepared instruction and advance one pair
+[.>>].

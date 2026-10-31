@@ -2,6 +2,8 @@
 
 Updated 2026-10-26. Development is authorized; **whole-stage acceptance remains incomplete**. [Current evidence](windows-device-evidence.md) supersedes old cloud-host availability statements.
 
+Latest bounded slice: use the unchanged attributed reference for trusted-tool BF-in-BF experiments and the new integrated normalized-input native producer; see [its contract and results](android-native-compiler-evidence.md). External debug metadata used SDK platform `android-37.0` and package `org.cock.stagea.session20261026` to preserve the prior package with a different certificate. Minimum/target SDK stay 35. Complete nesting, raw-source authority and general build entry remain blocked/incomplete.
+
 | Item | Decision and observed boundary |
 | --- | --- |
 | Target | Explicitly selected Pixel 8 Pro / husky, API 37, native `arm64-v8a`, 4096-byte pages |

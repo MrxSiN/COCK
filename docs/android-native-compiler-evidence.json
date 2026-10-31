@@ -1,0 +1,658 @@
+{
+  "blockers": [
+    "Full identical-reference nested integrated compiler times out with zero output at 600 seconds despite 64-MiB root capacity",
+    "Complete annotated original-source reader, original error offsets/precedence and immutable handoff remain absent",
+    "BF-owned output/session authority and usable annotated-source-to-APK build entry remain incomplete"
+  ],
+  "source_identities": [
+    {
+      "path": "src/android_native_compiler.bf",
+      "bytes": 39748,
+      "sha256": "217eda6046affe5f2eb390708e785f222f231c5a71f6869f8509e6b73fa40519"
+    },
+    {
+      "path": "tests/same_kernel_request.bf",
+      "bytes": 1424,
+      "sha256": "f7147722d4fab7b81494412330d560caac98507e2661931559930126d1d92f9f"
+    },
+    {
+      "path": "examples/heldout_stagea_q.bf",
+      "bytes": 367,
+      "sha256": "cb0e30854867c576480eae3d7a5c68eecefaf8b2bc2b738ed73b7fc1f9d12de8"
+    },
+    {
+      "path": "src/bf_in_bf_reference.bf",
+      "bytes": 1137,
+      "sha256": "7d7ab6e6b67c60a1d0176c33536e19eb3f3bd892c711733991dc1c6283bdb2f4"
+    }
+  ],
+  "scope": "Integrated normalized-source BF native producer and isolated debug-only target verification",
+  "harness_repairs": [
+    "Initial expected-packet concatenation failed; BF comparator rejected it, physical fixture encoding was corrected and comparisons rerun",
+    "Redundant key-password file caused first signing attempt to hit EOF; omitted redundant argument and all final signatures verified"
+  ],
+  "date": "2026-10-26",
+  "snapshot": {
+    "sha256": "314a6b6aa424cc1e8a888ca999067aeb3decb484d4e189bc84e38bc2997224cc",
+    "path": "C:\\Android\\cock-runs\\20261026-stagea/integrated-native-draft.zip"
+  },
+  "ownership": {
+    "producer": "src/android_native_compiler.bf",
+    "compile_platform": "android-37.0",
+    "new_foreign_executable_source_in_repository": false,
+    "authority": "Diagnostic record only; upstream raw source/offset and independent physical closure remain preconditions",
+    "app_specific_DEX": false,
+    "source_bytes": 39748,
+    "output": "00 reject OR 01 | ELF_size_u32le | ELF | a5",
+    "input": "dot_offset_u64le | repeated u8-counted normalized chunks | 00 a5",
+    "command_bytes": 29542,
+    "minimum_sdk": 35,
+    "external_debug_only_tools": [
+      "aapt2 37.0.0",
+      "installed .NET ZIP API",
+      "zipalign 37.0.0",
+      "keytool JDK 24",
+      "apksigner 37.0.0"
+    ],
+    "target_sdk": 35
+  },
+  "nested_plan": "docs/same-kernel-plan.md",
+  "measurements": {
+    "optimization": "NOT ATTEMPTED; mandatory gate failed",
+    "parallel_CPU_load": true,
+    "peak_RSS": "NOT MEASURED",
+    "whole_build_baseline": "NOT ESTABLISHED",
+    "power": "NOT MEASURED",
+    "component_remote_seconds_only": true
+  },
+  "run_directory": "C:\\Android\\cock-runs\\20261026-stagea",
+  "artifact_state": {
+    "release_key_used": false,
+    "debug_certificate_sha256": "898864a01110c81415572f88b86065f562a35dea5be0d4da16e1c608e340b0d5",
+    "package": "org.cock.stagea.session20261026",
+    "negative_package_removed": true,
+    "original_debug_package_replaced": false,
+    "force_stopped": true,
+    "APK_bytes_each": 41382,
+    "latest_installed": "heldout-q"
+  },
+  "timezone": "Asia/Kuala_Lumpur",
+  "target": {
+    "model": "Pixel 8 Pro",
+    "api_35_execution": "NOT RUN",
+    "adb": "C:/platform-tools/adb.exe",
+    "abi": "arm64-v8a",
+    "fingerprint": "google/husky/husky:17/CP3A.261005.005/16271449:user/release-keys",
+    "selected_transport": 1,
+    "sixteen_kib_execution": "NOT RUN",
+    "page_bytes": 4096,
+    "device": "husky",
+    "api": 37
+  },
+  "platform_contracts": [
+    "https://developer.android.com/ndk/reference/group/native-activity",
+    "https://developer.android.com/ndk/reference/group/logging",
+    "https://developer.android.com/tools/zipalign"
+  ],
+  "repository_git_metadata": "ABSENT; no Git commit claimed",
+  "native_plan": "docs/android-native-compiler-plan.md",
+  "status": {
+    "drafted": true,
+    "tested": "YES for recorded component/device checks; mandatory full nesting failed",
+    "whole_stage_integrated": false,
+    "implemented": "YES within normalized-source component contract",
+    "optimized": false
+  },
+  "tests": {
+    "annotation_audit_failures": 0,
+    "transport_and_overflow_negatives": [
+      {
+        "name": "missing-guard",
+        "result": "EXIT:0",
+        "pass": true,
+        "seconds": 0.2856174,
+        "observed_hex": "00"
+      },
+      {
+        "name": "bad-guard",
+        "result": "EXIT:0",
+        "pass": true,
+        "seconds": 0.1719515,
+        "observed_hex": "00"
+      },
+      {
+        "name": "truncated-source",
+        "result": "EXIT:0",
+        "pass": true,
+        "seconds": 0.0980936,
+        "observed_hex": "00"
+      },
+      {
+        "name": "missing-terminator",
+        "result": "EXIT:0",
+        "pass": true,
+        "seconds": 0.0872212,
+        "observed_hex": "00"
+      },
+      {
+        "name": "native-u16-overflow",
+        "result": "EXIT:0",
+        "pass": true,
+        "seconds": 1.187802,
+        "observed_hex": "00"
+      }
+    ],
+    "source_vectors": [
+      {
+        "name": "empty",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "plus output",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "valid safe annotation",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "indented safe annotation",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "newline between code and comment",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "comment may contain hash",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "invalid inline annotation",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "invalid command in comment",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "invalid embedded nul",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "valid crlf",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "invalid bare cr",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "invalid terminal cr",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "unmatched closing",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "unmatched opening",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "nested legal",
+        "observed": "1",
+        "pass": true
+      },
+      {
+        "name": "illegal utf8",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "illegal bom",
+        "observed": "0",
+        "pass": true
+      },
+      {
+        "name": "invalid content on code line",
+        "observed": "0",
+        "pass": true
+      }
+    ],
+    "wrong_entry": {
+      "wrong_entry_rejected": true,
+      "pid": "29715",
+      "exception": "UnsatisfiedLinkError",
+      "entry": "COCK_missing_entry"
+    },
+    "annotation_audit_files": 81,
+    "additional_selfhosting_runs": [
+      {
+        "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/native-b.selfhost.output",
+        "name": "native-b",
+        "seconds": 121.3391054
+      },
+      {
+        "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/heldout-q.selfhost.output",
+        "name": "heldout-q",
+        "seconds": 364.7462593
+      },
+      {
+        "result": "EXIT:143\n0 /data/local/tmp/cock-stagea/integrated-nested-a.selfhost.output",
+        "name": "integrated-nested-a",
+        "seconds": 135.8431929
+      }
+    ],
+    "direct_results": [
+      {
+        "bytes": 16646,
+        "first": 1,
+        "last": 165,
+        "name": "native-a",
+        "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/native-a.integrated.output",
+        "seconds": 0.6148342
+      },
+      {
+        "bytes": 16646,
+        "first": 1,
+        "last": 165,
+        "name": "native-b",
+        "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/native-b.integrated.output",
+        "seconds": 0.2256789
+      },
+      {
+        "bytes": 16646,
+        "first": 1,
+        "last": 165,
+        "name": "native-256",
+        "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/native-256.integrated.output",
+        "seconds": 0.2268765
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-0",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-0.integrated.output",
+        "seconds": 0.219304
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-1",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-1.integrated.output",
+        "seconds": 0.2150804
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-2",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-2.integrated.output",
+        "seconds": 0.232007
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-3",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-3.integrated.output",
+        "seconds": 0.2183549
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-4",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-4.integrated.output",
+        "seconds": 0.1936285
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-5",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-5.integrated.output",
+        "seconds": 0.2257105
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-6",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-6.integrated.output",
+        "seconds": 0.2095408
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-7",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-7.integrated.output",
+        "seconds": 0.2151435
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-8",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-8.integrated.output",
+        "seconds": 0.2113643
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-9",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-9.integrated.output",
+        "seconds": 0.2017527
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-10",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-10.integrated.output",
+        "seconds": 0.1864503
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-11",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-11.integrated.output",
+        "seconds": 0.2501493
+      },
+      {
+        "bytes": 1,
+        "first": 0,
+        "last": 0,
+        "name": "reject-12",
+        "result": "EXIT:0\n1 /data/local/tmp/cock-stagea/reject-12.integrated.output",
+        "seconds": 0.2401923
+      }
+    ],
+    "physical_Q_state": {
+      "native_status": 0,
+      "state_bytes": 96,
+      "PID": 31726,
+      "expected_byte_hex": "51",
+      "BF_comparison": 0,
+      "commands": 96,
+      "invocation_id": 1,
+      "output_bytes": 1,
+      "callback_status": 0,
+      "log": "--------- beginning of main\n10-26 15:52:00.907 31726 31726 I COCK_STAGE_A_0000000000000001: Q\n",
+      "guard": 0
+    },
+    "BF_source_checks": [
+      {
+        "gate": 1,
+        "pass": true,
+        "file": "src\\android_native_compiler.bf"
+      },
+      {
+        "gate": 1,
+        "pass": true,
+        "file": "tests\\same_kernel_request.bf"
+      },
+      {
+        "gate": 1,
+        "pass": true,
+        "file": "src\\bf_in_bf_reference.bf"
+      }
+    ],
+    "instruction_provenance": [
+      {
+        "add_w22_one": 32,
+        "name": "native-a",
+        "sub_w22_one": 0
+      },
+      {
+        "add_w22_one": 33,
+        "name": "native-b",
+        "sub_w22_one": 0
+      },
+      {
+        "add_w22_one": 88,
+        "name": "heldout-q",
+        "sub_w22_one": 7
+      }
+    ],
+    "native_CPU": [
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 160,
+        "name": "two_success",
+        "native_exit": 0
+      },
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 160,
+        "name": "two_sink_failures",
+        "native_exit": 0
+      },
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 96,
+        "name": "busy_guard",
+        "native_exit": 0
+      },
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 96,
+        "name": "exhausted_id",
+        "native_exit": 0
+      },
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 128,
+        "name": "maximum_id_then_wrap",
+        "native_exit": 0
+      },
+      {
+        "pass": true,
+        "BF_comparison": 0,
+        "bytes": 96,
+        "name": "forced_exclusive_failure",
+        "native_exit": 0
+      }
+    ],
+    "full_nested": {
+      "result": "EXIT:124\n0 /data/local/tmp/cock-stagea/integrated-nested-a.64m.output",
+      "root_capacity_bytes": 67108864,
+      "seconds": 600.3306425,
+      "name": "integrated-nested-a-capacity-repair"
+    },
+    "one_layer_A": {
+      "result": "EXIT:0\n16646 /data/local/tmp/cock-stagea/native-a.one.output",
+      "seconds": 98.087024,
+      "name": "integrated-one-layer-a"
+    },
+    "debug_packages": [
+      {
+        "name": "native-a",
+        "APK_bytes": 41382,
+        "selfhost_native_match": true,
+        "elf_sha256": "a8fd91bd4044eba507012bbbdf5ca1be011edf79687f94e475491a13939da3cc",
+        "alignment_verified": true,
+        "apk_sha256": "2860aede41b7098e0038441b5e78d4988a236f3d6aa386dfcc048b92ee823777",
+        "signature_verified": true,
+        "executable_entries": [
+          "AndroidManifest.xml",
+          "resources.arsc",
+          "lib/arm64-v8a/libcockstagea.so",
+          "META-INF/COCK-STA.SF",
+          "META-INF/COCK-STA.RSA",
+          "META-INF/MANIFEST.MF"
+        ],
+        "native_bytes": 16640
+      },
+      {
+        "name": "native-b",
+        "APK_bytes": 41382,
+        "selfhost_native_match": true,
+        "elf_sha256": "e20848b2205837b7a39a205bc22e5b656f511a54b30e21d3334a3ccc5b0cd45c",
+        "alignment_verified": true,
+        "apk_sha256": "0b1c2d0cf7d9cb9639ebab4a89c996e6753404a63d3bc8e405315714e7a1a3d2",
+        "signature_verified": true,
+        "executable_entries": [
+          "AndroidManifest.xml",
+          "resources.arsc",
+          "lib/arm64-v8a/libcockstagea.so",
+          "META-INF/COCK-STA.SF",
+          "META-INF/COCK-STA.RSA",
+          "META-INF/MANIFEST.MF"
+        ],
+        "native_bytes": 16640
+      },
+      {
+        "name": "heldout-q",
+        "APK_bytes": 41382,
+        "selfhost_native_match": true,
+        "elf_sha256": "229e14e941e2f17c55ded0b4bd9f2b31865b684b75210127c68dbe344ca8386d",
+        "alignment_verified": true,
+        "apk_sha256": "b4d781805766985431989b0b3691541eb6b720f5004f929339a0bc6f4ff33531",
+        "signature_verified": true,
+        "executable_entries": [
+          "AndroidManifest.xml",
+          "resources.arsc",
+          "lib/arm64-v8a/libcockstagea.so",
+          "META-INF/COCK-STA.SF",
+          "META-INF/COCK-STA.RSA",
+          "META-INF/MANIFEST.MF"
+        ],
+        "native_bytes": 16640
+      }
+    ],
+    "max_native": {
+      "ELF_bytes": 82176,
+      "name": "max-u16-native",
+      "result": "EXIT:0\n82182 /data/local/tmp/cock-stagea/native-max.output",
+      "native_bytes": 65532,
+      "commands": 16270,
+      "packet_bytes": 82182
+    },
+    "exact_packet_comparisons": [
+      {
+        "elf_bytes": 16640,
+        "separate_producer_exit": 0,
+        "packet_bytes": 16646,
+        "name": "native-a",
+        "independent_byte_equality": true,
+        "bf_compare": "0",
+        "sha256": "a8fd91bd4044eba507012bbbdf5ca1be011edf79687f94e475491a13939da3cc"
+      },
+      {
+        "elf_bytes": 16640,
+        "separate_producer_exit": 0,
+        "packet_bytes": 16646,
+        "name": "native-b",
+        "independent_byte_equality": true,
+        "bf_compare": "0",
+        "sha256": "e20848b2205837b7a39a205bc22e5b656f511a54b30e21d3334a3ccc5b0cd45c"
+      },
+      {
+        "elf_bytes": 16640,
+        "separate_producer_exit": 0,
+        "packet_bytes": 16646,
+        "name": "native-256",
+        "independent_byte_equality": true,
+        "bf_compare": "0",
+        "sha256": "5a03842dc1dd6ba83117fc56156a3d6c4a09f67c33e46ae0d9a319d5a78ea091"
+      },
+      {
+        "elf_bytes": 16640,
+        "separate_producer_exit": 0,
+        "packet_bytes": 16646,
+        "name": "heldout-q",
+        "independent_byte_equality": true,
+        "bf_compare": "0",
+        "sha256": "229e14e941e2f17c55ded0b4bd9f2b31865b684b75210127c68dbe344ca8386d"
+      }
+    ],
+    "one_layer_BF_comparisons": [
+      {
+        "bytes": 16646,
+        "exact_match": true,
+        "BF_compare": 0,
+        "name": "native-a"
+      },
+      {
+        "bytes": 16646,
+        "exact_match": true,
+        "BF_compare": 0,
+        "name": "native-b"
+      },
+      {
+        "bytes": 16646,
+        "exact_match": true,
+        "BF_compare": 0,
+        "name": "heldout-q"
+      }
+    ],
+    "device_launches": [
+      {
+        "install_success": true,
+        "expected_byte_hex": "20",
+        "launch": "Starting: Intent { cmp=org.cock.stagea.session20261026/android.app.NativeActivity }\nStatus: ok\nLaunchState: COLD\nActivity: org.cock.stagea.session20261026/android.app.NativeActivity\nTotalTime: 903\nWaitTime: 905\nComplete",
+        "pid": 28524,
+        "installed_apk_sha256": "2860aede41b7098e0038441b5e78d4988a236f3d6aa386dfcc048b92ee823777",
+        "installed_identity_match": true,
+        "exact_log": "10-26 15:37:01.244 28524 28524 I COCK_STAGE_A_0000000000000001:  ",
+        "name": "native-a"
+      },
+      {
+        "install_success": true,
+        "expected_byte_hex": "21",
+        "launch": "Starting: Intent { cmp=org.cock.stagea.session20261026/android.app.NativeActivity }\nStatus: ok\nLaunchState: COLD\nActivity: org.cock.stagea.session20261026/android.app.NativeActivity\nTotalTime: 554\nWaitTime: 556\nComplete",
+        "pid": 28764,
+        "installed_apk_sha256": "0b1c2d0cf7d9cb9639ebab4a89c996e6753404a63d3bc8e405315714e7a1a3d2",
+        "installed_identity_match": true,
+        "exact_log": "10-26 15:37:05.888 28764 28764 I COCK_STAGE_A_0000000000000001: !",
+        "name": "native-b"
+      },
+      {
+        "install_success": true,
+        "expected_byte_hex": "51",
+        "launch": "Starting: Intent { cmp=org.cock.stagea.session20261026/android.app.NativeActivity }\nStatus: ok\nLaunchState: COLD\nActivity: org.cock.stagea.session20261026/android.app.NativeActivity\nTotalTime: 495\nWaitTime: 498\nComplete",
+        "pid": 28881,
+        "installed_apk_sha256": "b4d781805766985431989b0b3691541eb6b720f5004f929339a0bc6f4ff33531",
+        "installed_identity_match": true,
+        "exact_log": "10-26 15:37:08.907 28881 28881 I COCK_STAGE_A_0000000000000001: Q",
+        "name": "heldout-q"
+      }
+    ]
+  },
+  "external_master_sha256": "5524bd878b66d5aea43b477ed696b8a802e9168b6b388abb5b47a5c4beb3d7fd",
+  "requested_stage_complete": false,
+  "held_out": {
+    "normalized_commands": 96,
+    "arithmetic": "seven subtractions followed by eighty eight additions",
+    "independent_BF_oracle_hex": "51",
+    "source": "examples/heldout_stagea_q.bf",
+    "selected_after_native_draft": true,
+    "original_dot_offset": 365
+  }
+}

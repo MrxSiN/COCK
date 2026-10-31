@@ -1,0 +1,21 @@
+{
+  "scope": "Trusted tool controls with wrapping bytes and root zero EOF",
+  "vectors": [
+    {"name":"empty", "source":"", "input_hex":"", "expected_hex":""},
+    {"name":"wrapping", "source":"-.+.+.", "input_hex":"", "expected_hex":"ff0001"},
+    {"name":"binary-and-eof", "source":",.,.,.,.,.,.,.", "input_hex":"000a0d1a21ff", "expected_hex":"000a0d1a21ff00"},
+    {"name":"clear-minus", "source":"-[-].", "input_hex":"", "expected_hex":"00"},
+    {"name":"clear-plus", "source":"+[+].", "input_hex":"", "expected_hex":"00"},
+    {"name":"paired-add", "source":"+++++.", "input_hex":"", "expected_hex":"05"},
+    {"name":"pair-pointer", "source":">+>++>+++<<<.>.>.>.", "input_hex":"", "expected_hex":"00010203"},
+    {"name":"skip-right", "source":"+>++>+++<<[>].", "input_hex":"", "expected_hex":"00"},
+    {"name":"skip-left", "source":">+>++>+++[<].", "input_hex":"", "expected_hex":"00"},
+    {"name":"skip-pair-right", "source":"+>>++>>+++<<<<[>>].", "input_hex":"", "expected_hex":"00"},
+    {"name":"skip-pair-left", "source":">>+>>++>>+++[<<].", "input_hex":"", "expected_hex":"00"},
+    {"name":"nested-transfer", "source":"+++[>++[>+<-]<-]>>.", "input_hex":"", "expected_hex":"06"},
+    {"name":"skip-zero-body", "source":"[+[-]>+.]+.", "input_hex":"", "expected_hex":"01"},
+    {"name":"left-bracket-nonzero", "source":"+++[.-]", "input_hex":"", "expected_hex":"030201"},
+    {"name":"transfer-to-nonzero", "source":"++>+++<[->+<]>.", "input_hex":"", "expected_hex":"05"},
+    {"name":"bang-as-data", "source":",.", "input_hex":"21", "expected_hex":"21"}
+  ]
+}

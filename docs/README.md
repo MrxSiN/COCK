@@ -2,6 +2,8 @@
 
 Updated 2026-10-26. [Project overview](../README.md), [current status](status.md) and [physical-device evidence](windows-device-evidence.md) are the starting points. Stage A is incomplete; later-stage designs and historical passing components do not establish stage acceptance.
 
+Latest: [integrated normalized-source native compiler and device evidence](android-native-compiler-evidence.md), [same-kernel nested compiler evidence](same-kernel-evidence.md), their [native plan](android-native-compiler-plan.md) and [nested plan](same-kernel-plan.md). The complete Android compiler's nested run still fails its watchdog; Stage A remains open.
+
 The master specification records requirements. Evidence records observed results. Plans/drafts record intended work. Checkpoint notices preserve older reports without presenting old environment paths, unavailable features or stale hashes as current instructions.
 
 ## Current guidance and contracts

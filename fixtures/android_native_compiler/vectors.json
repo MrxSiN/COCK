@@ -1,0 +1,10 @@
+{
+  "scope": "One integrated BF native producer for already admitted normalized source; not whole Stage A",
+  "input": "dot_offset_u64le | repeated u8 chunk length and exact bytes | 00 a5",
+  "output": "00 on rejection, or 01 | elf_size_u32le | exact ELF | a5",
+  "valid": ["32 additions and final dot", "33 additions and final dot", "mixed wrapping arithmetic", "256 commands across chunk boundary", "fresh post-draft held-out source"],
+  "invalid_source_hex": ["", "2b2e", "2c", "3c", "3e", "5b5d", "2b5b5d", "2e2e", "2b2e2b", "2b00", "2b58", "2b", "2d2e"],
+  "invalid_transport": ["missing zero chunk terminator", "missing A5", "mutated A5", "declared chunk truncated", "extra trailing bytes vetoed by host"],
+  "capacity": "u16 native-byte overflow rejects before native output; multi-chunk source must not truncate at 255",
+  "mandatory_external_facts": ["exact sealed request identity", "actual input count and successful read/close", "root exit zero", "exact complete output and successful write/close", "independent native validation before debug packaging"]
+}

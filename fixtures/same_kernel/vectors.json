@@ -1,0 +1,20 @@
+{
+  "scope": "Diagnostic same reference kernel twice; not COCK framed status or whole Stage A acceptance",
+  "driver": "tests/same_kernel_request.bf",
+  "interpreter": "src/bf_in_bf_reference.bf",
+  "root_watchdog_seconds": 600,
+  "driver_vectors": [
+    {"name":"empty","input_hex":"000000","expected_hex":"2121"},
+    {"name":"binary","input_hex":"012b00012e00030021ff00","expected_hex":"2b212e210021ff"},
+    {"name":"multiple_chunks","input_hex":"012b013e00012c012e00010001ff00","expected_hex":"2b3e212c2e2100ff"}
+  ],
+  "compiler_regressions": [
+    {"compiler":"src/mini_compiler.bf","application":"examples/tiny_app_a.bf","expected":"artifacts/tiny_app_a.aarch64.raw"},
+    {"compiler":"src/mini_compiler.bf","application":"examples/tiny_app_b.bf","expected":"artifacts/tiny_app_b.aarch64.raw"},
+    {"compiler":"src/mini_compiler_compact.bf","application":"examples/tiny_app_a.bf","expected":"artifacts/tiny_app_a.compact.aarch64.raw"},
+    {"compiler":"src/mini_compiler_compact.bf","application":"examples/tiny_app_b.bf","expected":"artifacts/tiny_app_b.compact.aarch64.raw"}
+  ],
+  "native_components": ["src/android_guest_entry.bf","src/android_activity_callback.bf","src/android_library_elf.bf"],
+  "held_out": "Select after source draft checkpoint; preserve exact annotated and normalized bytes",
+  "failure_rule": "Any unknown closure, timeout, nonzero exit, incorrect length or byte mismatch fails; partial output cannot pass"
+}

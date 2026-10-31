@@ -1,0 +1,18 @@
+{
+ "encodings":[
+  {"source":"", "expected_hex":"00"},
+  {"source":"+", "expected_hex":"0800"},
+  {"source":"-", "expected_hex":"0600"},
+  {"source":">", "expected_hex":"0300"},
+  {"source":"<", "expected_hex":"0400"},
+  {"source":".", "expected_hex":"0500"},
+  {"source":",", "expected_hex":"0700"},
+  {"source":"[]", "expected_hex":"020100"},
+  {"source":"++", "expected_hex":"080800"},
+  {"source":"[+]", "expected_hex":"02080100"},
+  {"source":"[-]", "expected_hex":"02060100"}
+ ],
+ "controls":"../trusted_interpreter/vectors.json",
+ "request_driver":"../../tests/encoded_kernel_request.bf",
+ "record_format":"dbfi codes one through eight and zero terminator"
+}

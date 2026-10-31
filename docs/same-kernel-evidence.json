@@ -1,0 +1,136 @@
+{
+  "whole_integrated_nested": "FAIL: exit 124, zero output under 600 seconds with 64-MiB root capacity",
+  "raw_comparisons": [
+    {
+      "actual_bytes": 264,
+      "BF_compare": 0,
+      "name": "original-a",
+      "expected_bytes": 264,
+      "independent_equal": true
+    },
+    {
+      "actual_bytes": 267,
+      "BF_compare": 1,
+      "name": "original-b",
+      "expected_bytes": 272,
+      "independent_equal": false
+    },
+    {
+      "actual_bytes": 140,
+      "BF_compare": 0,
+      "name": "compact-a",
+      "expected_bytes": 140,
+      "independent_equal": true
+    },
+    {
+      "actual_bytes": 144,
+      "BF_compare": 0,
+      "name": "compact-b",
+      "expected_bytes": 144,
+      "independent_equal": true
+    }
+  ],
+  "root_2m_sha256": "bb74b80a13518101512335b2ae6bec387ff4426dd08bc43aeb9fdbb022cfe5ee",
+  "interpreter": "src/bf_in_bf_reference.bf",
+  "same_source_commands": 423,
+  "capacity_repair": {
+    "result": "EXIT:124\n0 /data/local/tmp/cock-stagea/integrated-nested-a.64m.output",
+    "root_capacity_bytes": 67108864,
+    "seconds": 600.3306425,
+    "name": "integrated-nested-a-capacity-repair"
+  },
+  "results": [
+    {
+      "name": "original-a",
+      "seconds": 560.8055668,
+      "result": "EXIT:0\n264 /data/local/tmp/cock-stagea/original-a.nested.output"
+    },
+    {
+      "name": "original-b",
+      "seconds": 600.3478578,
+      "result": "EXIT:124\n267 /data/local/tmp/cock-stagea/original-b.nested.output"
+    },
+    {
+      "name": "compact-a",
+      "seconds": 353.2109242,
+      "result": "EXIT:0\n140 /data/local/tmp/cock-stagea/compact-a.nested.output"
+    },
+    {
+      "name": "compact-b",
+      "seconds": 440.3909945,
+      "result": "EXIT:0\n144 /data/local/tmp/cock-stagea/compact-b.nested.output"
+    },
+    {
+      "name": "android-callback",
+      "seconds": 600.2555195,
+      "result": "EXIT:124\n1 /data/local/tmp/cock-stagea/android-callback.nested.output"
+    },
+    {
+      "name": "android-guest-a",
+      "seconds": 600.2836186,
+      "result": "EXIT:124\n0 /data/local/tmp/cock-stagea/android-guest-a.nested.output"
+    }
+  ],
+  "full_COCK_profile": "NOT QUALIFIED; trusted-tool reference experiment, no guest fuel or structured status",
+  "driver_results": [
+    {
+      "name": "empty",
+      "exit": "EXIT:0",
+      "expected": "2121",
+      "pass": true,
+      "actual": "2121"
+    },
+    {
+      "name": "binary",
+      "exit": "EXIT:0",
+      "expected": "2b212e210021ff",
+      "pass": true,
+      "actual": "2b212e210021ff"
+    },
+    {
+      "name": "multiple_chunks",
+      "exit": "EXIT:0",
+      "expected": "2b3e212c2e2100ff",
+      "pass": true,
+      "actual": "2b3e212c2e2100ff"
+    }
+  ],
+  "whole_stage_complete": false,
+  "root_capacity_cutover": {
+    "reason": "Capacity headroom for two reference tape expansions of the 29542 command integrated compiler; no BF source change",
+    "cutover_utc": "2026-10-26T07:33:11.0501181Z",
+    "sha256": "30906F3D37AB56260FB7852ED060D951520768AD8212FB0BDDF4275F4B218025",
+    "new_root_257_controls": true
+  },
+  "timezone": "Asia/Kuala_Lumpur",
+  "source_identities": [
+    {
+      "path": "src/android_native_compiler.bf",
+      "bytes": 39748,
+      "sha256": "217eda6046affe5f2eb390708e785f222f231c5a71f6869f8509e6b73fa40519"
+    },
+    {
+      "path": "tests/same_kernel_request.bf",
+      "bytes": 1424,
+      "sha256": "f7147722d4fab7b81494412330d560caac98507e2661931559930126d1d92f9f"
+    },
+    {
+      "path": "examples/heldout_stagea_q.bf",
+      "bytes": 367,
+      "sha256": "cb0e30854867c576480eae3d7a5c68eecefaf8b2bc2b738ed73b7fc1f9d12de8"
+    },
+    {
+      "path": "src/bf_in_bf_reference.bf",
+      "bytes": 1137,
+      "sha256": "7d7ab6e6b67c60a1d0176c33536e19eb3f3bd892c711733991dc1c6283bdb2f4"
+    }
+  ],
+  "root_seed_sha256": "ea3162818ae74c52d51b494784faa5d1a2426dae02ed1155d12e4533a4f43743",
+  "date": "2026-10-26",
+  "superseded_integrated_attempt": {
+    "result": "EXIT:143\n0 /data/local/tmp/cock-stagea/integrated-nested-a.selfhost.output",
+    "name": "integrated-nested-a",
+    "seconds": 135.8431929
+  },
+  "root_64m_sha256": "30906f3d37ab56260fb7852ed060d951520768ad8212fb0bddf4275f4b218025"
+}

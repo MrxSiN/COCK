@@ -8,6 +8,7 @@ Rules for AI assistants working in this repository.
 - Read [docs/status.md](docs/status.md) before starting work. It is the source of truth for what is done and what is next.
 - Stage A is incomplete. Never describe a component result as stage acceptance.
 - Keep original evidence files unchanged. Add new evidence instead of rewriting old results.
+- The project is over-engineered on purpose. Do not suggest deleting or merging superseded BF prototypes, frozen fixtures, evidence `.md`/`.json` pairs or later-stage drafts to make the repo smaller. Reviews should look for real defects, not for size.
 
 ## Commits
 

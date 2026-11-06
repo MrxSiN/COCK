@@ -2,6 +2,13 @@
 
 COCK is a Brainfuck-authored Android compiler project. All repository-authored executable source is annotated eight-command `.bf`. **Stage A is incomplete; Stage B and later stages have not been accepted.**
 
+## In plain words
+
+- **What it does today:** a compiler written entirely in Brainfuck (BF) turns a tiny BF program into the native library of an Android app. The app runs on a real phone and prints one character.
+- **What it cannot do yet:** BF programs with input, loops or pointer moves; app screens or Android services; signing or packaging the app without external Android SDK tools.
+- **Biggest open problem:** running the full compiler inside a BF interpreter that is itself written in BF still times out after 600 seconds.
+- **How the work is split:** Stage A is a minimal working compiler. Stages B to F add the full BF language, an interpreter, APK signing, Android features and optimization, in that order.
+
 On 2026-10-26, the new `src/android_native_compiler.bf` generated admission-checked native callback, guest and ELF bytes in one BF program. Complete BF-in-BF outputs produced three debug APKs that installed and ran on the Pixel 8 Pro, Android API 37 / `arm64-v8a`, logging space, `!` and a fresh held-out `Q`. Installed APK identities, native instructions and six callback regressions pass. See [current evidence](docs/android-native-compiler-evidence.md) and [machine-readable results](docs/android-native-compiler-evidence.json).
 
 The complete normalized-source native producer runs through BF-in-BF. Two identical reference interpreters also execute the real compact raw compiler with exact A/B outputs. Nesting the complete integrated Android compiler still times out after 600 seconds, including a 64-MiB-capacity attempt. Integrated original annotated-source admission/errors, artifact authority and a readable-source build entry also remain open.
@@ -16,6 +23,7 @@ The complete normalized-source native producer runs through BF-in-BF. Two identi
 - [Development roadmap](docs/development-roadmap.md) and [engineering principles](docs/engineering-principles.md)
 - [All documentation, including historical evidence and prospective designs](docs/README.md)
 - [Master engineering specification](docs/COCK_Master_Engineering_Prompt_Updated.md)
+- [Commit and pull request rules](CLAUDE.md)
 
 ## Current implementation boundary
 

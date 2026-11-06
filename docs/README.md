@@ -1,6 +1,6 @@
 # Documentation index
 
-Updated 2026-10-26. [Project overview](../README.md), [current status](status.md) and [physical-device evidence](windows-device-evidence.md) are the starting points. Stage A is incomplete; later-stage designs and historical passing components do not establish stage acceptance.
+Updated 2026-11-06. [Project overview](../README.md), [current status](status.md) and [physical-device evidence](windows-device-evidence.md) are the starting points. Stage A is incomplete; later-stage designs and historical passing components do not establish stage acceptance.
 
 Latest: [integrated normalized-source native compiler and device evidence](android-native-compiler-evidence.md), [same-kernel nested compiler evidence](same-kernel-evidence.md), their [native plan](android-native-compiler-plan.md) and [nested plan](same-kernel-plan.md). The complete Android compiler's nested run still fails its watchdog; Stage A remains open.
 
@@ -48,7 +48,10 @@ The master specification records requirements. Evidence records observed results
 | [Dynamic guest tape development slice](dynamic-tape-slice-plan.md) | `dynamic-tape-slice-plan.md` |
 | [Stage A bounded implementation slice — general zero valued loop skip](dynamic-zero-skip-plan.md) | `dynamic-zero-skip-plan.md` |
 | [Emulator retry and remaining-gate test plan](emulator-retry-plan.md) | `emulator-retry-plan.md` |
+| [Decoded trusted tool loading repair](encoded-kernel-plan.md) | `encoded-kernel-plan.md` |
 | [General forward bracket probe — bounded Stage A slice](general-bracket-probe-plan.md) | `general-bracket-probe-plan.md` |
+| [Local trusted clear execution repair](local-clear-plan.md) | `local-clear-plan.md` |
+| [Local code and data nested repair plan](local-kernel-plan.md) | `local-kernel-plan.md` |
 | [COCK nested arithmetic smoke slice](nested-arithmetic-slice-plan.md) | `nested-arithmetic-slice-plan.md` |
 | [Nested compiler capable interpreter diagnostic slice](nested-kernel-slice-plan.md) | `nested-kernel-slice-plan.md` |
 | [Consolidated batch for the nested-proof draft](next-stage-acceptance.md) | `next-stage-acceptance.md` |
@@ -93,6 +96,7 @@ The master specification records requirements. Evidence records observed results
 | [Stage E consolidated acceptance and device draft](stage-e-test-draft.md) | `stage-e-test-draft.md` |
 | [Stage E native touch/text and two-app draft](stage-e-ui-draft.md) | `stage-e-ui-draft.md` |
 | [Stages C, D and E documentary checkpoint and issues](stages-cde-draft-checkpoint.md) | `stages-cde-draft-checkpoint.md` |
+| [Trusted nested interpreter repair plan](trusted-interpreter-plan.md) | `trusted-interpreter-plan.md` |
 | [Uploaded executable diagnostics and identity repair](upload-executable-run-plan.md) | `upload-executable-run-plan.md` |
 
 ## Historical evidence and references

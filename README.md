@@ -23,7 +23,7 @@ The complete normalized-source native producer runs through BF-in-BF. Two identi
 - [Development roadmap](docs/development-roadmap.md) and [engineering principles](docs/engineering-principles.md)
 - [All documentation, including historical evidence and prospective designs](docs/README.md)
 - [Master engineering specification](docs/COCK_Master_Engineering_Prompt_Updated.md)
-- [Commit and pull request rules](CLAUDE.md)
+- [Commit and pull request rules](AGENTS.md)
 
 ## Current implementation boundary
 
